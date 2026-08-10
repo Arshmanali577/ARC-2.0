@@ -1,0 +1,315 @@
+# Shared Content
+
+Text defined by shared navigation, footer, CTA, analytics, reveal, and floating contact components.
+
+- **src/app/layout.tsx:** next/script
+- **src/app/layout.tsx:** next/font/google
+- **src/app/layout.tsx:** ./globals.css
+- **src/app/layout.tsx:** @/components/AnalyticsEvents
+- **src/app/layout.tsx:** @/components/WhatsAppButton
+- **src/app/layout.tsx:** @/lib/data
+- **src/app/layout.tsx:** @/lib/seo
+- **src/app/layout.tsx:** @/lib/site-state
+- **src/app/layout.tsx:** ARC Builders | Custom Home Builder in Brisbane & South East Queensland
+- **src/app/layout.tsx:** %s | ARC Builders
+- **src/app/layout.tsx:** Construction
+- **src/app/layout.tsx:** , }, manifest:
+- **src/app/layout.tsx:** , openGraph: { title:
+- **src/app/layout.tsx:** , description: siteConfig.description, url: siteConfig.url, siteName: siteConfig.name, locale: siteConfig.locale, type:
+- **src/app/layout.tsx:** , images: [absoluteUrl(
+- **src/app/layout.tsx:** )], }, twitter: { card:
+- **src/app/layout.tsx:** , title:
+- **src/app/layout.tsx:** , description: siteConfig.description, images: [absoluteUrl(
+- **src/app/layout.tsx:** )], }, robots: { index: true, follow: true, googleBot: { index: true, follow: true,
+- **src/app/layout.tsx:** : -1, }, }, icons: { icon: [ { url:
+- **src/app/layout.tsx:** , type:
+- **src/app/layout.tsx:** , sizes:
+- **src/app/layout.tsx:** }, { url:
+- **src/app/layout.tsx:** }, ], apple:
+- **src/app/layout.tsx:** ); const basePhone = companyInfo.phone.replace(/\s+/g,
+- **src/app/layout.tsx:** , itemOffered: {
+- **src/app/layout.tsx:** , name: service.title, description: service.description, provider: {
+- **src/app/layout.tsx:** , name:
+- **src/app/layout.tsx:** , value: companyInfo.qbccLicence, }, address: {
+- **src/app/layout.tsx:** , streetAddress: companyInfo.streetAddress, addressLocality: companyInfo.suburb, addressRegion:
+- **src/app/layout.tsx:** , postalCode: companyInfo.postcode, addressCountry:
+- **src/app/layout.tsx:** , }, areaServed: siteConfig.serviceAreas, image: absoluteUrl(
+- **src/app/layout.tsx:** ), logo: absoluteUrl(
+- **src/app/layout.tsx:** ), contactPoint: {
+- **src/app/layout.tsx:** , contactType:
+- **src/app/layout.tsx:** , telephone: formattedPhone, email: companyInfo.email, areaServed:
+- **src/app/layout.tsx:** , availableLanguage: [
+- **src/app/layout.tsx:** ], }, knowsAbout: [
+- **src/app/layout.tsx:** , ], hasOfferCatalog: {
+- **src/app/layout.tsx:** , itemListElement: serviceOffers, }, ...(socialProfiles.length > 0 ? { sameAs: socialProfiles } : {}), }; const websiteSchema = {
+- **src/app/layout.tsx:** className=
+- **src/app/layout.tsx:** strategy=
+- **src/app/layout.tsx:** width=
+- **src/app/layout.tsx:** style={{ display:
+- **src/app/layout.tsx:** , visibility:
+- **src/app/layout.tsx:** }} /> </noscript> </> )} <div className=
+- **src/app/layout.tsx:** > {children} </div> {!maintenanceModeEnabled && <AnalyticsEvents />} {!maintenanceModeEnabled && <WhatsAppButton />} {!maintenanceModeEnabled && ( <script type=
+- **src/components/AnalyticsEvents.tsx:** @/lib/analytics
+- **src/components/AnalyticsEvents.tsx:** [data-gtm-event]
+- **src/components/Navbar.tsx:** next/link
+- **src/components/Navbar.tsx:** next/image
+- **src/components/Navbar.tsx:** @/lib/utils
+- **src/components/Navbar.tsx:** @/lib/data
+- **src/components/Navbar.tsx:** className=
+- **src/components/Navbar.tsx:** > <Image src=
+- **src/components/Navbar.tsx:** alt=
+- **src/components/Navbar.tsx:** width={500} height={189} className={cn(
+- **src/components/Navbar.tsx:** , scrolled ?
+- **src/components/Navbar.tsx:** )} priority unoptimized /> </Link> {} <nav className=
+- **src/components/Navbar.tsx:** > {link.label} <span className=
+- **src/components/Navbar.tsx:** /> </Link> ))} </nav> {} <div className=
+- **src/components/Navbar.tsx:** > <Link href=
+- **src/components/Navbar.tsx:** data-gtm-event=
+- **src/components/Navbar.tsx:** data-gtm-source=
+- **src/components/Navbar.tsx:** aria-label={mobileOpen ?
+- **src/components/Navbar.tsx:** } aria-expanded={mobileOpen} aria-controls=
+- **src/components/Navbar.tsx:** > {mobileOpen ? <X size={24} /> : <Menu size={24} />} </button> </div> </header> {} <AnimatePresence> {mobileOpen && ( <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.3 }} id=
+- **src/components/Navbar.tsx:** > {link.label} </Link> </motion.div> ))} <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} > <Link href=
+- **src/components/WhatsAppButton.tsx:** https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.
+- **src/components/WhatsAppButton.tsx:** noopener noreferrer
+- **src/components/WhatsAppButton.tsx:** Chat on WhatsApp
+- **src/components/WhatsAppButton.tsx:** currentColor
+- **src/lib/data.ts:** ./types
+- **src/lib/data.ts:** , title:
+- **src/lib/data.ts:** , slug:
+- **src/lib/data.ts:** , location:
+- **src/lib/data.ts:** , type:
+- **src/lib/data.ts:** , year:
+- **src/lib/data.ts:** , architect:
+- **src/lib/data.ts:** , scope:
+- **src/lib/data.ts:** , description:
+- **src/lib/data.ts:** , projectNarrative:
+- **src/lib/data.ts:** , heroImage:
+- **src/lib/data.ts:** , images: buildProjectGallery(
+- **src/lib/data.ts:** , 11), featured: true, }, { id:
+- **src/lib/data.ts:** , 13), featured: true, }, { id:
+- **src/lib/data.ts:** , 15), featured: true, }, { id:
+- **src/lib/data.ts:** , 9), featured: false, }, { id:
+- **src/lib/data.ts:** , 29), featured: false, }, { id:
+- **src/lib/data.ts:** , 30), featured: false, }, { id:
+- **src/lib/data.ts:** focus on liveable design, resolved detailing, and polished presentation, with a gallery that highlights both the home
+- **src/lib/data.ts:** , 21), featured: false, }, ]; export const residentialServices: Service[] = [ { id:
+- **src/lib/data.ts:** , icon:
+- **src/lib/data.ts:** , href:
+- **src/lib/data.ts:** , }, { id:
+- **src/lib/data.ts:** , name:
+- **src/lib/data.ts:** , role:
+- **src/lib/data.ts:** , quote:
+- **src/lib/data.ts:** , }, ]; export const processSteps: ProcessStep[] = [ { id: 1, title:
+- **src/lib/data.ts:** , }, { id: 2, title:
+- **src/lib/data.ts:** , }, { id: 3, title:
+- **src/lib/data.ts:** , }, { id: 4, title:
+- **src/lib/data.ts:** , }, ]; export const navLinks = [ { label:
+- **src/lib/data.ts:** , href:
+- **src/lib/data.ts:** }, { label:
+- **src/lib/data.ts:** }, ]; export const companyInfo = { name:
+- **src/lib/data.ts:** , fullName:
+- **src/lib/data.ts:** , phone:
+- **src/lib/data.ts:** , email:
+- **src/lib/data.ts:** , address:
+- **src/lib/data.ts:** , streetAddress:
+- **src/lib/data.ts:** , suburb:
+- **src/lib/data.ts:** , postcode:
+- **src/lib/data.ts:** , experience:
+- **src/lib/data.ts:** , tagline:
+- **src/lib/data.ts:** , qbccLicence:
+- **src/lib/data.ts:** , socials: { facebook:
+- **src/lib/data.ts:** , instagram:
+- **src/lib/data.ts:** , linkedin:
+- **src/lib/data.ts:** , youtube:
+- **src/lib/seo.ts:** ./data
+- **src/lib/seo.ts:** https://arcbuilders.com.au
+- **src/lib/seo.ts:** ); export const siteConfig = { name: companyInfo.name, fullName: companyInfo.fullName, description: companyInfo.tagline, url: normalizedSiteUrl, locale:
+- **src/lib/seo.ts:** , serviceAreas: [
+- **src/lib/seo.ts:** , ], }; export const defaultKeywords = [
+- **src/lib/seo.ts:** , ]; export function absoluteUrl(path =
+- **src/lib/seo.ts:** ) { if (!path || path ===
+- **src/lib/seo.ts:** ; noIndex?: boolean; }; export function createPageMetadata({ title, description, path, keywords = [], images = [
+- **src/lib/seo.ts:** ], type =
+- **src/lib/seo.ts:** , title, description, images: imageUrls, }, robots: noIndex ? { index: false, follow: false, nocache: true, } : { index: true, follow: true, googleBot: { index: true, follow: true,
+- **src/lib/site-state.ts:** Temporarily Offline
+- **src/lib/site-state.ts:** ARC Builders Digital Launch
+- **src/lib/site-state.ts:** We are crafting a sharper online home for ARC Builders.
+- **src/lib/site-state.ts:** Our new website experience is being finalised and will be live shortly. In the meantime, our team is still available for custom homes, renovations, extensions, and commercial construction across Brisbane and South East Queensland.
+- **src/lib/site-state.ts:** Project consultations remain open while the site is under maintenance.
+- **src/lib/site-state.ts:** Launching in the next few days
+- **src/lib/site-state.ts:** /projects/49-herbert-st/hero.webp
+- **src/lib/site-state.ts:** Custom homes with refined architectural delivery
+- **src/lib/site-state.ts:** Transparent pricing and disciplined project management
+- **src/lib/site-state.ts:** Residential and commercial builds across South East Queensland
+- **src/components/Footer.tsx:** next/link
+- **src/components/Footer.tsx:** next/image
+- **src/components/Footer.tsx:** @/lib/data
+- **src/components/Footer.tsx:** @/lib/local-areas
+- **src/components/Footer.tsx:** ); const footerServices: Array<{ label: string; href?: string }> = [ { label:
+- **src/components/Footer.tsx:** , href:
+- **src/components/Footer.tsx:** }, { label:
+- **src/components/Footer.tsx:** ].includes(area.slug) ); return ( <footer className=
+- **src/components/Footer.tsx:** > {} <div className=
+- **src/components/Footer.tsx:** /> <div className=
+- **src/components/Footer.tsx:** > <div className=
+- **src/components/Footer.tsx:** > {} <div className=
+- **src/components/Footer.tsx:** > <Link href=
+- **src/components/Footer.tsx:** className=
+- **src/components/Footer.tsx:** > <Image src=
+- **src/components/Footer.tsx:** alt=
+- **src/components/Footer.tsx:** width={500} height={189} className=
+- **src/components/Footer.tsx:** unoptimized /> </Link> <p className=
+- **src/components/Footer.tsx:** > {companyInfo.tagline} </p> {validSocialLinks.length > 0 && ( <div className=
+- **src/components/Footer.tsx:** rel=
+- **src/components/Footer.tsx:** data-gtm-event=
+- **src/components/Footer.tsx:** data-gtm-source=
+- **src/components/Footer.tsx:** > <Icon size={15} /> </a> ))} </div> )} </div> {} <div> <h4 className=
+- **src/components/Footer.tsx:** > Navigation </h4> <ul className=
+- **src/components/Footer.tsx:** > {link.label} </Link> </li> ))} </ul> </div> {} <div> <h4 className=
+- **src/components/Footer.tsx:** > Services </h4> <ul className=
+- **src/components/Footer.tsx:** > {service.label} </Link> ) : ( <span className=
+- **src/components/Footer.tsx:** >{service.label}</span> )} </li> ))} </ul> </div> {} <div> <h4 className=
+- **src/components/Footer.tsx:** > Contact </h4> <ul className=
+- **src/components/Footer.tsx:** > <li className=
+- **src/components/Footer.tsx:** > <MapPin size={16} className=
+- **src/components/Footer.tsx:** /> <span className=
+- **src/components/Footer.tsx:** >{companyInfo.address}</span> </li> <li className=
+- **src/components/Footer.tsx:** > <Phone size={16} className=
+- **src/components/Footer.tsx:** > {companyInfo.phone} </a> </li> <li className=
+- **src/components/Footer.tsx:** > <Mail size={16} className=
+- **src/components/Footer.tsx:** > {companyInfo.email} </a> </li> </ul> {} <div className=
+- **src/components/Footer.tsx:** > <div className=
+- **src/components/Footer.tsx:** > <ShieldCheck size={24} className=
+- **src/components/Footer.tsx:** /> <div> <p className=
+- **src/components/Footer.tsx:** > QBCC Licensed Builder </p> <p className=
+- **src/components/Footer.tsx:** > {companyInfo.qbccLicence} </p> </div> </div> </div> </div> {} <div> <h4 className=
+- **src/components/Footer.tsx:** > Service Areas </h4> <ul className=
+- **src/components/Footer.tsx:** > {area.name} </Link> </li> ))} <li> <Link href=
+- **src/components/Footer.tsx:** > View All Areas </Link> </li> </ul> </div> </div> {} <div className=
+- **src/components/Footer.tsx:** > <div className=
+- **src/components/Footer.tsx:** > <p className=
+- **src/components/Footer.tsx:** > © {new Date().getFullYear()} {companyInfo.fullName}. All rights reserved. </p> <span className=
+- **src/components/Footer.tsx:** >|</span> <p className=
+- **src/components/Footer.tsx:** > QBCC Licence: <span className=
+- **src/components/Footer.tsx:** })} aria-label=
+- **src/lib/local-areas.ts:** Brisbane Southside
+- **src/lib/local-areas.ts:** Brisbane, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Brisbane Southside
+- **src/lib/local-areas.ts:** ARC Builders designs and builds custom homes, renovations and premium family residences across Brisbane Southside with clear pricing and quality-first delivery.
+- **src/lib/local-areas.ts:** /projects/25-langford-st/hero.webp
+- **src/lib/local-areas.ts:** ARC Builders supports Brisbane Southside families with custom homes, renovations, extensions and practical family residences shaped around lifestyle, budget clarity and long-term build quality.
+- **src/lib/local-areas.ts:** Custom home planning for established southside blocks
+- **src/lib/local-areas.ts:** Renovation and extension guidance for growing households
+- **src/lib/local-areas.ts:** Transparent scope review before construction commitments
+- **src/lib/local-areas.ts:** Logan
+- **src/lib/local-areas.ts:** Logan, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Logan
+- **src/lib/local-areas.ts:** Custom homes, duplex projects, renovations and family builds by ARC Builders for Logan and South East Queensland homeowners.
+- **src/lib/local-areas.ts:** /projects/3-dart-ave-kingston/hero.webp
+- **src/lib/local-areas.ts:** For Logan homeowners, ARC Builders brings a measured design-and-build process with practical guidance on budget, approvals, site conditions and finishes.
+- **src/lib/local-areas.ts:** Custom homes and duplex-ready planning
+- **src/lib/local-areas.ts:** Straightforward communication from consultation to handover
+- **src/lib/local-areas.ts:** Project pages and build examples from nearby South East Queensland suburbs
+- **src/lib/local-areas.ts:** Rochedale
+- **src/lib/local-areas.ts:** Rochedale, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Rochedale
+- **src/lib/local-areas.ts:** ARC Builders delivers custom homes and premium family residences for Rochedale and Rochedale South clients with clear pricing and refined finishes.
+- **src/lib/local-areas.ts:** /projects/25-binnalong-st-rochedale-south/hero.webp
+- **src/lib/local-areas.ts:** Rochedale and Rochedale South families often need homes that balance premium finishes with practical planning. ARC Builders helps shape each build around site realities, family routines and confident project management.
+- **src/lib/local-areas.ts:** Premium family-home planning for Rochedale and nearby suburbs
+- **src/lib/local-areas.ts:** Detailed scope conversations before quoting
+- **src/lib/local-areas.ts:** Finished project references from Rochedale South and Brisbane Southside
+- **src/lib/local-areas.ts:** Calamvale
+- **src/lib/local-areas.ts:** Calamvale, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Calamvale
+- **src/lib/local-areas.ts:** Calamvale custom homes and family residences by ARC Builders, with modern layouts, quality finishes and transparent project guidance.
+- **src/lib/local-areas.ts:** /projects/17-ormskirk-st-calamvale/hero.webp
+- **src/lib/local-areas.ts:** ARC Builders has a strong project base around Calamvale, helping families plan modern residences with polished street appeal, liveable layouts and carefully selected finishes.
+- **src/lib/local-areas.ts:** Local custom-home examples in Calamvale
+- **src/lib/local-areas.ts:** Family-focused layouts and multi-generational planning options
+- **src/lib/local-areas.ts:** Clear build process from first consultation through completion
+- **src/lib/local-areas.ts:** Pallara
+- **src/lib/local-areas.ts:** Pallara, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Pallara
+- **src/lib/local-areas.ts:** ARC Builders creates custom homes and premium family residences for Pallara homeowners across Brisbane and South East Queensland.
+- **src/lib/local-areas.ts:** /projects/14-verona-st-pallara/hero.webp
+- **src/lib/local-areas.ts:** Pallara is a strong fit for modern family builds, and ARC Builders helps clients plan custom homes with careful attention to space, finishes, outdoor connection and everyday comfort.
+- **src/lib/local-areas.ts:** Custom design-and-build support for new estates and family blocks
+- **src/lib/local-areas.ts:** Premium finish planning without losing budget discipline
+- **src/lib/local-areas.ts:** Relevant Pallara project imagery and case-study context
+- **src/lib/local-areas.ts:** Greenbank
+- **src/lib/local-areas.ts:** Greenbank, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Greenbank
+- **src/lib/local-areas.ts:** Greenbank acreage homes and custom family builds by ARC Builders, designed for space, lifestyle and transparent project delivery.
+- **src/lib/local-areas.ts:** /projects/8-vineyard-drive-greenbank/hero.webp
+- **src/lib/local-areas.ts:** Greenbank sites often call for generous planning, strong outdoor connection and practical decisions around access, services and lifestyle. ARC Builders helps clients shape acreage homes with clarity from the start.
+- **src/lib/local-areas.ts:** Acreage and larger-block home planning
+- **src/lib/local-areas.ts:** Outdoor entertaining and family-lifestyle design thinking
+- **src/lib/local-areas.ts:** Scope clarity for site-specific requirements
+- **src/lib/local-areas.ts:** Eight Mile Plains
+- **src/lib/local-areas.ts:** Eight Mile Plains, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Eight Mile Plains
+- **src/lib/local-areas.ts:** ARC Builders delivers custom homes, renovations and premium family residences in Eight Mile Plains and Brisbane Southside.
+- **src/lib/local-areas.ts:** Based around Eight Mile Plains, ARC Builders works with homeowners who want a clear design-to-handover process, premium presentation and practical advice before the build begins.
+- **src/lib/local-areas.ts:** Local builder presence in Eight Mile Plains
+- **src/lib/local-areas.ts:** Premium family homes, renovations and extension guidance
+- **src/lib/local-areas.ts:** Fast access to Brisbane Southside and South East Queensland service areas
+- **src/lib/local-areas.ts:** Mount Gravatt
+- **src/lib/local-areas.ts:** Mount Gravatt, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Mount Gravatt
+- **src/lib/local-areas.ts:** Mount Gravatt custom homes and premium renovations by ARC Builders, with quality workmanship and transparent project guidance.
+- **src/lib/local-areas.ts:** /projects/3-stanley-st-mount-gravatt/hero.webp
+- **src/lib/local-areas.ts:** ARC Builders supports Mount Gravatt clients with custom homes and renovation planning that respects established streetscapes while delivering modern family comfort.
+- **src/lib/local-areas.ts:** Experience with premium residential detailing
+- **src/lib/local-areas.ts:** Practical planning for established Brisbane suburbs
+- **src/lib/local-areas.ts:** Strong project references across nearby southside locations
+- **src/lib/local-areas.ts:** Bahrs Scrub
+- **src/lib/local-areas.ts:** Bahrs Scrub, QLD
+- **src/lib/local-areas.ts:** Custom Home Builder Bahrs Scrub
+- **src/lib/local-areas.ts:** Bahrs Scrub custom homes and new family residences by ARC Builders for Logan and South East Queensland clients.
+- **src/lib/local-areas.ts:** /projects/18-skye-court-bahrs-scrub/hero.webp
+- **src/lib/local-areas.ts:** For Bahrs Scrub homeowners, ARC Builders provides a practical custom-home pathway with guidance on layouts, finishes, site needs and long-term family liveability.
+- **src/lib/local-areas.ts:** New-home planning for growing Logan-region communities
+- **src/lib/local-areas.ts:** Clear consultation and scope review before quoting
+- **src/lib/local-areas.ts:** Relevant Bahrs Scrub and nearby project examples
+- **src/lib/local-areas.ts:** South East Queensland
+- **src/lib/local-areas.ts:** Custom Home Builder South East Queensland
+- **src/lib/local-areas.ts:** ARC Builders designs and builds custom homes, renovations, extensions and selected commercial projects across South East Queensland.
+- **src/lib/local-areas.ts:** /projects/49-herbert-st/hero.webp
+- **src/lib/local-areas.ts:** Across South East Queensland, ARC Builders focuses on custom homes, renovations, extensions and selected commercial projects where clear communication and quality workmanship matter.
+- **src/lib/local-areas.ts:** Residential and selected commercial delivery across the region
+- **src/lib/local-areas.ts:** Transparent pricing and practical build-stage communication
+- **src/lib/local-areas.ts:** A growing project portfolio across Brisbane, Logan and surrounding suburbs
+- **src/components/CTASection.tsx:** next/link
+- **src/components/CTASection.tsx:** ./ScrollReveal
+- **src/components/CTASection.tsx:** url(/projects/3-brooklyn-st-spring-mountain/hero.webp)
+- **src/components/CTASection.tsx:** mx-auto mb-8 h-px bg-accent
+- **src/components/CTASection.tsx:** mx-auto mt-6 max-w-xl font-sans text-base text-[#0a0a0a]/58
+- **src/components/CTASection.tsx:** /contact
+- **src/components/CTASection.tsx:** tel:0411878438
+- **src/components/CTASection.tsx:** https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.
+- **src/components/CTASection.tsx:** noopener noreferrer
+- **src/components/CTASection.tsx:** currentColor
+- **src/components/ScrollReveal.tsx:** fadeUp
+- **src/components/ScrollReveal.tsx:** fadeDown
+- **src/components/ScrollReveal.tsx:** fadeLeft
+- **src/components/ScrollReveal.tsx:** fadeRight
+- **src/components/ScrollReveal.tsx:** fadeIn
+- **src/components/ScrollReveal.tsx:** scaleIn
+- **src/components/ScrollReveal.tsx:** , once = true, }: ScrollRevealProps) { const ref = useRef(null); const isInView = useInView(ref, { once, margin:
+- **src/components/ScrollReveal.tsx:** ); } }, [isInView, controls]); return ( <motion.div ref={ref} initial=
+
+## Code-Defined Icons
+
+- ArrowUp (Lucide React)
+- Facebook (Lucide React)
+- Instagram (Lucide React)
+- Linkedin (Lucide React)
+- Mail (Lucide React)
+- MapPin (Lucide React)
+- Menu (Lucide React)
+- Phone (Lucide React)
+- ShieldCheck (Lucide React)
+- X (Lucide React)
+- Youtube (Lucide React)

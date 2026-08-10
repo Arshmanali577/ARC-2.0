@@ -1,0 +1,178 @@
+{
+  "pageName": "Project: 8 Vineyard Drive Greenbank",
+  "originalRoute": "/projects/8-vineyard-drive-greenbank",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-01.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/8-vineyard-drive-greenbank/gallery-01.webp",
+      "bytes": 514152,
+      "sha256": "0a076f025d6b4eff3940638d8e7be5f2bc87d356fdb86b77fe15a6855f223990"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-02.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/8-vineyard-drive-greenbank/gallery-02.webp",
+      "bytes": 480180,
+      "sha256": "c615c93f9a198b1a163b9e51a66f40f5d7c6ac769528d90af86cb81b9c842450"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-03.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/8-vineyard-drive-greenbank/gallery-03.webp",
+      "bytes": 244784,
+      "sha256": "61c17dd7d977eb13ea18fea1bef53d39c3061a793bace0c533d577e3132fd0df"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-04.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/8-vineyard-drive-greenbank/gallery-04.webp",
+      "bytes": 87770,
+      "sha256": "8ea60f7da0ad3ad12c1f3629a94ad04469d3837b92a9167dcdf04f6f5700a0f7"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-05.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/8-vineyard-drive-greenbank/gallery-05.webp",
+      "bytes": 141048,
+      "sha256": "cfcdc29a0b0565e5198483f6b3b797a04fe11398248d27509de87517a70d991e"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-06.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/8-vineyard-drive-greenbank/gallery-06.webp",
+      "bytes": 205568,
+      "sha256": "d5ac5cd3765c55a0347c26644f4aeaddc10e7d4624ac8fec042074a4af1db15f"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-07.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/8-vineyard-drive-greenbank/gallery-07.webp",
+      "bytes": 238604,
+      "sha256": "3368ffb4254f1c080417ba60cc174eab2cffed729de0ca4e8bcf1d3a69fa6fa0"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/hero.webp",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Images/projects/8-vineyard-drive-greenbank/hero.webp",
+      "bytes": 514152,
+      "sha256": "0a076f025d6b4eff3940638d8e7be5f2bc87d356fdb86b77fe15a6855f223990"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/8-vineyard-drive-greenbank/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/8-vineyard-drive-greenbank/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/8-vineyard-drive-greenbank.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

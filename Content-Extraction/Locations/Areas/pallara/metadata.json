@@ -1,0 +1,136 @@
+{
+  "pageName": "Location: Pallara",
+  "originalRoute": "/locations/pallara",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/locations/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/locations/[slug]/page.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Locations/Areas/pallara/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/hero.webp",
+      "copiedTo": "Locations/Areas/pallara/Images/projects/14-verona-st-pallara/hero.webp",
+      "bytes": 57448,
+      "sha256": "dd9a34806abd3977aa9b01dd83e7fb1cdb6572fa7315ff36bc53e3e3b936de50"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/hero.webp",
+      "copiedTo": "Locations/Areas/pallara/Images/projects/17-ormskirk-st-calamvale/hero.webp",
+      "bytes": 498152,
+      "sha256": "fb1b61cc887c513419ae1ad782e686650551d4d00bd16ee9920359db7012a5ca"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Locations/Areas/pallara/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/hero.webp",
+      "copiedTo": "Locations/Areas/pallara/Images/projects/8-vineyard-drive-greenbank/hero.webp",
+      "bytes": 514152,
+      "sha256": "0a076f025d6b4eff3940638d8e7be5f2bc87d356fdb86b77fe15a6855f223990"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Locations/Areas/pallara/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Locations/Areas/pallara/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/locations/pallara.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

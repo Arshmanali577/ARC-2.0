@@ -1,0 +1,178 @@
+{
+  "pageName": "Project: 3 Dart Ave Kingston",
+  "originalRoute": "/projects/3-dart-ave-kingston",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-01.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-dart-ave-kingston/gallery-01.webp",
+      "bytes": 105044,
+      "sha256": "d7f1c2021d7d0ff40c1bed7b5ba24d45806106c257fcedbfe97a3ef7bae60b64"
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-02.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-dart-ave-kingston/gallery-02.webp",
+      "bytes": 111060,
+      "sha256": "781d238ccee401ac75b1f183b06097f301bf66227f73895ce1457092f89456d3"
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-03.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-dart-ave-kingston/gallery-03.webp",
+      "bytes": 181206,
+      "sha256": "b1600fb72efca840971aa39ccfb6332897026cff676bcfa5c87c26fb26171e0c"
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-04.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-dart-ave-kingston/gallery-04.webp",
+      "bytes": 66334,
+      "sha256": "1a772f3d7e47de60dac1f82a40718cb3077f5a5c9b795d564fdac9ca8a8b080c"
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-05.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-dart-ave-kingston/gallery-05.webp",
+      "bytes": 80118,
+      "sha256": "ce01fe9131283badc5f82b25cf4869b9958ff03525a1d95b42a8f86351cf13a0"
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-06.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-dart-ave-kingston/gallery-06.webp",
+      "bytes": 294958,
+      "sha256": "445f9d779d8cc872d660c0d3ae46e87b02982b622ff408d1514e1d06128f1d03"
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-07.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-dart-ave-kingston/gallery-07.webp",
+      "bytes": 533734,
+      "sha256": "fd66627fe738c760c18ff2612d5021a8186f43596cb5939eb89c1a8c24bc674f"
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/hero.webp",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Images/projects/3-dart-ave-kingston/hero.webp",
+      "bytes": 117330,
+      "sha256": "8c1c80be891c9f623036d13490d8a03998b05b6f64ac96e3f9421e3b9af3e1f5"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/3-dart-ave-kingston/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/3-dart-ave-kingston/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/3-dart-ave-kingston.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

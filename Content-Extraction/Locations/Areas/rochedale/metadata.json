@@ -1,0 +1,136 @@
+{
+  "pageName": "Location: Rochedale",
+  "originalRoute": "/locations/rochedale",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/locations/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/locations/[slug]/page.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Locations/Areas/rochedale/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "copiedTo": "Locations/Areas/rochedale/Images/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "bytes": 301376,
+      "sha256": "4f2b98f1d77c99f3d7dc1659eaf4a450c978734acdb408d1b57ce3d2a239b88a"
+    },
+    {
+      "reference": "/projects/25-langford-st/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/hero.webp",
+      "copiedTo": "Locations/Areas/rochedale/Images/projects/25-langford-st/hero.webp",
+      "bytes": 50338,
+      "sha256": "2f2ce38ccc7c36eece8d8a6c4f5d4ef6b7644e2488161672682977ba88da0d88"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Locations/Areas/rochedale/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/49-herbert-st/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/hero.webp",
+      "copiedTo": "Locations/Areas/rochedale/Images/projects/49-herbert-st/hero.webp",
+      "bytes": 80742,
+      "sha256": "b0c60aa633f26cc950506f455bada387fe1200bcc8bd2561364094fae891dca3"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Locations/Areas/rochedale/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Locations/Areas/rochedale/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/locations/rochedale.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

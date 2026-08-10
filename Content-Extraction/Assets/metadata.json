@@ -1,0 +1,2235 @@
+{
+  "description": "Deduplicated master copy of every local asset resolved as used.",
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Assets/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35",
+      "usedByRoutes": [
+        "/",
+        "/about",
+        "/blog",
+        "/blog/custom-home-vs-project-home-what-is-the-difference",
+        "/blog/fixed-price-vs-cost-plus-contracts-what-should-homeowners-choose",
+        "/blog/how-much-does-it-cost-to-build-a-house-in-brisbane-2026",
+        "/blog/steel-frame-vs-timber-frame-which-is-better",
+        "/blog/step-by-step-guide-to-building-a-house-in-qld",
+        "/commercial",
+        "/contact",
+        "/inclusions",
+        "/locations",
+        "/locations/bahrs-scrub",
+        "/locations/brisbane-southside",
+        "/locations/calamvale",
+        "/locations/eight-mile-plains",
+        "/locations/greenbank",
+        "/locations/logan",
+        "/locations/mount-gravatt",
+        "/locations/pallara",
+        "/locations/rochedale",
+        "/locations/south-east-queensland",
+        "/process",
+        "/projects",
+        "/projects/14-verona-st-pallara",
+        "/projects/17-ormskirk-st-calamvale",
+        "/projects/18-skye-court-bahrs-scrub",
+        "/projects/25-binnalong-st-rochedale-south",
+        "/projects/25-langford-st",
+        "/projects/3-brooklyn-st-spring-mountain",
+        "/projects/3-dart-ave-kingston",
+        "/projects/3-stanley-st-mount-gravatt",
+        "/projects/35-ayesha-place-calamvale",
+        "/projects/49-herbert-st",
+        "/projects/8-vineyard-drive-greenbank",
+        "/projects/hi-def-project",
+        "/residential"
+      ]
+    },
+    {
+      "reference": "/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/hero.webp",
+      "copiedTo": "Assets/Images/hero.webp",
+      "bytes": 193110,
+      "sha256": "f67ec35854d43f2d8d466d0c22cf8a24c421556113d936d51d66c7f507693d68",
+      "usedByRoutes": [
+        "/",
+        "/admin",
+        "/inclusions",
+        "/maintenance"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-01.webp",
+      "bytes": 95626,
+      "sha256": "761cfefe974c88dae0f23916c2dd58e408723a8392718cbb0fe99a24ccabba81",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-02.webp",
+      "bytes": 90230,
+      "sha256": "d70d3dd72c64700b1123b40ee7dcd6b74e9dbe09ba988eb6cb9bb6aa022eb065",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-03.webp",
+      "bytes": 136562,
+      "sha256": "9ba62fc25e259e79ab14ce3a4c8c979cac30858aa64cfa3e25e240e5b82a2425",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-04.webp",
+      "bytes": 103792,
+      "sha256": "0ea4e68a10c73314a76962a4abd8f3db14589921d65eccb2d0fbf0f463699fd8",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-05.webp",
+      "bytes": 159100,
+      "sha256": "58a8a57994a8b0abf0df99b27e42c079d2456cec60e4c3193f133ee8e1316905",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-06.webp",
+      "bytes": 119928,
+      "sha256": "1a0bbad3b44eaf1be900965f52ce7c5b0fb9f72faa1265269b7f58b40f3f355a",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-07.webp",
+      "bytes": 115890,
+      "sha256": "24ef2e6019bb2a7e01451668f49aa78f03af8014fccdca80e49e888386a9c04b",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-08.webp",
+      "bytes": 96642,
+      "sha256": "16c99911ffd08695bee9e31ba5d3e24aa3477ed578fa69f1799819491b5e2dbb",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-09.webp",
+      "bytes": 96728,
+      "sha256": "a11da4e1975bab4fe8abc51c783852d247e4b5b4ebf85d597fb28671a392007c",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-10.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-10.webp",
+      "bytes": 232418,
+      "sha256": "011a10f3daeda2391b27c5942caad659e4fbbfa3ed0edb1922ecc3eeab43b8b9",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-11.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/gallery-11.webp",
+      "bytes": 306038,
+      "sha256": "f68aae75bc3379d96833591846216dac5e51c95f38a8fc0875b66d65e6b0dc98",
+      "usedByRoutes": [
+        "/projects/14-verona-st-pallara"
+      ]
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/hero.webp",
+      "copiedTo": "Assets/Images/projects/14-verona-st-pallara/hero.webp",
+      "bytes": 57448,
+      "sha256": "dd9a34806abd3977aa9b01dd83e7fb1cdb6572fa7315ff36bc53e3e3b936de50",
+      "usedByRoutes": [
+        "/blog",
+        "/blog/fixed-price-vs-cost-plus-contracts-what-should-homeowners-choose",
+        "/blog/how-much-does-it-cost-to-build-a-house-in-brisbane-2026",
+        "/locations",
+        "/locations/pallara",
+        "/locations/south-east-queensland",
+        "/projects",
+        "/projects/14-verona-st-pallara",
+        "/residential"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-01.webp",
+      "bytes": 180306,
+      "sha256": "b291522e79997e181c624ac2094a7053db5f24a88d89ebeececa1b96d19d98f1",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-02.webp",
+      "bytes": 32660,
+      "sha256": "6eae84088320e1b5ec8bf0b47aefab0abe01b98b7b867232ffb4485af01ff2a7",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-03.webp",
+      "bytes": 42154,
+      "sha256": "586725d90fefa314655c36b71bf45ac41ebcdc66104c5c3e5a0927a70a5bd96e",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-04.webp",
+      "bytes": 48196,
+      "sha256": "a7adb1cce31bdc98ad189359e55ff8a499504effdbf79de83c16983e13ca15e5",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-05.webp",
+      "bytes": 53770,
+      "sha256": "68c120a125c0092a3fd90940e61b386e43eb001eb9a70ecba65fd9ae293ed296",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-06.webp",
+      "bytes": 35948,
+      "sha256": "0faaac7d308509bf48e9b63b120681221bf8c62f3b4a364437e7ea67c4fa7a5b",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-07.webp",
+      "bytes": 78400,
+      "sha256": "020a4caf3bb523d444f5715a3b3ad2f57ba9b50d6293bb3c23e96607dae51ce0",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-08.webp",
+      "bytes": 30692,
+      "sha256": "390509e05acfd537a83acd6edbfebe1ecfb50a85113a84ab30e42fee98ac8508",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-09.webp",
+      "bytes": 29294,
+      "sha256": "71cf86c59c90da0462a5e9d286e1abd81af7e31b79e143b1c87284aa05a3be3f",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-10.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-10.webp",
+      "bytes": 27178,
+      "sha256": "28354181682f5f28b4e350d5898d3a8561312afa023ae568cadf667c96d4d95e",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-11.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-11.webp",
+      "bytes": 35652,
+      "sha256": "c2245c17a278b71854f8a25d557daf68a4bf2f39ffc5395f09896b59a826f98a",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-12.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-12.webp",
+      "bytes": 32688,
+      "sha256": "26586a18ef6fd635af21a26f31323133b92e0c07633bd9010c2f8f9aaf7a84cf",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-13.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-13.webp",
+      "bytes": 32168,
+      "sha256": "143e6f7ef9ea89c27c366132c96e8c6ca2d5727eb7eef99215a3143f4b5d041a",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-14.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-14.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-14.webp",
+      "bytes": 25094,
+      "sha256": "22b2f91aad13a390fe53b252585b3544fa0488e5922ce0ceb1874572f37ae140",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-15.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-15.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-15.webp",
+      "bytes": 25038,
+      "sha256": "03a50b633ce02dc747a132ca8ff72730b3c5bb5f425050df45b0318cae31bd81",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-16.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-16.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-16.webp",
+      "bytes": 36910,
+      "sha256": "3348a7e8d722e5ce749833b55d9eec33b65bd4bb4cd08517b035753338e7f983",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-17.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-17.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-17.webp",
+      "bytes": 67220,
+      "sha256": "ff6d3dada4b2bd9ad340dc34170f41124410df8f30fc20badab383da90996724",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-18.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-18.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-18.webp",
+      "bytes": 61138,
+      "sha256": "8f01438a68253bc4d2440f0da743925702960041e87ed293c4bdcfdaf67ec111",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-19.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-19.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-19.webp",
+      "bytes": 39832,
+      "sha256": "3533dcca02f11d29a77482354208582c9a7e637865533390b52c0d8510d3ed72",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-20.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-20.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-20.webp",
+      "bytes": 55256,
+      "sha256": "5248c153620cf55e593de4297cd164dfdb6b930f136f63d904cae6c5a7356e06",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-21.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-21.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-21.webp",
+      "bytes": 51964,
+      "sha256": "71c82259f1eafc961c4acaa6f941fa049edbef724c44abfa41fccbdc162be0fa",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-22.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-22.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-22.webp",
+      "bytes": 33466,
+      "sha256": "622a3f1a88aa8c094ac829693712f2aa45b11630b2d586fd96e319fff7d8dad2",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-23.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-23.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-23.webp",
+      "bytes": 82556,
+      "sha256": "bc1c704d1a786d8daa66d44f9f21d20179dc7eb61a1b0a324adb1d64af7dabab",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-24.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-24.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-24.webp",
+      "bytes": 51692,
+      "sha256": "cad69d36e165d3f2d0f8e26e8842bcff76180343c0e722f9bc75d44c32727c74",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-25.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-25.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-25.webp",
+      "bytes": 37662,
+      "sha256": "2071cfd2f03c97c589f5b1ea0fde19af453a325a90def5df9bd9c0642d61854c",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-26.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-26.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-26.webp",
+      "bytes": 55628,
+      "sha256": "0549e2731592d1b44e0698cf8f51e982be50e6d142891679a43e6e48067c67a7",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-27.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-27.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-27.webp",
+      "bytes": 44144,
+      "sha256": "58fe6100ef05ea1ea688e9f7c56bbe52838001948d4b36ab7cffc1aea54da5ad",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-28.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-28.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-28.webp",
+      "bytes": 71214,
+      "sha256": "0de4b8ef72626cfbb081ac36c787cad68ceefb506014cc303abd8e2017ffa4d5",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-29.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-29.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/gallery-29.webp",
+      "bytes": 146650,
+      "sha256": "224cdc0649e42b863e147b23882f284039af13d92d96e280566a6afc3786348b",
+      "usedByRoutes": [
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/hero.webp",
+      "copiedTo": "Assets/Images/projects/17-ormskirk-st-calamvale/hero.webp",
+      "bytes": 498152,
+      "sha256": "fb1b61cc887c513419ae1ad782e686650551d4d00bd16ee9920359db7012a5ca",
+      "usedByRoutes": [
+        "/locations",
+        "/locations/brisbane-southside",
+        "/locations/calamvale",
+        "/locations/pallara",
+        "/locations/south-east-queensland",
+        "/projects/17-ormskirk-st-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-01.webp",
+      "bytes": 134148,
+      "sha256": "56faa83b499edb8a448e8136d02b8fd8a042fd1255827b81441b6745fe6a888f",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-02.webp",
+      "bytes": 42218,
+      "sha256": "edbb02d3ff2231ee2100488a2ad422c6c784a5348a9cdc4676214d115fabbdd4",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-03.webp",
+      "bytes": 46208,
+      "sha256": "fe1b546788eadfc44e88859e1d4bd59eb36e82841323d7d5d795a3025b9f90df",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-04.webp",
+      "bytes": 34480,
+      "sha256": "cd61d5a0476ccc96b0c72c40704b527f59dc67e15f158cde1e69a03b2d0d5ec7",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-05.webp",
+      "bytes": 46840,
+      "sha256": "09c0217c5137d4ee2fc8632959fb04300793321091551aa511964882073aae55",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-06.webp",
+      "bytes": 35918,
+      "sha256": "ebb69d38adb2b60253d979b9a29f81484bca593f2c1a18814969b0fa7c6b9505",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-07.webp",
+      "bytes": 26498,
+      "sha256": "84f1298112fff6cc3168605e2670581c6f548dad9c7b9a0c76b34717e3bd06ec",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-08.webp",
+      "bytes": 26766,
+      "sha256": "c2f0290f98777e4117faf11a7a80746bf60537bbfc3928eba9957d4a08625c31",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-09.webp",
+      "bytes": 38936,
+      "sha256": "bb2d1aca926fcc175d67ec223a01e0650f0223a3117eaaec7beac0283fdf8bb9",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-10.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-10.webp",
+      "bytes": 38556,
+      "sha256": "2cf32cf62e29547171dfb4552a30330c4a2353af7e5847cfc03d4d6b479d0cc9",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-11.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-11.webp",
+      "bytes": 42158,
+      "sha256": "160b7f3da1565f8626a7211b11f0843e3c034e475baf49aa977d7c2efcc0bac6",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-12.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-12.webp",
+      "bytes": 50128,
+      "sha256": "dddf4975208015381759b5c24991834fceb532453858bb2752dd88449916fb82",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-13.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-13.webp",
+      "bytes": 46898,
+      "sha256": "d8de215ed43a33b3ada2936f31cbc9f73bdbfd05e8b22a2c09c89b9d41702176",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-14.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-14.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-14.webp",
+      "bytes": 27674,
+      "sha256": "2af5e7d7b5cbf23808ed52bf264387ec5cb28b771e6b708bde154c50308cd3b5",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-15.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-15.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-15.webp",
+      "bytes": 29564,
+      "sha256": "3df2ace626d7afb895dd794a8291dab11cbdc96d148dd49f2f033f656ab37266",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-16.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-16.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-16.webp",
+      "bytes": 30386,
+      "sha256": "7010888bff69848ca2148f0512580cd452c1deef877523326eb32a2522a7b1f5",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-17.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-17.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-17.webp",
+      "bytes": 26448,
+      "sha256": "920659bb75207f99b23ed08538deee8c11e260aa3d5c817cefa073fc8d9771dc",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-18.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-18.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-18.webp",
+      "bytes": 52750,
+      "sha256": "43f1fd110af4f765c2d9617e1cda331db5bb21e6f16ff973ae8f1ed9552b0d77",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-19.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-19.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-19.webp",
+      "bytes": 172184,
+      "sha256": "c95b7bad3f150af0d4ee3de4b36c4ba6d7a1234bc9015703516c6b53e87c2437",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-20.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-20.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-20.webp",
+      "bytes": 173704,
+      "sha256": "e7e805139356b7e77caa51330c77c8545ae22ae4d155d17b421cace13a54f302",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-21.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-21.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/gallery-21.webp",
+      "bytes": 41534,
+      "sha256": "42549adea81749b80843e7a28667e4a4e15d0f2a45e0b8f424f649c639be50ec",
+      "usedByRoutes": [
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/hero.webp",
+      "copiedTo": "Assets/Images/projects/18-skye-court-bahrs-scrub/hero.webp",
+      "bytes": 366626,
+      "sha256": "8d8de4904311235aec9e4bb1fc0d70fcedde58e23bbd0f14e10d6e2583226bfc",
+      "usedByRoutes": [
+        "/locations",
+        "/locations/bahrs-scrub",
+        "/locations/greenbank",
+        "/locations/logan",
+        "/projects/18-skye-court-bahrs-scrub"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-01.webp",
+      "bytes": 113030,
+      "sha256": "45de792c51b71750ff874b2e2f4e0d7009d62f65dc5c822b599ca2beaf122216",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-02.webp",
+      "bytes": 15662,
+      "sha256": "14f27ec1d1c233097f6486a3526a761c0aae2ccb7245b274ad331d9a31821fe7",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-03.webp",
+      "bytes": 32992,
+      "sha256": "e678c1944e7548895de8f96e2c83101e4558e0efb9e17674b0be9aa0ca9e80b4",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-04.webp",
+      "bytes": 32184,
+      "sha256": "fdf36fe01e23767d20bca510c470a080206e0d7f3bf4526f2ad69adf44c0b98c",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-05.webp",
+      "bytes": 17736,
+      "sha256": "491826344a81cc2ba7459cca378513370b825adc0dd98eeee2792f9bd082e650",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-06.webp",
+      "bytes": 28836,
+      "sha256": "3040ffd9bdfe47e9d92e472b18ee975dc266a897fea00006919a994ebdfce48c",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-07.webp",
+      "bytes": 20788,
+      "sha256": "85cf4ede97a945e7fbe6d7e72ce7fb91b179b279ad7c1512e5acb420fc75a09a",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-08.webp",
+      "bytes": 37614,
+      "sha256": "f11eade00b45468df80e127f4f9d365717d9fe9900e4174b85e4e5a414c7cf0c",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-09.webp",
+      "bytes": 28780,
+      "sha256": "1850d8653dddb5548cf4aab413814614a8bd47e9f7b6b59f7ca5fbda07692136",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-10.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-10.webp",
+      "bytes": 23462,
+      "sha256": "014d868eb82408b1331319e164c7c39f61ebc537a3bb06eeca7d1ca593aede09",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-11.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-11.webp",
+      "bytes": 25920,
+      "sha256": "40d56bca48a9e53ac25d7bc32a90ac782dfbc5ef738082ac68d800362d7f60e7",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-12.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-12.webp",
+      "bytes": 16876,
+      "sha256": "9e441a664dde39e3b6b6a574c2540863e20bf6ef2da0fd0b2004c49be14d1b58",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-13.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-13.webp",
+      "bytes": 22210,
+      "sha256": "df79eaf30bbd4c299126ced5e489bdea94f2b21fca19d4d0c826eb25747e43d9",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-14.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-14.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-14.webp",
+      "bytes": 29646,
+      "sha256": "e1cff142de71741080ec95927867169ac91ed95c798b37a42608159d8071fc19",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-15.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-15.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-15.webp",
+      "bytes": 34178,
+      "sha256": "047d58b859b7f0baa6eb4fd7fcc0a026d5af57b5fc2e3a06e4ac3cff0c8f26ef",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-16.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-16.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-16.webp",
+      "bytes": 39410,
+      "sha256": "94eb0ea1bcbb4ae5acec39eb036ad02f486b84305888b3769c3a7e8b7b835bf8",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-17.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-17.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-17.webp",
+      "bytes": 41006,
+      "sha256": "37f05cc5e6a4a16ebd16aa6c649c71c810b96b15c19d96070be6bca69cd33f10",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-18.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-18.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-18.webp",
+      "bytes": 31422,
+      "sha256": "d0e5dbc8633d0da070881af6119213ed55570ebee371942ebb6136518cffff9e",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-19.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-19.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-19.webp",
+      "bytes": 32780,
+      "sha256": "1edd8500243a8ee8a10385ce5909d89d9e90d40a14300df6b08f65240f0858a4",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-20.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-20.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-20.webp",
+      "bytes": 57692,
+      "sha256": "dfb129f99d673ea8cf384581bf1b05a29c65e6adad509d740d9e1c1c5fab3e11",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-21.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-21.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-21.webp",
+      "bytes": 58044,
+      "sha256": "169ed07b7f77dc83a69fba650c98471ad1648c0d33e0eaed66ca463732ea140a",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-22.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-22.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-22.webp",
+      "bytes": 38052,
+      "sha256": "4d2d9b44e1dfbb0c32d21aaacdf81af20dc72e1803292d48dcfce1a9f52f2346",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-23.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-23.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-23.webp",
+      "bytes": 27680,
+      "sha256": "dc51c8306fb08daa5fb60e253335838b865144ea808d4a174961ed903309429f",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-24.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-24.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-24.webp",
+      "bytes": 35100,
+      "sha256": "25d1ec1be292da0708cd1ae973e1b42e63522725c02f7038a5a64274caccbd32",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-25.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-25.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-25.webp",
+      "bytes": 43930,
+      "sha256": "a5818930e781e922564d2ccef47dbdc10808f92bcb667b0e52436c54ad3ece7c",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-26.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-26.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-26.webp",
+      "bytes": 31972,
+      "sha256": "3cee0c67cafc78c534f6163788ce696da0bf8b851fef2443207e0e5155273a7e",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-27.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-27.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-27.webp",
+      "bytes": 20958,
+      "sha256": "a3b3f0aa7db00ffd2fa5a8f72581d387c760d225a9e4ba661974c643be90a385",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-28.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-28.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-28.webp",
+      "bytes": 24462,
+      "sha256": "03e058561b031d6983c6b0e9cfe17efb46ffb63b8238fb84f83033dbcccf6cc7",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-29.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-29.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-29.webp",
+      "bytes": 100972,
+      "sha256": "0b3fff4786733706d270310c8a542efded5ae039682d225a286f8edcbcd590c6",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-30.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-30.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/gallery-30.webp",
+      "bytes": 59894,
+      "sha256": "fc55f951d9c96abc247ecac97640a12b2e67ee241fbd7fcf9769863f1b91a1c7",
+      "usedByRoutes": [
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "copiedTo": "Assets/Images/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "bytes": 301376,
+      "sha256": "4f2b98f1d77c99f3d7dc1659eaf4a450c978734acdb408d1b57ce3d2a239b88a",
+      "usedByRoutes": [
+        "/locations",
+        "/locations/calamvale",
+        "/locations/eight-mile-plains",
+        "/locations/rochedale",
+        "/projects/25-binnalong-st-rochedale-south"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-01.webp",
+      "bytes": 80710,
+      "sha256": "94ab1a6d594e34fa02eaec323a7d82ff665cd91db655f062eef4b56630245721",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-02.webp",
+      "bytes": 94570,
+      "sha256": "fddbc6d57a23f9fbed4f987cbade8bcaceac0c0207d2ea6f8eba8409be6b107f",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-03.webp",
+      "bytes": 98754,
+      "sha256": "1695ee65469944b35ede8ab55c7c5c3b06da53c060e99a71c022be2885e55482",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-04.webp",
+      "bytes": 114388,
+      "sha256": "a9511b734406c2d9f7e7ca24c6803dad5223d153d502171cb56915fcbcb36fa1",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-05.webp",
+      "bytes": 132296,
+      "sha256": "af19dd38b5d25968949fc75d8b4aa35ea0b58168b1d58a8c77ace2024960a038",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-06.webp",
+      "bytes": 123212,
+      "sha256": "08752c079c108551b8cfe81a3f976cd7e8a6bc8f5e1956fec737f83c7fa92893",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-07.webp",
+      "bytes": 140748,
+      "sha256": "720fd7edb07e184027b7d21a051212f67e2983a9ff027c37eb4e90b20e463e26",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-08.webp",
+      "bytes": 204940,
+      "sha256": "2870f7b8c31ee92dda2b24014a41160fa8d53e3f6a580487e8f3866df78d8aaf",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-09.webp",
+      "bytes": 104046,
+      "sha256": "8f0dc440d3e223809dffe3672117c946cd2f88cc6a861166a42df9dab43966a1",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-10.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-10.webp",
+      "bytes": 84466,
+      "sha256": "9be86d611c60ccffae829b0e491fa088649970c62dacd1c0e4d19874e66d3814",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-11.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-11.webp",
+      "bytes": 110966,
+      "sha256": "b2dd6688278034470b39ecf264d9662127e4178b0bc86e8a1d0ff5ddda03d85f",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-12.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-12.webp",
+      "bytes": 140924,
+      "sha256": "b688ecd958f8aa7fdedaa602faae886db4f4541b61d18cdd18f8d746de8c0ac7",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-13.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/gallery-13.webp",
+      "bytes": 386430,
+      "sha256": "92a764608a72229b8aae7312e1b73b45b5a3b8daa8640208c1a5635666826a54",
+      "usedByRoutes": [
+        "/projects/25-langford-st"
+      ]
+    },
+    {
+      "reference": "/projects/25-langford-st/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/hero.webp",
+      "copiedTo": "Assets/Images/projects/25-langford-st/hero.webp",
+      "bytes": 50338,
+      "sha256": "2f2ce38ccc7c36eece8d8a6c4f5d4ef6b7644e2488161672682977ba88da0d88",
+      "usedByRoutes": [
+        "/",
+        "/about",
+        "/blog",
+        "/blog/steel-frame-vs-timber-frame-which-is-better",
+        "/locations",
+        "/locations/brisbane-southside",
+        "/locations/eight-mile-plains",
+        "/locations/mount-gravatt",
+        "/locations/rochedale",
+        "/projects/25-langford-st",
+        "/residential"
+      ]
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/3-brooklyn-st-spring-mountain/gallery-01.webp",
+      "bytes": 158554,
+      "sha256": "62341a6c1e00177b5b1a3f62f72b3680c91f73c5e1b0b01cfd1ad1b1801c4a07",
+      "usedByRoutes": [
+        "/projects/3-brooklyn-st-spring-mountain"
+      ]
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/3-brooklyn-st-spring-mountain/gallery-02.webp",
+      "bytes": 141662,
+      "sha256": "5f6db57aca31feea6d4e2e9413cf1d8605ff39ca46b0198f5a722151574e2f9e",
+      "usedByRoutes": [
+        "/projects/3-brooklyn-st-spring-mountain"
+      ]
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/3-brooklyn-st-spring-mountain/gallery-03.webp",
+      "bytes": 78078,
+      "sha256": "5d3c1ce78790b954a7f636b662c56c4b19213c40e04e148915f7da64ddbe206a",
+      "usedByRoutes": [
+        "/projects/3-brooklyn-st-spring-mountain"
+      ]
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/3-brooklyn-st-spring-mountain/gallery-04.webp",
+      "bytes": 121824,
+      "sha256": "67e1f2a0401fa25c34dc062156fbd0c6e6d01db94910c8a8bc4b1e21096c84ae",
+      "usedByRoutes": [
+        "/projects/3-brooklyn-st-spring-mountain"
+      ]
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/3-brooklyn-st-spring-mountain/gallery-05.webp",
+      "bytes": 75876,
+      "sha256": "c2786af527d386ea149ea68cf9f46f6b2736aeb957ae58a2a42f1bf271da18ec",
+      "usedByRoutes": [
+        "/projects/3-brooklyn-st-spring-mountain"
+      ]
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/3-brooklyn-st-spring-mountain/gallery-06.webp",
+      "bytes": 623282,
+      "sha256": "c8f649009553562fd28f61dabb66ecc31c41697d94b50e9523c8ef88a6353a2d",
+      "usedByRoutes": [
+        "/projects/3-brooklyn-st-spring-mountain"
+      ]
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Assets/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e",
+      "usedByRoutes": [
+        "/",
+        "/about",
+        "/blog",
+        "/blog/custom-home-vs-project-home-what-is-the-difference",
+        "/blog/fixed-price-vs-cost-plus-contracts-what-should-homeowners-choose",
+        "/blog/how-much-does-it-cost-to-build-a-house-in-brisbane-2026",
+        "/blog/steel-frame-vs-timber-frame-which-is-better",
+        "/blog/step-by-step-guide-to-building-a-house-in-qld",
+        "/commercial",
+        "/locations",
+        "/locations/bahrs-scrub",
+        "/locations/brisbane-southside",
+        "/locations/calamvale",
+        "/locations/eight-mile-plains",
+        "/locations/greenbank",
+        "/locations/logan",
+        "/locations/mount-gravatt",
+        "/locations/pallara",
+        "/locations/rochedale",
+        "/locations/south-east-queensland",
+        "/process",
+        "/projects/14-verona-st-pallara",
+        "/projects/17-ormskirk-st-calamvale",
+        "/projects/18-skye-court-bahrs-scrub",
+        "/projects/25-binnalong-st-rochedale-south",
+        "/projects/25-langford-st",
+        "/projects/3-brooklyn-st-spring-mountain",
+        "/projects/3-dart-ave-kingston",
+        "/projects/3-stanley-st-mount-gravatt",
+        "/projects/35-ayesha-place-calamvale",
+        "/projects/49-herbert-st",
+        "/projects/8-vineyard-drive-greenbank",
+        "/projects/hi-def-project",
+        "/residential"
+      ]
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/3-dart-ave-kingston/gallery-01.webp",
+      "bytes": 105044,
+      "sha256": "d7f1c2021d7d0ff40c1bed7b5ba24d45806106c257fcedbfe97a3ef7bae60b64",
+      "usedByRoutes": [
+        "/projects/3-dart-ave-kingston"
+      ]
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/3-dart-ave-kingston/gallery-02.webp",
+      "bytes": 111060,
+      "sha256": "781d238ccee401ac75b1f183b06097f301bf66227f73895ce1457092f89456d3",
+      "usedByRoutes": [
+        "/projects/3-dart-ave-kingston"
+      ]
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/3-dart-ave-kingston/gallery-03.webp",
+      "bytes": 181206,
+      "sha256": "b1600fb72efca840971aa39ccfb6332897026cff676bcfa5c87c26fb26171e0c",
+      "usedByRoutes": [
+        "/projects/3-dart-ave-kingston"
+      ]
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/3-dart-ave-kingston/gallery-04.webp",
+      "bytes": 66334,
+      "sha256": "1a772f3d7e47de60dac1f82a40718cb3077f5a5c9b795d564fdac9ca8a8b080c",
+      "usedByRoutes": [
+        "/projects/3-dart-ave-kingston"
+      ]
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/3-dart-ave-kingston/gallery-05.webp",
+      "bytes": 80118,
+      "sha256": "ce01fe9131283badc5f82b25cf4869b9958ff03525a1d95b42a8f86351cf13a0",
+      "usedByRoutes": [
+        "/projects/3-dart-ave-kingston"
+      ]
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/3-dart-ave-kingston/gallery-06.webp",
+      "bytes": 294958,
+      "sha256": "445f9d779d8cc872d660c0d3ae46e87b02982b622ff408d1514e1d06128f1d03",
+      "usedByRoutes": [
+        "/projects/3-dart-ave-kingston"
+      ]
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/3-dart-ave-kingston/gallery-07.webp",
+      "bytes": 533734,
+      "sha256": "fd66627fe738c760c18ff2612d5021a8186f43596cb5939eb89c1a8c24bc674f",
+      "usedByRoutes": [
+        "/projects/3-dart-ave-kingston"
+      ]
+    },
+    {
+      "reference": "/projects/3-dart-ave-kingston/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-dart-ave-kingston/hero.webp",
+      "copiedTo": "Assets/Images/projects/3-dart-ave-kingston/hero.webp",
+      "bytes": 117330,
+      "sha256": "8c1c80be891c9f623036d13490d8a03998b05b6f64ac96e3f9421e3b9af3e1f5",
+      "usedByRoutes": [
+        "/",
+        "/about",
+        "/locations",
+        "/locations/bahrs-scrub",
+        "/locations/logan",
+        "/projects/3-dart-ave-kingston"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-01.webp",
+      "bytes": 122870,
+      "sha256": "1a4499c7ce30978951e0675d7ce84e585520b1e7f929c95b88cfcaf756279b96",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-02.webp",
+      "bytes": 119084,
+      "sha256": "6ab314810c8cbb8d7b7f2880f653aa7b1b5bb2ee7f1bac7f49e7ef13e8266362",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-03.webp",
+      "bytes": 131038,
+      "sha256": "1c1beddac092b82dfc412b5a8fc71e6b2fb19cf224d602947e12aa647cbb140d",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-04.webp",
+      "bytes": 81818,
+      "sha256": "e9b5461ad46f4e63758d75557dbef9626541b4736b01210842af208261308b77",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-05.webp",
+      "bytes": 120886,
+      "sha256": "10aa1b6a913c437d93ece28a07808975d57607e6e0b04bddcd8a35feca66befb",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-06.webp",
+      "bytes": 127366,
+      "sha256": "2b74e5d4e91296bc42b7d44f7b24a504d9be83e50026baeaf600fc3c17fec6eb",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-07.webp",
+      "bytes": 256368,
+      "sha256": "4be473060e8a78c524fb5fda7fda003a181e4a4a80c97216d6946417982ffd5f",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-08.webp",
+      "bytes": 173264,
+      "sha256": "63883a22e3bf4e571de57cf2c601f8bbe6ea4e43c2fcb9de694d75c2c7ff7c1c",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-09.webp",
+      "bytes": 238240,
+      "sha256": "7813eeb4caa6be4cec88a9cef6758715a01e344f392653e7ec9b7e85e67e1056",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-10.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-10.webp",
+      "bytes": 138478,
+      "sha256": "3765b63b5b15207e9dc6600861a9d07647e8b4bfdd9b68433825e7b8c153fc19",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-11.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-11.webp",
+      "bytes": 162602,
+      "sha256": "3112f6255647e55de92e503149f401a5ab38a5c6351e0199d26f5b9dc29094bb",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-12.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-12.webp",
+      "bytes": 325952,
+      "sha256": "ed4b658b8bcbfcbe147ccd84c676ef1c41938f8aac7cfa9feca53a041acb0b62",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-13.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/gallery-13.webp",
+      "bytes": 519900,
+      "sha256": "2d96bcae1b6729aeb4c4428dedd964db7aaeb13e5e4c75f7baa723c7d746c0f4",
+      "usedByRoutes": [
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/hero.webp",
+      "copiedTo": "Assets/Images/projects/3-stanley-st-mount-gravatt/hero.webp",
+      "bytes": 101672,
+      "sha256": "c33198989fcd349311b11f025964c84e455881acbf8528dfa9518e8bcde4a3ce",
+      "usedByRoutes": [
+        "/blog",
+        "/blog/custom-home-vs-project-home-what-is-the-difference",
+        "/commercial",
+        "/locations",
+        "/locations/brisbane-southside",
+        "/locations/eight-mile-plains",
+        "/locations/mount-gravatt",
+        "/projects/3-stanley-st-mount-gravatt"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-01.webp",
+      "bytes": 176332,
+      "sha256": "1f156928e3d0698c57cbf1f5397a7aa64c3784b01a540d8d9ac7c19257c93481",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-02.webp",
+      "bytes": 113576,
+      "sha256": "14ec7ca3dca34a01da6c98e5d6cd1d60f1e517668181910ede5e6e0a768d5495",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-03.webp",
+      "bytes": 106940,
+      "sha256": "45cc046dce41a8c967c446d5402acfc089c7d6c60587a7060b7065b3154964e2",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-04.webp",
+      "bytes": 67906,
+      "sha256": "27070a4f5e012a2182d69dcc5a78b549a0ebbc7da1cbcd66c1bd67e1634ee381",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-05.webp",
+      "bytes": 98304,
+      "sha256": "e9247ca6fbddb535da5211d0d35842b6dcc7463d6604deedb8ad7c207d86c9fb",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-06.webp",
+      "bytes": 73442,
+      "sha256": "82102dd12873624c15e5d8931f6d873a2900e4c498e01a08614bec17955127fd",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-07.webp",
+      "bytes": 143248,
+      "sha256": "17ab631bfc3e89164b7851a160add174e119ec6ebf91addaa199962731f6ce77",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-08.webp",
+      "bytes": 58776,
+      "sha256": "0c794bc95f5fa603e346a4805c974444e89b548ba1640e13d93b5c446f0f833d",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-09.webp",
+      "bytes": 54870,
+      "sha256": "6d5c79958fcc4eff7d0b72731aeea302f169a4e5c01e955698eb8170de6f069e",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-10.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/gallery-10.webp",
+      "bytes": 508108,
+      "sha256": "45dfcbcd2efae9e8cb2c43bf985326b3d14e3fbad4a0f958a59864e290f168d6",
+      "usedByRoutes": [
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/hero.webp",
+      "copiedTo": "Assets/Images/projects/35-ayesha-place-calamvale/hero.webp",
+      "bytes": 82542,
+      "sha256": "0e6183418537a3ab88bf4ea29db74ba022e2a5b269b06283b8c68ca154f2b6bf",
+      "usedByRoutes": [
+        "/blog",
+        "/locations/calamvale",
+        "/projects/35-ayesha-place-calamvale"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-01.webp",
+      "bytes": 543446,
+      "sha256": "ad5c88b6204d68ef4281aafcf90f76cb1c54ead2a0402589a9f38cbe5bc7004c",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-02.webp",
+      "bytes": 390854,
+      "sha256": "b9f65ff2004dc8161e1193894d285edd2afcb229eab3011f58aefc957959a7d0",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-03.webp",
+      "bytes": 550308,
+      "sha256": "8389fcbb6e2ce5e8260e66e631a783443b0421a147df0f63b1c3262bfb4a2ae2",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-04.webp",
+      "bytes": 113940,
+      "sha256": "52c467f39402952d734f671ac6495e62ae4029d3069d7c3c4b61be41bf8a2a17",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-05.webp",
+      "bytes": 158678,
+      "sha256": "f33f4ddeb2e73577979d0142b5baeced4fa89168c6dcd6bed7d2c9ceb92d38eb",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-06.webp",
+      "bytes": 219770,
+      "sha256": "fe6ee26003ec16a845b83f76feb7475aeb04754eaecc90e45a57555da47939ce",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-07.webp",
+      "bytes": 137880,
+      "sha256": "6d761bee965d8925d80b4c384590f3ab7ac50c0b43315af3bb65a07b89ced93f",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-08.webp",
+      "bytes": 174220,
+      "sha256": "a25fab021d22db3b533dd4d1f2e8dc364b313c2fe148e336828bb2e4d1907999",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-09.webp",
+      "bytes": 248566,
+      "sha256": "4573d94b682660d5d311d390d21a265c401a34ff9d39614b8c0eb791ba0ae8ec",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-10.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-10.webp",
+      "bytes": 113424,
+      "sha256": "606bb500fb311733824674b5da87745781fbb121acdaaddd8142061d23b144cb",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-11.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-11.webp",
+      "bytes": 132848,
+      "sha256": "afcdbf126a86921548563d43b9e4a76c64fd4d54018f1f78766393f709e84e36",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-12.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-12.webp",
+      "bytes": 224308,
+      "sha256": "edea28e7442aa3130ab91815aa7848fe502e7c6b6758da1cbf3cc6fc7376aef1",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-13.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-13.webp",
+      "bytes": 283438,
+      "sha256": "aaba1deba33ddad8097628242c563ed5475b99b61d904baa393ed3448c5005ed",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-14.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-14.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-14.webp",
+      "bytes": 150680,
+      "sha256": "fd07cd0b2cd494432767b9910ab8314f06e2c30149198962b53cfa69a2f676a5",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-15.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-15.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/gallery-15.webp",
+      "bytes": 195138,
+      "sha256": "6b4ff68f7e57b9a77fe3ed50285daa449950ce54eb985632fda5a803d9f56ec8",
+      "usedByRoutes": [
+        "/projects/49-herbert-st"
+      ]
+    },
+    {
+      "reference": "/projects/49-herbert-st/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/hero.webp",
+      "copiedTo": "Assets/Images/projects/49-herbert-st/hero.webp",
+      "bytes": 80742,
+      "sha256": "b0c60aa633f26cc950506f455bada387fe1200bcc8bd2561364094fae891dca3",
+      "usedByRoutes": [
+        "/blog",
+        "/blog/step-by-step-guide-to-building-a-house-in-qld",
+        "/contact",
+        "/locations",
+        "/locations/mount-gravatt",
+        "/locations/rochedale",
+        "/locations/south-east-queensland",
+        "/projects/49-herbert-st",
+        "/residential"
+      ]
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/8-vineyard-drive-greenbank/gallery-01.webp",
+      "bytes": 514152,
+      "sha256": "0a076f025d6b4eff3940638d8e7be5f2bc87d356fdb86b77fe15a6855f223990",
+      "usedByRoutes": [
+        "/projects/8-vineyard-drive-greenbank"
+      ]
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/8-vineyard-drive-greenbank/gallery-02.webp",
+      "bytes": 480180,
+      "sha256": "c615c93f9a198b1a163b9e51a66f40f5d7c6ac769528d90af86cb81b9c842450",
+      "usedByRoutes": [
+        "/projects/8-vineyard-drive-greenbank"
+      ]
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/8-vineyard-drive-greenbank/gallery-03.webp",
+      "bytes": 244784,
+      "sha256": "61c17dd7d977eb13ea18fea1bef53d39c3061a793bace0c533d577e3132fd0df",
+      "usedByRoutes": [
+        "/projects/8-vineyard-drive-greenbank"
+      ]
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/8-vineyard-drive-greenbank/gallery-04.webp",
+      "bytes": 87770,
+      "sha256": "8ea60f7da0ad3ad12c1f3629a94ad04469d3837b92a9167dcdf04f6f5700a0f7",
+      "usedByRoutes": [
+        "/projects/8-vineyard-drive-greenbank"
+      ]
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/8-vineyard-drive-greenbank/gallery-05.webp",
+      "bytes": 141048,
+      "sha256": "cfcdc29a0b0565e5198483f6b3b797a04fe11398248d27509de87517a70d991e",
+      "usedByRoutes": [
+        "/projects/8-vineyard-drive-greenbank"
+      ]
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/8-vineyard-drive-greenbank/gallery-06.webp",
+      "bytes": 205568,
+      "sha256": "d5ac5cd3765c55a0347c26644f4aeaddc10e7d4624ac8fec042074a4af1db15f",
+      "usedByRoutes": [
+        "/projects/8-vineyard-drive-greenbank"
+      ]
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/8-vineyard-drive-greenbank/gallery-07.webp",
+      "bytes": 238604,
+      "sha256": "3368ffb4254f1c080417ba60cc174eab2cffed729de0ca4e8bcf1d3a69fa6fa0",
+      "usedByRoutes": [
+        "/projects/8-vineyard-drive-greenbank"
+      ]
+    },
+    {
+      "reference": "/projects/8-vineyard-drive-greenbank/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/8-vineyard-drive-greenbank/hero.webp",
+      "copiedTo": "Assets/Images/projects/8-vineyard-drive-greenbank/hero.webp",
+      "bytes": 514152,
+      "sha256": "0a076f025d6b4eff3940638d8e7be5f2bc87d356fdb86b77fe15a6855f223990",
+      "usedByRoutes": [
+        "/blog",
+        "/blog/fixed-price-vs-cost-plus-contracts-what-should-homeowners-choose",
+        "/blog/how-much-does-it-cost-to-build-a-house-in-brisbane-2026",
+        "/locations",
+        "/locations/bahrs-scrub",
+        "/locations/greenbank",
+        "/locations/logan",
+        "/locations/pallara",
+        "/projects/8-vineyard-drive-greenbank",
+        "/residential"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-01.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-01.webp",
+      "bytes": 110360,
+      "sha256": "e1025ebdf4af2090ec37f1f036d8b7025ef6bb67ad1425dc32cf29e8b75edf63",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-02.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-02.webp",
+      "bytes": 105856,
+      "sha256": "d2ae63f0ec287edb13f2607bd4079ed9fc173e2d1bc185b3579177835d6b8940",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-03.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-03.webp",
+      "bytes": 110546,
+      "sha256": "4ee430f8bd536eecd3e60726a6f779800bf56bfd1ac0f636af06820c1215f7ab",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-04.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-04.webp",
+      "bytes": 55932,
+      "sha256": "1b70a8856965e3220672114d9c61c2241aac034355bed4e92b1cdbda8932d8c6",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-05.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-05.webp",
+      "bytes": 62700,
+      "sha256": "e2c7dda4b589b85dace7fe8be1c23ed07992bab7f8a566cc938bd4915cdbdcb1",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-06.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-06.webp",
+      "bytes": 82294,
+      "sha256": "645fb9c87068e447353ed80954f8c4617a21cc74c9cef620e480102df1baa35f",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-07.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-07.webp",
+      "bytes": 92608,
+      "sha256": "bf42013d90c4cfd3055fad7a51606d9b87acd75cfb322e2d8e5b0789a7e3b403",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-08.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-08.webp",
+      "bytes": 597390,
+      "sha256": "198ea39f502eb171154d8d9ad0ce46828c6b61220b1073800ac60b213118b2a2",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-09.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/gallery-09.webp",
+      "bytes": 362382,
+      "sha256": "88a94ec0c42412e9ef64daf175e1092d9ed587c91d4f8cd25c02053f406bd3d3",
+      "usedByRoutes": [
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/projects/hi-def-project/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/hero.webp",
+      "copiedTo": "Assets/Images/projects/hi-def-project/hero.webp",
+      "bytes": 72938,
+      "sha256": "1eb51fcefbd60e520f58ccd9fa71cea1396a86c212754e10702c40314f3555b8",
+      "usedByRoutes": [
+        "/process",
+        "/projects/hi-def-project"
+      ]
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Assets/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f",
+      "usedByRoutes": [
+        "/",
+        "/about",
+        "/admin",
+        "/blog",
+        "/blog/custom-home-vs-project-home-what-is-the-difference",
+        "/blog/fixed-price-vs-cost-plus-contracts-what-should-homeowners-choose",
+        "/blog/how-much-does-it-cost-to-build-a-house-in-brisbane-2026",
+        "/blog/steel-frame-vs-timber-frame-which-is-better",
+        "/blog/step-by-step-guide-to-building-a-house-in-qld",
+        "/commercial",
+        "/contact",
+        "/inclusions",
+        "/locations",
+        "/locations/bahrs-scrub",
+        "/locations/brisbane-southside",
+        "/locations/calamvale",
+        "/locations/eight-mile-plains",
+        "/locations/greenbank",
+        "/locations/logan",
+        "/locations/mount-gravatt",
+        "/locations/pallara",
+        "/locations/rochedale",
+        "/locations/south-east-queensland",
+        "/maintenance",
+        "/process",
+        "/projects",
+        "/projects/14-verona-st-pallara",
+        "/projects/17-ormskirk-st-calamvale",
+        "/projects/18-skye-court-bahrs-scrub",
+        "/projects/25-binnalong-st-rochedale-south",
+        "/projects/25-langford-st",
+        "/projects/3-brooklyn-st-spring-mountain",
+        "/projects/3-dart-ave-kingston",
+        "/projects/3-stanley-st-mount-gravatt",
+        "/projects/35-ayesha-place-calamvale",
+        "/projects/49-herbert-st",
+        "/projects/8-vineyard-drive-greenbank",
+        "/projects/hi-def-project",
+        "/residential"
+      ]
+    },
+    {
+      "reference": "/videos/hero-langford.mp4",
+      "category": "Videos",
+      "originalLocation": "public/videos/hero-langford.mp4",
+      "copiedTo": "Assets/Videos/videos/hero-langford.mp4",
+      "bytes": 1531744,
+      "sha256": "49bf15b75f98cd806d6bef295d86db443f9e4007199907b60b90c18fd4ae149c",
+      "usedByRoutes": [
+        "/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "pageName": "Project: 14 Verona St Pallara",
+  "originalRoute": "/projects/14-verona-st-pallara",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-01.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-01.webp",
+      "bytes": 95626,
+      "sha256": "761cfefe974c88dae0f23916c2dd58e408723a8392718cbb0fe99a24ccabba81"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-02.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-02.webp",
+      "bytes": 90230,
+      "sha256": "d70d3dd72c64700b1123b40ee7dcd6b74e9dbe09ba988eb6cb9bb6aa022eb065"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-03.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-03.webp",
+      "bytes": 136562,
+      "sha256": "9ba62fc25e259e79ab14ce3a4c8c979cac30858aa64cfa3e25e240e5b82a2425"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-04.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-04.webp",
+      "bytes": 103792,
+      "sha256": "0ea4e68a10c73314a76962a4abd8f3db14589921d65eccb2d0fbf0f463699fd8"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-05.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-05.webp",
+      "bytes": 159100,
+      "sha256": "58a8a57994a8b0abf0df99b27e42c079d2456cec60e4c3193f133ee8e1316905"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-06.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-06.webp",
+      "bytes": 119928,
+      "sha256": "1a0bbad3b44eaf1be900965f52ce7c5b0fb9f72faa1265269b7f58b40f3f355a"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-07.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-07.webp",
+      "bytes": 115890,
+      "sha256": "24ef2e6019bb2a7e01451668f49aa78f03af8014fccdca80e49e888386a9c04b"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-08.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-08.webp",
+      "bytes": 96642,
+      "sha256": "16c99911ffd08695bee9e31ba5d3e24aa3477ed578fa69f1799819491b5e2dbb"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-09.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-09.webp",
+      "bytes": 96728,
+      "sha256": "a11da4e1975bab4fe8abc51c783852d247e4b5b4ebf85d597fb28671a392007c"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-10.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-10.webp",
+      "bytes": 232418,
+      "sha256": "011a10f3daeda2391b27c5942caad659e4fbbfa3ed0edb1922ecc3eeab43b8b9"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/gallery-11.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/gallery-11.webp",
+      "bytes": 306038,
+      "sha256": "f68aae75bc3379d96833591846216dac5e51c95f38a8fc0875b66d65e6b0dc98"
+    },
+    {
+      "reference": "/projects/14-verona-st-pallara/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/14-verona-st-pallara/hero.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/14-verona-st-pallara/hero.webp",
+      "bytes": 57448,
+      "sha256": "dd9a34806abd3977aa9b01dd83e7fb1cdb6572fa7315ff36bc53e3e3b936de50"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/14-verona-st-pallara/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/14-verona-st-pallara/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/14-verona-st-pallara.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

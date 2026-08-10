@@ -1,0 +1,47 @@
+{
+  "generatedAt": "2026-08-05T12:47:26.585Z",
+  "routes": 39,
+  "uniqueAssets": 191,
+  "categoryCounts": {
+    "Logos": 1,
+    "Images": 184,
+    "Documents": 1,
+    "Videos": 1,
+    "Icon": 4
+  },
+  "sharedAssets": 15,
+  "duplicateGroups": [
+    {
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35",
+      "files": [
+        "public/arc-logo.svg",
+        "public/favicon.svg"
+      ]
+    },
+    {
+      "sha256": "0a076f025d6b4eff3940638d8e7be5f2bc87d356fdb86b77fe15a6855f223990",
+      "files": [
+        "public/projects/8-vineyard-drive-greenbank/hero.webp",
+        "public/projects/8-vineyard-drive-greenbank/gallery-01.webp"
+      ]
+    }
+  ],
+  "unusedPublicAssets": [
+    "public/admin/config.yml",
+    "public/favicon-16x16.png",
+    "public/favicon-32x32.png",
+    "public/favicon.png",
+    "public/file.svg",
+    "public/globe.svg",
+    "public/icon-192.png",
+    "public/icon-512.png",
+    "public/logo-tight.webp",
+    "public/logo.png",
+    "public/logo.webp",
+    "public/next.svg",
+    "public/vercel.svg",
+    "public/videos/hero-langford-poster.jpg",
+    "public/window.svg"
+  ],
+  "missingAssets": []
+}

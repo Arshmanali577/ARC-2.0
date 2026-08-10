@@ -1,0 +1,37 @@
+{
+  "description": "Single consolidated folder for the site's browser favicon and touch-icon files.",
+  "assets": [
+    {
+      "reference": "/favicon.svg",
+      "category": "Icon",
+      "originalLocation": "public/favicon.svg",
+      "copiedTo": "Icon/favicon.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/favicon-96x96.png",
+      "category": "Icon",
+      "originalLocation": "public/favicon-96x96.png",
+      "copiedTo": "Icon/favicon-96x96.png",
+      "bytes": 1435,
+      "sha256": "556599c80f611bd2234a37243dc90137f0d7a476fb5357f251deafe3fca7f302"
+    },
+    {
+      "reference": "/favicon.ico",
+      "category": "Icon",
+      "originalLocation": "public/favicon.ico",
+      "copiedTo": "Icon/favicon.ico",
+      "bytes": 1698,
+      "sha256": "93ef4a0899bb248b19a6d49cb3bdee8085075fc85b496241df5fd24ffb9a2dbd"
+    },
+    {
+      "reference": "/apple-touch-icon.png",
+      "category": "Icon",
+      "originalLocation": "public/apple-touch-icon.png",
+      "copiedTo": "Icon/apple-touch-icon.png",
+      "bytes": 3048,
+      "sha256": "c678914ea5162e6b2e5ff195d5b36a8dc48c881079f6706fac11cf31a07b4bf5"
+    }
+  ]
+}

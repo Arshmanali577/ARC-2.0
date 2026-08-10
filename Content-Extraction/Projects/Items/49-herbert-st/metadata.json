@@ -1,0 +1,242 @@
+{
+  "pageName": "Project: 49 Herbert St",
+  "originalRoute": "/projects/49-herbert-st",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/49-herbert-st/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-01.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-01.webp",
+      "bytes": 543446,
+      "sha256": "ad5c88b6204d68ef4281aafcf90f76cb1c54ead2a0402589a9f38cbe5bc7004c"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-02.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-02.webp",
+      "bytes": 390854,
+      "sha256": "b9f65ff2004dc8161e1193894d285edd2afcb229eab3011f58aefc957959a7d0"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-03.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-03.webp",
+      "bytes": 550308,
+      "sha256": "8389fcbb6e2ce5e8260e66e631a783443b0421a147df0f63b1c3262bfb4a2ae2"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-04.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-04.webp",
+      "bytes": 113940,
+      "sha256": "52c467f39402952d734f671ac6495e62ae4029d3069d7c3c4b61be41bf8a2a17"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-05.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-05.webp",
+      "bytes": 158678,
+      "sha256": "f33f4ddeb2e73577979d0142b5baeced4fa89168c6dcd6bed7d2c9ceb92d38eb"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-06.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-06.webp",
+      "bytes": 219770,
+      "sha256": "fe6ee26003ec16a845b83f76feb7475aeb04754eaecc90e45a57555da47939ce"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-07.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-07.webp",
+      "bytes": 137880,
+      "sha256": "6d761bee965d8925d80b4c384590f3ab7ac50c0b43315af3bb65a07b89ced93f"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-08.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-08.webp",
+      "bytes": 174220,
+      "sha256": "a25fab021d22db3b533dd4d1f2e8dc364b313c2fe148e336828bb2e4d1907999"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-09.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-09.webp",
+      "bytes": 248566,
+      "sha256": "4573d94b682660d5d311d390d21a265c401a34ff9d39614b8c0eb791ba0ae8ec"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-10.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-10.webp",
+      "bytes": 113424,
+      "sha256": "606bb500fb311733824674b5da87745781fbb121acdaaddd8142061d23b144cb"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-11.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-11.webp",
+      "bytes": 132848,
+      "sha256": "afcdbf126a86921548563d43b9e4a76c64fd4d54018f1f78766393f709e84e36"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-12.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-12.webp",
+      "bytes": 224308,
+      "sha256": "edea28e7442aa3130ab91815aa7848fe502e7c6b6758da1cbf3cc6fc7376aef1"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-13.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-13.webp",
+      "bytes": 283438,
+      "sha256": "aaba1deba33ddad8097628242c563ed5475b99b61d904baa393ed3448c5005ed"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-14.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-14.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-14.webp",
+      "bytes": 150680,
+      "sha256": "fd07cd0b2cd494432767b9910ab8314f06e2c30149198962b53cfa69a2f676a5"
+    },
+    {
+      "reference": "/projects/49-herbert-st/gallery-15.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/gallery-15.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/gallery-15.webp",
+      "bytes": 195138,
+      "sha256": "6b4ff68f7e57b9a77fe3ed50285daa449950ce54eb985632fda5a803d9f56ec8"
+    },
+    {
+      "reference": "/projects/49-herbert-st/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/hero.webp",
+      "copiedTo": "Projects/Items/49-herbert-st/Images/projects/49-herbert-st/hero.webp",
+      "bytes": 80742,
+      "sha256": "b0c60aa633f26cc950506f455bada387fe1200bcc8bd2561364094fae891dca3"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/49-herbert-st/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/49-herbert-st/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/49-herbert-st.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

@@ -1,0 +1,354 @@
+{
+  "pageName": "Project: 17 Ormskirk St Calamvale",
+  "originalRoute": "/projects/17-ormskirk-st-calamvale",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-01.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-01.webp",
+      "bytes": 180306,
+      "sha256": "b291522e79997e181c624ac2094a7053db5f24a88d89ebeececa1b96d19d98f1"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-02.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-02.webp",
+      "bytes": 32660,
+      "sha256": "6eae84088320e1b5ec8bf0b47aefab0abe01b98b7b867232ffb4485af01ff2a7"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-03.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-03.webp",
+      "bytes": 42154,
+      "sha256": "586725d90fefa314655c36b71bf45ac41ebcdc66104c5c3e5a0927a70a5bd96e"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-04.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-04.webp",
+      "bytes": 48196,
+      "sha256": "a7adb1cce31bdc98ad189359e55ff8a499504effdbf79de83c16983e13ca15e5"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-05.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-05.webp",
+      "bytes": 53770,
+      "sha256": "68c120a125c0092a3fd90940e61b386e43eb001eb9a70ecba65fd9ae293ed296"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-06.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-06.webp",
+      "bytes": 35948,
+      "sha256": "0faaac7d308509bf48e9b63b120681221bf8c62f3b4a364437e7ea67c4fa7a5b"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-07.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-07.webp",
+      "bytes": 78400,
+      "sha256": "020a4caf3bb523d444f5715a3b3ad2f57ba9b50d6293bb3c23e96607dae51ce0"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-08.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-08.webp",
+      "bytes": 30692,
+      "sha256": "390509e05acfd537a83acd6edbfebe1ecfb50a85113a84ab30e42fee98ac8508"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-09.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-09.webp",
+      "bytes": 29294,
+      "sha256": "71cf86c59c90da0462a5e9d286e1abd81af7e31b79e143b1c87284aa05a3be3f"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-10.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-10.webp",
+      "bytes": 27178,
+      "sha256": "28354181682f5f28b4e350d5898d3a8561312afa023ae568cadf667c96d4d95e"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-11.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-11.webp",
+      "bytes": 35652,
+      "sha256": "c2245c17a278b71854f8a25d557daf68a4bf2f39ffc5395f09896b59a826f98a"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-12.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-12.webp",
+      "bytes": 32688,
+      "sha256": "26586a18ef6fd635af21a26f31323133b92e0c07633bd9010c2f8f9aaf7a84cf"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-13.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-13.webp",
+      "bytes": 32168,
+      "sha256": "143e6f7ef9ea89c27c366132c96e8c6ca2d5727eb7eef99215a3143f4b5d041a"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-14.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-14.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-14.webp",
+      "bytes": 25094,
+      "sha256": "22b2f91aad13a390fe53b252585b3544fa0488e5922ce0ceb1874572f37ae140"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-15.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-15.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-15.webp",
+      "bytes": 25038,
+      "sha256": "03a50b633ce02dc747a132ca8ff72730b3c5bb5f425050df45b0318cae31bd81"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-16.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-16.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-16.webp",
+      "bytes": 36910,
+      "sha256": "3348a7e8d722e5ce749833b55d9eec33b65bd4bb4cd08517b035753338e7f983"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-17.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-17.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-17.webp",
+      "bytes": 67220,
+      "sha256": "ff6d3dada4b2bd9ad340dc34170f41124410df8f30fc20badab383da90996724"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-18.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-18.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-18.webp",
+      "bytes": 61138,
+      "sha256": "8f01438a68253bc4d2440f0da743925702960041e87ed293c4bdcfdaf67ec111"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-19.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-19.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-19.webp",
+      "bytes": 39832,
+      "sha256": "3533dcca02f11d29a77482354208582c9a7e637865533390b52c0d8510d3ed72"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-20.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-20.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-20.webp",
+      "bytes": 55256,
+      "sha256": "5248c153620cf55e593de4297cd164dfdb6b930f136f63d904cae6c5a7356e06"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-21.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-21.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-21.webp",
+      "bytes": 51964,
+      "sha256": "71c82259f1eafc961c4acaa6f941fa049edbef724c44abfa41fccbdc162be0fa"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-22.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-22.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-22.webp",
+      "bytes": 33466,
+      "sha256": "622a3f1a88aa8c094ac829693712f2aa45b11630b2d586fd96e319fff7d8dad2"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-23.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-23.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-23.webp",
+      "bytes": 82556,
+      "sha256": "bc1c704d1a786d8daa66d44f9f21d20179dc7eb61a1b0a324adb1d64af7dabab"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-24.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-24.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-24.webp",
+      "bytes": 51692,
+      "sha256": "cad69d36e165d3f2d0f8e26e8842bcff76180343c0e722f9bc75d44c32727c74"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-25.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-25.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-25.webp",
+      "bytes": 37662,
+      "sha256": "2071cfd2f03c97c589f5b1ea0fde19af453a325a90def5df9bd9c0642d61854c"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-26.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-26.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-26.webp",
+      "bytes": 55628,
+      "sha256": "0549e2731592d1b44e0698cf8f51e982be50e6d142891679a43e6e48067c67a7"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-27.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-27.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-27.webp",
+      "bytes": 44144,
+      "sha256": "58fe6100ef05ea1ea688e9f7c56bbe52838001948d4b36ab7cffc1aea54da5ad"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-28.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-28.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-28.webp",
+      "bytes": 71214,
+      "sha256": "0de4b8ef72626cfbb081ac36c787cad68ceefb506014cc303abd8e2017ffa4d5"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/gallery-29.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/gallery-29.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/gallery-29.webp",
+      "bytes": 146650,
+      "sha256": "224cdc0649e42b863e147b23882f284039af13d92d96e280566a6afc3786348b"
+    },
+    {
+      "reference": "/projects/17-ormskirk-st-calamvale/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/17-ormskirk-st-calamvale/hero.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/17-ormskirk-st-calamvale/hero.webp",
+      "bytes": 498152,
+      "sha256": "fb1b61cc887c513419ae1ad782e686650551d4d00bd16ee9920359db7012a5ca"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/17-ormskirk-st-calamvale/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/17-ormskirk-st-calamvale/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/17-ormskirk-st-calamvale.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

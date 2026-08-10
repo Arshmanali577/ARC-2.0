@@ -1,0 +1,132 @@
+{
+  "pageName": "Blo: Step By Step Guide To Building A House In Qld",
+  "originalRoute": "/blog/step-by-step-guide-to-building-a-house-in-qld",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/blog/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/blog/[slug]/BlogDetailClient.tsx",
+    "src/app/blog/[slug]/page.tsx",
+    "src/app/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/SocialShare.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/blog.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Blog/Posts/step-by-step-guide-to-building-a-house-in-qld/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Blog/Posts/step-by-step-guide-to-building-a-house-in-qld/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/49-herbert-st/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/49-herbert-st/hero.webp",
+      "copiedTo": "Blog/Posts/step-by-step-guide-to-building-a-house-in-qld/Images/projects/49-herbert-st/hero.webp",
+      "bytes": 80742,
+      "sha256": "b0c60aa633f26cc950506f455bada387fe1200bcc8bd2561364094fae891dca3"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Blog/Posts/step-by-step-guide-to-building-a-house-in-qld/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedExcerpt}",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}",
+    "https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}"
+  ],
+  "apisUsed": [
+    "https://arcbuilders.com.au/blog/${post.slug}",
+    "https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedExcerpt}",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}",
+    "https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}"
+  ],
+  "textFile": "Blog/Posts/step-by-step-guide-to-building-a-house-in-qld/Text/content.md",
+  "originalContentSourceFiles": [
+    "Blog/Posts/step-by-step-guide-to-building-a-house-in-qld/Text/Original/step-by-step-guide-to-building-a-house-in-qld.md"
+  ],
+  "renderedHtmlSource": ".next/server/app/blog/step-by-step-guide-to-building-a-house-in-qld.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

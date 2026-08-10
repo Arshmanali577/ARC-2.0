@@ -1,0 +1,362 @@
+{
+  "pageName": "Project: 25 Binnalong St Rochedale South",
+  "originalRoute": "/projects/25-binnalong-st-rochedale-south",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-01.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-01.webp",
+      "bytes": 113030,
+      "sha256": "45de792c51b71750ff874b2e2f4e0d7009d62f65dc5c822b599ca2beaf122216"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-02.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-02.webp",
+      "bytes": 15662,
+      "sha256": "14f27ec1d1c233097f6486a3526a761c0aae2ccb7245b274ad331d9a31821fe7"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-03.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-03.webp",
+      "bytes": 32992,
+      "sha256": "e678c1944e7548895de8f96e2c83101e4558e0efb9e17674b0be9aa0ca9e80b4"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-04.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-04.webp",
+      "bytes": 32184,
+      "sha256": "fdf36fe01e23767d20bca510c470a080206e0d7f3bf4526f2ad69adf44c0b98c"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-05.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-05.webp",
+      "bytes": 17736,
+      "sha256": "491826344a81cc2ba7459cca378513370b825adc0dd98eeee2792f9bd082e650"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-06.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-06.webp",
+      "bytes": 28836,
+      "sha256": "3040ffd9bdfe47e9d92e472b18ee975dc266a897fea00006919a994ebdfce48c"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-07.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-07.webp",
+      "bytes": 20788,
+      "sha256": "85cf4ede97a945e7fbe6d7e72ce7fb91b179b279ad7c1512e5acb420fc75a09a"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-08.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-08.webp",
+      "bytes": 37614,
+      "sha256": "f11eade00b45468df80e127f4f9d365717d9fe9900e4174b85e4e5a414c7cf0c"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-09.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-09.webp",
+      "bytes": 28780,
+      "sha256": "1850d8653dddb5548cf4aab413814614a8bd47e9f7b6b59f7ca5fbda07692136"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-10.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-10.webp",
+      "bytes": 23462,
+      "sha256": "014d868eb82408b1331319e164c7c39f61ebc537a3bb06eeca7d1ca593aede09"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-11.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-11.webp",
+      "bytes": 25920,
+      "sha256": "40d56bca48a9e53ac25d7bc32a90ac782dfbc5ef738082ac68d800362d7f60e7"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-12.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-12.webp",
+      "bytes": 16876,
+      "sha256": "9e441a664dde39e3b6b6a574c2540863e20bf6ef2da0fd0b2004c49be14d1b58"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-13.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-13.webp",
+      "bytes": 22210,
+      "sha256": "df79eaf30bbd4c299126ced5e489bdea94f2b21fca19d4d0c826eb25747e43d9"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-14.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-14.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-14.webp",
+      "bytes": 29646,
+      "sha256": "e1cff142de71741080ec95927867169ac91ed95c798b37a42608159d8071fc19"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-15.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-15.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-15.webp",
+      "bytes": 34178,
+      "sha256": "047d58b859b7f0baa6eb4fd7fcc0a026d5af57b5fc2e3a06e4ac3cff0c8f26ef"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-16.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-16.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-16.webp",
+      "bytes": 39410,
+      "sha256": "94eb0ea1bcbb4ae5acec39eb036ad02f486b84305888b3769c3a7e8b7b835bf8"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-17.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-17.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-17.webp",
+      "bytes": 41006,
+      "sha256": "37f05cc5e6a4a16ebd16aa6c649c71c810b96b15c19d96070be6bca69cd33f10"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-18.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-18.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-18.webp",
+      "bytes": 31422,
+      "sha256": "d0e5dbc8633d0da070881af6119213ed55570ebee371942ebb6136518cffff9e"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-19.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-19.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-19.webp",
+      "bytes": 32780,
+      "sha256": "1edd8500243a8ee8a10385ce5909d89d9e90d40a14300df6b08f65240f0858a4"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-20.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-20.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-20.webp",
+      "bytes": 57692,
+      "sha256": "dfb129f99d673ea8cf384581bf1b05a29c65e6adad509d740d9e1c1c5fab3e11"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-21.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-21.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-21.webp",
+      "bytes": 58044,
+      "sha256": "169ed07b7f77dc83a69fba650c98471ad1648c0d33e0eaed66ca463732ea140a"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-22.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-22.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-22.webp",
+      "bytes": 38052,
+      "sha256": "4d2d9b44e1dfbb0c32d21aaacdf81af20dc72e1803292d48dcfce1a9f52f2346"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-23.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-23.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-23.webp",
+      "bytes": 27680,
+      "sha256": "dc51c8306fb08daa5fb60e253335838b865144ea808d4a174961ed903309429f"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-24.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-24.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-24.webp",
+      "bytes": 35100,
+      "sha256": "25d1ec1be292da0708cd1ae973e1b42e63522725c02f7038a5a64274caccbd32"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-25.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-25.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-25.webp",
+      "bytes": 43930,
+      "sha256": "a5818930e781e922564d2ccef47dbdc10808f92bcb667b0e52436c54ad3ece7c"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-26.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-26.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-26.webp",
+      "bytes": 31972,
+      "sha256": "3cee0c67cafc78c534f6163788ce696da0bf8b851fef2443207e0e5155273a7e"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-27.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-27.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-27.webp",
+      "bytes": 20958,
+      "sha256": "a3b3f0aa7db00ffd2fa5a8f72581d387c760d225a9e4ba661974c643be90a385"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-28.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-28.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-28.webp",
+      "bytes": 24462,
+      "sha256": "03e058561b031d6983c6b0e9cfe17efb46ffb63b8238fb84f83033dbcccf6cc7"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-29.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-29.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-29.webp",
+      "bytes": 100972,
+      "sha256": "0b3fff4786733706d270310c8a542efded5ae039682d225a286f8edcbcd590c6"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/gallery-30.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/gallery-30.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/gallery-30.webp",
+      "bytes": 59894,
+      "sha256": "fc55f951d9c96abc247ecac97640a12b2e67ee241fbd7fcf9769863f1b91a1c7"
+    },
+    {
+      "reference": "/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/25-binnalong-st-rochedale-south/hero.webp",
+      "bytes": 301376,
+      "sha256": "4f2b98f1d77c99f3d7dc1659eaf4a450c978734acdb408d1b57ce3d2a239b88a"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/25-binnalong-st-rochedale-south/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/25-binnalong-st-rochedale-south/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/25-binnalong-st-rochedale-south.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

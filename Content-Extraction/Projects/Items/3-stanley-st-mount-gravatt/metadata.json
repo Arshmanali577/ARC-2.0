@@ -1,0 +1,226 @@
+{
+  "pageName": "Project: 3 Stanley St Mount Gravatt",
+  "originalRoute": "/projects/3-stanley-st-mount-gravatt",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-01.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-01.webp",
+      "bytes": 122870,
+      "sha256": "1a4499c7ce30978951e0675d7ce84e585520b1e7f929c95b88cfcaf756279b96"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-02.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-02.webp",
+      "bytes": 119084,
+      "sha256": "6ab314810c8cbb8d7b7f2880f653aa7b1b5bb2ee7f1bac7f49e7ef13e8266362"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-03.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-03.webp",
+      "bytes": 131038,
+      "sha256": "1c1beddac092b82dfc412b5a8fc71e6b2fb19cf224d602947e12aa647cbb140d"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-04.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-04.webp",
+      "bytes": 81818,
+      "sha256": "e9b5461ad46f4e63758d75557dbef9626541b4736b01210842af208261308b77"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-05.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-05.webp",
+      "bytes": 120886,
+      "sha256": "10aa1b6a913c437d93ece28a07808975d57607e6e0b04bddcd8a35feca66befb"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-06.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-06.webp",
+      "bytes": 127366,
+      "sha256": "2b74e5d4e91296bc42b7d44f7b24a504d9be83e50026baeaf600fc3c17fec6eb"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-07.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-07.webp",
+      "bytes": 256368,
+      "sha256": "4be473060e8a78c524fb5fda7fda003a181e4a4a80c97216d6946417982ffd5f"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-08.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-08.webp",
+      "bytes": 173264,
+      "sha256": "63883a22e3bf4e571de57cf2c601f8bbe6ea4e43c2fcb9de694d75c2c7ff7c1c"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-09.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-09.webp",
+      "bytes": 238240,
+      "sha256": "7813eeb4caa6be4cec88a9cef6758715a01e344f392653e7ec9b7e85e67e1056"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-10.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-10.webp",
+      "bytes": 138478,
+      "sha256": "3765b63b5b15207e9dc6600861a9d07647e8b4bfdd9b68433825e7b8c153fc19"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-11.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-11.webp",
+      "bytes": 162602,
+      "sha256": "3112f6255647e55de92e503149f401a5ab38a5c6351e0199d26f5b9dc29094bb"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-12.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-12.webp",
+      "bytes": 325952,
+      "sha256": "ed4b658b8bcbfcbe147ccd84c676ef1c41938f8aac7cfa9feca53a041acb0b62"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/gallery-13.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/gallery-13.webp",
+      "bytes": 519900,
+      "sha256": "2d96bcae1b6729aeb4c4428dedd964db7aaeb13e5e4c75f7baa723c7d746c0f4"
+    },
+    {
+      "reference": "/projects/3-stanley-st-mount-gravatt/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-stanley-st-mount-gravatt/hero.webp",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Images/projects/3-stanley-st-mount-gravatt/hero.webp",
+      "bytes": 101672,
+      "sha256": "c33198989fcd349311b11f025964c84e455881acbf8528dfa9518e8bcde4a3ce"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/3-stanley-st-mount-gravatt/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/3-stanley-st-mount-gravatt/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/3-stanley-st-mount-gravatt.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

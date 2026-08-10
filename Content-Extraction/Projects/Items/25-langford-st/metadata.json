@@ -1,0 +1,226 @@
+{
+  "pageName": "Project: 25 Langford St",
+  "originalRoute": "/projects/25-langford-st",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/25-langford-st/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-01.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-01.webp",
+      "bytes": 80710,
+      "sha256": "94ab1a6d594e34fa02eaec323a7d82ff665cd91db655f062eef4b56630245721"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-02.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-02.webp",
+      "bytes": 94570,
+      "sha256": "fddbc6d57a23f9fbed4f987cbade8bcaceac0c0207d2ea6f8eba8409be6b107f"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-03.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-03.webp",
+      "bytes": 98754,
+      "sha256": "1695ee65469944b35ede8ab55c7c5c3b06da53c060e99a71c022be2885e55482"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-04.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-04.webp",
+      "bytes": 114388,
+      "sha256": "a9511b734406c2d9f7e7ca24c6803dad5223d153d502171cb56915fcbcb36fa1"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-05.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-05.webp",
+      "bytes": 132296,
+      "sha256": "af19dd38b5d25968949fc75d8b4aa35ea0b58168b1d58a8c77ace2024960a038"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-06.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-06.webp",
+      "bytes": 123212,
+      "sha256": "08752c079c108551b8cfe81a3f976cd7e8a6bc8f5e1956fec737f83c7fa92893"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-07.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-07.webp",
+      "bytes": 140748,
+      "sha256": "720fd7edb07e184027b7d21a051212f67e2983a9ff027c37eb4e90b20e463e26"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-08.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-08.webp",
+      "bytes": 204940,
+      "sha256": "2870f7b8c31ee92dda2b24014a41160fa8d53e3f6a580487e8f3866df78d8aaf"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-09.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-09.webp",
+      "bytes": 104046,
+      "sha256": "8f0dc440d3e223809dffe3672117c946cd2f88cc6a861166a42df9dab43966a1"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-10.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-10.webp",
+      "bytes": 84466,
+      "sha256": "9be86d611c60ccffae829b0e491fa088649970c62dacd1c0e4d19874e66d3814"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-11.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-11.webp",
+      "bytes": 110966,
+      "sha256": "b2dd6688278034470b39ecf264d9662127e4178b0bc86e8a1d0ff5ddda03d85f"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-12.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-12.webp",
+      "bytes": 140924,
+      "sha256": "b688ecd958f8aa7fdedaa602faae886db4f4541b61d18cdd18f8d746de8c0ac7"
+    },
+    {
+      "reference": "/projects/25-langford-st/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/gallery-13.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/gallery-13.webp",
+      "bytes": 386430,
+      "sha256": "92a764608a72229b8aae7312e1b73b45b5a3b8daa8640208c1a5635666826a54"
+    },
+    {
+      "reference": "/projects/25-langford-st/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/25-langford-st/hero.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/25-langford-st/hero.webp",
+      "bytes": 50338,
+      "sha256": "2f2ce38ccc7c36eece8d8a6c4f5d4ef6b7644e2488161672682977ba88da0d88"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/25-langford-st/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/25-langford-st/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/25-langford-st/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/25-langford-st.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

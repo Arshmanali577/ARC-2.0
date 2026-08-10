@@ -1,0 +1,162 @@
+{
+  "pageName": "Project: 3 Brooklyn St Spring Mountain",
+  "originalRoute": "/projects/3-brooklyn-st-spring-mountain",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-01.webp",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Images/projects/3-brooklyn-st-spring-mountain/gallery-01.webp",
+      "bytes": 158554,
+      "sha256": "62341a6c1e00177b5b1a3f62f72b3680c91f73c5e1b0b01cfd1ad1b1801c4a07"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-02.webp",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Images/projects/3-brooklyn-st-spring-mountain/gallery-02.webp",
+      "bytes": 141662,
+      "sha256": "5f6db57aca31feea6d4e2e9413cf1d8605ff39ca46b0198f5a722151574e2f9e"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-03.webp",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Images/projects/3-brooklyn-st-spring-mountain/gallery-03.webp",
+      "bytes": 78078,
+      "sha256": "5d3c1ce78790b954a7f636b662c56c4b19213c40e04e148915f7da64ddbe206a"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-04.webp",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Images/projects/3-brooklyn-st-spring-mountain/gallery-04.webp",
+      "bytes": 121824,
+      "sha256": "67e1f2a0401fa25c34dc062156fbd0c6e6d01db94910c8a8bc4b1e21096c84ae"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-05.webp",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Images/projects/3-brooklyn-st-spring-mountain/gallery-05.webp",
+      "bytes": 75876,
+      "sha256": "c2786af527d386ea149ea68cf9f46f6b2736aeb957ae58a2a42f1bf271da18ec"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/gallery-06.webp",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Images/projects/3-brooklyn-st-spring-mountain/gallery-06.webp",
+      "bytes": 623282,
+      "sha256": "c8f649009553562fd28f61dabb66ecc31c41697d94b50e9523c8ef88a6353a2d"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/3-brooklyn-st-spring-mountain/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/3-brooklyn-st-spring-mountain/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/3-brooklyn-st-spring-mountain.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

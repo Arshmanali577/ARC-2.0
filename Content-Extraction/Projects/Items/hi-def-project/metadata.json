@@ -1,0 +1,194 @@
+{
+  "pageName": "Project: Hi Def Project",
+  "originalRoute": "/projects/hi-def-project",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/hi-def-project/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-01.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-01.webp",
+      "bytes": 110360,
+      "sha256": "e1025ebdf4af2090ec37f1f036d8b7025ef6bb67ad1425dc32cf29e8b75edf63"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-02.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-02.webp",
+      "bytes": 105856,
+      "sha256": "d2ae63f0ec287edb13f2607bd4079ed9fc173e2d1bc185b3579177835d6b8940"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-03.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-03.webp",
+      "bytes": 110546,
+      "sha256": "4ee430f8bd536eecd3e60726a6f779800bf56bfd1ac0f636af06820c1215f7ab"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-04.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-04.webp",
+      "bytes": 55932,
+      "sha256": "1b70a8856965e3220672114d9c61c2241aac034355bed4e92b1cdbda8932d8c6"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-05.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-05.webp",
+      "bytes": 62700,
+      "sha256": "e2c7dda4b589b85dace7fe8be1c23ed07992bab7f8a566cc938bd4915cdbdcb1"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-06.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-06.webp",
+      "bytes": 82294,
+      "sha256": "645fb9c87068e447353ed80954f8c4617a21cc74c9cef620e480102df1baa35f"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-07.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-07.webp",
+      "bytes": 92608,
+      "sha256": "bf42013d90c4cfd3055fad7a51606d9b87acd75cfb322e2d8e5b0789a7e3b403"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-08.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-08.webp",
+      "bytes": 597390,
+      "sha256": "198ea39f502eb171154d8d9ad0ce46828c6b61220b1073800ac60b213118b2a2"
+    },
+    {
+      "reference": "/projects/hi-def-project/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/gallery-09.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/gallery-09.webp",
+      "bytes": 362382,
+      "sha256": "88a94ec0c42412e9ef64daf175e1092d9ed587c91d4f8cd25c02053f406bd3d3"
+    },
+    {
+      "reference": "/projects/hi-def-project/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/hi-def-project/hero.webp",
+      "copiedTo": "Projects/Items/hi-def-project/Images/projects/hi-def-project/hero.webp",
+      "bytes": 72938,
+      "sha256": "1eb51fcefbd60e520f58ccd9fa71cea1396a86c212754e10702c40314f3555b8"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/hi-def-project/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/hi-def-project/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/hi-def-project.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

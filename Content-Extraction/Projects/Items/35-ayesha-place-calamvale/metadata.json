@@ -1,0 +1,202 @@
+{
+  "pageName": "Project: 35 Ayesha Place Calamvale",
+  "originalRoute": "/projects/35-ayesha-place-calamvale",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-01.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-01.webp",
+      "bytes": 176332,
+      "sha256": "1f156928e3d0698c57cbf1f5397a7aa64c3784b01a540d8d9ac7c19257c93481"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-02.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-02.webp",
+      "bytes": 113576,
+      "sha256": "14ec7ca3dca34a01da6c98e5d6cd1d60f1e517668181910ede5e6e0a768d5495"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-03.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-03.webp",
+      "bytes": 106940,
+      "sha256": "45cc046dce41a8c967c446d5402acfc089c7d6c60587a7060b7065b3154964e2"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-04.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-04.webp",
+      "bytes": 67906,
+      "sha256": "27070a4f5e012a2182d69dcc5a78b549a0ebbc7da1cbcd66c1bd67e1634ee381"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-05.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-05.webp",
+      "bytes": 98304,
+      "sha256": "e9247ca6fbddb535da5211d0d35842b6dcc7463d6604deedb8ad7c207d86c9fb"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-06.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-06.webp",
+      "bytes": 73442,
+      "sha256": "82102dd12873624c15e5d8931f6d873a2900e4c498e01a08614bec17955127fd"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-07.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-07.webp",
+      "bytes": 143248,
+      "sha256": "17ab631bfc3e89164b7851a160add174e119ec6ebf91addaa199962731f6ce77"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-08.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-08.webp",
+      "bytes": 58776,
+      "sha256": "0c794bc95f5fa603e346a4805c974444e89b548ba1640e13d93b5c446f0f833d"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-09.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-09.webp",
+      "bytes": 54870,
+      "sha256": "6d5c79958fcc4eff7d0b72731aeea302f169a4e5c01e955698eb8170de6f069e"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/gallery-10.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/gallery-10.webp",
+      "bytes": 508108,
+      "sha256": "45dfcbcd2efae9e8cb2c43bf985326b3d14e3fbad4a0f958a59864e290f168d6"
+    },
+    {
+      "reference": "/projects/35-ayesha-place-calamvale/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/35-ayesha-place-calamvale/hero.webp",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Images/projects/35-ayesha-place-calamvale/hero.webp",
+      "bytes": 82542,
+      "sha256": "0e6183418537a3ab88bf4ea29db74ba022e2a5b269b06283b8c68ca154f2b6bf"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/35-ayesha-place-calamvale/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/35-ayesha-place-calamvale/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/35-ayesha-place-calamvale.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

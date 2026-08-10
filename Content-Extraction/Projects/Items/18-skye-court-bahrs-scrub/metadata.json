@@ -1,0 +1,290 @@
+{
+  "pageName": "Project: 18 Skye Court Bahrs Scrub",
+  "originalRoute": "/projects/18-skye-court-bahrs-scrub",
+  "routeType": "generated-static",
+  "sourcePage": "src/app/projects/[slug]/page.tsx",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/projects/[slug]/ProjectDetailClient.tsx",
+    "src/app/projects/[slug]/page.tsx",
+    "src/app/projects/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/CTASection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Navbar.tsx",
+    "src/components/ScrollReveal.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/local-areas.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts",
+    "src/lib/utils.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "CTASection",
+    "Footer",
+    "Navbar",
+    "ScrollReveal",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-01.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-01.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-01.webp",
+      "bytes": 134148,
+      "sha256": "56faa83b499edb8a448e8136d02b8fd8a042fd1255827b81441b6745fe6a888f"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-02.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-02.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-02.webp",
+      "bytes": 42218,
+      "sha256": "edbb02d3ff2231ee2100488a2ad422c6c784a5348a9cdc4676214d115fabbdd4"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-03.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-03.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-03.webp",
+      "bytes": 46208,
+      "sha256": "fe1b546788eadfc44e88859e1d4bd59eb36e82841323d7d5d795a3025b9f90df"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-04.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-04.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-04.webp",
+      "bytes": 34480,
+      "sha256": "cd61d5a0476ccc96b0c72c40704b527f59dc67e15f158cde1e69a03b2d0d5ec7"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-05.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-05.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-05.webp",
+      "bytes": 46840,
+      "sha256": "09c0217c5137d4ee2fc8632959fb04300793321091551aa511964882073aae55"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-06.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-06.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-06.webp",
+      "bytes": 35918,
+      "sha256": "ebb69d38adb2b60253d979b9a29f81484bca593f2c1a18814969b0fa7c6b9505"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-07.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-07.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-07.webp",
+      "bytes": 26498,
+      "sha256": "84f1298112fff6cc3168605e2670581c6f548dad9c7b9a0c76b34717e3bd06ec"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-08.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-08.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-08.webp",
+      "bytes": 26766,
+      "sha256": "c2f0290f98777e4117faf11a7a80746bf60537bbfc3928eba9957d4a08625c31"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-09.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-09.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-09.webp",
+      "bytes": 38936,
+      "sha256": "bb2d1aca926fcc175d67ec223a01e0650f0223a3117eaaec7beac0283fdf8bb9"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-10.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-10.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-10.webp",
+      "bytes": 38556,
+      "sha256": "2cf32cf62e29547171dfb4552a30330c4a2353af7e5847cfc03d4d6b479d0cc9"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-11.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-11.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-11.webp",
+      "bytes": 42158,
+      "sha256": "160b7f3da1565f8626a7211b11f0843e3c034e475baf49aa977d7c2efcc0bac6"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-12.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-12.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-12.webp",
+      "bytes": 50128,
+      "sha256": "dddf4975208015381759b5c24991834fceb532453858bb2752dd88449916fb82"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-13.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-13.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-13.webp",
+      "bytes": 46898,
+      "sha256": "d8de215ed43a33b3ada2936f31cbc9f73bdbfd05e8b22a2c09c89b9d41702176"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-14.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-14.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-14.webp",
+      "bytes": 27674,
+      "sha256": "2af5e7d7b5cbf23808ed52bf264387ec5cb28b771e6b708bde154c50308cd3b5"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-15.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-15.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-15.webp",
+      "bytes": 29564,
+      "sha256": "3df2ace626d7afb895dd794a8291dab11cbdc96d148dd49f2f033f656ab37266"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-16.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-16.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-16.webp",
+      "bytes": 30386,
+      "sha256": "7010888bff69848ca2148f0512580cd452c1deef877523326eb32a2522a7b1f5"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-17.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-17.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-17.webp",
+      "bytes": 26448,
+      "sha256": "920659bb75207f99b23ed08538deee8c11e260aa3d5c817cefa073fc8d9771dc"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-18.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-18.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-18.webp",
+      "bytes": 52750,
+      "sha256": "43f1fd110af4f765c2d9617e1cda331db5bb21e6f16ff973ae8f1ed9552b0d77"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-19.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-19.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-19.webp",
+      "bytes": 172184,
+      "sha256": "c95b7bad3f150af0d4ee3de4b36c4ba6d7a1234bc9015703516c6b53e87c2437"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-20.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-20.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-20.webp",
+      "bytes": 173704,
+      "sha256": "e7e805139356b7e77caa51330c77c8545ae22ae4d155d17b421cace13a54f302"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/gallery-21.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/gallery-21.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/gallery-21.webp",
+      "bytes": 41534,
+      "sha256": "42549adea81749b80843e7a28667e4a4e15d0f2a45e0b8f424f649c639be50ec"
+    },
+    {
+      "reference": "/projects/18-skye-court-bahrs-scrub/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/18-skye-court-bahrs-scrub/hero.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/18-skye-court-bahrs-scrub/hero.webp",
+      "bytes": 366626,
+      "sha256": "8d8de4904311235aec9e4bb1fc0d70fcedde58e23bbd0f14e10d6e2583226bfc"
+    },
+    {
+      "reference": "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Images/projects/3-brooklyn-st-spring-mountain/hero.webp",
+      "bytes": 153838,
+      "sha256": "a91313310f0fdb20a47aaaae1ab20fa8fa7cd7758e88a34b90f0038103b13c3e"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Projects/Items/18-skye-court-bahrs-scrub/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/CTASection.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/Navbar.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/ScrollReveal.tsx",
+      "type": "Code-defined UI animation"
+    },
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "http://www.w3.org/2000/svg",
+    "https://schema.org",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Projects/Items/18-skye-court-bahrs-scrub/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/projects/18-skye-court-bahrs-scrub.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

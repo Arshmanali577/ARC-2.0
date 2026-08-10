@@ -1,0 +1,87 @@
+{
+  "pageName": "Admin CMS",
+  "originalRoute": "/admin",
+  "routeType": "static",
+  "sourcePage": "src/app/admin/page.tsx",
+  "sourceComponents": [
+    "src/app/admin/page.tsx",
+    "src/app/api/auth/route.ts",
+    "src/app/api/callback/route.ts",
+    "src/app/layout.tsx",
+    "src/components/AnalyticsEvents.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/lib/analytics.ts",
+    "src/lib/data.ts",
+    "src/lib/seo.ts",
+    "src/lib/site-state.ts",
+    "src/lib/types.ts"
+  ],
+  "sharedComponentsUsed": [
+    "AnalyticsEvents",
+    "WhatsAppButton"
+  ],
+  "assets": [
+    {
+      "reference": "/hero.webp",
+      "category": "Images",
+      "originalLocation": "public/hero.webp",
+      "copiedTo": "Admin/Images/hero.webp",
+      "bytes": 193110,
+      "sha256": "f67ec35854d43f2d8d466d0c22cf8a24c421556113d936d51d66c7f507693d68"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Admin/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ],
+  "missingAssets": [],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google",
+      "source": "src/app/layout.tsx"
+    }
+  ],
+  "animations": [
+    {
+      "library": "framer-motion",
+      "source": "src/components/WhatsAppButton.tsx",
+      "type": "Code-defined UI animation"
+    }
+  ],
+  "externalUrls": [
+    "https://github.com/login/oauth/access_token",
+    "https://github.com/login/oauth/authorize?${params.toString(",
+    "https://schema.org",
+    "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js",
+    "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "apisUsed": [
+    "/api/auth",
+    "https://arcbuilders.com.au",
+    "https://github.com/login/oauth/access_token",
+    "https://github.com/login/oauth/authorize?${params.toString(",
+    "https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js",
+    "https://www.googletagmanager.com/gtm.js?id=",
+    "https://www.googletagmanager.com/ns.html?id=${gtmId}"
+  ],
+  "textFile": "Admin/Text/content.md",
+  "originalContentSourceFiles": [],
+  "renderedHtmlSource": ".next/server/app/admin.html",
+  "extractionNotes": [
+    "Rendered text was extracted from the production build HTML.",
+    "Conditional/source-only interface strings were extracted from the traced source graph.",
+    "Lucide icons and inline SVGs are code-defined; their names are recorded but no nonexistent source file is copied."
+  ]
+}

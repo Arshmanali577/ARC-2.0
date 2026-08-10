@@ -1,0 +1,128 @@
+# Global Content
+
+Content inherited through the root layout, global metadata, navigation/footer data, analytics, structured data, and floating WhatsApp control.
+
+- **src/app/layout.tsx:** next/script
+- **src/app/layout.tsx:** next/font/google
+- **src/app/layout.tsx:** ./globals.css
+- **src/app/layout.tsx:** @/components/AnalyticsEvents
+- **src/app/layout.tsx:** @/components/WhatsAppButton
+- **src/app/layout.tsx:** @/lib/data
+- **src/app/layout.tsx:** @/lib/seo
+- **src/app/layout.tsx:** @/lib/site-state
+- **src/app/layout.tsx:** ARC Builders | Custom Home Builder in Brisbane & South East Queensland
+- **src/app/layout.tsx:** %s | ARC Builders
+- **src/app/layout.tsx:** Construction
+- **src/app/layout.tsx:** , }, manifest:
+- **src/app/layout.tsx:** , openGraph: { title:
+- **src/app/layout.tsx:** , description: siteConfig.description, url: siteConfig.url, siteName: siteConfig.name, locale: siteConfig.locale, type:
+- **src/app/layout.tsx:** , images: [absoluteUrl(
+- **src/app/layout.tsx:** )], }, twitter: { card:
+- **src/app/layout.tsx:** , title:
+- **src/app/layout.tsx:** , description: siteConfig.description, images: [absoluteUrl(
+- **src/app/layout.tsx:** )], }, robots: { index: true, follow: true, googleBot: { index: true, follow: true,
+- **src/app/layout.tsx:** : -1, }, }, icons: { icon: [ { url:
+- **src/app/layout.tsx:** , type:
+- **src/app/layout.tsx:** , sizes:
+- **src/app/layout.tsx:** }, { url:
+- **src/app/layout.tsx:** }, ], apple:
+- **src/app/layout.tsx:** ); const basePhone = companyInfo.phone.replace(/\s+/g,
+- **src/app/layout.tsx:** , itemOffered: {
+- **src/app/layout.tsx:** , name: service.title, description: service.description, provider: {
+- **src/app/layout.tsx:** , name:
+- **src/app/layout.tsx:** , value: companyInfo.qbccLicence, }, address: {
+- **src/app/layout.tsx:** , streetAddress: companyInfo.streetAddress, addressLocality: companyInfo.suburb, addressRegion:
+- **src/app/layout.tsx:** , postalCode: companyInfo.postcode, addressCountry:
+- **src/app/layout.tsx:** , }, areaServed: siteConfig.serviceAreas, image: absoluteUrl(
+- **src/app/layout.tsx:** ), logo: absoluteUrl(
+- **src/app/layout.tsx:** ), contactPoint: {
+- **src/app/layout.tsx:** , contactType:
+- **src/app/layout.tsx:** , telephone: formattedPhone, email: companyInfo.email, areaServed:
+- **src/app/layout.tsx:** , availableLanguage: [
+- **src/app/layout.tsx:** ], }, knowsAbout: [
+- **src/app/layout.tsx:** , ], hasOfferCatalog: {
+- **src/app/layout.tsx:** , itemListElement: serviceOffers, }, ...(socialProfiles.length > 0 ? { sameAs: socialProfiles } : {}), }; const websiteSchema = {
+- **src/app/layout.tsx:** className=
+- **src/app/layout.tsx:** strategy=
+- **src/app/layout.tsx:** width=
+- **src/app/layout.tsx:** style={{ display:
+- **src/app/layout.tsx:** , visibility:
+- **src/app/layout.tsx:** }} /> </noscript> </> )} <div className=
+- **src/app/layout.tsx:** > {children} </div> {!maintenanceModeEnabled && <AnalyticsEvents />} {!maintenanceModeEnabled && <WhatsAppButton />} {!maintenanceModeEnabled && ( <script type=
+- **src/components/AnalyticsEvents.tsx:** @/lib/analytics
+- **src/components/AnalyticsEvents.tsx:** [data-gtm-event]
+- **src/components/WhatsAppButton.tsx:** https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.
+- **src/components/WhatsAppButton.tsx:** noopener noreferrer
+- **src/components/WhatsAppButton.tsx:** Chat on WhatsApp
+- **src/components/WhatsAppButton.tsx:** currentColor
+- **src/lib/data.ts:** ./types
+- **src/lib/data.ts:** , title:
+- **src/lib/data.ts:** , slug:
+- **src/lib/data.ts:** , location:
+- **src/lib/data.ts:** , type:
+- **src/lib/data.ts:** , year:
+- **src/lib/data.ts:** , architect:
+- **src/lib/data.ts:** , scope:
+- **src/lib/data.ts:** , description:
+- **src/lib/data.ts:** , projectNarrative:
+- **src/lib/data.ts:** , heroImage:
+- **src/lib/data.ts:** , images: buildProjectGallery(
+- **src/lib/data.ts:** , 11), featured: true, }, { id:
+- **src/lib/data.ts:** , 13), featured: true, }, { id:
+- **src/lib/data.ts:** , 15), featured: true, }, { id:
+- **src/lib/data.ts:** , 9), featured: false, }, { id:
+- **src/lib/data.ts:** , 29), featured: false, }, { id:
+- **src/lib/data.ts:** , 30), featured: false, }, { id:
+- **src/lib/data.ts:** focus on liveable design, resolved detailing, and polished presentation, with a gallery that highlights both the home
+- **src/lib/data.ts:** , 21), featured: false, }, ]; export const residentialServices: Service[] = [ { id:
+- **src/lib/data.ts:** , icon:
+- **src/lib/data.ts:** , href:
+- **src/lib/data.ts:** , }, { id:
+- **src/lib/data.ts:** , name:
+- **src/lib/data.ts:** , role:
+- **src/lib/data.ts:** , quote:
+- **src/lib/data.ts:** , }, ]; export const processSteps: ProcessStep[] = [ { id: 1, title:
+- **src/lib/data.ts:** , }, { id: 2, title:
+- **src/lib/data.ts:** , }, { id: 3, title:
+- **src/lib/data.ts:** , }, { id: 4, title:
+- **src/lib/data.ts:** , }, ]; export const navLinks = [ { label:
+- **src/lib/data.ts:** , href:
+- **src/lib/data.ts:** }, { label:
+- **src/lib/data.ts:** }, ]; export const companyInfo = { name:
+- **src/lib/data.ts:** , fullName:
+- **src/lib/data.ts:** , phone:
+- **src/lib/data.ts:** , email:
+- **src/lib/data.ts:** , address:
+- **src/lib/data.ts:** , streetAddress:
+- **src/lib/data.ts:** , suburb:
+- **src/lib/data.ts:** , postcode:
+- **src/lib/data.ts:** , experience:
+- **src/lib/data.ts:** , tagline:
+- **src/lib/data.ts:** , qbccLicence:
+- **src/lib/data.ts:** , socials: { facebook:
+- **src/lib/data.ts:** , instagram:
+- **src/lib/data.ts:** , linkedin:
+- **src/lib/data.ts:** , youtube:
+- **src/lib/seo.ts:** ./data
+- **src/lib/seo.ts:** https://arcbuilders.com.au
+- **src/lib/seo.ts:** ); export const siteConfig = { name: companyInfo.name, fullName: companyInfo.fullName, description: companyInfo.tagline, url: normalizedSiteUrl, locale:
+- **src/lib/seo.ts:** , serviceAreas: [
+- **src/lib/seo.ts:** , ], }; export const defaultKeywords = [
+- **src/lib/seo.ts:** , ]; export function absoluteUrl(path =
+- **src/lib/seo.ts:** ) { if (!path || path ===
+- **src/lib/seo.ts:** ; noIndex?: boolean; }; export function createPageMetadata({ title, description, path, keywords = [], images = [
+- **src/lib/seo.ts:** ], type =
+- **src/lib/seo.ts:** , title, description, images: imageUrls, }, robots: noIndex ? { index: false, follow: false, nocache: true, } : { index: true, follow: true, googleBot: { index: true, follow: true,
+- **src/lib/site-state.ts:** Temporarily Offline
+- **src/lib/site-state.ts:** ARC Builders Digital Launch
+- **src/lib/site-state.ts:** We are crafting a sharper online home for ARC Builders.
+- **src/lib/site-state.ts:** Our new website experience is being finalised and will be live shortly. In the meantime, our team is still available for custom homes, renovations, extensions, and commercial construction across Brisbane and South East Queensland.
+- **src/lib/site-state.ts:** Project consultations remain open while the site is under maintenance.
+- **src/lib/site-state.ts:** Launching in the next few days
+- **src/lib/site-state.ts:** /projects/49-herbert-st/hero.webp
+- **src/lib/site-state.ts:** Custom homes with refined architectural delivery
+- **src/lib/site-state.ts:** Transparent pricing and disciplined project management
+- **src/lib/site-state.ts:** Residential and commercial builds across South East Queensland
+
+## Code-Defined Icons
+

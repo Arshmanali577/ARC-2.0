@@ -1,0 +1,38 @@
+{
+  "description": "Root-layout branding, browser icons, manifest, global styling, structured data, and fonts.",
+  "sourceComponents": [
+    "src/app/layout.tsx",
+    "src/app/globals.css",
+    "src/lib/seo.ts",
+    "src/lib/data.ts"
+  ],
+  "importedFonts": [
+    {
+      "family": "Inter",
+      "provider": "Google Fonts via next/font/google"
+    },
+    {
+      "family": "DM Serif Display",
+      "provider": "Google Fonts via next/font/google"
+    }
+  ],
+  "consolidatedIconFolder": "Icon",
+  "assets": [
+    {
+      "reference": "/arc-logo.svg",
+      "category": "Logos",
+      "originalLocation": "public/arc-logo.svg",
+      "copiedTo": "Global/Logos/arc-logo.svg",
+      "bytes": 1759,
+      "sha256": "162898c29d045445c24d04ab690e9091c0b8d74673766db87f6bcf1adbb94e35"
+    },
+    {
+      "reference": "/site.webmanifest",
+      "category": "Documents",
+      "originalLocation": "public/site.webmanifest",
+      "copiedTo": "Global/Documents/site.webmanifest",
+      "bytes": 793,
+      "sha256": "f96e8cab71aebe0e3c2f950b14ed8be4974de5a149782159efb6829c7efb1e7f"
+    }
+  ]
+}
