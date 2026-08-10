@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   ARC Builders design tokens
+   Single source of truth for colour, type and layout. Every component reads
+   from here — change a value once and it propagates across the whole site.
+--------------------------------------------------------------------------- */
+@theme {
+  /* Brand navies */
+  --color-ink: #001a38; /* deepest navy — enquire band, hover states */
+  --color-brand: #002b5c; /* primary brand navy */
+  --color-brand-deep: #0b2f57; /* hero media plate */
+  --color-brand-mid: #0b3a69; /* media plate on navy sections */
+
+  /* Supporting greys / blues */
+  --color-muted: #5b7392; /* eyebrows, meta labels */
+  --color-body: #4a5c73; /* secondary body copy */
+  --color-faint: #9aaabf; /* index numerals, hints */
+  --color-mist: #c9d6e5; /* light accent on navy */
+  --color-mist-deep: #a9bfd6; /* body copy on navy */
+  --color-surface: #f4f6f9; /* tinted section background */
+
+  /* Hairlines */
+  --color-line: rgba(0, 43, 92, 0.16);
+  --color-line-soft: rgba(0, 43, 92, 0.12);
+  --color-line-strong: rgba(0, 43, 92, 0.22);
+  --color-line-stage: rgba(0, 43, 92, 0.25);
+  --color-line-dashed: rgba(0, 43, 92, 0.28);
+  --color-line-invert: rgba(255, 255, 255, 0.16);
+  --color-line-invert-soft: rgba(255, 255, 255, 0.2);
+  --color-line-invert-strong: rgba(255, 255, 255, 0.32);
+  --color-line-invert-hero: rgba(255, 255, 255, 0.45);
+
+  /* Media placeholder tints */
+  --color-plate-1: #dce4ee;
+  --color-plate-2: #d2dce9;
+  --color-plate-3: #e2e9f1;
+  --color-plate-4: #cfdae8;
+
+  /* Typography */
+  --font-sans: var(--font-inter), Inter, sans-serif;
+  --font-display: "Century Gothic", var(--font-questrial), Questrial, sans-serif;
+
+  /* Breakpoints mirror the source design's media queries exactly.
+     base = <=900px · nav = >=901px · wide = >=1201px */
+  --breakpoint-nav: 901px;
+  --breakpoint-wide: 1201px;
+}
+
+/* Diagonal hatch used by every media placeholder ------------------------- */
+@utility hatch-light {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(0, 43, 92, 0.07) 0 2px,
+    transparent 2px 12px
+  );
+}
+
+@utility hatch-dark {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0 2px,
+    transparent 2px 12px
+  );
+}
+
+@utility hatch-dark-strong {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07) 0 2px,
+    transparent 2px 12px
+  );
+}
+
+/* Base ------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--color-mist);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+}
