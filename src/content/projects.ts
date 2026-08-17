@@ -18,6 +18,12 @@ export type Project = {
   description: string;
   projectNarrative: string;
   heroImage: string;
+  /**
+   * Optional looping film for the masthead. `heroImage` stays as the poster
+   * frame, so a project without a video is unchanged. Add one per project as
+   * the footage lands: `/videos/<slug>.mp4`.
+   */
+  heroVideo?: string;
   images: string[];
   featured: boolean;
 };
@@ -44,6 +50,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Planned as a refined family residence, Aurelia Residence balances calm interiors, warm timber tones, and generous glazing to create a home that feels open, bright, and easy to live in every day.",
     heroImage: "/projects/14-verona-st-pallara/hero.webp",
+    heroVideo: "/videos/14-verona-st-pallara.mp4",
     images: buildProjectGallery("14-verona-st-pallara", 11),
     featured: true,
   },
@@ -61,6 +68,7 @@ export const projects: Project[] = [
     projectNarrative:
       "From the dark joinery and sculpted kitchen detailing to the layered living zones, Solstice Residence was delivered as a contemporary home with strong visual impact and practical spaces for modern family routines.",
     heroImage: "/projects/25-langford-st/hero.webp",
+    heroVideo: "/videos/25-langford-st.mp4",
     images: buildProjectGallery("25-langford-st", 13),
     featured: true,
   },
@@ -95,6 +103,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Set within Spring Mountain, Evercrest Residence was shaped to make the most of its estate setting with modern street appeal, efficient planning, and flexible living areas that support a growing household.",
     heroImage: "/projects/3-brooklyn-st-spring-mountain/hero.webp",
+    heroVideo: "/videos/3-brooklyn-st-spring-mountain.mp4",
     images: buildProjectGallery("3-brooklyn-st-spring-mountain", 6),
     featured: false,
   },
@@ -112,6 +121,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Willowmere Residence focused on liveability first, with a practical layout, durable finishes, and comfortable shared spaces that make the home as functional as it is visually polished.",
     heroImage: "/projects/3-dart-ave-kingston/hero.webp",
+    heroVideo: "/videos/3-dart-ave-kingston.mp4",
     images: buildProjectGallery("3-dart-ave-kingston", 7),
     featured: false,
   },
@@ -163,6 +173,7 @@ export const projects: Project[] = [
     projectNarrative:
       "With its acreage context in mind, Oakmont Residence was composed around spacious entertaining, expansive sight lines, and a layout that feels generous, grounded, and well suited to semi-rural living.",
     heroImage: "/projects/8-vineyard-drive-greenbank/hero.webp",
+    heroVideo: "/videos/8-vineyard-drive-greenbank.mp4",
     images: buildProjectGallery("8-vineyard-drive-greenbank", 7),
     featured: true,
   },
@@ -197,6 +208,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Ormskirk Residence was shaped around a polished everyday living experience, bringing together confident exterior form, practical zoning, and carefully finished interiors suited to modern family life.",
     heroImage: "/projects/17-ormskirk-st-calamvale/hero.webp",
+    heroVideo: "/videos/17-ormskirk-st-calamvale.mp4",
     images: buildProjectGallery("17-ormskirk-st-calamvale", 29),
     featured: false,
   },
@@ -231,6 +243,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Skye Court Residence captures ARC Builders' focus on liveable design, resolved detailing, and polished presentation, with a gallery that highlights both the home's finished exterior and internal flow.",
     heroImage: "/projects/18-skye-court-bahrs-scrub/hero.webp",
+    heroVideo: "/videos/18-skye-court-bahrs-scrub.mp4",
     images: buildProjectGallery("18-skye-court-bahrs-scrub", 21),
     featured: false,
   },

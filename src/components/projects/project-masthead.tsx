@@ -32,6 +32,7 @@ export function ProjectMasthead({
           label={project.title.toUpperCase()}
           tone="dark"
           src={project.heroImage}
+          video={project.heroVideo}
           alt={project.title}
           priority
           align="end"

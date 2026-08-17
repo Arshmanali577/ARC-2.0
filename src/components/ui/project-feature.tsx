@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { ArrowUpRight } from "@/components/ui/icon";
+import { HoverVideo } from "@/components/ui/hover-video";
 import { MediaPlate } from "@/components/ui/media-plate";
 import { projectsPage } from "@/content/pages";
 import type { Project } from "@/content/projects";
@@ -50,6 +51,12 @@ export function ProjectFeature({
             aspect,
           )}
         />
+        {project.heroVideo ? (
+          <HoverVideo
+            src={project.heroVideo}
+            zoom="group-hover:scale-[1.03]"
+          />
+        ) : null}
         <span
           aria-hidden
           className="pointer-events-none absolute inset-0 border border-transparent transition-colors duration-500 ease-out group-hover:border-white/35"

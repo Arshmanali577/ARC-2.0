@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { ArrowUpRight } from "@/components/ui/icon";
+import { HoverVideo } from "@/components/ui/hover-video";
 import { MediaPlate } from "@/components/ui/media-plate";
 import type { Project } from "@/content/projects";
 import { projectsPage } from "@/content/pages";
@@ -62,6 +63,10 @@ export function ProjectCard({
           sizes={sizes}
           className="h-full w-full transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
         />
+        {/* Projects with footage play it under the cursor; the still above is
+            the poster the film fades up from, so cards stay identical until
+            hovered — and identical for good if the project has no video. */}
+        {project.heroVideo ? <HoverVideo src={project.heroVideo} /> : null}
         {/* Reads as a drawing frame rather than a shadowed card. */}
         <span
           aria-hidden
