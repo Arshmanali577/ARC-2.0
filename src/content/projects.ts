@@ -86,6 +86,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Every decision on Lumiere Residence centred on light, proportion, and finish quality, resulting in a home that feels elegant, welcoming, and highly functional for day-to-day family living.",
     heroImage: "/projects/49-herbert-st/hero.webp",
+    heroVideo: "/videos/49-herbert-st.mp4",
     images: buildProjectGallery("49-herbert-st", 15),
     featured: true,
   },
@@ -139,6 +140,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Halcyon Residence combines elevated detailing with strong everyday usability, bringing together feature ceilings, bespoke kitchen elements, and carefully resolved interiors in a confidently finished family home.",
     heroImage: "/projects/3-stanley-st-mount-gravatt/hero.webp",
+    heroVideo: "/videos/3-stanley-st-mount-gravatt.mp4",
     images: buildProjectGallery("3-stanley-st-mount-gravatt", 13),
     featured: true,
   },
@@ -156,6 +158,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Designed for relaxed family living, Elmsworth Residence pairs contemporary styling with thoughtful zoning, quality joinery, and bright internal spaces that feel connected from front to rear.",
     heroImage: "/projects/35-ayesha-place-calamvale/hero.webp",
+    heroVideo: "/videos/35-ayesha-place-calamvale.mp4",
     images: buildProjectGallery("35-ayesha-place-calamvale", 10),
     featured: false,
   },
