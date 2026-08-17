@@ -1,12 +1,27 @@
 import type { ElementType, ReactNode } from "react";
 
+import { UnderlineLink } from "@/components/ui/button";
 import { cn } from "@/lib/cn";
 
 /**
- * Horizontal page gutter from the design: 56px desktop, 24px at <=900px.
- * Used by every full-width band so the rhythm never drifts.
+ * Horizontal page gutter: the design's 56px desktop and 24px phone values,
+ * with a 40px step in between so a tablet in portrait is not read at phone
+ * margins. Used by every full-width band so the rhythm never drifts.
  */
-export const gutter = "px-6 nav:px-14";
+export const gutter = "px-6 tab:px-10 nav:px-14";
+
+/**
+ * Vertical rhythm. `default` is the homepage's band spacing; pages that still
+ * carry their own padding simply leave `size` off and nothing changes. Small
+ * screens take a shorter band so a phone is not scrolling through 92px of
+ * empty space between every section.
+ */
+const paddings = {
+  none: "",
+  default: "py-[68px] tab:py-[92px] nav:py-[128px]",
+  tight: "py-[56px] tab:py-[72px] nav:py-[96px]",
+  open: "py-[80px] tab:py-[110px] nav:py-[152px]",
+} as const;
 
 type SectionProps = {
   id?: string;
@@ -14,6 +29,9 @@ type SectionProps = {
   className?: string;
   /** Applies the standard page gutter. Turn off for full-bleed bands. */
   padded?: boolean;
+  size?: keyof typeof paddings;
+  /** Names the landmark when the band is rendered as `nav` or `aside`. */
+  "aria-label"?: string;
   children: ReactNode;
 };
 
@@ -22,10 +40,16 @@ export function Section({
   as: Tag = "section",
   className,
   padded = true,
+  size = "none",
+  "aria-label": ariaLabel,
   children,
 }: SectionProps) {
   return (
-    <Tag id={id} className={cn(padded && gutter, className)}>
+    <Tag
+      id={id}
+      aria-label={ariaLabel}
+      className={cn(padded && gutter, paddings[size], className)}
+    >
       {children}
     </Tag>
   );
@@ -36,6 +60,10 @@ export function Section({
 type EyebrowProps = {
   children: ReactNode;
   tone?: "muted" | "light";
+  /** Draws the short hairline tick the homepage bands lead with. */
+  withRule?: boolean;
+  /** Promote to a heading when the eyebrow is what labels a block of content. */
+  as?: ElementType;
   className?: string;
 };
 
@@ -43,18 +71,36 @@ type EyebrowProps = {
 export function Eyebrow({
   children,
   tone = "muted",
+  withRule = false,
+  as: Tag = "span",
   className,
 }: EyebrowProps) {
-  return (
+  const label = (
     <span
       className={cn(
         "text-[11px] font-semibold uppercase tracking-[0.28em]",
         tone === "light" ? "text-mist" : "text-muted",
-        className,
       )}
     >
       {children}
     </span>
+  );
+
+  if (!withRule) {
+    return <Tag className={cn("m-0 block", className)}>{label}</Tag>;
+  }
+
+  return (
+    <Tag className={cn("m-0 flex items-center gap-4", className)}>
+      <span
+        aria-hidden
+        className={cn(
+          "h-px w-8",
+          tone === "light" ? "bg-line-invert-hero" : "bg-line-strong",
+        )}
+      />
+      {label}
+    </Tag>
   );
 }
 
@@ -74,14 +120,83 @@ export function SectionHeading({
   return (
     <h2
       className={cn(
-        "m-0 font-display text-[34px] font-normal leading-[1.1] tracking-[-0.02em]",
-        size === 54
-          ? "nav:text-[54px] nav:leading-[1.08]"
-          : "nav:text-[52px]",
+        "m-0 font-display text-[clamp(27px,8vw,34px)] font-normal leading-[1.1] tracking-[-0.02em] [text-wrap:balance]",
+        size === 54 ? "nav:text-[54px] nav:leading-[1.08]" : "nav:text-[52px]",
         className,
       )}
     >
       {children}
     </h2>
+  );
+}
+
+/* -- Section header ------------------------------------------------------- */
+
+type SectionHeaderProps = {
+  eyebrow: string;
+  heading: ReactNode;
+  lead?: string;
+  action?: { label: string; href: string };
+  tone?: "dark" | "light";
+  size?: 52 | 54;
+  /** Hairline under the header. Off for bands that open straight into copy. */
+  rule?: boolean;
+  className?: string;
+};
+
+/**
+ * Eyebrow → heading → lead, with an optional action on the opposite edge and
+ * a closing hairline. Every homepage band opens with this, which is what keeps
+ * the vertical rhythm identical from section to section.
+ */
+export function SectionHeader({
+  eyebrow,
+  heading,
+  lead,
+  action,
+  tone = "dark",
+  size = 54,
+  rule = true,
+  className,
+}: SectionHeaderProps) {
+  return (
+    <div
+      className={cn(
+        "flex flex-col items-start justify-between gap-9 nav:flex-row nav:items-end nav:gap-16",
+        rule && "border-b pb-8",
+        rule && (tone === "light" ? "border-line-invert" : "border-line"),
+        className,
+      )}
+    >
+      <div className="max-w-[720px]">
+        <Eyebrow tone={tone === "light" ? "light" : "muted"} withRule>
+          {eyebrow}
+        </Eyebrow>
+        <SectionHeading size={size} className="mt-6">
+          {heading}
+        </SectionHeading>
+        {lead ? (
+          <p
+            className={cn(
+              "m-0 mt-6 max-w-[620px] text-[17px] leading-[1.75]",
+              tone === "light" ? "text-mist-deep" : "text-body",
+            )}
+          >
+            {lead}
+          </p>
+        ) : null}
+      </div>
+
+      {action ? (
+        <UnderlineLink
+          href={action.href}
+          tone={tone === "light" ? "light" : "dark"}
+          withArrow
+          className="shrink-0"
+        >
+          {action.label}
+        </UnderlineLink>
+      ) : null}
+    </div>
   );
 }

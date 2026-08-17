@@ -1,36 +1,52 @@
-import { Eyebrow, Section, SectionHeading } from "@/components/ui/section";
-import { journeySection, stages } from "@/content/homepage";
+import { Section, SectionHeader } from "@/components/ui/section";
+import { journeySection } from "@/content/homepage";
+import { processSteps } from "@/content/process";
 
+/**
+ * Four stages on a drawn scale. Each stage opens with a rule and a marker, and
+ * the first is picked out in brand navy so the sequence has a clear start —
+ * the same convention as the figures band at the top of the page.
+ */
 export function Journey() {
   return (
-    <Section id="journey" className="bg-surface py-[110px]">
-      <div className="max-w-[620px]">
-        <Eyebrow>{journeySection.eyebrow}</Eyebrow>
-        <SectionHeading className="mt-4">
-          {journeySection.heading}
-        </SectionHeading>
-      </div>
+    <Section id="journey" size="default" className="bg-surface">
+      <SectionHeader
+        eyebrow={journeySection.eyebrow}
+        heading={journeySection.heading}
+        lead={journeySection.lead}
+        action={journeySection.link}
+      />
 
-      <div className="mt-14 grid grid-cols-1 gap-10 nav:grid-cols-2 wide:grid-cols-4">
-        {stages.map((stage, index) => (
-          <div
-            key={stage.index}
-            className={`border-t-2 pt-[22px] ${
-              index === 0 ? "border-brand" : "border-line-stage"
-            }`}
-          >
-            <div className="text-[11px] font-semibold tracking-[0.16em] text-muted">
-              {stage.index}
+      <ol className="reveal-group m-0 mt-16 grid list-none grid-cols-1 gap-x-9 gap-y-14 p-0 tab:grid-cols-2 wide:grid-cols-4">
+        {processSteps.map((step, index) => (
+          <li key={step.id}>
+            <div
+              className={`border-t-2 ${
+                index === 0 ? "border-brand" : "border-line-stage"
+              }`}
+            >
+              <div className="flex items-center gap-3.5 pt-6">
+                <span
+                  aria-hidden
+                  className={`h-1.5 w-1.5 ${
+                    index === 0 ? "bg-brand" : "bg-line-stage"
+                  }`}
+                />
+                <span className="text-[11px] font-semibold tracking-[0.16em] text-muted">
+                  STAGE {String(step.id).padStart(2, "0")}
+                </span>
+              </div>
             </div>
-            <h3 className="m-0 mt-3.5 font-display text-[26px] font-normal">
-              {stage.title}
+
+            <h3 className="m-0 mt-5 font-display text-[26px] font-normal leading-[1.15]">
+              {step.title}
             </h3>
-            <p className="m-0 mt-2.5 text-[15px] leading-[1.65] text-body">
-              {stage.body}
+            <p className="m-0 mt-3.5 text-[15px] leading-[1.7] text-body">
+              {step.description}
             </p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ol>
     </Section>
   );
 }

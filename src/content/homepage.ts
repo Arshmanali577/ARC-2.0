@@ -1,21 +1,30 @@
 /**
- * All homepage copy, section by section, in the order it appears on the page.
- * Editing marketing text should never require opening a component file.
+ * Homepage copy, section by section, in the order it appears on the page.
+ *
+ * Every string is migrated from the live site's homepage (see
+ * `Content-Extraction/Home/Text/content.md`). The only strings that are not
+ * from the live homepage are the two hero button labels, which the extraction
+ * did not capture and which are kept from this theme instead.
  */
 
 import type { MediaPlate } from "@/components/ui/media-plate";
+import { localAreas } from "@/content/local-areas";
+import { projects } from "@/content/projects";
 
 /* -- Hero ----------------------------------------------------------------- */
 
 export const hero = {
-  eyebrow: "Custom homes · Brisbane & South East Queensland",
-  heading: "Build your vision, not a version of it.",
-  body: "ARC Builders takes your brief from first sketch to final handover — design, approvals, construction and finishes handled under one roof, so the home you move into is the one you imagined.",
-  primaryCta: { label: "Book a free consultation", href: "#enquire" },
-  secondaryCta: { label: "See our work", href: "#projects" },
+  eyebrow: "Aesthetic Residential & Commercial",
+  heading: "Custom Homes Crafted with Care",
+  body: "Serving Brisbane and South East Queensland with thoughtfully designed homes, transparent pricing, and quality-first construction.",
+  primaryCta: { label: "Book a free consultation", href: "/contact" },
+  secondaryCta: { label: "See our work", href: "/projects" },
   media: {
-    label: "HERO FILM — COMPLETED HOME, GOLDEN HOUR",
+    label: "SOLSTICE RESIDENCE — EIGHT MILE PLAINS",
     tone: "dark",
+    src: "/projects/25-langford-st/hero.webp",
+    alt: "Solstice Residence, Eight Mile Plains",
+    video: "/videos/hero-langford.mp4",
   } satisfies MediaPlate,
 };
 
@@ -23,229 +32,139 @@ export const hero = {
 
 export type Stat = { value: string; label: string };
 
+/**
+ * The live hero animates three counters. Only the years figure is recorded in
+ * the extracted content (`companyInfo.experience`), so the other two cells
+ * count what is actually in this project rather than assert an unverified
+ * number. Replace them once the real figures are supplied.
+ */
 export const stats: Stat[] = [
-  { value: "18+", label: "Years in Queensland" },
-  { value: "100+", label: "Homes delivered" },
-  { value: "One", label: "Point of contact, start to finish" },
+  { value: "18+", label: "Years of Industry Experience" },
+  { value: `${projects.length}`, label: "Successful Projects" },
+  { value: `${localAreas.length}`, label: "Service Areas Across SEQ" },
 ];
-
-/* -- Promise -------------------------------------------------------------- */
-
-export const promise = {
-  eyebrow: "Our promise",
-  heading: "A home should still feel right in thirty years.",
-  lead: "Most of what makes a build difficult happens long before anyone lifts a hammer — unclear drawings, soft budgets, decisions left open. We close those gaps first. The scope is written in plain language, the price is fixed, and every finish is chosen before site start.",
-  body: "What you get is a build without surprises, and a house detailed well enough that your family grows into it rather than out of it.",
-};
 
 /* -- Selected work -------------------------------------------------------- */
 
-export type Project = {
-  slug: string;
-  name: string;
-  location: string;
-  summary: string;
-  href: string;
-  media: MediaPlate;
-  /** Offsets the card down a row in the two-column grid. */
-  staggered?: boolean;
-};
-
 export const projectsSection = {
-  eyebrow: "Selected work",
-  heading: "Four homes, four very different briefs",
-  link: { label: "All projects →", href: "#projects" },
+  eyebrow: "Portfolio",
+  heading: "Featured Projects",
+  link: { label: "All projects", href: "/projects" },
 };
 
-export const projects: Project[] = [
-  {
-    slug: "aurelia",
-    name: "Aurelia Residence",
-    location: "Pallara, QLD",
-    summary:
-      "A four-bedroom family home on a new-estate block, planned around a shared central courtyard.",
-    href: "#projects",
-    media: { label: "AURELIA — FRONT ELEVATION, DUSK", tone: "plate-1" },
-  },
-  {
-    slug: "solstice",
-    name: "Solstice Residence",
-    location: "Eight Mile Plains, QLD",
-    summary:
-      "Two generations under one roof, with a self-contained ground-floor wing and separate entry.",
-    href: "#projects",
-    media: { label: "SOLSTICE — LIVING, NORTH LIGHT", tone: "plate-2" },
-    staggered: true,
-  },
-  {
-    slug: "lumiere",
-    name: "Lumiere Residence",
-    location: "Camp Hill, QLD",
-    summary:
-      "A full renovation and rear extension to a character home, opened up to the garden.",
-    href: "#projects",
-    media: { label: "LUMIERE — STAIR & VOID", tone: "plate-3" },
-  },
-  {
-    slug: "halcyon",
-    name: "Halcyon Residence",
-    location: "Mount Gravatt, QLD",
-    summary:
-      "Premium detailing throughout — stone, joinery and lighting resolved before site start.",
-    href: "#projects",
-    media: { label: "HALCYON — KITCHEN DETAIL", tone: "plate-4" },
-    staggered: true,
-  },
-];
-
-/* -- The practice --------------------------------------------------------- */
+/* -- The practice (About preview) ----------------------------------------- */
 
 export type Pillar = { index: string; title: string; body: string };
 
 export const practice = {
-  eyebrow: "The practice",
-  heading: "Builders are not interchangeable.",
-  lead: "Eighteen years of custom residential and commercial building across Brisbane and South East Queensland. We take on a limited number of projects each year, which is what allows the director to stay across every one of them personally.",
-  body: "Our specialisation runs deeper than square metres: multi-generational planning, Vastu-aware orientation, and detailing for families who intend to stay in the home they build.",
-  link: { label: "More about ARC →", href: "#studio" },
+  eyebrow: "About ARC Builders",
+  heading: "Custom Homes Built With Precision and Care",
+  lead: "At ARC Builders, we bring over 18 years of experience delivering high-quality custom homes in Brisbane and South East Queensland. Our expert team is committed to exceptional customer service, offering a seamless and transparent building experience from design to completion.",
+  body: [
+    "We specialise in custom home design, multi-generational homes, and Vastu-inspired home planning, creating functional, spacious homes tailored for modern families who value comfort, connection, and long-term living.",
+    "With fixed pricing, transparent quotes, and no hidden costs, you can build with confidence knowing exactly what to expect. Unlike standard project builders, we offer fully customised home designs so your home reflects your lifestyle, preferences, and future needs.",
+  ],
+  note: "ARC Builders - trusted custom home builders in Queensland, delivering personalised homes with precision, quality, and a difference.",
+  link: { label: "More about ARC", href: "/about" },
   media: {
-    label: "DIRECTOR & TEAM ON SITE — PORTRAIT",
+    label: "WILLOWMERE RESIDENCE — KINGSTON",
     tone: "brand-mid",
+    src: "/projects/3-dart-ave-kingston/hero.webp",
+    alt: "Willowmere Residence, Kingston",
   } satisfies MediaPlate,
 };
 
 export const pillars: Pillar[] = [
   {
     index: "01",
-    title: "Fixed pricing",
-    body: "A quote with the full scope attached. No allowances that quietly grow.",
+    title: "18+ Years",
+    body: "Experienced custom home delivery across Queensland",
   },
   {
     index: "02",
-    title: "Multi-generational",
-    body: "Dual living, separate wings, and privacy planned from the first sketch.",
+    title: "Transparent Quotes",
+    body: "Fixed pricing and clear scope without hidden costs",
   },
   {
     index: "03",
-    title: "Vastu-aware design",
-    body: "Orientation and room placement resolved alongside your consultant.",
+    title: "Custom Planning",
+    body: "Fully personalised homes for modern family living",
   },
   {
     index: "04",
-    title: "One point of contact",
-    body: "The builder who quotes your home is the one who runs the site.",
-  },
-];
-
-/* -- The journey ---------------------------------------------------------- */
-
-export type Stage = { index: string; title: string; body: string };
-
-export const journeySection = {
-  eyebrow: "The journey",
-  heading: "Four stages, and you always know which one you're in",
-};
-
-export const stages: Stage[] = [
-  {
-    index: "STAGE 01",
-    title: "Your vision",
-    body: "A free, no-obligation consultation. We walk the site, take the brief, and give you an honest read on what it costs before anyone draws anything.",
-  },
-  {
-    index: "STAGE 02",
-    title: "Design",
-    body: "Floor plans, facades and interior finishes worked through together until the drawings match what you pictured.",
-  },
-  {
-    index: "STAGE 03",
-    title: "Approvals & pricing",
-    body: "Permits secured, trades quoted, and the contract price fixed — so construction starts with nothing left open.",
-  },
-  {
-    index: "STAGE 04",
-    title: "Build & handover",
-    body: "A clean site, weekly photo updates, then a full walkthrough of every system in the house before the keys change hands.",
+    title: "Specialist Design",
+    body: "Multi-generational and Vastu-inspired home planning",
   },
 ];
 
 /* -- What we build -------------------------------------------------------- */
 
-export type Capability = {
-  index: string;
-  title: string;
-  body: string;
-  href: string;
-};
-
 export const capabilitySection = {
-  eyebrow: "What we build",
-  heading: "Residential and commercial, under one licence",
+  eyebrow: "What We Do",
+  heading: "Our Services",
+  lead: "We design and build stylish residential and commercial buildings that suit your style, budget, and requirements.",
+  footnote: "Need a complete service scope for residential or commercial work?",
+  links: [
+    { label: "Residential services", href: "/residential" },
+    { label: "Commercial services", href: "/commercial" },
+  ],
 };
 
-export const capabilities: Capability[] = [
-  {
-    index: "01",
-    title: "Custom Homes",
-    body: "Concept to completion on your block — designed around the site, your budget, and how your family actually lives.",
-    href: "#capability",
-  },
-  {
-    index: "02",
-    title: "Renovations",
-    body: "Structural and cosmetic work on established homes, managed to keep dust, noise and surprises contained.",
-    href: "#capability",
-  },
-  {
-    index: "03",
-    title: "Extensions & Granny Flats",
-    body: "Added floor area that reads as part of the original house, not an afterthought bolted to the back.",
-    href: "#capability",
-  },
-  {
-    index: "04",
-    title: "Fitouts & Medical Centres",
-    body: "Retail and clinical fitouts delivered to programme, with trades sequenced around your opening date.",
-    href: "#capability",
-  },
-];
+/** The four service lines the live homepage surfaces, in the same order. */
+export const homeServiceIds = ["1", "2", "3", "7"];
 
-/* -- Testimonial ---------------------------------------------------------- */
+/* -- Local expertise ------------------------------------------------------ */
 
-export const testimonial = {
-  eyebrow: "Client",
-  quote:
-    "“Building our home happened during one of the most important times of our lives. ARC’s team became a source of calm and reassurance. They didn’t just build a house; they created a warm, safe space where our new journey as a family could begin.”",
-  author: "Jaswinder & Reet",
-  project: "Custom family home",
-  media: {
-    label: "CLIENT PORTRAIT IN FINISHED HOME",
-    tone: "plate-1",
-  } satisfies MediaPlate,
+export const localExpertise = {
+  eyebrow: "Local Expertise",
+  heading: "Custom Home Builder in Brisbane & South East Queensland",
+  lead: "ARC Builders supports Indian-Australian and local families with custom homes, Vastu-aware planning, transparent pricing, and practical project delivery across South East Queensland.",
 };
-
-/* -- Service areas -------------------------------------------------------- */
 
 export const serviceAreaSection = {
   eyebrow: "Where we build",
-  link: { label: "All service areas →", href: "#enquire" },
+  link: { label: "All service areas", href: "/locations" },
 };
 
-export const serviceAreas: string[] = [
-  "Brisbane Southside",
-  "Logan",
-  "Rochedale",
-  "Calamvale",
-  "Pallara",
-  "Greenbank",
-  "Eight Mile Plains",
-  "Mount Gravatt",
+/** The eight suburbs the live homepage lists, in order. */
+export const homeAreaSlugs = [
+  "brisbane-southside",
+  "logan",
+  "rochedale",
+  "calamvale",
+  "pallara",
+  "greenbank",
+  "eight-mile-plains",
+  "mount-gravatt",
 ];
 
-/* -- Enquire -------------------------------------------------------------- */
+/* -- The journey (process) ------------------------------------------------ */
 
-export const enquire = {
-  eyebrow: "Next step",
-  heading: "Let's talk about your block.",
-  body: "Send your site details and rough brief. You'll get an honest view on feasibility, timeline and cost — free, no obligation, and before you commit to anything.",
+export const journeySection = {
+  eyebrow: "How We Work",
+  heading: "Our Process",
+  lead: "From first conversation to final handover, every step is transparent, collaborative, and focused on your vision.",
+  link: { label: "The full process", href: "/process" },
+};
+
+/* -- Testimonials --------------------------------------------------------- */
+
+export const testimonialSection = {
+  eyebrow: "Testimonials",
+  heading: "What Our Clients Say",
+  media: {
+    label: "ELMSWORTH RESIDENCE — CALAMVALE",
+    tone: "plate-1",
+    src: "/projects/35-ayesha-place-calamvale/hero.webp",
+    alt: "Elmsworth Residence, Calamvale",
+  } satisfies MediaPlate,
+};
+
+/* -- Closing call to action ----------------------------------------------- */
+
+export const cta = {
+  eyebrow: "Let's Build Together",
+  heading: "Ready to Build Your Dream Home?",
+  body: "Whether it's a custom home, renovation, or commercial project, our team delivers quality builds with transparent pricing and no hidden surprises.",
+  primaryCta: { label: "Get in Touch", href: "/contact" },
 };

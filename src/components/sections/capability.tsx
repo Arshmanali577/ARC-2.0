@@ -1,39 +1,38 @@
-import Link from "next/link";
+import { UnderlineLink } from "@/components/ui/button";
+import { Section, SectionHeader } from "@/components/ui/section";
+import { ServiceRows } from "@/components/ui/service-rows";
+import { capabilitySection, homeServiceIds } from "@/content/homepage";
+import { allServices } from "@/content/services";
 
-import { Eyebrow, Section, SectionHeading } from "@/components/ui/section";
-import { capabilities, capabilitySection } from "@/content/homepage";
+const homeServices = homeServiceIds
+  .map((id) => allServices.find((service) => service.id === id))
+  .filter((service) => service !== undefined);
 
 export function Capability() {
   return (
-    <Section id="capability" className="py-[110px]">
-      <div className="max-w-[620px]">
-        <Eyebrow>{capabilitySection.eyebrow}</Eyebrow>
-        <SectionHeading className="mt-4">
-          {capabilitySection.heading}
-        </SectionHeading>
+    <Section id="capability" size="default" className="bg-surface">
+      <SectionHeader
+        eyebrow={capabilitySection.eyebrow}
+        heading={capabilitySection.heading}
+        lead={capabilitySection.lead}
+        rule={false}
+      />
+
+      <div className="mt-14">
+        <ServiceRows services={homeServices} />
       </div>
 
-      <div className="mt-[50px] border-t border-line">
-        {capabilities.map((item) => (
-          <Link
-            key={item.index}
-            href={item.href}
-            className="grid grid-cols-1 items-center gap-7 border-b border-line py-8 transition-[padding-left,background-color] duration-300 ease-out hover:bg-surface nav:grid-cols-[70px_320px_1fr_40px] nav:hover:pl-5"
-          >
-            <span className="text-[11px] font-semibold tracking-[0.16em] text-faint">
-              {item.index}
-            </span>
-            <h3 className="m-0 font-display text-[30px] font-normal">
-              {item.title}
-            </h3>
-            <p className="m-0 text-[16px] leading-[1.6] text-body">
-              {item.body}
-            </p>
-            <span aria-hidden className="text-[22px] text-brand nav:text-right">
-              →
-            </span>
-          </Link>
-        ))}
+      <div className="mt-12 flex flex-col items-start justify-between gap-7 nav:flex-row nav:items-center nav:gap-16">
+        <p className="m-0 max-w-[46ch] text-[16px] leading-[1.65] text-body">
+          {capabilitySection.footnote}
+        </p>
+        <div className="flex flex-col items-start gap-5 nav:flex-row nav:items-center nav:gap-10">
+          {capabilitySection.links.map((link) => (
+            <UnderlineLink key={link.href} href={link.href} withArrow>
+              {link.label}
+            </UnderlineLink>
+          ))}
+        </div>
       </div>
     </Section>
   );

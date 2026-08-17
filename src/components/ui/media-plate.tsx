@@ -6,18 +6,27 @@ import { cn } from "@/lib/cn";
  * Every image slot on the page is a "plate". Until real photography lands it
  * renders the hatched placeholder from the design; pass `src` and the exact
  * same slot renders an optimised <Image> instead — no layout change.
+ *
+ * `className` sizes the plate — a height, or an `aspect-*`. It must NOT carry
+ * a position utility: the plate owns `relative` so `next/image fill` has an
+ * ancestor to fill, and Tailwind would resolve the clash by source order, not
+ * by the order you wrote the classes in. Position the wrapper instead.
  */
 export type MediaPlate = {
   /** Uppercase art-direction note shown on the placeholder. */
   label: string;
-  /** Placeholder fill. Determines hatch colour and label contrast. */
-  tone: "dark" | "brand-mid" | "plate-1" | "plate-2" | "plate-3" | "plate-4";
+  /** Placeholder fill — only ever seen when `src` is absent. */
+  tone?: "dark" | "brand-mid" | "plate-1" | "plate-2" | "plate-3" | "plate-4";
   /** Supply once real photography exists. */
   src?: string;
   alt?: string;
+  /** Optional looping background film. `src` is used as its poster frame. */
+  video?: string;
 };
 
-const toneStyles: Record<MediaPlate["tone"], string> = {
+type PlateTone = NonNullable<MediaPlate["tone"]>;
+
+const toneStyles: Record<PlateTone, string> = {
   dark: "bg-brand-deep hatch-dark",
   "brand-mid": "bg-brand-mid hatch-dark-strong",
   "plate-1": "bg-plate-1 hatch-light",
@@ -26,7 +35,7 @@ const toneStyles: Record<MediaPlate["tone"], string> = {
   "plate-4": "bg-plate-4 hatch-light",
 };
 
-const isDarkTone = (tone: MediaPlate["tone"]) =>
+const isDarkTone = (tone: PlateTone) =>
   tone === "dark" || tone === "brand-mid";
 
 type MediaPlateProps = MediaPlate & {
@@ -41,15 +50,35 @@ type MediaPlateProps = MediaPlate & {
 
 export function MediaPlate({
   label,
-  tone,
+  tone = "plate-1",
   src,
   alt,
+  video,
   className,
   align = "start",
   labelPadding = 18,
   priority,
   sizes = "100vw",
 }: MediaPlateProps) {
+  if (video) {
+    return (
+      <div className={cn("relative overflow-hidden", className)}>
+        <video
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          poster={src}
+          aria-label={alt ?? label}
+        >
+          <source src={video} type="video/mp4" />
+        </video>
+      </div>
+    );
+  }
+
   if (src) {
     return (
       <div className={cn("relative overflow-hidden", className)}>

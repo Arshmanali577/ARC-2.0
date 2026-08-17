@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Reference-only copies of the original site's source — not part of the build.
+    "Content-Extraction/**",
   ]),
 ]);
 

@@ -1,60 +1,75 @@
-import { UnderlineLink } from "@/components/ui/button";
 import { MediaPlate } from "@/components/ui/media-plate";
-import { Eyebrow, SectionHeading, gutter } from "@/components/ui/section";
+import { Section, SectionHeader } from "@/components/ui/section";
 import { pillars, practice } from "@/content/homepage";
 
+/**
+ * The navy band. A tall portrait on the left, the write-up on the right, and
+ * the four capabilities beneath as a divider grid — the 1px gap over a
+ * translucent ground is the same rule work used across the design.
+ */
 export function Practice() {
   return (
-    <section id="studio" className="bg-brand text-white">
-      <div
-        className={`grid grid-cols-1 items-start gap-20 py-[110px] nav:grid-cols-[1fr_1.15fr] ${gutter}`}
-      >
-        <div>
-          <Eyebrow tone="light">{practice.eyebrow}</Eyebrow>
-          <SectionHeading className="mt-[18px]">
-            {practice.heading}
-          </SectionHeading>
-          <MediaPlate
-            {...practice.media}
-            sizes="(max-width: 900px) 100vw, 45vw"
-            className="mt-[42px] h-[380px]"
-          />
-        </div>
+    <Section id="studio" size="default" className="relative bg-brand text-white">
+      <div aria-hidden className="pointer-events-none absolute inset-0 hatch-dark" />
 
-        <div className="nav:pt-12">
-          <p className="m-0 text-[21px] font-light leading-[1.65] text-white/92">
-            {practice.lead}
-          </p>
-          <p className="m-0 mt-6 text-[17px] leading-[1.75] text-mist-deep">
-            {practice.body}
-          </p>
+      <div className="relative">
+        <SectionHeader
+          eyebrow={practice.eyebrow}
+          heading={practice.heading}
+          tone="light"
+          action={practice.link}
+        />
 
-          {/* 1px gap over a translucent white ground draws the divider grid */}
-          <div className="mt-[46px] grid grid-cols-1 gap-px bg-line-invert-soft nav:grid-cols-2">
-            {pillars.map((pillar) => (
-              <div key={pillar.index} className="bg-brand px-[26px] py-7">
-                <div className="text-[11px] font-semibold tracking-[0.16em] text-mist">
-                  {pillar.index}
-                </div>
-                <h3 className="m-0 mt-3.5 text-[17px] font-semibold">
-                  {pillar.title}
-                </h3>
-                <p className="m-0 mt-2 text-[14px] leading-[1.6] text-mist-deep">
-                  {pillar.body}
-                </p>
-              </div>
-            ))}
+        <div className="mt-16 grid grid-cols-1 items-start gap-12 nav:grid-cols-[1fr_1.25fr] nav:gap-16">
+          {/* The portrait tracks the write-up rather than leaving a column of
+              dead navy beside it. Positioning lives on the wrapper — MediaPlate
+              keeps `relative` for `next/image fill`. */}
+          <div className="nav:sticky nav:top-[120px]">
+            <MediaPlate
+              {...practice.media}
+              sizes="(max-width: 900px) 100vw, 42vw"
+              className="aspect-[4/5] w-full"
+            />
           </div>
 
-          <UnderlineLink
-            href={practice.link.href}
-            tone="light"
-            className="mt-[38px]"
-          >
-            {practice.link.label}
-          </UnderlineLink>
+          <div>
+            <p className="m-0 text-[21px] font-light leading-[1.65] text-white/92">
+              {practice.lead}
+            </p>
+            {practice.body.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="m-0 mt-6 text-[17px] leading-[1.75] text-mist-deep"
+              >
+                {paragraph}
+              </p>
+            ))}
+
+            <div className="reveal-group mt-12 grid grid-cols-1 gap-px bg-line-invert-soft tab:grid-cols-2">
+              {pillars.map((pillar) => (
+                <div key={pillar.index} className="bg-brand px-7 py-8">
+                  <div className="flex items-center gap-3.5">
+                    <span className="text-[11px] font-semibold tracking-[0.16em] text-mist">
+                      {pillar.index}
+                    </span>
+                    <span aria-hidden className="h-px w-6 bg-line-invert-strong" />
+                  </div>
+                  <h3 className="m-0 mt-5 text-[17px] font-semibold">
+                    {pillar.title}
+                  </h3>
+                  <p className="m-0 mt-2.5 text-[14px] leading-[1.6] text-mist-deep">
+                    {pillar.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <p className="m-0 mt-10 border-t border-line-invert pt-8 text-[15px] leading-[1.75] text-mist-deep">
+              {practice.note}
+            </p>
+          </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* `Content-Extraction/` is the archived copy of the old site. Tailwind's
+   automatic source detection was reading the class names out of it and
+   emitting utilities — and breakpoints — this site never uses. */
+@source not "../../Content-Extraction";
+
 /* ---------------------------------------------------------------------------
    ARC Builders design tokens
    Single source of truth for colour, type and layout. Every component reads
@@ -37,12 +42,22 @@
   --color-plate-3: #e2e9f1;
   --color-plate-4: #cfdae8;
 
+  /* Elevation. Cards sit flat; the lift only appears on hover, and it is cast
+     in brand navy rather than neutral grey so it reads as part of the palette
+     instead of a generic drop shadow. */
+  --shadow-plate: 0 26px 60px -30px rgba(0, 43, 92, 0.42);
+  --shadow-plate-strong: 0 34px 80px -34px rgba(0, 43, 92, 0.52);
+
   /* Typography */
   --font-sans: var(--font-inter), Inter, sans-serif;
   --font-display: "Century Gothic", var(--font-questrial), Questrial, sans-serif;
 
-  /* Breakpoints mirror the source design's media queries exactly.
-     base = <=900px · nav = >=901px · wide = >=1201px */
+  /* Breakpoints. `nav` and `wide` mirror the source design's media queries
+     exactly. `tab` is an addition: the design jumped straight from 24px
+     gutters and one column to the 901px layout, which left every screen from
+     a 320px phone to an 834px tablet on an identical, very narrow layout.
+     base = <=639px · tab = >=640px · nav = >=901px · wide = >=1201px */
+  --breakpoint-tab: 640px;
   --breakpoint-nav: 901px;
   --breakpoint-wide: 1201px;
 }
@@ -72,10 +87,96 @@
   );
 }
 
+/* Scroll reveal ----------------------------------------------------------- */
+
+/* Two deliberate details here:
+   1. The end state is `transform: none`, not `translateY(0)`. A settled
+      transform would make every revealed element a containing block and break
+      the sticky rails on the project, article, contact and area pages.
+   2. The reveal animates `transform`, while Tailwind v4 compiles `translate-*`
+      and `scale-*` to the independent `translate` and `scale` properties. That
+      is what lets a card sit inside `reveal-group` and still lift and zoom on
+      hover — the two compose instead of one overriding the other. Do not
+      rewrite these keyframes to use `translate`. */
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Starts part-way up rather than at zero: a route change still reads as a
+   transition, but the first paint of a cold load is never invisible, so this
+   costs nothing against LCP. */
+@keyframes fade-in {
+  from {
+    opacity: 0.55;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Driven by the scroll position rather than an observer, so the reveal costs
+   no JavaScript. Browsers without `animation-timeline` simply render the
+   content in place, and the animation is skipped outright when the visitor has
+   asked for reduced motion. */
+@utility reveal {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 4% cover 26%;
+    }
+  }
+}
+
+/* The same reveal applied to a grid or list, with each of the first few
+   children finishing a little later than the one before it. The stagger comes
+   from the animation range, so it still costs nothing at runtime. */
+@utility reveal-group {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      & > * {
+        animation: reveal-in linear both;
+        animation-timeline: view();
+        animation-range: entry 2% cover 22%;
+      }
+
+      & > *:nth-child(2) {
+        animation-range: entry 2% cover 28%;
+      }
+
+      & > *:nth-child(3) {
+        animation-range: entry 2% cover 34%;
+      }
+
+      & > *:nth-child(n + 4) {
+        animation-range: entry 2% cover 40%;
+      }
+    }
+  }
+}
+
+/* Opacity only — safe on any wrapper, including ones holding sticky children. */
+@utility page-enter {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fade-in 300ms ease-out both;
+  }
+}
+
 /* Base ------------------------------------------------------------------- */
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* `clip`, not `hidden`: it stops a stray overflow from producing a
+       horizontal scrollbar without creating a scroll container, so every
+       sticky rail on the site keeps working. */
+    overflow-x: clip;
   }
 
   body {
