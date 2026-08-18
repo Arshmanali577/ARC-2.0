@@ -17,6 +17,13 @@
   --color-brand-deep: #0b2f57; /* hero media plate */
   --color-brand-mid: #0b3a69; /* media plate on navy sections */
 
+  /* Azure accent — the footer's highlight. Brighter than the brand navy so a
+     link, an icon or a licence number lifts off the deep ground, but still the
+     same blue family, so nothing reads as a second brand colour. */
+  --color-accent: #2f8fe0;
+  --color-accent-soft: #5aa9ef;
+  --color-accent-deep: #1a6bb8;
+
   /* Supporting greys / blues */
   --color-muted: #5b7392; /* eyebrows, meta labels */
   --color-body: #4a5c73; /* secondary body copy */
@@ -47,6 +54,11 @@
      instead of a generic drop shadow. */
   --shadow-plate: 0 26px 60px -30px rgba(0, 43, 92, 0.42);
   --shadow-plate-strong: 0 34px 80px -34px rgba(0, 43, 92, 0.52);
+
+  /* Footer glows. Cast in the accent rather than neutral black so the lift on
+     a social button or a hovered link stays inside the palette. */
+  --shadow-glow-soft: 0 0 0 1px rgba(90, 169, 239, 0.28), 0 10px 26px -12px rgba(47, 143, 224, 0.6);
+  --shadow-glow-lift: 0 14px 30px -12px rgba(47, 143, 224, 0.75);
 
   /* Typography */
   --font-sans: var(--font-inter), Inter, sans-serif;
@@ -85,6 +97,96 @@
     rgba(255, 255, 255, 0.07) 0 2px,
     transparent 2px 12px
   );
+}
+
+/* Footer surface ---------------------------------------------------------- */
+
+/* The footer's ground: the deepest navy with two soft lights layered over it —
+   a cool wash falling from the top edge and a warmer navy pooling in the
+   bottom-left corner, behind the blueprint drawing. Gradients rather than a
+   flat fill are what stop a 500px-tall block of #001a38 from reading as a
+   dead rectangle. */
+@utility footer-surface {
+  background-color: var(--color-ink);
+  background-image:
+    radial-gradient(
+      140% 90% at 50% -20%,
+      rgba(47, 143, 224, 0.18),
+      transparent 62%
+    ),
+    radial-gradient(
+      70% 70% at 4% 96%,
+      rgba(11, 58, 105, 0.55),
+      transparent 72%
+    );
+}
+
+/* Draughting paper. A 72px grid at the threshold of visibility, masked so it
+   only ever surfaces near the top edge and dissolves before it reaches the
+   copy underneath. */
+@utility blueprint-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 58%);
+  mask-image: linear-gradient(to bottom, black, transparent 58%);
+}
+
+/* Premium separator: a hairline that carries light in the middle and fades out
+   at both ends, so a divider reads as a lit edge instead of a border. */
+@utility rule-glow {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.1) 16%,
+    rgba(90, 169, 239, 0.5) 50%,
+    rgba(255, 255, 255, 0.1) 84%,
+    transparent
+  );
+}
+
+/* The vertical counterpart, dividing the cells of the bottom bar. */
+@utility rule-glow-y {
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.16) 32%,
+    rgba(255, 255, 255, 0.16) 68%,
+    transparent
+  );
+}
+
+/* The glow a glyph takes on when its row is hovered. A drop-shadow rather
+   than a box-shadow, so it hugs the icon's strokes instead of its box. */
+@utility glow-accent {
+  filter: drop-shadow(0 0 6px rgba(90, 169, 239, 0.6));
+}
+
+/* Social marks -------------------------------------------------------------
+   Each network keeps its own colours so the icons are recognisable at 22px,
+   but every one is rendered as a gradient lit from the top-left, which is what
+   makes the row read as a set rather than four pasted logos. */
+@utility social-facebook {
+  background-image: linear-gradient(140deg, #2b8bff 0%, #1877f2 48%, #0d5bc4 100%);
+}
+
+@utility social-instagram {
+  background-image: linear-gradient(
+    140deg,
+    #f3a13a 0%,
+    #dd2a7b 44%,
+    #8134af 74%,
+    #4f5bd5 100%
+  );
+}
+
+@utility social-linkedin {
+  background-image: linear-gradient(140deg, #2a8fd8 0%, #0a66c2 50%, #06498f 100%);
+}
+
+@utility social-youtube {
+  background-image: linear-gradient(140deg, #ff5a5f 0%, #e82f45 50%, #b81d30 100%);
 }
 
 /* Scroll reveal ----------------------------------------------------------- */

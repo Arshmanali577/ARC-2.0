@@ -108,22 +108,40 @@ export const headerCta: NavItem = {
   href: "/contact",
 };
 
-/** The footer lists the routable pages; "Services" leads its own column. */
-export const footerNav: NavItem[] = primaryNav.filter(
-  (entry): entry is NavItem => !isNavGroup(entry),
-);
+/**
+ * Every footer service carries the glyph it is listed with. The name resolves
+ * to a drawing in `components/ui/icon.tsx` — keeping the key here rather than a
+ * component reference is what lets this file stay free of JSX.
+ */
+export type ServiceIconName =
+  | "home"
+  | "building"
+  | "draft"
+  | "hammer"
+  | "extend"
+  | "cabin"
+  | "store"
+  | "medical";
 
-export const footerServices: NavItem[] = [
-  ...servicesNav,
-  { label: "Custom Homes", href: "/residential#custom-homes" },
-  { label: "Renovations", href: "/residential#renovations" },
-  { label: "Extensions", href: "/residential#extensions" },
-  { label: "Granny Flats", href: "/residential#granny-flats" },
-  { label: "Shop Fitouts", href: "/commercial#shop-fitouts" },
-  { label: "Medical Centres", href: "/commercial#medical-centres" },
+export type ServiceNavItem = NavItem & { icon: ServiceIconName };
+
+export const footerServices: ServiceNavItem[] = [
+  { label: "Residential", href: "/residential", icon: "home" },
+  { label: "Commercial", href: "/commercial", icon: "building" },
+  { label: "Custom Homes", href: "/residential#custom-homes", icon: "draft" },
+  { label: "Renovations", href: "/residential#renovations", icon: "hammer" },
+  { label: "Extensions", href: "/residential#extensions", icon: "extend" },
+  { label: "Granny Flats", href: "/residential#granny-flats", icon: "cabin" },
+  { label: "Shop Fitouts", href: "/commercial#shop-fitouts", icon: "store" },
+  {
+    label: "Medical Centres",
+    href: "/commercial#medical-centres",
+    icon: "medical",
+  },
 ];
 
-/** The six suburbs the live footer lists, plus the index link. */
+/** The six suburbs the live footer lists. The index link is separate: the
+    footer renders it as an action, not as a seventh suburb. */
 export const footerAreas: NavItem[] = [
   { label: "Brisbane Southside", href: "/locations/brisbane-southside" },
   { label: "Logan", href: "/locations/logan" },
@@ -131,5 +149,41 @@ export const footerAreas: NavItem[] = [
   { label: "Calamvale", href: "/locations/calamvale" },
   { label: "Pallara", href: "/locations/pallara" },
   { label: "Greenbank", href: "/locations/greenbank" },
-  { label: "View All Areas", href: "/locations" },
 ];
+
+export const allAreasLink: NavItem = {
+  label: "View All Areas",
+  href: "/locations",
+};
+
+/* -- Footer -------------------------------------------------------------- */
+
+/**
+ * Social profiles. The hrefs are `#` in the live site's `companyInfo.socials`
+ * and are migrated verbatim — swap in the real profile URLs when they exist.
+ */
+export type SocialNetwork = "facebook" | "instagram" | "linkedin" | "youtube";
+
+export type SocialLink = { label: string; href: string; network: SocialNetwork };
+
+export const socials: SocialLink[] = [
+  { label: "Facebook", href: "#", network: "facebook" },
+  { label: "Instagram", href: "#", network: "instagram" },
+  { label: "LinkedIn", href: "#", network: "linkedin" },
+  { label: "YouTube", href: "#", network: "youtube" },
+];
+
+/** The two-line statement the footer's bottom bar opens with. */
+export const footerCreed = {
+  lead: "Building spaces that inspire.",
+  echo: "Crafted with trust. Built for life.",
+} as const;
+
+/** Column headings, so the footer component carries no copy of its own. */
+export const footerLabels = {
+  services: "Services",
+  contact: "Contact",
+  areas: "Service Areas",
+  follow: "Follow Us",
+  rights: "All rights reserved.",
+} as const;

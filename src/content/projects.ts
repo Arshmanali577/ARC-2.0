@@ -194,6 +194,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Celeste Residence was curated as a premium showcase project, pairing bold presentation with luxurious finishes and a strong focus on craftsmanship, flow, and everyday comfort.",
     heroImage: "/projects/hi-def-project/hero.webp",
+    heroVideo: "/videos/hi-def-project.mp4",
     images: buildProjectGallery("hi-def-project", 9),
     featured: false,
   },
@@ -229,6 +230,7 @@ export const projects: Project[] = [
     projectNarrative:
       "Binnalong Residence brings a composed, functional approach to the family home, with a gallery that follows the project from its exterior presence through to finished internal spaces and key living zones.",
     heroImage: "/projects/25-binnalong-st-rochedale-south/hero.webp",
+    heroVideo: "/videos/25-binnalong-st-rochedale-south.mp4",
     images: buildProjectGallery("25-binnalong-st-rochedale-south", 30),
     featured: false,
   },

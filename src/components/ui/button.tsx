@@ -85,7 +85,7 @@ export function Button({
 type UnderlineLinkProps = {
   href: string;
   children: ReactNode;
-  tone?: "dark" | "light";
+  tone?: "dark" | "light" | "accent";
   /** Trailing arrow that slides on hover. */
   withArrow?: boolean;
   className?: string;
@@ -104,9 +104,12 @@ export function UnderlineLink({
       href={href}
       className={cn(
         "group/link inline-flex items-center gap-2.5 whitespace-nowrap border-b pb-1.5 text-[13px] font-semibold uppercase tracking-[0.12em] transition-[border-color,opacity,color] duration-300 ease-out",
-        tone === "light"
-          ? "border-white/50 text-white hover:border-white"
-          : "border-brand text-brand hover:opacity-60",
+        tone === "light" && "border-white/50 text-white hover:border-white",
+        tone === "dark" && "border-brand text-brand hover:opacity-60",
+        // The footer's azure treatment: the rule stays dim until the link is
+        // hovered, so a column of suburbs is not competing with its own action.
+        tone === "accent" &&
+          "border-accent/40 text-accent-soft hover:border-accent-soft hover:text-white",
         className,
       )}
     >
