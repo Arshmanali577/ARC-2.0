@@ -5,7 +5,7 @@ import { ArrowRight } from "@/components/ui/icon";
 import { cn } from "@/lib/cn";
 
 /**
- * The five button treatments used in the design. Each variant reproduces its
+ * The button treatments used in the design. Each variant reproduces its
  * source padding, type and hover transition — add a variant here rather than
  * one-off classes in a section.
  */
@@ -14,7 +14,9 @@ export type ButtonVariant =
   | "heroSolid" // white block, hero primary
   | "heroOutline" // hairline outline, hero secondary
   | "actionSolid" // white full-width row, enquire band
-  | "actionOutline"; // outlined full-width row, enquire band
+  | "actionOutline" // outlined full-width row, enquire band
+  | "cardSolid" // rounded navy row, foot of a floating card
+  | "panelSolid"; // rounded white row, enquire band's consultation panel
 
 const base =
   "group/button relative inline-flex items-center gap-3 transition duration-300 ease-out";
@@ -30,6 +32,15 @@ const variants: Record<ButtonVariant, string> = {
     "justify-between bg-white px-7 py-[22px] text-[15px] font-semibold tracking-[0.06em] text-brand hover:bg-mist",
   actionOutline:
     "justify-between border border-line-invert-strong px-7 py-[22px] text-[15px] font-medium tracking-[0.06em] text-white hover:border-white hover:bg-white/8",
+  // The only rounded button in the set: it closes a rounded card, so a square
+  // block would read as a foreign object sitting inside one.
+  cardSolid:
+    "w-full justify-center rounded-full bg-brand px-7 py-[17px] text-[12px] font-semibold uppercase tracking-[0.14em] text-white shadow-plate hover:-translate-y-0.5 hover:bg-ink hover:shadow-plate-strong",
+  // The enquire panel's primary. Label optically centred with the arrow pinned
+  // to the right edge — a `justify-between` row would push the label hard left
+  // and leave the button looking unbalanced at full width.
+  panelSolid:
+    "w-full justify-center rounded-[10px] bg-white px-6 py-[19px] text-[12px] font-semibold uppercase tracking-[0.1em] text-brand hover:-translate-y-0.5 hover:bg-mist [&>svg]:absolute [&>svg]:right-5 tab:px-14 tab:text-[13px] tab:tracking-[0.14em] tab:[&>svg]:right-7",
 };
 
 type ButtonProps = {
@@ -48,7 +59,10 @@ export function Button({
   className,
   withArrow,
 }: ButtonProps) {
-  const isExternal = /^(https?:|tel:|mailto:)/.test(href);
+  // A same-page hash has to stay a plain anchor: that is what lets the
+  // `scroll-behavior: smooth` set in `globals.css` drive the jump, with no
+  // client JavaScript and no router work for a destination already rendered.
+  const isPlainAnchor = /^(https?:|tel:|mailto:|#)/.test(href);
   const content = (
     <>
       <span>{children}</span>
@@ -59,7 +73,7 @@ export function Button({
   );
   const classes = cn(base, variants[variant], className);
 
-  if (isExternal) {
+  if (isPlainAnchor) {
     return (
       <a
         href={href}

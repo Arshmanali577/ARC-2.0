@@ -135,12 +135,72 @@ export const projectsPage = {
   detail: {
     detailsHeading: "Project Details",
     aboutHeading: "About This Project",
-    galleryHeading: "Project Gallery",
+    /** The showcase band leads with the eyebrow, then the heading. */
+    galleryEyebrow: "Project Gallery",
+    galleryHeading: "Explore Every Detail",
+    /** Controls inside the showcase. Every one of these is announced to a
+     *  screen reader, so they are copy, not decoration. */
+    gallery: {
+      previous: "Previous image",
+      next: "Next image",
+      fullscreen: "Fullscreen",
+      closeFullscreen: "Close fullscreen",
+      thumbnails: "Gallery thumbnails",
+      scrollThumbsBack: "Scroll thumbnails left",
+      scrollThumbsForward: "Scroll thumbnails right",
+      filterLabel: "Filter gallery by room",
+      empty: "No images in this category yet.",
+    },
     labels: {
+      /** Names the build itself — used by the gallery's information bar. */
+      project: "Project",
       location: "Location",
       scope: "Scope",
       architect: "Architect",
+      /** The short form, used where a specification sits in a two-cell row. */
       year: "Year",
+      projectType: "Project Type",
+      buildType: "Build Type",
+      duration: "Build Duration",
+      status: "Project Status",
+      /** The long form the detail card spells out. */
+      yearCompleted: "Year Completed",
+    },
+    /** The action closing the specification card. Scrolls to the gallery. */
+    galleryCta: "View Project Gallery",
+    /**
+     * How ARC builds, said once. These four hold for every home in the
+     * portfolio, so they are written here rather than repeated per project.
+     * `icon` selects the glyph in `project-about.tsx`.
+     */
+    features: [
+      {
+        icon: "architecture",
+        title: "Modern Architecture",
+        body: "Clean, timeless design with a focus on how the home is lived in.",
+      },
+      {
+        icon: "openPlan",
+        title: "Open Plan Living",
+        body: "Spacious interiors that flow effortlessly for family living.",
+      },
+      {
+        icon: "materials",
+        title: "Premium Materials",
+        body: "Carefully selected finishes chosen to look and last well.",
+      },
+      {
+        icon: "outdoor",
+        title: "Indoor–Outdoor Living",
+        body: "A seamless connection to the alfresco and the yard beyond.",
+      },
+    ],
+    /** Column headings for the statistics panel under the feature cards. */
+    stats: {
+      bedrooms: "Bedrooms",
+      bathrooms: "Bathrooms",
+      livingAreas: "Living Areas",
+      completed: "Completed",
     },
     viewLabel: "View project",
     backLink: "← All projects",

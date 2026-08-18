@@ -1,47 +1,36 @@
-import { MediaPlate } from "@/components/ui/media-plate";
-import { Section, SectionHeading } from "@/components/ui/section";
-import { projectsPage } from "@/content/pages";
+import { GalleryInfoBar } from "@/components/projects/gallery/gallery-info-bar";
+import { GalleryShowcase } from "@/components/projects/gallery/gallery-showcase";
+import { Section } from "@/components/ui/section";
+import { getGalleryItems } from "@/content/project-gallery";
 import type { Project } from "@/content/projects";
 
 /**
- * Every gallery frame on one crop. Galleries here run from six to thirty
- * images, so a single 4:3 ratio across the grid is what keeps a long set
- * scannable — the rhythm comes from the column count changing at each
- * breakpoint, not from tiles of different shapes.
+ * The gallery band: one large frame at a time rather than a wall of tiles.
  *
- * Only the masthead image is eager; every frame below loads lazily through
- * `next/image`.
+ * Galleries here run from six to thirty images, and a masonry grid asked the
+ * visitor to scan all of them at once. The showcase inverts that — a single
+ * landscape stage, a filter rail for the room they came to see, and a
+ * thumbnail strip that keeps the whole set within reach.
+ *
+ * This file stays a Server Component: the item list, its categories and its
+ * captions are all resolved here, so the client bundle receives plain data and
+ * the band's own frame — section, padding, information bar — never ships.
  */
 export function ProjectGallery({ project }: { project: Project }) {
-  const count = project.images.length;
+  const items = getGalleryItems(project);
 
   return (
-    <Section size="default" className="bg-surface">
-      <div className="flex flex-col items-start justify-between gap-4 border-b border-line pb-7 nav:flex-row nav:items-baseline nav:gap-12">
-        <SectionHeading>{projectsPage.detail.galleryHeading}</SectionHeading>
-        <p className="m-0 shrink-0 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
-          {count} {count === 1 ? "image" : "images"}
-        </p>
-      </div>
-
-      <ul className="reveal-group m-0 mt-12 grid list-none grid-cols-1 gap-5 p-0 tab:grid-cols-2 wide:grid-cols-3">
-        {project.images.map((image, index) => (
-          <li key={image} className="group relative overflow-hidden bg-white">
-            <MediaPlate
-              label={`${project.title} — ${index + 1}`}
-              tone="plate-2"
-              src={image}
-              alt={`${project.title}, image ${index + 1} of ${count}`}
-              sizes="(max-width: 639px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              className="aspect-[4/3] w-full transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
-            />
-            <span
-              aria-hidden
-              className="pointer-events-none absolute inset-0 border border-transparent transition-colors duration-500 ease-out group-hover:border-white/40"
-            />
-          </li>
-        ))}
-      </ul>
+    /* Asymmetric padding rather than a `size` token: this band shares
+       `bg-surface` with the About section directly above it, so the two read
+       as one continuous ground and the usual top inset is dead space. Buying
+       it back is what lets the stage grow without pushing the thumbnail strip
+       off the bottom of the screen. */
+    <Section
+      size="none"
+      className="bg-surface pt-[44px] pb-[56px] tab:pt-[56px] tab:pb-[72px] nav:pt-[72px] nav:pb-[96px]"
+    >
+      <GalleryShowcase items={items} />
+      <GalleryInfoBar project={project} />
     </Section>
   );
 }

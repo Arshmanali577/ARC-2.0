@@ -179,6 +179,12 @@ export const footerCreed = {
   echo: "Crafted with trust. Built for life.",
 } as const;
 
+/** Its answering line, set in the same hand further along the bottom bar. */
+export const footerCreedEcho = {
+  lead: "Quality is never an accident.",
+  echo: "It is drawn, then it is built.",
+} as const;
+
 /** Column headings, so the footer component carries no copy of its own. */
 export const footerLabels = {
   services: "Services",

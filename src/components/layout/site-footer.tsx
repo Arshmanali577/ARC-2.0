@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 
 import { FooterColumn } from "@/components/layout/footer/footer-column";
 import { FooterFact, FooterLink } from "@/components/layout/footer/footer-link";
-import { SocialLink } from "@/components/layout/footer/social-link";
 import { BlueprintHouse } from "@/components/ui/blueprint-house";
 import { UnderlineLink } from "@/components/ui/button";
 import {
@@ -27,10 +26,10 @@ import {
   allAreasLink,
   footerAreas,
   footerCreed,
+  footerCreedEcho,
   footerLabels,
   footerServices,
   site,
-  socials,
   type ServiceIconName,
 } from "@/content/site";
 
@@ -41,8 +40,9 @@ import {
  * axonometric line drawing of a house that bleeds off the left gutter; the
  * three list columns each lead with an eyebrow over a short azure rule, and
  * every row carries the glyph for what it is. Below a lit divider the bottom
- * bar splits into four cells — the studio line, the social row, the copyright
- * and the licence — separated by vertical hairlines rather than boxed.
+ * bar splits into four cells — the studio line, its answering line, the
+ * copyright and the licence — separated by vertical hairlines rather than
+ * boxed.
  *
  * Everything here is a Server Component. The reveal on scroll is the site's own
  * `reveal-group`, driven by `animation-timeline: view()` and so costing no
@@ -194,17 +194,15 @@ export function SiteFooter() {
             </p>
           </div>
 
+          {/* Its answering line, set in the same hand */}
           <Cell>
-            <h2 className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-white">
-              {footerLabels.follow}
-            </h2>
-            <ul className="m-0 mt-5 flex list-none flex-wrap gap-3.5 p-0">
-              {socials.map((social) => (
-                <li key={social.network}>
-                  <SocialLink {...social} />
-                </li>
-              ))}
-            </ul>
+            <QuoteIcon size={20} className="text-accent-soft/80" />
+            <p className="m-0 mt-3.5 border-l-2 border-accent/70 pl-5 text-[15px] leading-[1.7]">
+              <span className="block text-white">{footerCreedEcho.lead}</span>
+              <span className="block text-accent-soft">
+                {footerCreedEcho.echo}
+              </span>
+            </p>
           </Cell>
 
           <Cell>

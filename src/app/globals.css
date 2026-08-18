@@ -121,6 +121,26 @@
     );
 }
 
+/* Enquire band --------------------------------------------------------------
+   The same deep navy as the footer, but lit from the top right so the
+   consultation card reads as sitting in a pool of light rather than on a flat
+   rectangle. Deliberately not `footer-surface`: the two bands are adjacent, and
+   an identical ground would merge them into one 900px block of navy. */
+@utility cta-surface {
+  background-color: var(--color-ink);
+  background-image:
+    radial-gradient(
+      78% 64% at 72% -10%,
+      rgba(47, 143, 224, 0.2),
+      transparent 64%
+    ),
+    radial-gradient(
+      64% 72% at 2% 104%,
+      rgba(11, 58, 105, 0.55),
+      transparent 70%
+    );
+}
+
 /* Draughting paper. A 72px grid at the threshold of visibility, masked so it
    only ever surfaces near the top edge and dissolves before it reaches the
    copy underneath. */
@@ -131,6 +151,23 @@
   background-size: 72px 72px;
   -webkit-mask-image: linear-gradient(to bottom, black, transparent 58%);
   mask-image: linear-gradient(to bottom, black, transparent 58%);
+}
+
+/* The same draughting paper on a light ground. The About band on a project
+   page sits on `bg-surface`, where the white-line grid above is invisible, so
+   this is its navy twin — a 72px module at the threshold of visibility, masked
+   to a soft pool at the top so it never competes with the copy over it. */
+@utility blueprint-grid-light {
+  background-image:
+    linear-gradient(rgba(0, 43, 92, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 43, 92, 0.055) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: radial-gradient(
+    120% 78% at 50% 0%,
+    black,
+    transparent 70%
+  );
+  mask-image: radial-gradient(120% 78% at 50% 0%, black, transparent 70%);
 }
 
 /* Premium separator: a hairline that carries light in the middle and fades out
@@ -183,6 +220,12 @@
 
 @utility social-linkedin {
   background-image: linear-gradient(140deg, #2a8fd8 0%, #0a66c2 50%, #06498f 100%);
+}
+
+/* Also used by the enquire band's WhatsApp tile — the one green in a navy
+   section, kept because a recognisable channel mark is the point of it. */
+@utility social-whatsapp {
+  background-image: linear-gradient(140deg, #4ce07a 0%, #25d366 48%, #0f9d47 100%);
 }
 
 @utility social-youtube {

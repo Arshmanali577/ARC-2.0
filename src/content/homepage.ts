@@ -10,6 +10,8 @@
 import type { MediaPlate } from "@/components/ui/media-plate";
 import { localAreas } from "@/content/local-areas";
 import { projects } from "@/content/projects";
+import { site } from "@/content/site";
+import { testimonials } from "@/content/testimonials";
 
 /* -- Hero ----------------------------------------------------------------- */
 
@@ -167,4 +169,50 @@ export const cta = {
   heading: "Ready to Build Your Dream Home?",
   body: "Whether it's a custom home, renovation, or commercial project, our team delivers quality builds with transparent pricing and no hidden surprises.",
   primaryCta: { label: "Get in Touch", href: "/contact" },
+
+  /**
+   * The four figures across the top of the band. Every one is counted from
+   * this repository or read from `site.ts` rather than asserted — swap a value
+   * here the day the business has a verified number to put in its place.
+   * `icon` names the glyph; the drawing itself stays in the component.
+   */
+  proof: [
+    {
+      icon: "projects",
+      value: `${projects.length}`,
+      label: "Projects Delivered",
+    },
+    { icon: "experience", value: site.experience, label: "Years Experience" },
+    {
+      icon: "licence",
+      value: "Licensed",
+      label: `${site.licence.authority} Builder`,
+    },
+    {
+      icon: "reviews",
+      value: `${testimonials.length}`,
+      label: "Client Reviews",
+    },
+  ],
+
+  /** The three promises under the statement, left column. */
+  assurances: [
+    { icon: "design", label: "Custom Design" },
+    { icon: "price", label: "Fixed Price Contracts" },
+    { icon: "accredited", label: "Licensed Builder" },
+  ],
+
+  /** The floating panel on the right. */
+  panel: {
+    heading: "Book a Consultation",
+    body: "Let's discuss your vision and bring it to life.",
+    action: { label: "Schedule a Consultation", href: "/contact" },
+    /** Labels only — every number and link is read from `site.contact`. */
+    channels: {
+      phone: "Call Us",
+      email: "Email Us",
+      whatsapp: "WhatsApp",
+      whatsappValue: "Chat with our team",
+    },
+  },
 };

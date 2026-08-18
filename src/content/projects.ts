@@ -15,6 +15,21 @@ export type Project = {
   year: string;
   architect: string;
   scope: string;
+  /**
+   * The contract shape, shown on the detail card alongside the scope line.
+   * `scope` says what was built; this says how it was delivered.
+   */
+  buildType: string;
+  /** On site, foundations to handover. */
+  buildDuration: string;
+  /**
+   * Read off the project's own gallery rather than a plan set, so these are
+   * the rooms the photography actually shows. Optional throughout: a project
+   * without a figure simply drops that cell from the statistics panel.
+   */
+  bedrooms?: number;
+  bathrooms?: number;
+  livingAreas?: number;
   description: string;
   projectNarrative: string;
   heroImage: string;
@@ -26,6 +41,18 @@ export type Project = {
   heroVideo?: string;
   images: string[];
   featured: boolean;
+};
+
+/**
+ * Every build in the portfolio is handed over, so the status is a constant
+ * rather than twelve repetitions of the same string. Add a `status` field to
+ * `Project` the day a project is genuinely in progress.
+ */
+export const projectStatus = "Completed";
+
+/** Long-form type name for the detail card; the filter chips use the short one. */
+export const projectTypeNames: Record<ProjectType, string> = {
+  "custom-home": "Custom Home",
 };
 
 const buildProjectGallery = (slug: string, galleryCount: number) =>
@@ -45,6 +72,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Full design & build - luxury family home",
+    buildType: "Full Design & Build",
+    buildDuration: "10 Months",
+    bedrooms: 4,
+    bathrooms: 2,
+    livingAreas: 2,
     description:
       "A beautifully crafted family residence in Pallara featuring modern architectural lines, premium finishes, and spacious open-plan living. Designed to embrace the Queensland lifestyle with seamless indoor-outdoor flow.",
     projectNarrative:
@@ -63,6 +95,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Custom home - contemporary design & build",
+    buildType: "Custom Design & Build",
+    buildDuration: "14 Months",
+    bedrooms: 5,
+    bathrooms: 4,
+    livingAreas: 3,
     description:
       "A striking contemporary residence showcasing bold architectural design, high-end interiors, and expansive living spaces. Built with meticulous attention to detail and quality craftsmanship throughout.",
     projectNarrative:
@@ -81,6 +118,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Full design & build - modern family home",
+    buildType: "Full Design & Build",
+    buildDuration: "15 Months",
+    bedrooms: 5,
+    bathrooms: 4,
+    livingAreas: 3,
     description:
       "A sophisticated modern family home featuring clean architectural lines, premium material selections, and thoughtfully designed living spaces that maximise natural light and ventilation.",
     projectNarrative:
@@ -99,6 +141,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Custom home - new build",
+    buildType: "Custom Home Build",
+    buildDuration: "9 Months",
+    bedrooms: 4,
+    bathrooms: 2,
+    livingAreas: 2,
     description:
       "A stunning custom home in the Spring Mountain estate featuring contemporary architecture, premium finishes, and generous living areas designed for modern family living in one of Brisbane's most sought-after growth corridors.",
     projectNarrative:
@@ -117,6 +164,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Full design & build - family home",
+    buildType: "Full Design & Build",
+    buildDuration: "9 Months",
+    bedrooms: 4,
+    bathrooms: 2,
+    livingAreas: 2,
     description:
       "A well-appointed family home in Kingston combining functional design with stylish contemporary finishes. Every space has been carefully planned to deliver comfort, practicality, and lasting quality.",
     projectNarrative:
@@ -135,6 +187,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Full design & build - luxury home",
+    buildType: "Full Design & Build",
+    buildDuration: "14 Months",
+    bedrooms: 5,
+    bathrooms: 4,
+    livingAreas: 3,
     description:
       "An impressive custom build in Mount Gravatt showcasing architectural excellence and superior craftsmanship. Featuring high ceilings, premium kitchen design, and beautifully appointed interiors throughout.",
     projectNarrative:
@@ -153,6 +210,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Custom home - modern family build",
+    buildType: "Custom Home Build",
+    buildDuration: "12 Months",
+    bedrooms: 5,
+    bathrooms: 4,
+    livingAreas: 3,
     description:
       "A modern family home in Calamvale designed with thoughtful attention to space, light, and lifestyle. Featuring contemporary interiors, quality finishes, and functional living areas perfect for family life.",
     projectNarrative:
@@ -171,6 +233,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Full design & build - acreage home",
+    buildType: "Full Design & Build",
+    buildDuration: "12 Months",
+    bedrooms: 4,
+    bathrooms: 3,
+    livingAreas: 2,
     description:
       "A spacious acreage home in Greenbank set against lush surroundings. This build features expansive living areas, a chef-grade kitchen, and outdoor entertaining spaces that make the most of the tranquil semi-rural setting.",
     projectNarrative:
@@ -189,6 +256,11 @@ export const projects: Project[] = [
     year: "2024",
     architect: "ARC Design Studio",
     scope: "Full design & build - premium residence",
+    buildType: "Full Design & Build",
+    buildDuration: "12 Months",
+    bedrooms: 4,
+    bathrooms: 3,
+    livingAreas: 2,
     description:
       "A premium custom residence showcasing ARC Builders' commitment to exceptional quality. This project features striking exterior design, luxurious interiors, and the finest material selections throughout.",
     projectNarrative:
@@ -207,6 +279,11 @@ export const projects: Project[] = [
     year: "2026",
     architect: "ARC Design Studio",
     scope: "Custom home - completed family residence",
+    buildType: "Custom Home Build",
+    buildDuration: "14 Months",
+    bedrooms: 5,
+    bathrooms: 5,
+    livingAreas: 3,
     description:
       "A contemporary Calamvale residence with a strong street presence, considered internal planning, and refined finishes throughout. The home balances family functionality with clean architectural presentation.",
     projectNarrative:
@@ -225,6 +302,11 @@ export const projects: Project[] = [
     year: "2026",
     architect: "ARC Design Studio",
     scope: "Custom home - full build",
+    buildType: "Custom Home Build",
+    buildDuration: "13 Months",
+    bedrooms: 5,
+    bathrooms: 3,
+    livingAreas: 3,
     description:
       "A thoughtfully completed Rochedale South home featuring crisp exterior detailing, warm interior selections, and practical living spaces designed for comfort, durability, and day-to-day ease.",
     projectNarrative:
@@ -243,6 +325,11 @@ export const projects: Project[] = [
     year: "2026",
     architect: "ARC Design Studio",
     scope: "Custom home - new residence",
+    buildType: "Custom Home Build",
+    buildDuration: "12 Months",
+    bedrooms: 4,
+    bathrooms: 3,
+    livingAreas: 3,
     description:
       "A fresh custom residence in Bahrs Scrub with bright internal spaces, contemporary finishes, and a clean, practical layout designed to support relaxed family living.",
     projectNarrative:

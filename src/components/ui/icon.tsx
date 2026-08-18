@@ -62,6 +62,41 @@ export function ChevronDown(props: IconProps) {
   );
 }
 
+/** Gallery navigation. Drawn on the same grid as the disclosure caret. */
+export function ChevronLeft(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M10 3.5L5.5 8l4.5 4.5" />
+    </Svg>
+  );
+}
+
+export function ChevronRight(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M6 3.5L10.5 8 6 12.5" />
+    </Svg>
+  );
+}
+
+/** Four corners pushed outward — the gallery's fullscreen action. */
+export function ExpandIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M6.4 2.4H2.4v4M9.6 2.4h4v4M9.6 13.6h4v-4M6.4 13.6h-4v-4" />
+    </Svg>
+  );
+}
+
+/** The same corners drawn inward, plus the lightbox dismiss. */
+export function CloseIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M3.2 3.2l9.6 9.6M12.8 3.2l-9.6 9.6" />
+    </Svg>
+  );
+}
+
 export function ArrowDown(props: IconProps) {
   return (
     <Svg {...props}>
@@ -216,6 +251,197 @@ export function QuoteIcon({ className, size = 16 }: IconProps) {
   );
 }
 
+/* -- Project detail -------------------------------------------------------- */
+
+/* The glyphs the About band on a project page is built from. Same 16px grid
+   and 1.5px hairline as the service marks above, so a specification row, a
+   feature card and a statistic all read as one drawn set. */
+
+/** Architect: the figure on the drawing, not a photo avatar. */
+export function PersonIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M8 2.4a2.7 2.7 0 1 1 0 5.4 2.7 2.7 0 0 1 0-5.4z" />
+      <path d="M2.8 14.2c0-2.9 2.3-4.8 5.2-4.8s5.2 1.9 5.2 4.8" />
+    </Svg>
+  );
+}
+
+/** Year completed: the wall calendar, ruled like a schedule. */
+export function CalendarIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M2.2 3.6h11.6v10.2H2.2z" />
+      <path d="M2.2 6.6h11.6" />
+      <path d="M5.4 2.2v2.8M10.6 2.2v2.8" />
+      <path d="M4.8 9.2h1.4M7.3 9.2h1.4M9.8 9.2h1.4M4.8 11.6h1.4M7.3 11.6h1.4" />
+    </Svg>
+  );
+}
+
+/** The same sheet with the date struck through — a programme, delivered. */
+export function CalendarCheckIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M2.2 3.6h11.6v10.2H2.2z" />
+      <path d="M2.2 6.6h11.6" />
+      <path d="M5.4 2.2v2.8M10.6 2.2v2.8" />
+      <path d="m5.4 10.2 1.8 1.8 3.4-3.6" />
+    </Svg>
+  );
+}
+
+/** Build duration: the programme clock. */
+export function ClockIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M8 1.6a6.4 6.4 0 1 1 0 12.8A6.4 6.4 0 0 1 8 1.6z" />
+      <path d="M8 4.6V8.2l2.8 1.7" />
+    </Svg>
+  );
+}
+
+/* -- Proof marks -----------------------------------------------------------
+   The four figures and three assurances in the enquire band. Drawn on the same
+   16px grid as everything above, so a rosette sits beside a calendar without
+   either looking imported. */
+
+/** Licensed and covered: the shield, signed off. */
+export function ShieldCheckIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M8 1.6 13.1 3.6v4.1c0 3.2-2.05 5.5-5.1 6.7-3.05-1.2-5.1-3.5-5.1-6.7V3.6z" />
+      <path d="m5.6 7.7 1.85 1.85L10.5 6.3" />
+    </Svg>
+  );
+}
+
+/** Fixed price: the same shield holding a figure rather than a tick. */
+export function ShieldPriceIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M8 1.6 13.1 3.6v4.1c0 3.2-2.05 5.5-5.1 6.7-3.05-1.2-5.1-3.5-5.1-6.7V3.6z" />
+      <path d="M8 4.6v6" />
+      <path d="M9.7 6.1c-.4-.5-3.3-.8-3.3.8 0 1.35 3.3.5 3.3 1.9 0 1.5-2.9 1.25-3.4.7" />
+    </Svg>
+  );
+}
+
+/** Accreditation: the rosette, ribbon and all. */
+export function AwardIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M8 1.7a3.85 3.85 0 1 1 0 7.7 3.85 3.85 0 0 1 0-7.7z" />
+      <path d="M8 4.4a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z" />
+      <path d="M5.6 8.9 4.3 14.3 8 12.2l3.7 2.1-1.3-5.4" />
+    </Svg>
+  );
+}
+
+/** Client reviews. */
+export function StarIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="m8 1.7 1.9 4.2 4.5.5-3.4 3.1.95 4.5L8 11.7l-3.95 2.3.95-4.5L1.6 6.4l4.5-.5z" />
+    </Svg>
+  );
+}
+
+/** Project status: handover, signed off. */
+export function CheckCircleIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M8 1.6a6.4 6.4 0 1 1 0 12.8A6.4 6.4 0 0 1 8 1.6z" />
+      <path d="m5 8.2 2.1 2.1L11.1 6" />
+    </Svg>
+  );
+}
+
+/** Modern architecture: a monopitch volume with a set-back wing. */
+export function ElevationIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M1.2 13.9h13.6" />
+      <path d="M2.6 13.9V5.6l6.2-2.8v11.1" />
+      <path d="M8.8 13.9V7.2h4.6v6.7" />
+      <path d="M4.4 13.9V9.6h2.4v4.3" />
+      <path d="M10.2 9.4h2" />
+    </Svg>
+  );
+}
+
+/** Open plan living: the sofa and its floor lamp, drawn in elevation. */
+export function SofaIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M2.6 8.6V6.4h8.2v2.2" />
+      <path d="M1.4 12.2V9.8a1.2 1.2 0 0 1 1.2-1.2h8.2a1.2 1.2 0 0 1 1.2 1.2v2.4z" />
+      <path d="M2.8 12.2v1.4M10.6 12.2v1.4" />
+      <path d="M14.4 13.6V6.6" />
+      <path d="M13.1 6.6h2.6l-.75-2.4h-1.1z" />
+    </Svg>
+  );
+}
+
+/** Living areas: the armchair, the same set one seat narrower. */
+export function ArmchairIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4.4 8.4V5.6h7.2v2.8" />
+      <path d="M2.8 12.4V9.9a1.5 1.5 0 0 1 1.6-1.5h7.2a1.5 1.5 0 0 1 1.6 1.5v2.5z" />
+      <path d="M2.8 10.6h10.4" />
+      <path d="M4.4 12.4v1.3M11.6 12.4v1.3" />
+    </Svg>
+  );
+}
+
+/** Premium materials: the cut stone, faceted. */
+export function GemIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4.4 3h7.2l2.8 3.9L8 13.6 1.6 6.9z" />
+      <path d="M1.6 6.9h12.8" />
+      <path d="M4.4 3 6 6.9 8 13.6M11.6 3 10 6.9 8 13.6" />
+    </Svg>
+  );
+}
+
+/** Indoor-outdoor living: the bi-fold opening, both leaves drawn. */
+export function BifoldIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M1.4 2.4v11.2M14.6 2.4v11.2" />
+      <path d="M1.4 2.4h13.2M1.4 13.6h13.2" />
+      <path d="M3 3.6h4.2v8.8H3z" />
+      <path d="M8.8 3.6H13v8.8H8.8z" />
+    </Svg>
+  );
+}
+
+/** Bedrooms: headboard, mattress, pillow. */
+export function BedIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M1.6 13.8V4.2" />
+      <path d="M1.6 8.4h12.8v5.4" />
+      <path d="M1.6 11.2h12.8" />
+      <path d="M3.2 8.4V6.2h3.6v2.2" />
+    </Svg>
+  );
+}
+
+/** Bathrooms: the freestanding tub under its wall spout. */
+export function BathIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M1.4 8h13.2" />
+      <path d="M2.6 8v2.6a2.6 2.6 0 0 0 2.6 2.6h5.6a2.6 2.6 0 0 0 2.6-2.6V8" />
+      <path d="m4.4 13.2-.9 1.4M11.6 13.2l.9 1.4" />
+      <path d="M4.6 8V4.8a1.4 1.4 0 0 1 2.8 0" />
+    </Svg>
+  );
+}
+
 /* -- Social marks ---------------------------------------------------------- */
 
 /* These are the networks' own logotypes, so they are solid shapes on a 24px
@@ -271,6 +497,15 @@ export function LinkedinIcon(props: IconProps) {
   return (
     <BrandSvg {...props}>
       <path d="M5 3.2a2.35 2.35 0 1 1 0 4.7 2.35 2.35 0 0 1 0-4.7M3 9.1h4v11.7H3zm6.6 0h3.83v1.6h.05a4.2 4.2 0 0 1 3.78-2.08c4.04 0 4.79 2.66 4.79 6.12v6.06h-4v-5.37c0-1.28-.02-2.93-1.79-2.93-1.79 0-2.06 1.4-2.06 2.84v5.46h-4z" />
+    </BrandSvg>
+  );
+}
+
+export function WhatsappIcon(props: IconProps) {
+  return (
+    <BrandSvg {...props}>
+      <path d="M12.04 2.5a9.4 9.4 0 0 0-8.1 14.13L2.5 21.9l5.4-1.41a9.4 9.4 0 1 0 4.14-17.99m0 1.86a7.54 7.54 0 0 1 0 15.08 7.5 7.5 0 0 1-3.82-1.05l-.27-.16-3.2.84.85-3.12-.18-.29a7.54 7.54 0 0 1 6.62-11.3" />
+      <path d="M8.9 7.36c-.18-.4-.36-.41-.53-.42h-.45a.86.86 0 0 0-.62.29 2.6 2.6 0 0 0-.82 1.94c0 1.14.83 2.25.95 2.4.11.16 1.6 2.57 3.95 3.5 1.95.77 2.35.62 2.77.58.42-.04 1.36-.56 1.55-1.09.19-.53.19-.99.14-1.08-.06-.1-.21-.16-.45-.28-.23-.11-1.36-.67-1.57-.75-.21-.08-.36-.11-.51.12s-.59.75-.72.9c-.13.16-.27.18-.5.06a6.3 6.3 0 0 1-1.85-1.14 7 7 0 0 1-1.28-1.6c-.14-.23-.02-.35.1-.47l.34-.4c.11-.13.15-.23.23-.38.07-.16.03-.29-.03-.4-.06-.12-.5-1.26-.7-1.72" />
     </BrandSvg>
   );
 }
