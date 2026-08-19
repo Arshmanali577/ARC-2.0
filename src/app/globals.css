@@ -529,3 +529,46 @@
     outline-offset: 3px;
   }
 }
+
+/* Featured carousel ---------------------------------------------------------
+   The band advances itself when a project's film reaches its end, so the two
+   pieces of motion below are what make that read as a deliberate hand-off
+   rather than a jump cut: the overlay copy rises in behind the incoming
+   photograph, and the progress dash fills across the life of the slide.
+
+   `feature-rise` settles on `transform: none` for the same reason every other
+   keyframe here does — a settled transform would make the element a
+   containing block. */
+@keyframes feature-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility feature-rise {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: feature-rise 640ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* The dash under a slide with no film to time itself by. A film-backed slide
+   drives the same bar from its own `currentTime` instead, so both cases read
+   as one control. Duration is set inline from `STILL_DURATION`. */
+@keyframes feature-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@utility feature-progress {
+  transform-origin: left;
+  animation: feature-progress linear both;
+}

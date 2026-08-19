@@ -16,7 +16,8 @@ export type ButtonVariant =
   | "actionSolid" // white full-width row, enquire band
   | "actionOutline" // outlined full-width row, enquire band
   | "cardSolid" // rounded navy row, foot of a floating card
-  | "panelSolid"; // rounded white row, enquire band's consultation panel
+  | "panelSolid" // rounded white row, enquire band's consultation panel
+  | "mediaSolid"; // navy block sitting over a photograph
 
 const base =
   "group/button relative inline-flex items-center gap-3 transition duration-300 ease-out";
@@ -36,6 +37,11 @@ const variants: Record<ButtonVariant, string> = {
   // block would read as a foreign object sitting inside one.
   cardSolid:
     "w-full justify-center rounded-full bg-brand px-7 py-[17px] text-[13px] font-semibold uppercase tracking-[0.14em] text-white shadow-plate hover:-translate-y-0.5 hover:bg-ink hover:shadow-plate-strong",
+  // Sits on a photograph rather than on a page ground, so it carries a
+  // hairline of its own: without one the navy block dissolves into the scrim
+  // wherever the image behind it happens to be dark.
+  mediaSolid:
+    "border border-white/25 bg-brand/90 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-[2px] hover:-translate-y-0.5 hover:border-white/50 hover:bg-brand",
   // The enquire panel's primary. Label optically centred with the arrow pinned
   // to the right edge — a `justify-between` row would push the label hard left
   // and leave the button looking unbalanced at full width.
@@ -99,7 +105,7 @@ export function Button({
 type UnderlineLinkProps = {
   href: string;
   children: ReactNode;
-  tone?: "dark" | "light" | "accent";
+  tone?: "dark" | "light" | "accent" | "quiet";
   /** Trailing arrow that slides on hover. */
   withArrow?: boolean;
   className?: string;
@@ -124,6 +130,10 @@ export function UnderlineLink({
         // hovered, so a column of suburbs is not competing with its own action.
         tone === "accent" &&
           "border-accent/40 text-accent-soft hover:border-accent-soft hover:text-white",
+        // No rule until it is wanted: used where the link sits on the same
+        // line as an eyebrow, where a permanent underline reads as a second
+        // hairline competing with the eyebrow's own.
+        tone === "quiet" && "border-transparent text-brand hover:border-brand",
         className,
       )}
     >

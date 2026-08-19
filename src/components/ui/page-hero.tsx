@@ -33,6 +33,8 @@ type PageHeroProps = {
   size?: keyof typeof heights;
   /** `brass` picks the eyebrow out in the journey's stage colour. */
   eyebrowTone?: "mist" | "brass";
+  /** Draws the short brass rule between the H1 and the lead. */
+  divider?: boolean;
   children?: ReactNode;
   className?: string;
 };
@@ -47,6 +49,7 @@ export function PageHero({
   imagePosition,
   size = "default",
   eyebrowTone = "mist",
+  divider = false,
   children,
   className,
 }: PageHeroProps) {
@@ -121,6 +124,10 @@ export function PageHero({
         <h1 className="m-0 mt-7 max-w-[18ch] font-display text-[clamp(29px,9vw,38px)] font-normal leading-[1.04] tracking-[-0.03em] [text-wrap:balance] nav:text-[54px] wide:text-[68px]">
           {heading}
         </h1>
+
+        {divider ? (
+          <span aria-hidden className="mt-8 block h-0.5 w-14 bg-gold-soft" />
+        ) : null}
 
         {lead ? (
           <p className="m-0 mt-7 max-w-[56ch] text-[19px] font-light leading-[1.7] text-white/82">

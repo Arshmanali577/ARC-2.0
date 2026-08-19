@@ -211,21 +211,29 @@ export const projectsPage = {
     ],
     images: ["/projects/14-verona-st-pallara/hero.webp"],
   } satisfies PageSeo,
-  eyebrow: "Portfolio",
-  heading: "Our Projects",
-  lead: "Explore our portfolio of residential and commercial builds across Queensland.",
+  eyebrow: "Our Portfolio",
+  heading: "Spaces Built for Life.",
+  lead: "Explore our portfolio of residential and commercial projects across Queensland. Each one crafted with precision, passion, and purpose.",
   heroImage: "/projects/14-verona-st-pallara/hero.webp",
   allFilterLabel: "All Projects",
-  /** Section labels for the portfolio bands. Both headings are wording the
-   *  site already uses — "Featured Projects" from the homepage, "All Projects"
-   *  from this page's own filter. */
+  /** The showcase carousel. Every one of these is either read on the page or
+   *  announced to a screen reader, so all of it is copy, not decoration. */
   featured: {
-    eyebrow: "Featured",
-    heading: "Featured Projects",
+    eyebrow: "Featured Project",
+    viewAll: "View all projects",
+    previous: "Previous project",
+    next: "Next project",
+    /** Prefixes a project title on the peek cards and the progress dashes. */
+    show: "Show",
   },
   index: {
-    eyebrow: "Index",
-    heading: "The Full Portfolio",
+    heading: "All Projects",
+    sort: {
+      label: "Sort by:",
+      latest: "Latest",
+      oldest: "Oldest",
+      title: "A–Z",
+    },
   },
   detail: {
     detailsHeading: "Project Details",

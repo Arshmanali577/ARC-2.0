@@ -59,7 +59,9 @@ export function Section({
 
 type EyebrowProps = {
   children: ReactNode;
-  tone?: "muted" | "light";
+  /** `brass` picks the rule out in the journey's stage colour, leaving the
+   *  label itself in brand navy — the treatment the portfolio bands open on. */
+  tone?: "muted" | "light" | "brass";
   /** Draws the short hairline tick the homepage bands lead with. */
   withRule?: boolean;
   /** Promote to a heading when the eyebrow is what labels a block of content. */
@@ -79,7 +81,9 @@ export function Eyebrow({
     <span
       className={cn(
         "text-[12px] font-semibold uppercase tracking-[0.28em]",
-        tone === "light" ? "text-mist" : "text-muted",
+        tone === "light" && "text-mist",
+        tone === "muted" && "text-muted",
+        tone === "brass" && "text-brand",
       )}
     >
       {children}
@@ -96,7 +100,9 @@ export function Eyebrow({
         aria-hidden
         className={cn(
           "h-px w-8",
-          tone === "light" ? "bg-line-invert-hero" : "bg-line-strong",
+          tone === "light" && "bg-line-invert-hero",
+          tone === "muted" && "bg-line-strong",
+          tone === "brass" && "bg-gold",
         )}
       />
       {label}
