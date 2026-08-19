@@ -8,7 +8,7 @@ import { headerCta, isNavGroup, primaryNav } from "@/content/site";
 import { cn } from "@/lib/cn";
 
 const row =
-  "border-b border-line-soft py-4 text-[13px] font-medium uppercase tracking-[0.08em] text-brand";
+  "border-b border-line-soft py-4 text-[14px] font-medium uppercase tracking-[0.08em] text-brand";
 
 /**
  * Below 901px the link row is hidden, so the same routes are served from a
@@ -97,7 +97,7 @@ export function MobileNav() {
             <Link
               href={headerCta.href}
               onClick={close}
-              className="mt-6 bg-brand px-6 py-[14px] text-center text-[13px] font-medium uppercase tracking-[0.12em] text-white transition duration-300 ease-out hover:bg-ink"
+              className="mt-6 bg-brand px-6 py-[14px] text-center text-[14px] font-medium uppercase tracking-[0.12em] text-white transition duration-300 ease-out hover:bg-ink"
             >
               {headerCta.label}
             </Link>

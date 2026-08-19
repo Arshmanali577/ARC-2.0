@@ -60,7 +60,7 @@ export function LocationCard({
       <div className={cn(!isFeature && "mt-6")}>
         <span className="flex items-center gap-4">
           <span aria-hidden className="h-px w-6 bg-line-strong" />
-          <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
+          <span className="text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
             {area.regionLabel}
           </span>
         </span>
@@ -79,13 +79,13 @@ export function LocationCard({
         <p
           className={cn(
             "m-0 mt-4 leading-[1.7] text-body",
-            isFeature ? "max-w-[46ch] text-[17px]" : "text-[15px]",
+            isFeature ? "max-w-[46ch] text-[18px]" : "text-[16px]",
           )}
         >
           {area.intro}
         </p>
 
-        <span className="mt-7 inline-flex items-center gap-2.5 border-b border-brand pb-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-brand transition-opacity duration-300 ease-out group-hover:opacity-60">
+        <span className="mt-7 inline-flex items-center gap-2.5 border-b border-brand pb-1.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand transition-opacity duration-300 ease-out group-hover:opacity-60">
           {locationsPage.viewLabel}
           <ArrowUpRight size={16} />
         </span>

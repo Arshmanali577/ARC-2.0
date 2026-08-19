@@ -94,10 +94,10 @@ function ProjectFactCard({
               <Icon size={19} />
             </span>
             <div className="min-w-0">
-              <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-faint">
+              <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-faint">
                 {label}
               </dt>
-              <dd className="m-0 mt-[5px] text-[15px] leading-[1.5] text-brand">
+              <dd className="m-0 mt-[5px] text-[16px] leading-[1.5] text-brand">
                 {value}
               </dd>
             </div>
@@ -178,7 +178,7 @@ function ProjectStats({ project }: { project: Project }) {
           {/* `dt` leads in the markup, as a description list requires, and the
               column is reversed so the figure still reads above its label. */}
           <div className="flex min-w-0 flex-col-reverse">
-            <dt className="mt-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
+            <dt className="mt-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted">
               {label}
             </dt>
             <dd className="m-0 font-display text-[26px] leading-none text-brand wide:text-[30px]">
@@ -233,7 +233,7 @@ export function ProjectAbout({
             {project.title}
           </SectionHeading>
 
-          <p className="m-0 mt-7 max-w-[62ch] text-[18px] font-light leading-[1.7] text-body nav:text-[19px]">
+          <p className="m-0 mt-7 max-w-[62ch] text-[19px] font-light leading-[1.7] text-body nav:text-[20px]">
             {project.description}
           </p>
 
@@ -250,10 +250,10 @@ export function ProjectAbout({
                     size={34}
                     className="text-brand transition-transform duration-500 ease-out group-hover:-translate-y-0.5 group-hover:scale-[1.06]"
                   />
-                  <h3 className="m-0 mt-5 font-display text-[19px] font-normal leading-[1.25] tracking-[-0.01em] text-brand">
+                  <h3 className="m-0 mt-5 font-display text-[20px] font-normal leading-[1.25] tracking-[-0.01em] text-brand">
                     {feature.title}
                   </h3>
-                  <p className="m-0 mt-3 text-[13px] leading-[1.6] text-body">
+                  <p className="m-0 mt-3 text-[15px] leading-[1.6] text-body">
                     {feature.body}
                   </p>
                 </li>
@@ -274,10 +274,10 @@ export function ProjectAbout({
 
             <div className="relative">
               <QuoteIcon size={24} className="text-accent-soft" />
-              <blockquote className="m-0 mt-4 max-w-[60ch] font-display text-[18px] font-normal leading-[1.5] tracking-[-0.01em] tab:text-[21px]">
+              <blockquote className="m-0 mt-4 max-w-[60ch] font-display text-[19px] font-normal leading-[1.5] tracking-[-0.01em] tab:text-[21px]">
                 {project.projectNarrative}
               </blockquote>
-              <figcaption className="mt-5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent-soft">
+              <figcaption className="mt-5 text-[12px] font-semibold uppercase tracking-[0.16em] text-accent-soft">
                 — {project.architect}
               </figcaption>
             </div>

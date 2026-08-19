@@ -25,22 +25,22 @@ const variants: Record<ButtonVariant, string> = {
   headerSolid:
     "bg-brand px-6 py-[14px] text-[13px] font-medium uppercase tracking-[0.12em] text-white hover:bg-ink",
   heroSolid:
-    "bg-white px-8 py-[19px] text-[13px] font-semibold uppercase tracking-[0.12em] text-brand hover:-translate-y-0.5 hover:bg-mist",
+    "bg-white px-8 py-[19px] text-[14px] font-semibold uppercase tracking-[0.12em] text-brand hover:-translate-y-0.5 hover:bg-mist",
   heroOutline:
-    "border border-line-invert-hero px-8 py-[19px] text-[13px] font-semibold uppercase tracking-[0.12em] text-white hover:-translate-y-0.5 hover:border-white hover:bg-white/12",
+    "border border-line-invert-hero px-8 py-[19px] text-[14px] font-semibold uppercase tracking-[0.12em] text-white hover:-translate-y-0.5 hover:border-white hover:bg-white/12",
   actionSolid:
-    "justify-between bg-white px-7 py-[22px] text-[15px] font-semibold tracking-[0.06em] text-brand hover:bg-mist",
+    "justify-between bg-white px-7 py-[22px] text-[16px] font-semibold tracking-[0.06em] text-brand hover:bg-mist",
   actionOutline:
-    "justify-between border border-line-invert-strong px-7 py-[22px] text-[15px] font-medium tracking-[0.06em] text-white hover:border-white hover:bg-white/8",
+    "justify-between border border-line-invert-strong px-7 py-[22px] text-[16px] font-medium tracking-[0.06em] text-white hover:border-white hover:bg-white/8",
   // The only rounded button in the set: it closes a rounded card, so a square
   // block would read as a foreign object sitting inside one.
   cardSolid:
-    "w-full justify-center rounded-full bg-brand px-7 py-[17px] text-[12px] font-semibold uppercase tracking-[0.14em] text-white shadow-plate hover:-translate-y-0.5 hover:bg-ink hover:shadow-plate-strong",
+    "w-full justify-center rounded-full bg-brand px-7 py-[17px] text-[13px] font-semibold uppercase tracking-[0.14em] text-white shadow-plate hover:-translate-y-0.5 hover:bg-ink hover:shadow-plate-strong",
   // The enquire panel's primary. Label optically centred with the arrow pinned
   // to the right edge — a `justify-between` row would push the label hard left
   // and leave the button looking unbalanced at full width.
   panelSolid:
-    "w-full justify-center rounded-[10px] bg-white px-6 py-[19px] text-[12px] font-semibold uppercase tracking-[0.1em] text-brand hover:-translate-y-0.5 hover:bg-mist [&>svg]:absolute [&>svg]:right-5 tab:px-14 tab:text-[13px] tab:tracking-[0.14em] tab:[&>svg]:right-7",
+    "w-full justify-center rounded-[10px] bg-white px-6 py-[19px] text-[13px] font-semibold uppercase tracking-[0.1em] text-brand hover:-translate-y-0.5 hover:bg-mist [&>svg]:absolute [&>svg]:right-5 tab:px-14 tab:text-[14px] tab:tracking-[0.14em] tab:[&>svg]:right-7",
 };
 
 type ButtonProps = {
@@ -117,7 +117,7 @@ export function UnderlineLink({
     <Link
       href={href}
       className={cn(
-        "group/link inline-flex items-center gap-2.5 whitespace-nowrap border-b pb-1.5 text-[13px] font-semibold uppercase tracking-[0.12em] transition-[border-color,opacity,color] duration-300 ease-out",
+        "group/link inline-flex items-center gap-2.5 whitespace-nowrap border-b pb-1.5 text-[14px] font-semibold uppercase tracking-[0.12em] transition-[border-color,opacity,color] duration-300 ease-out",
         tone === "light" && "border-white/50 text-white hover:border-white",
         tone === "dark" && "border-brand text-brand hover:opacity-60",
         // The footer's azure treatment: the rule stays dim until the link is

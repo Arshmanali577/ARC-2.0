@@ -46,6 +46,13 @@ type MediaPlateProps = MediaPlate & {
   labelPadding?: number;
   priority?: boolean;
   sizes?: string;
+  /**
+   * `object-position` for the photograph, e.g. `"center 15%"`. Only matters on
+   * a plate whose rendered shape is far from the file's own — a full-bleed
+   * masthead is letterboxed hard on a wide screen, and a centred crop can take
+   * the top off the building. Left unset, the plate crops from the centre.
+   */
+  position?: string;
 };
 
 export function MediaPlate({
@@ -59,6 +66,7 @@ export function MediaPlate({
   labelPadding = 18,
   priority,
   sizes = "100vw",
+  position,
 }: MediaPlateProps) {
   if (video) {
     return (
@@ -89,6 +97,7 @@ export function MediaPlate({
           priority={priority}
           sizes={sizes}
           className="object-cover"
+          style={position ? { objectPosition: position } : undefined}
         />
       </div>
     );
@@ -107,7 +116,7 @@ export function MediaPlate({
     >
       <span
         className={cn(
-          "text-[11px] font-medium tracking-[0.14em]",
+          "text-[12px] font-medium tracking-[0.14em]",
           isDarkTone(tone) ? "text-white/50" : "text-muted",
         )}
       >

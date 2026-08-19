@@ -48,15 +48,15 @@ function BlockNode({ block, first }: { block: Block; first: boolean }) {
 
   if (block.kind === "list") {
     const items = block.items.map((item, index) => (
-      <li key={index} className="grid grid-cols-[16px_1fr] gap-4">
+      <li key={index} className="grid grid-cols-[20px_1fr] gap-4">
         {block.ordered ? (
-          <span className="pt-[9px] text-[13px] font-semibold text-brand">
+          <span className="pt-[9px] text-[15px] font-semibold text-brand">
             {index + 1}
           </span>
         ) : (
           <span
             aria-hidden
-            className="mt-[13px] h-1.5 w-1.5 shrink-0 bg-brand"
+            className="mt-[14px] h-1.5 w-1.5 shrink-0 bg-brand"
           />
         )}
         <span>
@@ -66,7 +66,7 @@ function BlockNode({ block, first }: { block: Block; first: boolean }) {
     ));
 
     return (
-      <ul className="m-0 mt-7 flex list-none flex-col gap-3 p-0 text-[18px] leading-[1.75] text-body">
+      <ul className="m-0 mt-7 flex list-none flex-col gap-3 p-0 text-[19px] leading-[1.75] text-body">
         {items}
       </ul>
     );
@@ -74,7 +74,7 @@ function BlockNode({ block, first }: { block: Block; first: boolean }) {
 
   return (
     <p
-      className={`m-0 text-[18px] leading-[1.85] text-body ${
+      className={`m-0 text-[19px] leading-[1.85] text-body ${
         first ? "" : "mt-6"
       }`}
     >

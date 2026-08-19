@@ -65,11 +65,11 @@ export function ProjectFeature({
 
       <div className="wide:pb-2">
         <div className="flex items-center gap-4">
-          <span className="text-[11px] font-semibold tracking-[0.16em] text-faint">
+          <span className="text-[12px] font-semibold tracking-[0.16em] text-faint">
             {String(index + 1).padStart(2, "0")}
           </span>
           <span aria-hidden className="h-px w-8 bg-line-strong" />
-          <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
+          <span className="text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
             {project.location}
           </span>
         </div>
@@ -78,30 +78,30 @@ export function ProjectFeature({
           {project.title}
         </h3>
 
-        <p className="m-0 mt-6 max-w-[46ch] text-[16px] leading-[1.7] text-body">
+        <p className="m-0 mt-6 max-w-[46ch] text-[17px] leading-[1.7] text-body">
           {project.description}
         </p>
 
         <dl className="m-0 mt-9 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-line pt-7">
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-faint">
+            <dt className="text-[12px] font-semibold uppercase tracking-[0.16em] text-faint">
               {labels.scope}
             </dt>
-            <dd className="m-0 mt-2 text-[14px] leading-[1.5] text-brand">
+            <dd className="m-0 mt-2 text-[16px] leading-[1.5] text-brand">
               {project.scope}
             </dd>
           </div>
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.16em] text-faint">
+            <dt className="text-[12px] font-semibold uppercase tracking-[0.16em] text-faint">
               {labels.year}
             </dt>
-            <dd className="m-0 mt-2 text-[14px] leading-[1.5] text-brand">
+            <dd className="m-0 mt-2 text-[16px] leading-[1.5] text-brand">
               {project.year}
             </dd>
           </div>
         </dl>
 
-        <span className="mt-8 inline-flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand">
+        <span className="mt-8 inline-flex items-center gap-3 text-[14px] font-semibold uppercase tracking-[0.12em] text-brand">
           {viewLabel}
           <ArrowUpRight
             size={18}

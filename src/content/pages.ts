@@ -31,71 +31,166 @@ export const aboutPage = {
       "Brisbane builder team",
       "quality home builder Queensland",
     ],
-    images: ["/projects/25-langford-st/hero.webp"],
+    /** The share card shows the page's own masthead. */
+    images: ["/about/hero.webp"],
   } satisfies PageSeo,
-  eyebrow: "Our Story",
-  heading: "About ARC Builders",
-  lead: site.legalName,
-  heroImage: "/projects/25-langford-st/hero.webp",
+  eyebrow: "About ARC Builders",
+  /**
+   * The masthead H1, set in two lines with the closing word picked out in the
+   * accent so the page opens on one deliberate point of colour. Kept as parts
+   * rather than one string because the page has to mark that word up.
+   */
+  heading: {
+    line1: "Built on Experience.",
+    line2: "Driven by ",
+    accent: "Integrity.",
+  },
+  lead: "We are a Brisbane-based building company passionate about creating exceptional residential and commercial spaces that stand the test of time.",
+  /**
+   * The masthead photograph. Not one of the portfolio builds, so it is
+   * described rather than credited to a project — the captioned plates
+   * elsewhere on the site name the home they show, and this one cannot.
+   */
+  heroImage: "/about/hero.webp",
+  heroImageAlt:
+    "A contemporary two-storey home lit from within at dusk, seen across the pool from the alfresco",
+  heroMediaLabel: "ARC BUILDERS",
+  heroCta: { label: "Our Projects", href: "/projects" },
   story: {
-    heading: "Builders with a Difference",
+    heading: "Builders Who Care About the Details",
     paragraphs: [
       "At ARC Builders, we have been in the construction industry for over 18 years, with an experienced team driven to deliver excellence in customer service.",
       "Transforming your plans into quality residential or commercial buildings. Unlike others that only provide set design and build, we customise our plans to reflect your unique vision.",
       "We are driven by a passion to deliver superior customer service, delivering on time, with a team that builds to the highest quality and finest details.",
     ],
-    /** Two frames of the same completed home, layered. */
+    /** Signs the statement off the way a letter from the office would. */
+    signature: {
+      name: "The ARC Builders Team",
+      note: `${site.licence.label} — LIC. ${site.licence.number}`,
+    },
     media: {
       src: "/projects/3-dart-ave-kingston/hero.webp",
       alt: "Willowmere Residence, Kingston",
       label: "WILLOWMERE RESIDENCE — KINGSTON",
     },
-    mediaInset: {
-      src: "/projects/3-dart-ave-kingston/gallery-04.webp",
-      alt: "Willowmere Residence, Kingston",
-      label: "WILLOWMERE RESIDENCE — KINGSTON",
-    },
+    /**
+     * The navy panel stepped over the foot of the photograph. Every figure is
+     * counted from this repository or read from `site.ts` rather than
+     * asserted. `icon` names a glyph; the drawing stays in the component.
+     */
+    stats: [
+      { icon: "experience", value: site.experience, label: "Years Experience" },
+      {
+        icon: "projects",
+        value: `${projects.length}`,
+        label: "Projects Delivered",
+      },
+      {
+        icon: "areas",
+        value: `${localAreas.length}`,
+        label: "Service Areas",
+      },
+      {
+        icon: "licence",
+        value: site.licence.authority,
+        label: "Licensed Builder",
+      },
+    ],
   },
-  /** The full-bleed plate between the story and the values. */
-  feature: {
-    src: "/projects/49-herbert-st/hero.webp",
-    alt: "Lumiere Residence, Camp Hill",
-    caption: "LUMIERE RESIDENCE — CAMP HILL",
-  },
-  /**
-   * The live page animates three counters — "Years Experience", "Projects"
-   * and "Satisfaction". Only the years figure is recorded in the extracted
-   * content, so the remaining cells count what this project actually holds
-   * rather than assert an unverified number.
-   */
-  stats: [
-    { value: site.experience, label: "Years Experience" },
-    { value: `${projects.length}`, label: "Projects" },
-    { value: `${localAreas.length}`, label: "Service Areas" },
-  ],
   values: {
-    eyebrow: "What Drives Us",
-    heading: "Our Values",
+    eyebrow: "Our Values",
+    heading: "The Principles That Guide Everything We Do",
+    lead: "Four commitments that hold on every project, whatever its size or budget.",
     items: [
       {
         index: "01",
+        icon: "transparency",
         title: "Transparency",
         body: "Upfront pricing with no hidden costs. You know exactly what you're investing from day one.",
       },
       {
         index: "02",
+        icon: "detail",
         title: "Attention to Detail",
         body: "The finest details matter. Our team builds to the highest quality standards on every project.",
       },
       {
         index: "03",
+        icon: "client",
         title: "Client First",
         body: "We listen first, advise second. Your vision and goals are always at the centre of what we do.",
       },
       {
         index: "04",
+        icon: "excellence",
         title: "Excellence",
         body: "Driven to deliver superior customer service and quality craftsmanship, every single time.",
+      },
+    ],
+  },
+  /** The navy band. The stages themselves are read from `process.ts`. */
+  approach: {
+    eyebrow: "Our Approach",
+    heading: "A Seamless Building Experience From Start to Finish",
+    lead: "Our proven process keeps your project managed with precision, professionalism, and care at every step.",
+    link: { label: "Our Process", href: "/process" },
+  },
+  build: {
+    eyebrow: "What We Build",
+    heading: "Quality Homes. Exceptional Spaces.",
+    lead: "We build a wide range of residential and commercial projects, each tailored to our clients' needs and built to the highest standards.",
+    link: { label: "View our services", href: "/residential" },
+    items: [
+      {
+        title: "Custom Homes",
+        href: "/residential#custom-homes",
+        src: "/projects/14-verona-st-pallara/hero.webp",
+        alt: "Aurelia Residence, Pallara",
+      },
+      {
+        title: "Duplexes & Granny Flats",
+        href: "/residential#granny-flats",
+        src: "/projects/18-skye-court-bahrs-scrub/hero.webp",
+        alt: "Skye Court Residence, Bahrs Scrub",
+      },
+      {
+        title: "Renovations",
+        href: "/residential#renovations",
+        src: "/projects/25-langford-st/gallery-03.webp",
+        alt: "Solstice Residence, Eight Mile Plains",
+      },
+      {
+        title: "Commercial",
+        href: "/commercial",
+        src: "/projects/3-stanley-st-mount-gravatt/hero.webp",
+        alt: "Halcyon Residence, Mount Gravatt",
+      },
+    ],
+  },
+  whyArc: {
+    eyebrow: "Why Clients Choose ARC",
+    heading: "More Than Builders. Your Project Partners.",
+    body: "We don't just construct buildings; we build trust and long-term relationships. Clients choose us for our commitment to quality, communication, and results that exceed expectations.",
+    items: [
+      {
+        icon: "tailored",
+        title: "Tailored Solutions",
+        body: "Every plan is customised to suit your site, your lifestyle and your budget — never a set design.",
+      },
+      {
+        icon: "communication",
+        title: "Clear Communication",
+        body: "Regular updates and site meetings keep you informed and involved through the whole build.",
+      },
+      {
+        icon: "onTime",
+        title: "On-Time Delivery",
+        body: "A programme you can plan around, managed by trades who have worked together for years.",
+      },
+      {
+        icon: "local",
+        title: "Local Expertise",
+        body: "Brisbane locals — we know the suburbs, the soil, and what each council will ask for.",
       },
     ],
   },
@@ -222,12 +317,12 @@ export const processPage = {
       "custom home timeline",
       "builder process Brisbane",
     ],
-    images: ["/projects/hi-def-project/hero.webp"],
+    images: ["/process/hero.webp"],
   } satisfies PageSeo,
-  eyebrow: "How We Work",
-  heading: "Our Process",
-  lead: "Every ARC project follows a proven process that ensures transparency, quality, and your complete satisfaction.",
-  heroImage: "/projects/hi-def-project/hero.webp",
+  eyebrow: "Our Building Process",
+  heading: "A Seamless Journey From Start to Finish",
+  lead: "We take pride in delivering a smooth, transparent, and stress-free building experience. Here's how we bring your vision to life.",
+  heroImage: "/process/hero.webp",
 };
 
 /* -- Locations ------------------------------------------------------------ */
@@ -362,17 +457,37 @@ export const contactPage = {
     images: ["/projects/49-herbert-st/hero.webp"],
   } satisfies PageSeo,
   eyebrow: "Get In Touch",
-  heading: "Start Your Project",
-  lead: "Ready to build? Contact us for an obligation-free consultation and quote.",
+  /** Split so the hero can set the closing word in the accent blue. */
+  heading: { lead: "Let’s Build Something", accent: "Extraordinary" },
+  /** The plain string the H1 reads as, for anything that needs one. */
+  headingPlain: "Let’s Build Something Extraordinary",
+  lead: "Whether you’re planning your dream home or a commercial development, we’re here to bring your vision to life.",
   heroImage: "/projects/49-herbert-st/hero.webp",
-  infoHeading: "Contact Information",
+  /** The three quick channels carried on the hero plate. */
+  heroChannels: {
+    phone: "Call Us",
+    email: "Email Us",
+    hours: "Business Hours",
+  },
+  infoEyebrow: "Contact Information",
+  infoHeading: "We’d Love to Hear From You",
   labels: {
     address: "Address",
     phone: "Phone",
     email: "Email",
+    hours: "Business Hours",
+  },
+  /** The lit panel that closes the details rail. */
+  consultation: {
+    heading: "Book a Free Consultation",
+    body: "Let’s discuss your project and explore the possibilities.",
+    /** An anchor, not a link: the enquiry form is already on this page. */
+    action: { label: "Book a consultation", href: "#enquiry" },
   },
   form: {
+    eyebrow: "Send Us a Message",
     heading: "Project Enquiry",
+    lead: "Have a question or ready to start your project? Fill out the form and we’ll get back to you shortly.",
     fields: {
       name: "Full Name *",
       email: "Email Address *",
@@ -405,6 +520,47 @@ export const contactPage = {
     ],
     submitLabel: "Send Enquiry",
     note: "This form opens your default email app so you can review and send your enquiry details directly. Private project selections are shared after enquiry review.",
+  },
+  /**
+   * The reassurance band under the form. Each `icon` names a drawing in
+   * `components/ui/icon.tsx`, so this file stays free of JSX.
+   */
+  why: {
+    eyebrow: "Why Choose ARC Builders?",
+    heading: "Built on Experience. Driven by Integrity.",
+    items: [
+      {
+        icon: "shield",
+        title: "Experienced & Trusted",
+        body: `${site.experience} years of industry experience delivering high-quality construction with integrity.`,
+      },
+      {
+        icon: "draft",
+        title: "Custom Solutions",
+        body: "Tailored designs and solutions that are unique to your vision and needs.",
+      },
+      {
+        icon: "craft",
+        title: "Quality Craftsmanship",
+        body: "We take pride in our attention to detail and premium finishes.",
+      },
+      {
+        icon: "schedule",
+        title: "On-Time & On-Budget",
+        body: "Committed to delivering your project on time and within budget.",
+      },
+      {
+        icon: "client",
+        title: "Client Focused",
+        body: "Clear communication, transparency, and your satisfaction every step of the way.",
+      },
+    ],
+  },
+  location: {
+    eyebrow: "Our Location",
+    heading: "Visit Our Office",
+    lead: "We’re based in Eight Mile Plains and proudly service Brisbane and surrounding areas.",
+    action: "Get Directions",
   },
 };
 

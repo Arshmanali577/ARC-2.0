@@ -120,7 +120,7 @@ export function GalleryShowcase({ items }: { items: GalleryItem[] }) {
 
       <div className="mt-6 tab:mt-7">
         {visible.length === 0 ? (
-          <p className="m-0 rounded-[20px] border border-line-soft bg-white px-6 py-16 text-center text-[15px] text-body">
+          <p className="m-0 rounded-[20px] border border-line-soft bg-white px-6 py-16 text-center text-[16px] text-body">
             {labels.empty}
           </p>
         ) : (

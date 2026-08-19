@@ -33,10 +33,10 @@ export function Testimonial() {
           <figcaption className="mt-9 flex items-center gap-4 border-t border-line pt-7">
             <span aria-hidden className="h-0.5 w-11 bg-brand" />
             <span>
-              <span className="block text-[15px] font-semibold">
+              <span className="block text-[16px] font-semibold">
                 {lead.name}
               </span>
-              <span className="mt-1.5 block text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
+              <span className="mt-1.5 block text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
                 {lead.role}
               </span>
             </span>
@@ -50,16 +50,16 @@ export function Testimonial() {
             key={item.id}
             className="m-0 flex flex-col justify-between gap-8 bg-white px-8 py-10 nav:px-10 nav:py-12"
           >
-            <blockquote className="m-0 text-[17px] leading-[1.75] text-body">
+            <blockquote className="m-0 text-[18px] leading-[1.75] text-body">
               “{item.quote}”
             </blockquote>
             <figcaption className="flex items-center gap-4">
               <span aria-hidden className="h-0.5 w-11 bg-brand" />
               <span>
-                <span className="block text-[15px] font-semibold">
+                <span className="block text-[16px] font-semibold">
                   {item.name}
                 </span>
-                <span className="mt-1.5 block text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
+                <span className="mt-1.5 block text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
                   {item.role}
                 </span>
               </span>

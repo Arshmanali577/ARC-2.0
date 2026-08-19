@@ -36,7 +36,7 @@ export function ServiceAreas() {
               <h3 className="m-0 font-display text-[22px] font-normal leading-[1.2]">
                 {area.name}
               </h3>
-              <p className="m-0 mt-3 text-[14px] leading-[1.6] text-body">
+              <p className="m-0 mt-3 text-[16px] leading-[1.6] text-body">
                 {area.strengths[0]}
               </p>
             </div>

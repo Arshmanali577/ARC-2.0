@@ -33,12 +33,23 @@ export const site = {
       "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
     mapEmbed:
       "https://www.google.com/maps?q=25+Langford+Street,+Eight+Mile+Plains+QLD+4113,+Australia&output=embed",
+    directionsHref:
+      "https://www.google.com/maps/dir/?api=1&destination=8+Clunies+Ross+Court,+Eight+Mile+Plains+QLD+4113,+Australia",
     address: {
       street: "8 Clunies Ross Court",
       locality: "Eight Mile Plains",
       region: "QLD",
       postcode: "4113",
     },
+    /**
+     * Trading hours, as two rows so the contact page can set the days apart
+     * from the times. Not present in the migrated `companyInfo` — taken from
+     * the contact-page design; correct here if the office keeps other hours.
+     */
+    hours: [
+      { days: "Mon – Fri", time: "7:00am – 5:00pm" },
+      { days: "Sat", time: "8:00am – 12:00pm" },
+    ],
   },
 } as const;
 

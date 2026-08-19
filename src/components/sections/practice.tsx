@@ -39,7 +39,7 @@ export function Practice() {
             {practice.body.map((paragraph) => (
               <p
                 key={paragraph}
-                className="m-0 mt-6 text-[17px] leading-[1.75] text-mist-deep"
+                className="m-0 mt-6 text-[18px] leading-[1.75] text-mist-deep"
               >
                 {paragraph}
               </p>
@@ -49,22 +49,22 @@ export function Practice() {
               {pillars.map((pillar) => (
                 <div key={pillar.index} className="bg-brand px-7 py-8">
                   <div className="flex items-center gap-3.5">
-                    <span className="text-[11px] font-semibold tracking-[0.16em] text-mist">
+                    <span className="text-[12px] font-semibold tracking-[0.16em] text-mist">
                       {pillar.index}
                     </span>
                     <span aria-hidden className="h-px w-6 bg-line-invert-strong" />
                   </div>
-                  <h3 className="m-0 mt-5 text-[17px] font-semibold">
+                  <h3 className="m-0 mt-5 text-[18px] font-semibold">
                     {pillar.title}
                   </h3>
-                  <p className="m-0 mt-2.5 text-[14px] leading-[1.6] text-mist-deep">
+                  <p className="m-0 mt-2.5 text-[16px] leading-[1.6] text-mist-deep">
                     {pillar.body}
                   </p>
                 </div>
               ))}
             </div>
 
-            <p className="m-0 mt-10 border-t border-line-invert pt-8 text-[15px] leading-[1.75] text-mist-deep">
+            <p className="m-0 mt-10 border-t border-line-invert pt-8 text-[16px] leading-[1.75] text-mist-deep">
               {practice.note}
             </p>
           </div>

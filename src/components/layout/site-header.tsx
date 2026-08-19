@@ -20,7 +20,7 @@ export function SiteHeader() {
       {/* The link row is desktop-only, as the design specifies. The CTA joins
           it at 1201px. The gaps are a touch tighter than the design's 22/30px
           because the row now carries eight entries rather than seven. */}
-      <nav className="hidden items-center gap-[18px] text-[13px] font-medium uppercase tracking-[0.08em] text-brand nav:flex wide:gap-[26px]">
+      <nav className="hidden items-center gap-[18px] text-[13px] font-medium uppercase tracking-[0.08em] text-brand nav:flex wide:gap-[26px] wide:text-[14px]">
         {primaryNav.map((entry) =>
           isNavGroup(entry) ? (
             <NavDropdown key={entry.label} group={entry} />

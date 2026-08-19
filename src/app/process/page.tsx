@@ -1,5 +1,4 @@
 import { ProcessTimeline } from "@/components/process/process-timeline";
-import { StageIndex } from "@/components/process/stage-index";
 import { CtaBand } from "@/components/sections/cta-band";
 import { PageHero } from "@/components/ui/page-hero";
 import { processPage } from "@/content/pages";
@@ -15,11 +14,12 @@ export default function ProcessPage() {
         heading={processPage.heading}
         lead={processPage.lead}
         image={processPage.heroImage}
-        imageAlt="Celeste Residence, Brisbane"
-        mediaLabel="CELESTE RESIDENCE — BRISBANE"
+        imageAlt="A completed ARC home lit from within at dusk"
+        mediaLabel="ARC BUILDERS"
+        size="full"
+        eyebrowTone="brass"
+        imagePosition="center 62%"
       />
-
-      <StageIndex />
 
       <ProcessTimeline />
 

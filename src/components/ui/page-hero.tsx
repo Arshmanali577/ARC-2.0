@@ -13,18 +13,26 @@ import { cn } from "@/lib/cn";
 const heights = {
   default: "min-h-[440px]",
   tall: "min-h-[540px] nav:min-h-[640px]",
+  /* One step beyond `tall`, for a page whose masthead photograph is the
+     opening statement rather than a backdrop to the H1. */
+  full: "min-h-[560px] nav:min-h-[720px] wide:min-h-[780px]",
 } as const;
 
 type PageHeroProps = {
   eyebrow: string;
-  heading: string;
+  /** A node, not a string, so a page can set one word of its H1 apart. */
+  heading: ReactNode;
   lead?: string;
   image?: string;
   imageAlt?: string;
   /** Art-direction note shown when no photograph is supplied. */
   mediaLabel?: string;
+  /** `object-position` for the photograph, e.g. `"center 15%"`. */
+  imagePosition?: string;
   /** `tall` gives the photograph more room on pages that open on a story. */
   size?: keyof typeof heights;
+  /** `brass` picks the eyebrow out in the journey's stage colour. */
+  eyebrowTone?: "mist" | "brass";
   children?: ReactNode;
   className?: string;
 };
@@ -36,7 +44,9 @@ export function PageHero({
   image,
   imageAlt,
   mediaLabel = "ARC BUILDERS",
+  imagePosition,
   size = "default",
+  eyebrowTone = "mist",
   children,
   className,
 }: PageHeroProps) {
@@ -56,6 +66,7 @@ export function PageHero({
           tone="dark"
           src={image}
           alt={imageAlt}
+          position={imagePosition}
           priority
           align="end"
           labelPadding={20}
@@ -90,8 +101,19 @@ export function PageHero({
 
       <div className={`relative z-10 pb-[64px] pt-[112px] text-white ${gutter}`}>
         <span className="flex items-center gap-4">
-          <span aria-hidden className="h-px w-10 bg-white/45" />
-          <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-mist">
+          <span
+            aria-hidden
+            className={cn(
+              "h-px w-10",
+              eyebrowTone === "brass" ? "bg-gold-soft/60" : "bg-white/45",
+            )}
+          />
+          <span
+            className={cn(
+              "text-[12px] font-semibold uppercase tracking-[0.28em]",
+              eyebrowTone === "brass" ? "text-gold-soft" : "text-mist",
+            )}
+          >
             {eyebrow}
           </span>
         </span>
@@ -101,7 +123,7 @@ export function PageHero({
         </h1>
 
         {lead ? (
-          <p className="m-0 mt-7 max-w-[56ch] text-[18px] font-light leading-[1.7] text-white/82">
+          <p className="m-0 mt-7 max-w-[56ch] text-[19px] font-light leading-[1.7] text-white/82">
             {lead}
           </p>
         ) : null}

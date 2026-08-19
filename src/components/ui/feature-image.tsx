@@ -37,7 +37,7 @@ export function FeatureImage({
       {caption ? (
         <div className={cn("mt-5 flex items-center gap-5", gutter)}>
           <span aria-hidden className="h-px w-10 bg-line-strong" />
-          <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
+          <span className="text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
             {caption}
           </span>
         </div>

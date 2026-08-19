@@ -16,7 +16,7 @@ export function LocalExpertise() {
             {localExpertise.heading}
           </SectionHeading>
         </div>
-        <p className="m-0 max-w-[54ch] text-[19px] font-light leading-[1.7] text-body nav:self-end">
+        <p className="m-0 max-w-[54ch] text-[20px] font-light leading-[1.7] text-body nav:self-end">
           {localExpertise.lead}
         </p>
       </div>

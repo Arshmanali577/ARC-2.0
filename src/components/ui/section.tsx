@@ -78,7 +78,7 @@ export function Eyebrow({
   const label = (
     <span
       className={cn(
-        "text-[11px] font-semibold uppercase tracking-[0.28em]",
+        "text-[12px] font-semibold uppercase tracking-[0.28em]",
         tone === "light" ? "text-mist" : "text-muted",
       )}
     >
@@ -178,7 +178,7 @@ export function SectionHeader({
         {lead ? (
           <p
             className={cn(
-              "m-0 mt-6 max-w-[620px] text-[17px] leading-[1.75]",
+              "m-0 mt-6 max-w-[620px] text-[18px] leading-[1.75]",
               tone === "light" ? "text-mist-deep" : "text-body",
             )}
           >

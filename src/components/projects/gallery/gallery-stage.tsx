@@ -123,7 +123,7 @@ export function GalleryStage({
       <button
         type="button"
         onClick={onOpenFullscreen}
-        className="absolute right-4 top-4 z-30 inline-flex items-center gap-2.5 rounded-full bg-white/95 px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-brand shadow-plate backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-plate-strong tab:right-6 tab:top-6 tab:px-5 tab:py-3 tab:text-[11px]"
+        className="absolute right-4 top-4 z-30 inline-flex items-center gap-2.5 rounded-full bg-white/95 px-4 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-brand shadow-plate backdrop-blur-sm transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-white hover:shadow-plate-strong tab:right-6 tab:top-6 tab:px-5 tab:py-3 tab:text-[12px]"
       >
         <span>{labels.fullscreen}</span>
         <ExpandIcon size={14} />
@@ -153,7 +153,7 @@ export function GalleryStage({
         className="pointer-events-none absolute inset-x-0 bottom-0 z-30 flex items-end justify-between gap-5 p-5 tab:gap-8 tab:p-8 nav:p-10"
       >
         <div className="min-w-0 max-w-[560px] animate-[fade-in_600ms_ease-out_both]">
-          <p className="m-0 text-[10px] font-semibold uppercase tracking-[0.28em] text-mist tab:text-[11px]">
+          <p className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-mist tab:text-[12px]">
             {item.categoryLabel}
           </p>
           <p className="m-0 mt-2 font-display text-[20px] font-normal leading-[1.15] tracking-[-0.02em] text-white tab:mt-2.5 tab:text-[30px] nav:text-[34px]">
@@ -161,12 +161,12 @@ export function GalleryStage({
           </p>
           {/* Clamped on a phone: the caption sits over a 4:3 crop there, and
               an unclamped third line would run into the navigation arrows. */}
-          <p className="m-0 mt-2.5 line-clamp-2 text-[12px] leading-[1.6] text-white/80 tab:mt-3 tab:line-clamp-none tab:text-[14px] tab:leading-[1.65]">
+          <p className="m-0 mt-2.5 line-clamp-2 text-[14px] leading-[1.6] text-white/80 tab:mt-3 tab:line-clamp-none tab:text-[16px] tab:leading-[1.65]">
             {item.description}
           </p>
         </div>
 
-        <p className="m-0 shrink-0 text-[12px] font-semibold tracking-[0.14em] text-white/85 tab:text-[13px]">
+        <p className="m-0 shrink-0 text-[13px] font-semibold tracking-[0.14em] text-white/85 tab:text-[14px]">
           {pad(active + 1)} <span className="text-white/45">/</span>{" "}
           {pad(items.length)}
         </p>

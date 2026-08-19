@@ -113,7 +113,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
             <ArticleToc blocks={post.blocks} />
 
             <div className="mt-12">
-              <h2 className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted">
+              <h2 className="m-0 text-[12px] font-semibold uppercase tracking-[0.28em] text-muted">
                 {detail.shareHeading}
               </h2>
               <div className="mt-6 flex flex-wrap gap-2.5">
@@ -123,7 +123,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="border border-line-strong px-5 py-3.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-brand transition duration-300 ease-out hover:border-brand hover:bg-brand hover:text-white"
+                    className="border border-line-strong px-5 py-3.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand transition duration-300 ease-out hover:border-brand hover:bg-brand hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -132,14 +132,14 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
             </div>
 
             <div className="mt-12">
-              <h2 className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted">
+              <h2 className="m-0 text-[12px] font-semibold uppercase tracking-[0.28em] text-muted">
                 {detail.tagsHeading}
               </h2>
               <ul className="m-0 mt-6 flex list-none flex-wrap gap-2 p-0">
                 {post.tags.map((tag) => (
                   <li
                     key={tag}
-                    className="border border-line px-3.5 py-2 text-[12px] leading-[1.4] text-body"
+                    className="border border-line px-3.5 py-2 text-[14px] leading-[1.4] text-body"
                   >
                     {tag}
                   </li>

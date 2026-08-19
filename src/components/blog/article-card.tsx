@@ -73,10 +73,10 @@ export function ArticleCard({
 
         {!isCompact ? (
           <>
-            <p className="m-0 mt-4 max-w-[54ch] text-[16px] leading-[1.7] text-body">
+            <p className="m-0 mt-4 max-w-[54ch] text-[17px] leading-[1.7] text-body">
               {post.excerpt}
             </p>
-            <span className="mt-7 inline-flex items-center gap-2.5 border-b border-brand pb-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-brand transition-opacity duration-300 ease-out group-hover:opacity-60">
+            <span className="mt-7 inline-flex items-center gap-2.5 border-b border-brand pb-1.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand transition-opacity duration-300 ease-out group-hover:opacity-60">
               {blogPage.readLabel}
               <ArrowUpRight size={16} />
             </span>

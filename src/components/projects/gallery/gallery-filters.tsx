@@ -41,7 +41,7 @@ export function GalleryFilters({
             aria-pressed={isActive}
             onClick={() => onChange(option.id)}
             className={cn(
-              "rounded-full border px-5 py-[11px] text-[11px] font-semibold uppercase tracking-[0.14em] transition duration-300 ease-out tab:px-[22px] tab:py-[13px]",
+              "rounded-full border px-5 py-[11px] text-[12px] font-semibold uppercase tracking-[0.14em] transition duration-300 ease-out tab:px-[22px] tab:py-[13px]",
               isActive
                 ? "border-brand bg-brand text-white shadow-plate"
                 : "border-line bg-white text-brand hover:-translate-y-0.5 hover:border-line-strong hover:bg-surface",

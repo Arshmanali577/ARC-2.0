@@ -35,7 +35,7 @@ export function FooterLink({ href, icon, children }: FooterLinkProps) {
   );
 
   const className =
-    "group flex w-fit items-start gap-3.5 py-[7px] text-[14px] leading-[1.5] transition-colors duration-300 ease-out hover:text-white";
+    "group flex w-fit items-start gap-3.5 py-[7px] text-[16px] leading-[1.5] transition-colors duration-300 ease-out hover:text-white";
 
   if (isExternal) {
     return (
@@ -61,7 +61,7 @@ export function FooterFact({
   children: ReactNode;
 }) {
   return (
-    <div className="flex items-start gap-3.5 py-[7px] text-[14px] leading-[1.5]">
+    <div className="flex items-start gap-3.5 py-[7px] text-[16px] leading-[1.5]">
       <span className="mt-px text-accent">{icon}</span>
       <span>{children}</span>
     </div>

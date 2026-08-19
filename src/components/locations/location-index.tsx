@@ -46,7 +46,7 @@ export function LocationIndex({
                     : "bg-surface text-brand hover:bg-white",
                 )}
               >
-                <span className="font-display text-[17px] leading-[1.25] nav:text-[18px]">
+                <span className="font-display text-[18px] leading-[1.25] nav:text-[19px]">
                   {area.name}
                 </span>
                 <ArrowUpRight

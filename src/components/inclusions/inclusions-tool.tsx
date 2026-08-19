@@ -30,9 +30,9 @@ const currency = new Intl.NumberFormat("en-AU", {
 });
 
 const fieldClass =
-  "w-full border border-line-strong bg-white px-4 py-3.5 text-[15px] text-brand outline-none transition-colors duration-250 ease-out focus:border-brand";
+  "w-full border border-line-strong bg-white px-4 py-3.5 text-[16px] text-brand outline-none transition-colors duration-250 ease-out focus:border-brand";
 const labelClass =
-  "block text-[11px] font-semibold uppercase tracking-[0.16em] text-muted";
+  "block text-[12px] font-semibold uppercase tracking-[0.16em] text-muted";
 
 const buildTypes: BuildType[] = ["single-storey", "double-storey", "custom"];
 
@@ -63,10 +63,10 @@ export function InclusionsTool() {
       <div className="grid grid-cols-1 gap-px bg-line-soft nav:grid-cols-3">
         {inclusionsPage.assurances.map((item) => (
           <div key={item.title} className="bg-white px-7 py-8">
-            <h2 className="m-0 text-[17px] font-semibold text-brand">
+            <h2 className="m-0 text-[18px] font-semibold text-brand">
               {item.title}
             </h2>
-            <p className="m-0 mt-2.5 text-[15px] leading-[1.65] text-body">
+            <p className="m-0 mt-2.5 text-[16px] leading-[1.65] text-body">
               {item.body}
             </p>
           </div>
@@ -78,15 +78,15 @@ export function InclusionsTool() {
         <h2 className="m-0 font-display text-[clamp(27px,8vw,34px)] font-normal leading-[1.1] tracking-[-0.02em]">
           {setup.heading}
         </h2>
-        <p className="m-0 mt-5 max-w-[720px] text-[17px] leading-[1.75] text-body">
+        <p className="m-0 mt-5 max-w-[720px] text-[18px] leading-[1.75] text-body">
           {setup.lead}
         </p>
 
         <div className="mt-8 border border-line bg-surface p-7">
-          <h3 className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted">
+          <h3 className="m-0 text-[12px] font-semibold uppercase tracking-[0.28em] text-muted">
             {setup.howToHeading}
           </h3>
-          <p className="m-0 mt-3.5 text-[15px] leading-[1.7] text-body">
+          <p className="m-0 mt-3.5 text-[16px] leading-[1.7] text-body">
             {setup.howTo}
           </p>
         </div>
@@ -127,7 +127,7 @@ export function InclusionsTool() {
               </Choice>
             ))}
           </div>
-          <p className="m-0 mt-4 max-w-[720px] text-[14px] leading-[1.7] text-body">
+          <p className="m-0 mt-4 max-w-[720px] text-[16px] leading-[1.7] text-body">
             {setup.buildTypeNote}
           </p>
         </fieldset>
@@ -155,15 +155,15 @@ export function InclusionsTool() {
                   <span className="font-display text-[24px] leading-[1.2]">
                     {item.name}
                   </span>
-                  <span className="mt-3 text-[15px] leading-[1.65] text-body">
+                  <span className="mt-3 text-[16px] leading-[1.65] text-body">
                     {item.description}
                   </span>
-                  <span className="mt-5 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand">
+                  <span className="mt-5 text-[14px] font-semibold uppercase tracking-[0.12em] text-brand">
                     {guide.amount === null
                       ? "Pricing shared with consultant after scope review"
                       : `${currency.format(guide.amount)} · ${guide.detail}`}
                   </span>
-                  <ul className="m-0 mt-5 flex list-none flex-col gap-2 p-0 text-[14px] leading-[1.6] text-body">
+                  <ul className="m-0 mt-5 flex list-none flex-col gap-2 p-0 text-[16px] leading-[1.6] text-body">
                     {item.highlights.map((highlight) => (
                       <li key={highlight} className="grid grid-cols-[16px_1fr] gap-3">
                         <span aria-hidden className="text-brand">
@@ -206,12 +206,12 @@ export function InclusionsTool() {
                   className="grid grid-cols-1 gap-6 border-b border-line py-8 nav:grid-cols-[1.2fr_1fr_1fr_auto] nav:gap-10"
                 >
                   <div>
-                    <h3 className="m-0 text-[17px] font-semibold text-brand">
+                    <h3 className="m-0 text-[18px] font-semibold text-brand">
                       {row.item}
                     </h3>
                     <span
                       className={cn(
-                        "mt-3 inline-block px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em]",
+                        "mt-3 inline-block px-3 py-1.5 text-[12px] font-semibold uppercase tracking-[0.14em]",
                         inclusionStatusMeta[status].className,
                       )}
                     >
@@ -219,23 +219,23 @@ export function InclusionsTool() {
                     </span>
                   </div>
 
-                  <div className="text-[15px] leading-[1.65] text-body">
-                    <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-faint">
+                  <div className="text-[16px] leading-[1.65] text-body">
+                    <span className="block text-[12px] font-semibold uppercase tracking-[0.16em] text-faint">
                       Allowance
                     </span>
                     <span className="mt-2 block">{row.allowance}</span>
                   </div>
 
-                  <div className="text-[15px] leading-[1.65] text-body">
-                    <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] text-faint">
+                  <div className="text-[16px] leading-[1.65] text-body">
+                    <span className="block text-[12px] font-semibold uppercase tracking-[0.16em] text-faint">
                       Upgrade option
                     </span>
                     <span className="mt-2 block">{row.upgradeOption}</span>
-                    <span className="mt-2 block text-[13px] text-muted">
+                    <span className="mt-2 block text-[15px] text-muted">
                       {row.notes}
                     </span>
                     {row.upgradeCost ? (
-                      <span className="mt-2 block text-[13px] font-semibold text-brand">
+                      <span className="mt-2 block text-[15px] font-semibold text-brand">
                         {currency.format(row.upgradeCost)}
                       </span>
                     ) : null}
@@ -243,7 +243,7 @@ export function InclusionsTool() {
 
                   <div className="flex flex-wrap items-start gap-2.5">
                     {row.selectionMode === "fixed" ? (
-                      <span className="border border-line px-5 py-3.5 text-[13px] uppercase tracking-[0.12em] text-muted">
+                      <span className="border border-line px-5 py-3.5 text-[14px] uppercase tracking-[0.12em] text-muted">
                         {selectionLabels.locked}
                       </span>
                     ) : row.selectionMode === "allowance-upgrade" ? (
@@ -290,14 +290,14 @@ export function InclusionsTool() {
         <h2 className="m-0 font-display text-[clamp(25px,7vw,30px)] font-normal leading-[1.15]">
           {inclusionsPage.exclusionsHeading}
         </h2>
-        <p className="m-0 mt-4 max-w-[720px] text-[17px] leading-[1.75] text-body">
+        <p className="m-0 mt-4 max-w-[720px] text-[18px] leading-[1.75] text-body">
           {inclusionsPage.exclusionsLead}
         </p>
         <ul className="m-0 mt-7 flex list-none flex-col border-t border-line p-0">
           {explicitExclusions.map((item) => (
             <li
               key={item}
-              className="border-b border-line py-4 text-[16px] leading-[1.6] text-body"
+              className="border-b border-line py-4 text-[17px] leading-[1.6] text-body"
             >
               {item}
             </li>
@@ -310,19 +310,19 @@ export function InclusionsTool() {
         <h2 className="m-0 font-display text-[clamp(25px,7vw,30px)] font-normal leading-[1.15]">
           {snapshot.heading}
         </h2>
-        <p className="m-0 mt-4 max-w-[720px] text-[17px] leading-[1.75] text-body">
+        <p className="m-0 mt-4 max-w-[720px] text-[18px] leading-[1.75] text-body">
           {snapshot.lead}
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-11 nav:grid-cols-2">
           <div>
-            <h3 className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted">
+            <h3 className="m-0 text-[12px] font-semibold uppercase tracking-[0.28em] text-muted">
               {snapshot.guideLabel}
             </h3>
-            <p className="m-0 mt-5 text-[17px] font-semibold text-brand">
+            <p className="m-0 mt-5 text-[18px] font-semibold text-brand">
               {pricingGuide.label}
             </p>
-            <p className="m-0 mt-1.5 text-[15px] text-body">
+            <p className="m-0 mt-1.5 text-[16px] text-body">
               {pricingGuide.detail}
             </p>
             <p className="m-0 mt-5 font-display text-[clamp(31px,9.5vw,40px)] leading-none text-brand">
@@ -331,18 +331,18 @@ export function InclusionsTool() {
                 : currency.format(pricingGuide.amount)}
             </p>
 
-            <h3 className="m-0 mt-10 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted">
+            <h3 className="m-0 mt-10 text-[12px] font-semibold uppercase tracking-[0.28em] text-muted">
               {snapshot.officialLabel}
             </h3>
             <ul className="m-0 mt-5 flex list-none flex-col border-t border-line p-0">
               {publicBasePricing.map((item) => (
                 <li
                   key={item.label}
-                  className="flex flex-wrap items-baseline justify-between gap-3 border-b border-line py-3.5 text-[15px] text-body"
+                  className="flex flex-wrap items-baseline justify-between gap-3 border-b border-line py-3.5 text-[16px] text-body"
                 >
                   <span>
                     {item.label}
-                    <span className="ml-2 text-[13px] text-muted">
+                    <span className="ml-2 text-[15px] text-muted">
                       {item.detail}
                     </span>
                   </span>
@@ -352,7 +352,7 @@ export function InclusionsTool() {
                 </li>
               ))}
             </ul>
-            <ul className="m-0 mt-5 flex list-none flex-col gap-2 p-0 text-[14px] leading-[1.7] text-muted">
+            <ul className="m-0 mt-5 flex list-none flex-col gap-2 p-0 text-[16px] leading-[1.7] text-muted">
               {consultantPricingNotes.map((note) => (
                 <li key={note}>- {note}</li>
               ))}
@@ -360,12 +360,12 @@ export function InclusionsTool() {
           </div>
 
           <div>
-            <h3 className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted">
+            <h3 className="m-0 text-[12px] font-semibold uppercase tracking-[0.28em] text-muted">
               {snapshot.selectionsLabel}
             </h3>
 
             {summary.selectedUpgrades.length === 0 ? (
-              <p className="m-0 mt-5 text-[16px] leading-[1.7] text-body">
+              <p className="m-0 mt-5 text-[17px] leading-[1.7] text-body">
                 {snapshot.emptySelections}
               </p>
             ) : (
@@ -373,11 +373,11 @@ export function InclusionsTool() {
                 {summary.selectedUpgrades.map((item) => (
                   <li
                     key={item.key}
-                    className="flex flex-wrap items-baseline justify-between gap-3 border-b border-line py-3.5 text-[15px] text-body"
+                    className="flex flex-wrap items-baseline justify-between gap-3 border-b border-line py-3.5 text-[16px] text-body"
                   >
                     <span>
                       {item.item}
-                      <span className="ml-2 text-[13px] text-muted">
+                      <span className="ml-2 text-[15px] text-muted">
                         {item.sectionTitle}
                       </span>
                     </span>
@@ -393,7 +393,7 @@ export function InclusionsTool() {
               {snapshot.acknowledgements.map((item, index) => (
                 <label
                   key={item}
-                  className="flex items-start gap-3.5 text-[15px] leading-[1.6] text-body"
+                  className="flex items-start gap-3.5 text-[16px] leading-[1.6] text-body"
                 >
                   <input
                     type="checkbox"
@@ -433,7 +433,7 @@ function Choice({
       aria-pressed={active}
       onClick={onClick}
       className={cn(
-        "border px-5 py-3.5 text-[13px] uppercase tracking-[0.12em] transition duration-250 ease-out",
+        "border px-5 py-3.5 text-[14px] uppercase tracking-[0.12em] transition duration-250 ease-out",
         active
           ? "border-brand bg-brand text-white"
           : "border-line-strong text-brand hover:border-brand",

@@ -50,29 +50,27 @@ const assuranceGlyphs: Record<string, Glyph> = {
 
 /* -- Contact tile ---------------------------------------------------------- */
 
+type Tile = {
+  href: string;
+  label: string;
+  value: string;
+  Icon: Glyph;
+  tone?: "accent" | "whatsapp";
+};
+
 /**
  * One way to reach ARC. External by design: `tel:`, `mailto:` and the WhatsApp
  * deep link all leave the site, so each is a plain anchor rather than a router
  * link. WhatsApp keeps its own green — a channel mark that is not recognisable
  * is not doing its job.
  */
-function ContactTile({
-  href,
-  label,
-  value,
-  Icon,
-  tone = "accent",
-}: {
-  href: string;
-  label: string;
-  value: string;
-  Icon: Glyph;
-  tone?: "accent" | "whatsapp";
-}) {
+function ContactTile({ href, label, value, Icon, tone = "accent" }: Tile) {
   return (
     <a
       href={href}
-      {...(href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {})}
+      {...(href.startsWith("http")
+        ? { target: "_blank", rel: "noreferrer" }
+        : {})}
       /* A row on a phone, the design's stacked card from tablet up. Three
          stacked cards on a 390px screen is 400px of near-empty tile. */
       className="group/tile flex items-center gap-4 rounded-[12px] border border-line-invert bg-white/[0.045] p-4 transition duration-300 ease-out hover:-translate-y-0.5 hover:border-line-invert-strong hover:bg-white/[0.09] tab:flex-col tab:items-stretch tab:gap-0"
@@ -89,8 +87,8 @@ function ContactTile({
       </span>
 
       <span className="min-w-0 flex-1 tab:flex-none">
-        <span className="block text-[14px] font-medium leading-none">{label}</span>
-        <span className="mt-2 block break-words text-[12.5px] leading-[1.45] text-white/55">
+        <span className="block text-[16px] font-medium leading-none">{label}</span>
+        <span className="mt-2 block break-words text-[14px] leading-[1.45] text-white/55">
           {value}
         </span>
       </span>
@@ -112,7 +110,8 @@ type CtaBandProps = {
    * the panel falls back to the phone number instead.
    */
   primary?: { label: string; href: string } | null;
-  /** The three contact tiles. Off on /contact, which already carries them. */
+  /** The rail of contact tiles. Off on /contact, where the panel's own white
+      rows already name every channel. */
   details?: boolean;
 };
 
@@ -123,7 +122,41 @@ export function CtaBand({
   primary = { label: cta.panel.action.label, href: cta.panel.action.href },
   details = true,
 }: CtaBandProps) {
-  const { channels } = cta.panel;
+  const { actions, channels } = cta.panel;
+
+  /* The panel's white rows. With a leading button it makes one act — booking —
+     and the tiles below carry the rest. Without one, on /contact, every way to
+     reach ARC is a row of its own, each in the same hand as the call. */
+  const rows = primary
+    ? [primary]
+    : [
+        { label: `Call ${site.contact.phone}`, href: site.contact.phoneHref },
+        { label: actions.whatsapp, href: site.contact.whatsappHref },
+        actions.book,
+        { label: actions.email, href: site.contact.emailHref },
+      ];
+
+  const tiles: Tile[] = [
+    {
+      href: site.contact.phoneHref,
+      label: channels.phone,
+      value: site.contact.phone,
+      Icon: PhoneIcon,
+    },
+    {
+      href: site.contact.emailHref,
+      label: channels.email,
+      value: site.contact.email,
+      Icon: MailIcon,
+    },
+    {
+      href: site.contact.whatsappHref,
+      label: channels.whatsapp,
+      value: channels.whatsappValue,
+      Icon: WhatsappIcon,
+      tone: "whatsapp",
+    },
+  ];
 
   return (
     <Section
@@ -152,7 +185,7 @@ export function CtaBand({
             {heading}
           </h2>
 
-          <p className="m-0 mt-6 max-w-[46ch] text-[17px] font-light leading-[1.75] text-white/72">
+          <p className="m-0 mt-6 max-w-[46ch] text-[18px] font-light leading-[1.75] text-white/72">
             {body}
           </p>
 
@@ -172,7 +205,7 @@ export function CtaBand({
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-full border border-accent/45 text-accent-soft">
                     <Icon size={18} />
                   </span>
-                  <span className="max-w-[10ch] text-[14px] leading-[1.35] text-white/80">
+                  <span className="max-w-[10ch] text-[16px] leading-[1.35] text-white/80">
                     {assurance.label}
                   </span>
                 </li>
@@ -202,7 +235,7 @@ export function CtaBand({
                   <p className="m-0 mt-3.5 font-display text-[25px] font-normal leading-none tracking-[-0.02em] nav:text-[29px]">
                     {figure.value}
                   </p>
-                  <p className="m-0 mt-2.5 text-[12px] leading-[1.4] text-white/55">
+                  <p className="m-0 mt-2.5 text-[14px] leading-[1.4] text-white/55">
                     {figure.label}
                   </p>
                 </li>
@@ -219,20 +252,23 @@ export function CtaBand({
                 <p className="m-0 font-display text-[23px] font-normal leading-[1.15] tracking-[-0.02em] tab:text-[28px]">
                   {cta.panel.heading}
                 </p>
-                <p className="m-0 mt-2 text-[15px] leading-[1.6] text-white/65">
+                <p className="m-0 mt-2 text-[16px] leading-[1.6] text-white/65">
                   {cta.panel.body}
                 </p>
               </div>
             </div>
 
-            <Button
-              href={primary ? primary.href : site.contact.phoneHref}
-              variant="panelSolid"
-              withArrow
-              className="mt-7"
-            >
-              {primary ? primary.label : `Call ${site.contact.phone}`}
-            </Button>
+            {rows.map((row, index) => (
+              <Button
+                key={row.label}
+                href={row.href}
+                variant="panelSolid"
+                withArrow
+                className={index === 0 ? "mt-7" : "mt-3"}
+              >
+                {row.label}
+              </Button>
+            ))}
 
             {details ? (
               <>
@@ -242,31 +278,15 @@ export function CtaBand({
                 />
 
                 <div className="mt-6 grid grid-cols-1 gap-3 tab:grid-cols-3">
-                  <ContactTile
-                    href={site.contact.phoneHref}
-                    label={channels.phone}
-                    value={site.contact.phone}
-                    Icon={PhoneIcon}
-                  />
-                  <ContactTile
-                    href={site.contact.emailHref}
-                    label={channels.email}
-                    value={site.contact.email}
-                    Icon={MailIcon}
-                  />
-                  <ContactTile
-                    href={site.contact.whatsappHref}
-                    label={channels.whatsapp}
-                    value={channels.whatsappValue}
-                    Icon={WhatsappIcon}
-                    tone="whatsapp"
-                  />
+                  {tiles.map((tile) => (
+                    <ContactTile key={tile.label} {...tile} />
+                  ))}
                 </div>
               </>
             ) : null}
           </div>
 
-          <p className="m-0 mt-7 flex items-center gap-3.5 text-[11px] font-medium uppercase tracking-[0.16em] text-white/45">
+          <p className="m-0 mt-7 flex items-center gap-3.5 text-[12px] font-medium uppercase tracking-[0.16em] text-white/45">
             <span aria-hidden className="h-px w-6 bg-white/25" />
             {site.licence.label} · {site.licence.number}
           </p>

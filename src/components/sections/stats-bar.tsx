@@ -42,7 +42,7 @@ export function StatsBar({ stats = homeStats }: { stats?: Stat[] }) {
             >
               {cell.value}
             </div>
-            <div className="mt-4 text-[11px] font-medium uppercase tracking-[0.16em] text-mist-deep">
+            <div className="mt-4 text-[12px] font-medium uppercase tracking-[0.16em] text-mist-deep">
               {cell.label}
             </div>
           </div>

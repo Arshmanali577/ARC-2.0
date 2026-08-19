@@ -39,7 +39,7 @@ export function NavLink({
         "transition-[border-color,color] duration-250 ease-out",
         variant === "bar"
           ? "whitespace-nowrap border-b pb-[3px]"
-          : "border-b border-line-soft py-4 text-[13px] font-medium uppercase tracking-[0.08em]",
+          : "border-b border-line-soft py-4 text-[14px] font-medium uppercase tracking-[0.08em]",
         variant === "bar" && (active ? "border-brand" : "border-transparent hover:border-brand"),
         variant === "stacked" && (active ? "text-brand" : "text-brand/70"),
       )}

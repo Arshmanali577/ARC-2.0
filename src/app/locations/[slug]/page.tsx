@@ -91,8 +91,8 @@ export default async function LocationDetailPage(
                 key={paragraph}
                 className={
                   index === 0
-                    ? "m-0 mt-9 max-w-[60ch] text-[19px] font-light leading-[1.7]"
-                    : "m-0 mt-7 max-w-[64ch] text-[17px] leading-[1.8] text-body"
+                    ? "m-0 mt-9 max-w-[60ch] text-[20px] font-light leading-[1.7]"
+                    : "m-0 mt-7 max-w-[64ch] text-[18px] leading-[1.8] text-body"
                 }
               >
                 {paragraph}
@@ -115,7 +115,7 @@ export default async function LocationDetailPage(
               {area.strengths.map((strength) => (
                 <li
                   key={strength}
-                  className="flex items-start gap-4 bg-white px-6 py-6 text-[16px] leading-[1.65] text-brand"
+                  className="flex items-start gap-4 bg-white px-6 py-6 text-[17px] leading-[1.65] text-brand"
                 >
                   <span
                     aria-hidden
@@ -161,13 +161,13 @@ export default async function LocationDetailPage(
               key={faq.question}
               className="grid grid-cols-1 gap-5 border-b border-line py-10 nav:grid-cols-[64px_1fr_1.35fr] nav:gap-14"
             >
-              <span className="text-[11px] font-semibold tracking-[0.16em] text-faint">
+              <span className="text-[12px] font-semibold tracking-[0.16em] text-faint">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="m-0 font-display text-[22px] font-normal leading-[1.3] nav:text-[24px]">
                 {faq.question}
               </h3>
-              <p className="m-0 text-[16px] leading-[1.8] text-body">
+              <p className="m-0 text-[17px] leading-[1.8] text-body">
                 {faq.answer}
               </p>
             </li>

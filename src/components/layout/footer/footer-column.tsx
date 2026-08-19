@@ -29,7 +29,7 @@ export function FooterColumn({
     <div className={cn("relative", className)}>
       <h2
         id={id}
-        className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-white"
+        className="m-0 text-[12px] font-semibold uppercase tracking-[0.28em] text-white"
       >
         {title}
       </h2>

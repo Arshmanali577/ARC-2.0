@@ -115,7 +115,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-50 focus:bg-brand focus:px-6 focus:py-3.5 focus:text-[13px] focus:font-semibold focus:uppercase focus:tracking-[0.12em] focus:text-white"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-6 focus:top-6 focus:z-50 focus:bg-brand focus:px-6 focus:py-3.5 focus:text-[14px] focus:font-semibold focus:uppercase focus:tracking-[0.12em] focus:text-white"
         >
           Skip to content
         </a>

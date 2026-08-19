@@ -54,7 +54,7 @@ export function Hero() {
       <div className={`relative z-10 mt-auto pb-11 pt-[140px] ${gutter}`}>
         <span className="flex items-center gap-4">
           <span aria-hidden className="h-px w-10 bg-white/45" />
-          <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-mist">
+          <span className="text-[12px] font-semibold uppercase tracking-[0.28em] text-mist">
             {hero.eyebrow}
           </span>
         </span>
@@ -63,7 +63,7 @@ export function Hero() {
           {hero.heading}
         </h1>
 
-        <p className="m-0 mt-8 max-w-[52ch] text-[19px] font-light leading-[1.7] text-white/82">
+        <p className="m-0 mt-8 max-w-[52ch] text-[20px] font-light leading-[1.7] text-white/82">
           {hero.body}
         </p>
 
@@ -87,7 +87,7 @@ export function Hero() {
 
         {/* Baseline rail: the scroll cue on one edge, the photograph's credit
             on the other — both sitting on the same hairline. */}
-        <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/55">
+        <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-6 text-[12px] font-semibold uppercase tracking-[0.2em] text-white/55">
           <ArrowDown size={14} />
           <span>Scroll</span>
           <span aria-hidden className="h-px flex-1 bg-white/12" />

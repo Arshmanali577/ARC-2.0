@@ -59,14 +59,14 @@ export function ProjectMasthead({
       <div className={`relative z-10 mt-auto pb-11 pt-[132px] ${gutter}`}>
         <Link
           href="/projects"
-          className="inline-block border-b border-white/40 pb-1.5 text-[12px] font-semibold uppercase tracking-[0.14em] text-white/70 transition-colors duration-300 ease-out hover:border-white hover:text-white"
+          className="inline-block border-b border-white/40 pb-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-white/70 transition-colors duration-300 ease-out hover:border-white hover:text-white"
         >
           {backLink}
         </Link>
 
         <span className="mt-10 flex items-center gap-4">
           <span aria-hidden className="h-px w-10 bg-white/45" />
-          <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-mist">
+          <span className="text-[12px] font-semibold uppercase tracking-[0.28em] text-mist">
             {project.location}
           </span>
         </span>
@@ -77,7 +77,7 @@ export function ProjectMasthead({
 
         {/* Where this build sits in the portfolio — the counterpart to the
             previous/next walk at the foot of the page. */}
-        <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/55">
+        <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-6 text-[12px] font-semibold uppercase tracking-[0.2em] text-white/55">
           <span>
             Project {String(position).padStart(2, "0")} / {total}
           </span>

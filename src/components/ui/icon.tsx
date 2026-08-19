@@ -267,6 +267,18 @@ export function PersonIcon(props: IconProps) {
   );
 }
 
+/** Two figures: the client and the builder, side by side. */
+export function PeopleIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M6.2 2.6a2.4 2.4 0 1 1 0 4.8 2.4 2.4 0 0 1 0-4.8z" />
+      <path d="M1.6 13.6c0-2.6 2.1-4.3 4.6-4.3s4.6 1.7 4.6 4.3" />
+      <path d="M11 3a2.2 2.2 0 0 1 0 4.4" />
+      <path d="M12 9.5c1.5.5 2.4 1.8 2.4 3.5" />
+    </Svg>
+  );
+}
+
 /** Year completed: the wall calendar, ruled like a schedule. */
 export function CalendarIcon(props: IconProps) {
   return (
@@ -438,6 +450,56 @@ export function BathIcon(props: IconProps) {
       <path d="M2.6 8v2.6a2.6 2.6 0 0 0 2.6 2.6h5.6a2.6 2.6 0 0 0 2.6-2.6V8" />
       <path d="m4.4 13.2-.9 1.4M11.6 13.2l.9 1.4" />
       <path d="M4.6 8V4.8a1.4 1.4 0 0 1 2.8 0" />
+    </Svg>
+  );
+}
+
+/* -- Journey stages -------------------------------------------------------- */
+
+/* The five glyphs the /process timeline hangs on its rail. Same 16px grid and
+   1.5px hairline as everything above, so the run of markers reads as one set
+   with the service icons rather than a borrowed icon pack. */
+
+/** Consultation: two plates in conversation. */
+export function ChatIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M1.4 2.6h8.8v5.6H4.6L2.6 10.2V8.2H1.4z" />
+      <path d="M12 5.2h2.6v5.4h-1.2v2l-2-2H7.4" />
+    </Svg>
+  );
+}
+
+/** Construction: the hard hat, brim and crown rib. */
+export function HardHatIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M1.4 11.4h13.2v1.6H1.4z" />
+      <path d="M3.6 11.4V8.6a4.4 4.4 0 0 1 8.8 0v2.8" />
+      <path d="M6.4 4.6V3h3.2v1.6" />
+    </Svg>
+  );
+}
+
+/** Handover: the house, set down on an open hand. */
+export function HandoverIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M4 6.6 8 3.2l4 3.4" />
+      <path d="M5.2 6.1v3.7h5.6V6.1" />
+      <path d="M1.8 11.4c1.6 1.9 3.7 2.9 6.2 2.9s4.6-1 6.2-2.9" />
+    </Svg>
+  );
+}
+
+/** Aftercare: the support headset, still on. */
+export function HeadsetIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M3.2 10V8.4a4.8 4.8 0 0 1 9.6 0V10" />
+      <path d="M1.9 9.4h2.4v3.8H1.9z" />
+      <path d="M11.7 9.4h2.4v3.8h-2.4z" />
+      <path d="M12.9 13.2v.5a1.2 1.2 0 0 1-1.2 1.2H8.6" />
     </Svg>
   );
 }

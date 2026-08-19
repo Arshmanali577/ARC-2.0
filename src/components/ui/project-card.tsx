@@ -77,7 +77,7 @@ export function ProjectCard({
       <div className="mt-6 flex items-start justify-between gap-6 border-t border-line pt-5 transition-colors duration-300 ease-out group-hover:border-brand">
         <div>
           {showIndex ? (
-            <span className="block text-[11px] font-semibold tracking-[0.16em] text-faint">
+            <span className="block text-[12px] font-semibold tracking-[0.16em] text-faint">
               {String(index + 1).padStart(2, "0")}
             </span>
           ) : null}
@@ -92,7 +92,7 @@ export function ProjectCard({
           >
             {project.title}
           </h3>
-          <span className="mt-2 block text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
+          <span className="mt-2 block text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
             {project.location}
           </span>
         </div>
@@ -104,13 +104,13 @@ export function ProjectCard({
       </div>
 
       {showDescription ? (
-        <p className="m-0 mt-4 max-w-[46ch] text-[15px] leading-[1.65] text-body">
+        <p className="m-0 mt-4 max-w-[46ch] text-[16px] leading-[1.65] text-body">
           {project.description}
         </p>
       ) : null}
 
       {showAction ? (
-        <span className="mt-5 inline-flex items-center gap-2.5 border-b border-brand pb-1.5 text-[12px] font-semibold uppercase tracking-[0.12em] text-brand transition-opacity duration-300 ease-out group-hover:opacity-60">
+        <span className="mt-5 inline-flex items-center gap-2.5 border-b border-brand pb-1.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand transition-opacity duration-300 ease-out group-hover:opacity-60">
           {projectsPage.detail.viewLabel}
         </span>
       ) : null}

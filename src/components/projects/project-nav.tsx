@@ -84,7 +84,7 @@ function NavCard({
       <div className="min-w-0 flex-1">
         <span
           className={cn(
-            "flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted",
+            "flex items-center gap-3 text-[12px] font-semibold uppercase tracking-[0.16em] text-muted",
             isNext && "nav:justify-end",
           )}
         >
@@ -105,7 +105,7 @@ function NavCard({
         <span className="mt-3 block font-display text-[20px] font-normal leading-[1.2] [text-wrap:balance] tab:text-[24px] nav:text-[28px]">
           {project.title}
         </span>
-        <span className="mt-2 block text-[11px] font-medium uppercase tracking-[0.14em] text-faint">
+        <span className="mt-2 block text-[12px] font-medium uppercase tracking-[0.14em] text-faint">
           {project.location}
         </span>
       </div>

@@ -55,7 +55,7 @@ export function BlogIndex({
                 aria-pressed={isActive}
                 onClick={() => setActive(category)}
                 className={cn(
-                  "border px-5 py-3.5 text-[13px] uppercase tracking-[0.12em] transition duration-300 ease-out",
+                  "border px-5 py-3.5 text-[14px] uppercase tracking-[0.12em] transition duration-300 ease-out",
                   isActive
                     ? "border-brand bg-brand text-white"
                     : "border-line-strong text-brand hover:border-brand hover:bg-brand hover:text-white",
@@ -69,7 +69,7 @@ export function BlogIndex({
 
         <p
           aria-live="polite"
-          className="m-0 shrink-0 text-[11px] font-semibold uppercase tracking-[0.16em] text-muted"
+          className="m-0 shrink-0 text-[12px] font-semibold uppercase tracking-[0.16em] text-muted"
         >
           {visible.length} {visible.length === 1 ? "article" : "articles"}
         </p>
@@ -97,7 +97,7 @@ export function BlogIndex({
           ) : null}
         </>
       ) : (
-        <p className="m-0 mt-16 border-l-2 border-brand py-2 pl-6 text-[17px] leading-[1.7] text-body">
+        <p className="m-0 mt-16 border-l-2 border-brand py-2 pl-6 text-[18px] leading-[1.7] text-body">
           {blogPage.emptyLabel}
         </p>
       )}

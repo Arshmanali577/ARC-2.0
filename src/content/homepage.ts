@@ -207,6 +207,20 @@ export const cta = {
     heading: "Book a Consultation",
     body: "Let's discuss your vision and bring it to life.",
     action: { label: "Schedule a Consultation", href: "/contact" },
+
+    /**
+     * The rows the panel offers where it has no leading button — on /contact,
+     * where "Schedule a Consultation" would point at the page already open.
+     * Each is a white row in the same hand as the call above it; the call
+     * itself is built from `site.contact` and so is not listed here. Booking
+     * goes to the enquiry form, which is the booking on this site.
+     */
+    actions: {
+      whatsapp: "WhatsApp Us",
+      email: "Email Us",
+      book: { label: "Book Online", href: "/contact#enquiry" },
+    },
+
     /** Labels only — every number and link is read from `site.contact`. */
     channels: {
       phone: "Call Us",

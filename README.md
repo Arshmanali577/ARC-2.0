@@ -114,6 +114,33 @@ as the web fallback (headings, stat numerals, the wordmark). `font-sans` is
 Inter 300–700 for everything else. Both load through `next/font`, so there are
 no render-blocking font requests.
 
+**Type scale.** Sizes are arbitrary-value utilities, not named steps — the
+ladder they come from is documented in `globals.css` under `@theme`. There are
+two of them, because letterspaced caps read a size larger than prose set at the
+same value:
+
+| Rung | Label (uppercase / tracked)                        | Body (prose)                                |
+| ---- | -------------------------------------------------- | ------------------------------------------- |
+| 11   | Index numerals, smallest overlay meta               | —                                           |
+| 12   | Eyebrows, meta rows, `dt` labels, tags              | —                                           |
+| 13   | Card/panel buttons, filter chips, desktop link row  | —                                           |
+| 14   | Hero and form buttons, `UnderlineLink`, mobile nav  | Fine print inside a tile or overlay          |
+| 15   | —                                                  | Captions, meta values, footer bottom bar     |
+| 16   | —                                                  | **Default** — card copy, footer links, fields |
+| 17   | —                                                  | Section copy, list rows, contact values      |
+| 18   | —                                                  | Section leads, small page intros             |
+| 19   | —                                                  | Article body, page-hero leads                |
+| 20   | —                                                  | Hero leads, opening paragraphs               |
+
+Headings sit above the ladder and are unchanged: 20–34px for an `h3` or small
+`h2`, `clamp()`ed 27–34px rising to 52–86px for a section `h2` or page `h1`.
+Pick the nearest rung rather than inventing a size.
+
+The desktop link row is deliberately held at the 13px rung: eight `nowrap`
+entries plus the wordmark already fill the 901px bar, which is why its gaps
+were tightened in the first place. The mobile panel — where the nav is actually
+read on a phone — takes the 14px.
+
 **Breakpoints.** `nav:` and `wide:` mirror the source design's media queries.
 `tab:` is an addition — the design went straight from a 24px-gutter single
 column to the 901px layout, which left a 320px phone and an 834px tablet on

@@ -73,7 +73,7 @@ export function GalleryLightbox({
     >
       <div className="flex shrink-0 items-start justify-between gap-6 px-5 py-5 tab:px-8 tab:py-7">
         <div className="min-w-0">
-          <p className="m-0 text-[10px] font-semibold uppercase tracking-[0.28em] text-mist tab:text-[11px]">
+          <p className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-mist tab:text-[12px]">
             {item.categoryLabel}
           </p>
           <p className="m-0 mt-2 truncate font-display text-[20px] font-normal tracking-[-0.02em] text-white tab:text-[26px]">
@@ -121,10 +121,10 @@ export function GalleryLightbox({
       </div>
 
       <div className="flex shrink-0 items-end justify-between gap-8 px-5 py-5 tab:px-8 tab:py-7">
-        <p className="m-0 max-w-[640px] text-[13px] leading-[1.65] text-mist-deep tab:text-[14px]">
+        <p className="m-0 max-w-[640px] text-[15px] leading-[1.65] text-mist-deep tab:text-[16px]">
           {item.description}
         </p>
-        <p className="m-0 shrink-0 text-[12px] font-semibold tracking-[0.14em] text-white/85 tab:text-[13px]">
+        <p className="m-0 shrink-0 text-[13px] font-semibold tracking-[0.14em] text-white/85 tab:text-[14px]">
           {pad(active + 1)} <span className="text-white/45">/</span>{" "}
           {pad(items.length)}
         </p>

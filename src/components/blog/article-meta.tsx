@@ -21,7 +21,7 @@ export function ArticleMeta({
   return (
     <div
       className={cn(
-        "flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] font-medium uppercase tracking-[0.14em]",
+        "flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12px] font-medium uppercase tracking-[0.14em]",
         tone === "light" ? "text-mist" : "text-muted",
         className,
       )}

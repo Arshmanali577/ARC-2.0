@@ -40,7 +40,7 @@ export function ServiceRows({
             className="pointer-events-none absolute inset-x-0 bottom-[-1px] h-px origin-left scale-x-0 bg-brand transition-transform duration-500 ease-out group-hover:scale-x-100"
           />
 
-          <span className="text-[11px] font-semibold tracking-[0.16em] text-faint transition-colors duration-300 ease-out group-hover:text-brand">
+          <span className="text-[12px] font-semibold tracking-[0.16em] text-faint transition-colors duration-300 ease-out group-hover:text-brand">
             {String(index + 1).padStart(2, "0")}
           </span>
 
@@ -48,7 +48,7 @@ export function ServiceRows({
             {service.title}
           </Heading>
 
-          <p className="m-0 max-w-[52ch] text-[16px] leading-[1.65] text-body">
+          <p className="m-0 max-w-[52ch] text-[17px] leading-[1.65] text-body">
             {service.description}
           </p>
 

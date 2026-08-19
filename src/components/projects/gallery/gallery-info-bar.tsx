@@ -34,10 +34,10 @@ export function GalleryInfoBar({ project }: { project: Project }) {
         >
           <fact.Icon size={18} className="text-muted" />
           <div className="min-w-0">
-            <dt className="m-0 text-[10px] font-semibold uppercase tracking-[0.2em] text-faint">
+            <dt className="m-0 text-[11px] font-semibold uppercase tracking-[0.2em] text-faint">
               {fact.label}
             </dt>
-            <dd className="m-0 mt-1 truncate text-[14px] font-medium text-ink tab:text-[15px]">
+            <dd className="m-0 mt-1 truncate text-[15px] font-medium text-ink tab:text-[16px]">
               {fact.value}
             </dd>
           </div>

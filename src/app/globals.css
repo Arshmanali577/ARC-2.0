@@ -24,6 +24,14 @@
   --color-accent-soft: #5aa9ef;
   --color-accent-deep: #1a6bb8;
 
+  /* Brass accent — the building journey's stage colour. Warm enough to pick
+     out a tick, a stage glyph or an outcome tile against all that navy, and
+     deep enough to hold its contrast on white. It is a marker, not a second
+     brand colour: it appears on the process journey and nowhere else. */
+  --color-gold: #b8853f;
+  --color-gold-soft: #d3a86a;
+  --color-gold-deep: #8f6526;
+
   /* Supporting greys / blues */
   --color-muted: #5b7392; /* eyebrows, meta labels */
   --color-body: #4a5c73; /* secondary body copy */
@@ -63,6 +71,35 @@
   /* Typography */
   --font-sans: var(--font-inter), Inter, sans-serif;
   --font-display: "Century Gothic", var(--font-questrial), Questrial, sans-serif;
+
+  /* Type scale. Sizes stay arbitrary-value utilities (`text-[16px]`) rather
+     than named steps, because the display sizes are the design file's own
+     numbers and rounding them to a Tailwind step would drift the layout. The
+     ladder below is the scale those numbers come from — read it before adding
+     a size, and pick the nearest rung rather than inventing one.
+
+     Two ladders, because letterspaced caps read a size larger than prose set
+     at the same value:
+
+       LABEL — uppercase and/or tracking >= 0.1em
+         11  index numerals, the smallest overlay meta
+         12  eyebrows, meta rows, dt labels, tags
+         13  compact action labels: card and panel buttons, filter chips,
+             the desktop link row (held here by the eight-entry header bar)
+         14  primary action labels: hero and form buttons, `UnderlineLink`,
+             the mobile nav rows
+
+       BODY — everything set as prose
+         14  fine print inside a tile or overlay
+         15  captions, meta values, footer bottom bar
+         16  the default: card and column copy, footer links, form fields
+         17  section copy, list rows, contact values
+         18  section leads, small page intros
+         19  article body, page-hero leads
+         20  hero leads, the opening paragraph of a page
+
+     Headings are unchanged and sit above this: 20-34px for an h3/small h2,
+     `clamp()`ed 27-34px rising to 52-86px for a section h2 or page h1. */
 
   /* Breakpoints. `nav` and `wide` mirror the source design's media queries
      exactly. `tab` is an addition: the design jumped straight from 24px
@@ -303,6 +340,151 @@
       & > *:nth-child(n + 4) {
         animation-range: entry 2% cover 40%;
       }
+    }
+  }
+}
+
+/* Journey motion --------------------------------------------------------------
+   The /process timeline is animated entirely off the scroll position, on the
+   same `animation-timeline: view()` mechanism as `reveal` above: no observer,
+   no client component, and nothing at all when the visitor has asked for
+   reduced motion or the browser has no scroll-driven animations.
+
+   Every one of these settles on `transform: none` for the reason given above —
+   a settled transform would make the element a containing block. */
+
+@keyframes rail-draw {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-52px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(52px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes marker-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes lift-in {
+  from {
+    opacity: 0;
+    transform: translateY(38px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The plate settles out of a slight overscale as it crosses the viewport, so
+   the photograph drifts against the page instead of sitting dead still.
+   `scale`, not a transform, so it composes with the hover zoom on the same
+   element rather than one overriding the other. */
+@keyframes plate-settle {
+  from {
+    scale: 1.14;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+/* The measure drawn down the page. Scaled from its top edge across the whole
+   time the list is on screen, so the rule reads as being drawn by the scroll
+   itself. Paired with a full-height hairline underneath it in the markup, so
+   the un-drawn part of the run is still visible. */
+@utility rail-draw {
+  transform-origin: top;
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: rail-draw linear both;
+      animation-timeline: view();
+      animation-range: entry 100% exit 0%;
+    }
+  }
+}
+
+@utility reveal-left {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: slide-in-left linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 44%;
+    }
+  }
+}
+
+@utility reveal-right {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: slide-in-right linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 48%;
+    }
+  }
+}
+
+/* The numbered marker on the rail, which snaps in a little ahead of the copy
+   beside it — the stage announces itself, then reads. */
+@utility reveal-marker {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: marker-pop linear both;
+      animation-timeline: view();
+      animation-range: entry 4% cover 30%;
+    }
+  }
+}
+
+/* The outcome tile, which arrives last: the photograph is already in place
+   before the card lands over it. */
+@utility reveal-lift {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: lift-in linear both;
+      animation-timeline: view();
+      animation-range: entry 22% cover 60%;
+    }
+  }
+}
+
+@utility plate-settle {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: plate-settle linear both;
+      animation-timeline: view();
+      animation-range: cover 0% cover 100%;
     }
   }
 }

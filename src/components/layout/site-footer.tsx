@@ -87,12 +87,12 @@ export function SiteFooter() {
         <div className="reveal-group grid grid-cols-1 gap-x-14 gap-y-[52px] tab:grid-cols-2 nav:gap-y-16 wide:grid-cols-[1.45fr_1fr_1.15fr_0.95fr] wide:gap-x-16">
           {/* -- Brand -------------------------------------------------------- */}
           <div className="max-w-[380px]">
-            <Wordmark tone="light" size={24} />
+            <Wordmark tone="light" size="footer" />
             <span
               aria-hidden
               className="mt-6 block h-px w-14 bg-linear-to-r from-accent-soft to-accent/0"
             />
-            <p className="m-0 mt-6 text-[15px] leading-[1.75]">
+            <p className="m-0 mt-6 text-[16px] leading-[1.75]">
               {site.shortDescription}
             </p>
           </div>
@@ -144,10 +144,10 @@ export function SiteFooter() {
                 <LicenceIcon size={20} />
               </span>
               <span className="block">
-                <span className="block text-[14px] font-semibold text-white">
+                <span className="block text-[16px] font-semibold text-white">
                   {site.licence.label}
                 </span>
-                <span className="mt-0.5 block text-[14px] tracking-[0.04em] text-accent-soft">
+                <span className="mt-0.5 block text-[16px] tracking-[0.04em] text-accent-soft">
                   {site.licence.number}
                 </span>
               </span>
@@ -188,7 +188,7 @@ export function SiteFooter() {
           {/* The studio line */}
           <div className="flex flex-col justify-center wide:pr-11">
             <QuoteIcon size={20} className="text-accent-soft/80" />
-            <p className="m-0 mt-3.5 border-l-2 border-accent/70 pl-5 text-[15px] leading-[1.7]">
+            <p className="m-0 mt-3.5 border-l-2 border-accent/70 pl-5 text-[16px] leading-[1.7]">
               <span className="block text-white">{footerCreed.lead}</span>
               <span className="block text-accent-soft">{footerCreed.echo}</span>
             </p>
@@ -197,7 +197,7 @@ export function SiteFooter() {
           {/* Its answering line, set in the same hand */}
           <Cell>
             <QuoteIcon size={20} className="text-accent-soft/80" />
-            <p className="m-0 mt-3.5 border-l-2 border-accent/70 pl-5 text-[15px] leading-[1.7]">
+            <p className="m-0 mt-3.5 border-l-2 border-accent/70 pl-5 text-[16px] leading-[1.7]">
               <span className="block text-white">{footerCreedEcho.lead}</span>
               <span className="block text-accent-soft">
                 {footerCreedEcho.echo}
@@ -206,14 +206,14 @@ export function SiteFooter() {
           </Cell>
 
           <Cell>
-            <p className="m-0 text-[13px] leading-[1.7] text-white/55">
+            <p className="m-0 text-[15px] leading-[1.7] text-white/55">
               © {site.copyrightYear} {site.legalName}.{" "}
               {footerLabels.rights}
             </p>
           </Cell>
 
           <Cell>
-            <p className="m-0 text-[13px] leading-[1.7] text-white/55">
+            <p className="m-0 text-[15px] leading-[1.7] text-white/55">
               {site.licence.authority} Licence:{" "}
               <span className="font-medium tracking-[0.04em] text-accent-soft">
                 {site.licence.number}

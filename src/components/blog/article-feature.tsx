@@ -49,11 +49,11 @@ export function ArticleFeature({
           {post.title}
         </h2>
 
-        <p className="m-0 mt-6 max-w-[52ch] text-[17px] leading-[1.75] text-body">
+        <p className="m-0 mt-6 max-w-[52ch] text-[18px] leading-[1.75] text-body">
           {post.excerpt}
         </p>
 
-        <span className="mt-9 inline-flex items-center gap-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-brand">
+        <span className="mt-9 inline-flex items-center gap-3 text-[14px] font-semibold uppercase tracking-[0.12em] text-brand">
           {blogPage.readLabel}
           <ArrowUpRight
             size={18}

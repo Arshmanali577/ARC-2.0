@@ -15,9 +15,9 @@ const { form } = contactPage;
  * `:focus-visible` outline still fires on top of it for keyboard users.
  */
 const fieldClass =
-  "w-full border-0 border-b border-line-strong bg-transparent px-0 py-3.5 text-[16px] text-brand outline-none transition-colors duration-300 ease-out placeholder:text-faint focus:border-brand";
+  "w-full border-0 border-b border-line-strong bg-transparent px-0 py-3.5 text-[17px] text-brand outline-none transition-colors duration-300 ease-out placeholder:text-faint focus:border-brand";
 const labelClass =
-  "block text-[11px] font-semibold uppercase tracking-[0.16em] text-muted";
+  "block text-[12px] font-semibold uppercase tracking-[0.16em] text-muted";
 
 /**
  * The enquiry form. As on the live site it composes a message and hands it to
@@ -161,7 +161,7 @@ export function ContactForm({ labelledBy }: { labelledBy?: string }) {
       <div className="mt-2 flex flex-col gap-7 nav:flex-row nav:items-center nav:justify-between nav:gap-12">
         <button
           type="submit"
-          className="group/button inline-flex items-center justify-between gap-6 bg-brand px-8 py-[19px] text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition duration-300 ease-out hover:bg-ink"
+          className="group/button inline-flex items-center justify-between gap-6 bg-brand px-8 py-[19px] text-[14px] font-semibold uppercase tracking-[0.12em] text-white transition duration-300 ease-out hover:bg-ink"
         >
           <span>{form.submitLabel}</span>
           <ArrowRight className="transition-transform duration-300 ease-out group-hover/button:translate-x-1" />
@@ -170,7 +170,7 @@ export function ContactForm({ labelledBy }: { labelledBy?: string }) {
         <p
           id="enquiry-note"
           aria-live="polite"
-          className="m-0 max-w-[46ch] text-[13px] leading-[1.7] text-body"
+          className="m-0 max-w-[46ch] text-[15px] leading-[1.7] text-body"
         >
           {sent ? (
             <>
