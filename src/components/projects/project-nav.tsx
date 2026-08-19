@@ -66,7 +66,7 @@ function NavCard({
     <Link
       href={`/projects/${project.slug}`}
       className={cn(
-        "group flex items-center gap-6 bg-white px-6 py-7 transition-colors duration-300 ease-out hover:bg-surface nav:px-9 nav:py-8",
+        "group flex items-center gap-4 bg-white px-5 py-6 transition-colors duration-300 ease-out hover:bg-surface tab:gap-6 tab:px-6 tab:py-7 nav:px-9 nav:py-8",
         isNext && "nav:flex-row-reverse nav:text-right",
       )}
     >
@@ -102,7 +102,7 @@ function NavCard({
             />
           ) : null}
         </span>
-        <span className="mt-3 block font-display text-[20px] font-normal leading-[1.2] [text-wrap:balance] tab:text-[24px] nav:text-[28px]">
+        <span className="mt-2.5 block font-display text-[19px] font-normal leading-[1.2] [text-wrap:balance] tab:mt-3 tab:text-[24px] nav:text-[28px]">
           {project.title}
         </span>
         <span className="mt-2 block text-[12px] font-medium uppercase tracking-[0.14em] text-faint">

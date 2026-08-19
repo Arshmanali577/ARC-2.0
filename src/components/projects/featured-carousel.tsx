@@ -168,7 +168,7 @@ function Slide({
         />
 
         {isActive ? (
-          <div className="absolute inset-x-0 bottom-0 z-10 p-7 text-white tab:p-10 nav:p-14">
+          <div className="absolute inset-x-0 bottom-0 z-10 p-5 text-white tab:p-10 nav:p-14">
             <span
               className="feature-rise block text-[12px] font-semibold uppercase tracking-[0.24em] text-gold-soft"
               style={{ animationDelay: "60ms" }}
@@ -177,14 +177,14 @@ function Slide({
             </span>
 
             <h3
-              className="feature-rise m-0 mt-4 max-w-[14ch] font-display text-[clamp(28px,7vw,34px)] font-normal leading-[1.06] tracking-[-0.02em] nav:text-[46px]"
+              className="feature-rise m-0 mt-3 max-w-[14ch] font-display text-[clamp(26px,7vw,34px)] font-normal leading-[1.06] tracking-[-0.02em] tab:mt-4 nav:text-[46px]"
               style={{ animationDelay: "140ms" }}
             >
               {project.title}
             </h3>
 
             <span
-              className="feature-rise mt-4 flex items-center gap-2 text-[13px] font-medium tracking-[0.04em] text-white/78"
+              className="feature-rise mt-3 flex items-center gap-2 text-[13px] font-medium tracking-[0.04em] text-white/78 tab:mt-4"
               style={{ animationDelay: "220ms" }}
             >
               <PinIcon size={14} className="text-gold-soft" />
@@ -192,7 +192,7 @@ function Slide({
             </span>
 
             <span
-              className="feature-rise mt-7 block"
+              className="feature-rise mt-5 block tab:mt-7"
               style={{ animationDelay: "300ms" }}
             >
               <Button
@@ -358,10 +358,12 @@ export function FeaturedCarousel({
       }}
       {...swipe}
       /* Full-bleed on purpose: the peeks are meant to run off both edges of
-         the page. The container's ratio is the showing card's own ratio
-         divided by its width, which is what holds that card at a steady
-         2.2:1 from a phone up to a wide monitor. */
-      className="relative aspect-[3/2] w-full overflow-hidden tab:aspect-[2/1] nav:aspect-[11/4]"
+         the page. The ratio is the container's, so the showing card's own shape
+         is that ratio divided by its width — 2.2:1 on a wide monitor, opening
+         up as the page narrows. The phone takes the tallest of the three
+         because the overlay copy on the showing card is a fixed number of
+         lines: at 3:2 the card was 250px tall and the block over it was not. */
+      className="relative aspect-[4/3] w-full overflow-hidden tab:aspect-[2/1] nav:aspect-[11/4]"
     >
       {items.map((project, index) => {
         /* Wrapped to the shorter way round, so stepping from the last
@@ -386,18 +388,30 @@ export function FeaturedCarousel({
         );
       })}
 
-      <CarouselArrow
-        direction="previous"
-        onClick={previous}
-        label={labels.previous}
-        className="left-3 tab:left-6 nav:left-10"
-      />
-      <CarouselArrow
-        direction="next"
-        onClick={next}
-        label={labels.next}
-        className="right-3 tab:right-6 nav:right-10"
-      />
+      {/* Off on a phone. The overlay copy fills almost the whole of a
+          phone-sized card, so a disc parked at its vertical centre lands on the
+          project title however it is positioned — and a touch device has the
+          swipe this stage already listens for, with the dashes below as the
+          visible control. Wrapped rather than hidden on the button itself: the
+          arrow already carries `inline-flex`, and two display utilities on one
+          element are resolved by stylesheet order, not by the order they are
+          written. */}
+      <span className="hidden tab:block">
+        <CarouselArrow
+          direction="previous"
+          onClick={previous}
+          label={labels.previous}
+          className="left-3 tab:left-6 nav:left-10"
+        />
+      </span>
+      <span className="hidden tab:block">
+        <CarouselArrow
+          direction="next"
+          onClick={next}
+          label={labels.next}
+          className="right-3 tab:right-6 nav:right-10"
+        />
+      </span>
     </div>
   );
 
@@ -405,7 +419,7 @@ export function FeaturedCarousel({
     <Section size="default" padded={false} className={cn("bg-surface", className)}>
       <div
         className={cn(
-          "flex items-center justify-between gap-6 pb-9 tab:pb-11",
+          "flex flex-col items-start justify-between gap-4 pb-8 tab:flex-row tab:items-center tab:gap-6 tab:pb-11",
           gutter,
         )}
       >
@@ -423,9 +437,9 @@ export function FeaturedCarousel({
         stage
       )}
 
-      <div className="mt-8 flex items-center justify-center gap-3">
+      <div className="mt-7 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 tab:mt-8 tab:flex-nowrap">
         {counter ? (
-          <span className="mr-4 text-[12px] font-semibold tracking-[0.16em] text-muted">
+          <span className="mr-2 text-[12px] font-semibold tracking-[0.16em] text-muted tab:mr-4">
             <span className="text-brand">
               {String(active + 1).padStart(2, "0")}
             </span>
@@ -444,9 +458,9 @@ export function FeaturedCarousel({
               onClick={() => select(index)}
               aria-label={`${labels.show} ${project.title}`}
               aria-current={isActive}
-              className="group/dot py-2"
+              className="group/dot py-3 tab:py-2"
             >
-              <span className="block h-[3px] w-9 overflow-hidden rounded-full bg-brand/15 transition-colors duration-300 ease-out group-hover/dot:bg-brand/30 tab:w-11">
+              <span className="block h-[3px] w-8 overflow-hidden rounded-full bg-brand/15 transition-colors duration-300 ease-out group-hover/dot:bg-brand/30 tab:w-11">
                 {isActive ? (
                   <span
                     /* Two ways of filling one bar. A film-backed slide is

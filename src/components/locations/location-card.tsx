@@ -79,7 +79,7 @@ export function LocationCard({
         <p
           className={cn(
             "m-0 mt-4 leading-[1.7] text-body",
-            isFeature ? "max-w-[46ch] text-[18px]" : "text-[16px]",
+            isFeature ? "max-w-[46ch] text-[17px] tab:text-[18px]" : "text-[16px]",
           )}
         >
           {area.intro}

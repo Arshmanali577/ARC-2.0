@@ -41,7 +41,7 @@ export default function ContactPage() {
 
           <div
             id="enquiry"
-            className="reveal scroll-mt-[120px] bg-surface p-8 nav:p-12 wide:p-14"
+            className="reveal scroll-mt-[120px] bg-surface p-6 tab:p-8 nav:p-12 wide:p-14"
           >
             <Eyebrow>{contactPage.form.eyebrow}</Eyebrow>
 
@@ -52,7 +52,7 @@ export default function ContactPage() {
               {contactPage.form.heading}
             </h2>
 
-            <p className="m-0 mt-4 max-w-[52ch] text-[17px] leading-[1.75] text-body">
+            <p className="m-0 mt-4 max-w-[52ch] text-[16px] leading-[1.75] text-body tab:text-[17px]">
               {contactPage.form.lead}
             </p>
 

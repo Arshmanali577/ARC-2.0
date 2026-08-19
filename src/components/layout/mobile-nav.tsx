@@ -66,7 +66,13 @@ export function MobileNav() {
         )}
       >
         <nav aria-label="Primary" className="min-h-0">
-          <div className="flex flex-col px-6 pb-7 pt-2">
+          {/* The panel is eleven rows and a button — taller than a short phone
+              in portrait, and taller than any phone in landscape. Capping it at
+              the space under the bar and letting it scroll is what stops the
+              last routes and the call to action from being unreachable behind
+              the fold. `overscroll-contain` keeps that scroll inside the menu
+              rather than handing it to the page underneath. */}
+          <div className="flex max-h-[calc(100svh-80px)] flex-col overflow-y-auto overscroll-contain px-6 pb-7 pt-2">
             {primaryNav.map((entry, index) => (
               /* The panel has room to stack, so a group's routes sit indented
                  under its label rather than behind a second disclosure. */

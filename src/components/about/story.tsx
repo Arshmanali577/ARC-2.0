@@ -49,8 +49,8 @@ export function AboutStory() {
               key={paragraph}
               className={
                 index === 0
-                  ? "m-0 mt-9 max-w-[58ch] text-[20px] font-light leading-[1.7]"
-                  : "m-0 mt-6 max-w-[62ch] text-[17px] leading-[1.8] text-body"
+                  ? "m-0 mt-8 max-w-[58ch] text-[18px] font-light leading-[1.7] tab:mt-9 tab:text-[20px]"
+                  : "m-0 mt-6 max-w-[62ch] text-[16px] leading-[1.75] text-body tab:text-[17px] tab:leading-[1.8]"
               }
             >
               {paragraph}
@@ -87,7 +87,7 @@ export function AboutStory() {
               return (
                 <div
                   key={stat.label}
-                  className="flex flex-col items-center bg-brand px-4 py-8 text-center text-white nav:px-5 nav:py-10"
+                  className="flex flex-col items-center bg-brand px-3 py-7 text-center text-white tab:px-4 tab:py-8 nav:px-5 nav:py-10"
                 >
                   <span
                     aria-hidden
@@ -98,7 +98,7 @@ export function AboutStory() {
                   <span className="mt-5 font-display text-[27px] leading-none nav:text-[31px]">
                     <Counter value={stat.value} />
                   </span>
-                  <span className="mt-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-mist-deep">
+                  <span className="mt-3 text-[11px] font-semibold uppercase leading-[1.5] tracking-[0.12em] text-mist-deep tab:tracking-[0.16em]">
                     {stat.label}
                   </span>
                 </div>

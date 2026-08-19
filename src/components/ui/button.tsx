@@ -33,9 +33,9 @@ const variants: Record<ButtonVariant, string> = {
   headerSolid:
     "bg-brand px-6 py-[14px] text-[13px] font-medium uppercase tracking-[0.12em] text-white hover:bg-ink",
   heroSolid:
-    "bg-white px-8 py-[19px] text-[14px] font-semibold uppercase tracking-[0.12em] text-brand hover:-translate-y-0.5 hover:bg-mist",
+    "bg-white px-6 py-[18px] text-[14px] font-semibold uppercase tracking-[0.12em] text-brand hover:-translate-y-0.5 hover:bg-mist tab:px-8 tab:py-[19px]",
   heroOutline:
-    "border border-line-invert-hero px-8 py-[19px] text-[14px] font-semibold uppercase tracking-[0.12em] text-white hover:-translate-y-0.5 hover:border-white hover:bg-white/12",
+    "border border-line-invert-hero px-6 py-[18px] text-[14px] font-semibold uppercase tracking-[0.12em] text-white hover:-translate-y-0.5 hover:border-white hover:bg-white/12 tab:px-8 tab:py-[19px]",
   actionSolid:
     "justify-between bg-white px-7 py-[22px] text-[16px] font-semibold tracking-[0.06em] text-brand hover:bg-mist",
   actionOutline:
@@ -56,11 +56,16 @@ const variants: Record<ButtonVariant, string> = {
   // wherever the image behind it happens to be dark.
   mediaSolid:
     "border border-white/25 bg-brand/90 px-7 py-[15px] text-[13px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-[2px] hover:-translate-y-0.5 hover:border-white/50 hover:bg-brand",
-  // The enquire panel's primary. Label optically centred with the arrow pinned
-  // to the right edge — a `justify-between` row would push the label hard left
-  // and leave the button looking unbalanced at full width.
+  // The enquire panel's primary. From `tab` up the label is optically centred
+  // with the arrow pinned to the right edge — a `justify-between` row would
+  // push the label hard left and leave the button looking unbalanced at full
+  // width. On a phone that inverts: the panel is only ~290px wide, a centred
+  // "Schedule a Consultation" reaches within a few pixels of the pinned arrow
+  // and overlaps it outright below 375px. So the phone takes the same
+  // label-left / arrow-right row every other full-width action on the site
+  // uses, where the two can never collide however long the label is.
   panelSolid:
-    "w-full justify-center rounded-[10px] bg-white px-6 py-[19px] text-[13px] font-semibold uppercase tracking-[0.1em] text-brand hover:-translate-y-0.5 hover:bg-mist [&>svg]:absolute [&>svg]:right-5 tab:px-14 tab:text-[14px] tab:tracking-[0.14em] tab:[&>svg]:right-7",
+    "w-full justify-between rounded-[10px] bg-white px-5 py-[17px] text-[13px] font-semibold uppercase tracking-[0.08em] text-brand hover:-translate-y-0.5 hover:bg-mist tab:justify-center tab:px-14 tab:py-[19px] tab:text-[14px] tab:tracking-[0.14em] tab:[&>svg]:absolute tab:[&>svg]:right-7",
 };
 
 type ButtonProps = {

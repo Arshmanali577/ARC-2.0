@@ -77,7 +77,7 @@ export function BlogIndex({
 
       {feature ? (
         <>
-          <div className="reveal mt-16">
+          <div className="reveal mt-11 tab:mt-16">
             <ArticleFeature
               post={feature}
               formattedDate={formattedDates[feature.slug]}
@@ -85,7 +85,7 @@ export function BlogIndex({
           </div>
 
           {rest.length > 0 ? (
-            <div className="reveal-group mt-24 grid grid-cols-1 gap-x-11 gap-y-16 tab:grid-cols-2">
+            <div className="reveal-group mt-16 grid grid-cols-1 gap-x-11 gap-y-12 tab:mt-24 tab:grid-cols-2 tab:gap-y-16">
               {rest.map((post) => (
                 <ArticleCard
                   key={post.slug}
@@ -97,7 +97,7 @@ export function BlogIndex({
           ) : null}
         </>
       ) : (
-        <p className="m-0 mt-16 border-l-2 border-brand py-2 pl-6 text-[18px] leading-[1.7] text-body">
+        <p className="m-0 mt-11 border-l-2 border-brand py-2 pl-5 text-[17px] leading-[1.7] text-body tab:mt-16 tab:pl-6 tab:text-[18px]">
           {blogPage.emptyLabel}
         </p>
       )}

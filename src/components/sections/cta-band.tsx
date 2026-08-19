@@ -189,7 +189,7 @@ export function CtaBand({
             {splitWords(heading)}
           </h2>
 
-          <p className="m-0 mt-6 max-w-[46ch] text-[18px] font-light leading-[1.75] text-white/72">
+          <p className="m-0 mt-5 max-w-[46ch] text-[17px] font-light leading-[1.75] text-white/72 tab:mt-6 tab:text-[18px]">
             {body}
           </p>
 
@@ -209,7 +209,7 @@ export function CtaBand({
                   <span className="flex size-11 shrink-0 items-center justify-center rounded-full border border-accent/45 text-accent-soft">
                     <Icon size={18} />
                   </span>
-                  <span className="max-w-[10ch] text-[16px] leading-[1.35] text-white/80">
+                  <span className="text-[16px] leading-[1.35] text-white/80 tab:max-w-[10ch]">
                     {assurance.label}
                   </span>
                 </li>
@@ -228,7 +228,7 @@ export function CtaBand({
                 <li
                   key={figure.label}
                   className={cn(
-                    "flex flex-col items-center px-2 text-center",
+                    "flex flex-col items-center px-1 text-center tab:px-2",
                     // Divided from the second cell on a phone's two-up grid,
                     // and from every cell but the first once they sit in a row.
                     index % 2 === 1 && "border-l border-line-invert",
@@ -241,7 +241,7 @@ export function CtaBand({
                         `Counter` prints those unchanged. */}
                     <Counter value={figure.value} />
                   </p>
-                  <p className="m-0 mt-2.5 text-[14px] leading-[1.4] text-white/55">
+                  <p className="m-0 mt-2.5 text-[13px] leading-[1.4] text-white/55 tab:text-[14px]">
                     {figure.label}
                   </p>
                 </li>

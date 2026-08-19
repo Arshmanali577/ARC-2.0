@@ -46,7 +46,7 @@ export function Approach() {
             {splitWords(approach.heading)}
           </p>
 
-          <p className="m-0 mt-7 max-w-[54ch] text-[17px] leading-[1.75] text-body nav:text-[18px]">
+          <p className="m-0 mt-6 max-w-[54ch] text-[16px] leading-[1.75] text-body tab:mt-7 tab:text-[17px] nav:text-[18px]">
             {approach.body}
           </p>
         </div>
@@ -62,7 +62,7 @@ export function Approach() {
                 key={figure.label.join(" ")}
                 tone="navy"
                 className={cn(
-                  "px-5 py-2 text-center wide:px-7",
+                  "px-3 py-2 text-center tab:px-5 wide:px-7",
                   // Divided from the second cell on a phone's two-up grid, and
                   // from every cell but the first once they sit in a row.
                   index % 2 === 1 && "border-l border-line",
@@ -93,7 +93,7 @@ export function Approach() {
                     )}
                   </span>
 
-                  <span className="mt-4 block text-[12px] font-semibold uppercase leading-[1.6] tracking-[0.16em] text-muted">
+                  <span className="mt-3.5 block text-[12px] font-semibold uppercase leading-[1.6] tracking-[0.12em] text-muted tab:mt-4 tab:tracking-[0.16em]">
                     {figure.label.map((line) => (
                       <span key={line} className="block">
                         {line}

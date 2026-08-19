@@ -38,7 +38,7 @@ export function ServiceRows({
           key={service.id}
           id={withAnchors ? service.anchor : undefined}
           href={service.href}
-          className={`group relative grid scroll-mt-28 grid-cols-1 items-baseline gap-4 border-b border-line py-9 transition-colors duration-500 ease-out hover:border-brand nav:items-center nav:gap-12 nav:py-10 ${
+          className={`group relative grid scroll-mt-28 grid-cols-1 items-baseline gap-3 border-b border-line py-8 transition-colors duration-500 ease-out hover:border-brand tab:gap-4 tab:py-9 nav:items-center nav:gap-12 nav:py-10 ${
             showArrow
               ? "nav:grid-cols-[64px_minmax(220px,1fr)_1.5fr_auto]"
               : "nav:grid-cols-[64px_minmax(220px,1fr)_1.5fr]"
@@ -54,11 +54,11 @@ export function ServiceRows({
             {String(index + 1).padStart(2, "0")}
           </span>
 
-          <Heading className="m-0 font-display text-[28px] font-normal leading-[1.15] transition-transform duration-500 ease-out nav:text-[30px] nav:group-hover:translate-x-1">
+          <Heading className="m-0 font-display text-[25px] font-normal leading-[1.15] transition-transform duration-500 ease-out tab:text-[28px] nav:text-[30px] nav:group-hover:translate-x-1">
             {service.title}
           </Heading>
 
-          <p className="m-0 max-w-[52ch] text-[17px] leading-[1.65] text-body">
+          <p className="m-0 max-w-[52ch] text-[16px] leading-[1.65] text-body tab:text-[17px]">
             {service.description}
           </p>
 

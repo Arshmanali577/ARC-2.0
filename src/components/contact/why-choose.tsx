@@ -49,7 +49,7 @@ export function WhyChoose() {
             <li
               key={item.title}
               className={cn(
-                "flex flex-col items-center px-4 text-center nav:px-6",
+                "flex flex-col items-center px-2 text-center tab:px-4 nav:px-6",
                 // Ruled off from the cell on its left, at whichever column
                 // count is in play.
                 index % 2 === 1 && "border-l border-line-soft",
@@ -66,13 +66,13 @@ export function WhyChoose() {
                   "col-span-2 border-l-0 tab:col-span-1",
               )}
             >
-              <span className="flex size-16 items-center justify-center rounded-full border border-line bg-white text-brand">
+              <span className="flex size-14 items-center justify-center rounded-full border border-line bg-white text-brand tab:size-16">
                 <Icon size={24} />
               </span>
-              <p className="m-0 mt-6 text-[17px] font-semibold leading-[1.35] text-brand">
+              <p className="m-0 mt-5 text-[16px] font-semibold leading-[1.35] text-brand tab:mt-6 tab:text-[17px]">
                 {item.title}
               </p>
-              <p className="m-0 mt-3 max-w-[26ch] text-[16px] leading-[1.65] text-body">
+              <p className="m-0 mt-2.5 max-w-[26ch] text-[15px] leading-[1.6] text-body tab:mt-3 tab:text-[16px] tab:leading-[1.65]">
                 {item.body}
               </p>
             </li>

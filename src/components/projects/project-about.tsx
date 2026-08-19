@@ -78,13 +78,13 @@ function ProjectFactCard({
   ].filter((fact) => Boolean(fact.value));
 
   return (
-    <div className="reveal rounded-[22px] border border-line-soft bg-white p-5 shadow-plate tab:rounded-[24px] tab:p-7">
+    <div className="reveal rounded-[22px] border border-line-soft bg-white p-4 shadow-plate tab:rounded-[24px] tab:p-7">
       <dl className="m-0">
         {facts.map(({ label, value, Icon }, index) => (
           <div
             key={label}
             className={cn(
-              "group/row flex items-start gap-4 py-[15px]",
+              "group/row flex items-start gap-3.5 py-[13px] tab:gap-4 tab:py-[15px]",
               index > 0 && "border-t border-line-soft",
             )}
           >
@@ -169,7 +169,7 @@ function ProjectStats({ project }: { project: Project }) {
         <div
           key={key}
           className={cn(
-            "flex items-center gap-3.5 px-5 py-6 tab:px-4 wide:px-6",
+            "flex items-center gap-3 px-4 py-5 tab:gap-3.5 tab:py-6 wide:px-6",
             index % 2 === 1 && "border-l border-line-soft",
             index >= 2 && "border-t border-line-soft tab:border-t-0",
             index > 0 && "tab:border-l tab:border-line-soft",
@@ -236,7 +236,7 @@ export function ProjectAbout({
             {project.title}
           </SectionHeading>
 
-          <p className="reveal-soft m-0 mt-7 max-w-[62ch] text-[19px] font-light leading-[1.7] text-body nav:text-[20px]">
+          <p className="reveal-soft m-0 mt-6 max-w-[62ch] text-[17px] font-light leading-[1.7] text-body tab:mt-7 tab:text-[19px] nav:text-[20px]">
             {project.description}
           </p>
 

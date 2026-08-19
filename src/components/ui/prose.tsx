@@ -30,8 +30,8 @@ function BlockNode({ block, first }: { block: Block; first: boolean }) {
       return (
         <h2
           id={block.id}
-          className={`m-0 scroll-mt-28 font-display text-[28px] font-normal leading-[1.2] tracking-[-0.01em] nav:text-[34px] ${
-            first ? "" : "mt-[68px]"
+          className={`m-0 scroll-mt-28 font-display text-[25px] font-normal leading-[1.2] tracking-[-0.01em] tab:text-[28px] nav:text-[34px] ${
+            first ? "" : "mt-12 tab:mt-[68px]"
           }`}
         >
           <Inline nodes={block.content} />
@@ -71,7 +71,7 @@ function BlockNode({ block, first }: { block: Block; first: boolean }) {
     ));
 
     return (
-      <ul className="m-0 mt-7 flex list-none flex-col gap-3 p-0 text-[19px] leading-[1.75] text-body">
+      <ul className="m-0 mt-7 flex list-none flex-col gap-3 p-0 text-[17px] leading-[1.75] text-body tab:text-[19px]">
         {items}
       </ul>
     );
@@ -79,7 +79,7 @@ function BlockNode({ block, first }: { block: Block; first: boolean }) {
 
   return (
     <p
-      className={`m-0 text-[19px] leading-[1.85] text-body ${
+      className={`m-0 text-[17px] leading-[1.8] text-body tab:text-[19px] tab:leading-[1.85] ${
         first ? "" : "mt-6"
       }`}
     >

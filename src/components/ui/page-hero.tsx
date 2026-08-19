@@ -120,7 +120,7 @@ export function PageHero({
       />
 
       <div
-        className={`enter-stagger relative z-10 pb-[64px] pt-[112px] text-white ${gutter}`}
+        className={`enter-stagger relative z-10 pb-[52px] pt-[92px] text-white tab:pb-[64px] tab:pt-[112px] ${gutter}`}
       >
         <span className="flex items-center gap-4">
           <span
@@ -154,7 +154,7 @@ export function PageHero({
         ) : null}
 
         {lead ? (
-          <p className="m-0 mt-7 max-w-[56ch] text-[19px] font-light leading-[1.7] text-white/82">
+          <p className="m-0 mt-6 max-w-[56ch] text-[17px] font-light leading-[1.7] text-white/82 tab:mt-7 tab:text-[19px]">
             {lead}
           </p>
         ) : null}

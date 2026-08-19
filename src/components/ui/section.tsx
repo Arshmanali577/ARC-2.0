@@ -207,7 +207,7 @@ export function SectionHeader({
         {lead ? (
           <p
             className={cn(
-              "m-0 mt-6 max-w-[620px] text-[18px] leading-[1.75]",
+              "m-0 mt-5 max-w-[620px] text-[17px] leading-[1.75] tab:mt-6 tab:text-[18px]",
               tone === "light" ? "text-mist-deep" : "text-body",
             )}
           >

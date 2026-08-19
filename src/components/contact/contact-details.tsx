@@ -79,7 +79,7 @@ export function ContactDetails() {
 
       <dl className="m-0 mt-10 border-t border-line">
         {channels.map(({ label, Icon, href, value }) => (
-          <div key={label} className="flex gap-5 border-b border-line py-6">
+          <div key={label} className="flex gap-4 border-b border-line py-5 tab:gap-5 tab:py-6">
             <span
               aria-hidden
               className="mt-0.5 flex size-11 shrink-0 items-center justify-center bg-brand text-white"
@@ -90,7 +90,7 @@ export function ContactDetails() {
               <dt className="text-[12px] font-semibold uppercase tracking-[0.16em] text-faint">
                 {label}
               </dt>
-              <dd className="m-0 mt-2 break-words text-[17.5px] leading-[1.6] text-brand">
+              <dd className="m-0 mt-1.5 break-words text-[16px] leading-[1.6] text-brand tab:mt-2 tab:text-[17.5px]">
                 {href ? (
                   <a
                     href={href}
@@ -117,7 +117,7 @@ export function ContactDetails() {
         href={site.contact.whatsappHref}
         target="_blank"
         rel="noreferrer"
-        className="group mt-8 flex items-center gap-5 border border-line-strong py-5 pl-5 pr-6 text-[16px] text-brand transition duration-300 ease-out hover:border-brand hover:bg-brand hover:text-white"
+        className="group mt-8 flex items-center gap-4 border border-line-strong py-4 pl-4 pr-5 text-[16px] text-brand transition duration-300 ease-out hover:border-brand hover:bg-brand hover:text-white tab:gap-5 tab:py-5 tab:pl-5 tab:pr-6"
       >
         <span
           aria-hidden
@@ -135,7 +135,7 @@ export function ContactDetails() {
       {/* The one lit surface in the column, so it is what the eye lands on
           after the list. Its action is an in-page anchor: the form it books
           through is a few hundred pixels to the right. */}
-      <div className="mt-5 bg-brand p-7 text-white">
+      <div className="mt-5 bg-brand p-6 text-white tab:p-7">
         <p className="m-0 font-display text-[22px] font-normal leading-[1.2] tracking-[-0.02em]">
           {contactPage.consultation.heading}
         </p>

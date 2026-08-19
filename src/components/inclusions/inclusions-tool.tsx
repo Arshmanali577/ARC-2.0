@@ -62,7 +62,7 @@ export function InclusionsTool() {
       {/* -- Assurances ---------------------------------------------------- */}
       <div className="grid grid-cols-1 gap-px bg-line-soft nav:grid-cols-3">
         {inclusionsPage.assurances.map((item) => (
-          <div key={item.title} className="bg-white px-7 py-8">
+          <div key={item.title} className="bg-white px-5 py-6 tab:px-7 tab:py-8">
             <h2 className="m-0 text-[18px] font-semibold text-brand">
               {item.title}
             </h2>
@@ -74,15 +74,15 @@ export function InclusionsTool() {
       </div>
 
       {/* -- Project setup ------------------------------------------------- */}
-      <section className="mt-[72px]">
+      <section className="mt-[56px] tab:mt-[72px]">
         <h2 className="m-0 font-display text-[clamp(27px,8vw,34px)] font-normal leading-[1.1] tracking-[-0.02em]">
           {setup.heading}
         </h2>
-        <p className="m-0 mt-5 max-w-[720px] text-[18px] leading-[1.75] text-body">
+        <p className="m-0 mt-5 max-w-[720px] text-[17px] leading-[1.75] text-body tab:text-[18px]">
           {setup.lead}
         </p>
 
-        <div className="mt-8 border border-line bg-surface p-7">
+        <div className="mt-8 border border-line bg-surface p-5 tab:p-7">
           <h3 className="m-0 text-[12px] font-semibold uppercase tracking-[0.28em] text-muted">
             {setup.howToHeading}
           </h3>
@@ -146,7 +146,7 @@ export function InclusionsTool() {
                   aria-pressed={active}
                   onClick={() => setPackageId(item.id)}
                   className={cn(
-                    "flex flex-col border p-7 text-left transition duration-250 ease-out active:scale-[0.99]",
+                    "flex flex-col border p-5 text-left transition duration-250 ease-out active:scale-[0.99] tab:p-7",
                     active
                       ? "border-brand bg-surface"
                       : "border-line hover:border-brand",
@@ -182,7 +182,7 @@ export function InclusionsTool() {
 
       {/* -- Inclusion schedule -------------------------------------------- */}
       {inclusionSections.map((section) => (
-        <section key={section.id} className="mt-[72px]">
+        <section key={section.id} className="mt-[56px] tab:mt-[72px]">
           <h2 className="m-0 border-b border-line pb-5 font-display text-[clamp(25px,7vw,30px)] font-normal leading-[1.15]">
             {section.title}
           </h2>
@@ -203,7 +203,7 @@ export function InclusionsTool() {
               return (
                 <div
                   key={key}
-                  className="grid grid-cols-1 gap-6 border-b border-line py-8 nav:grid-cols-[1.2fr_1fr_1fr_auto] nav:gap-10"
+                  className="grid grid-cols-1 gap-5 border-b border-line py-7 nav:grid-cols-[1.2fr_1fr_1fr_auto] nav:gap-10 nav:py-8"
                 >
                   <div>
                     <h3 className="m-0 text-[18px] font-semibold text-brand">
@@ -286,11 +286,11 @@ export function InclusionsTool() {
       ))}
 
       {/* -- Exclusions ----------------------------------------------------- */}
-      <section className="mt-[72px]">
+      <section className="mt-[56px] tab:mt-[72px]">
         <h2 className="m-0 font-display text-[clamp(25px,7vw,30px)] font-normal leading-[1.15]">
           {inclusionsPage.exclusionsHeading}
         </h2>
-        <p className="m-0 mt-4 max-w-[720px] text-[18px] leading-[1.75] text-body">
+        <p className="m-0 mt-4 max-w-[720px] text-[17px] leading-[1.75] text-body tab:text-[18px]">
           {inclusionsPage.exclusionsLead}
         </p>
         <ul className="m-0 mt-7 flex list-none flex-col border-t border-line p-0">
@@ -306,11 +306,11 @@ export function InclusionsTool() {
       </section>
 
       {/* -- Snapshot ------------------------------------------------------- */}
-      <section className="mt-[72px] bg-surface p-8 nav:p-12">
+      <section className="mt-[56px] bg-surface p-6 tab:mt-[72px] tab:p-8 nav:p-12">
         <h2 className="m-0 font-display text-[clamp(25px,7vw,30px)] font-normal leading-[1.15]">
           {snapshot.heading}
         </h2>
-        <p className="m-0 mt-4 max-w-[720px] text-[18px] leading-[1.75] text-body">
+        <p className="m-0 mt-4 max-w-[720px] text-[17px] leading-[1.75] text-body tab:text-[18px]">
           {snapshot.lead}
         </p>
 

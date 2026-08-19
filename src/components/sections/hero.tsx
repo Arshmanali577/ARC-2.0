@@ -22,7 +22,7 @@ import { hero } from "@/content/homepage";
  */
 export function Hero() {
   return (
-    <section className="relative flex min-h-[660px] flex-col overflow-hidden nav:min-h-[calc(100svh-92px)] nav:max-h-[1000px]">
+    <section className="relative flex min-h-[600px] flex-col overflow-hidden tab:min-h-[660px] nav:min-h-[calc(100svh-92px)] nav:max-h-[1000px]">
       {/* MediaPlate owns `relative` for `next/image fill`, so the layer that
           takes it out of flow has to be this wrapper. */}
       <div className="enter-plate absolute inset-0">
@@ -66,7 +66,7 @@ export function Hero() {
       />
 
       <div
-        className={`enter-stagger relative z-10 mt-auto pb-11 pt-[140px] ${gutter}`}
+        className={`enter-stagger relative z-10 mt-auto pb-10 pt-[104px] tab:pb-11 tab:pt-[140px] ${gutter}`}
       >
         <span className="flex items-center gap-4">
           <span aria-hidden className="h-px w-10 bg-white/45" />
@@ -79,19 +79,19 @@ export function Hero() {
             rather than faded: each word arrives in reading order, starting
             after the eyebrow has landed. */}
         <h1
-          className={`${wordsClass.enter} m-0 mt-8 max-w-[15ch] font-display text-[clamp(34px,11vw,46px)] font-normal leading-[1.02] tracking-[-0.03em] text-white [text-wrap:balance] nav:text-[62px] wide:text-[86px]`}
+          className={`${wordsClass.enter} m-0 mt-7 max-w-[15ch] font-display text-[clamp(34px,11vw,46px)] font-normal leading-[1.02] tracking-[-0.03em] text-white [text-wrap:balance] tab:mt-8 nav:text-[62px] wide:text-[86px]`}
         >
           {splitWords(hero.heading, "enter", 120)}
         </h1>
 
-        <p className="m-0 mt-8 max-w-[52ch] text-[20px] font-light leading-[1.7] text-white/82">
+        <p className="m-0 mt-6 max-w-[52ch] text-[17px] font-light leading-[1.7] text-white/82 tab:mt-8 tab:text-[18px] nav:text-[20px]">
           {hero.body}
         </p>
 
         {/* Only the primary leans towards the cursor. Two magnetic buttons
             side by side fight each other for the pointer; one states which
             action the page is actually asking for. */}
-        <div className="mt-11 flex flex-col items-stretch gap-3 nav:flex-row nav:items-center nav:gap-4">
+        <div className="mt-9 flex flex-col items-stretch gap-3 tab:mt-11 nav:flex-row nav:items-center nav:gap-4">
           <Magnetic className="justify-center nav:justify-start">
             <Button
               href={hero.primaryCta.href}
@@ -113,7 +113,7 @@ export function Hero() {
 
         {/* Baseline rail: the scroll cue on one edge, the photograph's credit
             on the other — both sitting on the same hairline. */}
-        <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-6 text-[12px] font-semibold uppercase tracking-[0.2em] text-white/55">
+        <div className="mt-10 flex items-center gap-4 border-t border-white/20 pt-5 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/55 tab:mt-14 tab:gap-5 tab:pt-6 tab:text-[12px] tab:tracking-[0.2em]">
           <ArrowDown size={14} />
           <span>Scroll</span>
           <span aria-hidden className="h-px flex-1 bg-white/12" />

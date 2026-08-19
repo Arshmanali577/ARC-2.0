@@ -34,7 +34,7 @@ export function AboutWhyArc() {
           <SectionHeading size={54} className="mt-6 max-w-[20ch]">
             {whyArc.heading}
           </SectionHeading>
-          <p className="m-0 mt-7 max-w-[46ch] text-[18px] leading-[1.8] text-body">
+          <p className="m-0 mt-6 max-w-[46ch] text-[17px] leading-[1.8] text-body tab:mt-7 tab:text-[18px]">
             {whyArc.body}
           </p>
         </div>

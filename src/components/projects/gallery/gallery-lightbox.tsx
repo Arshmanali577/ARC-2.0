@@ -71,7 +71,7 @@ export function GalleryLightbox({
       {...swipe}
       className="fixed inset-0 z-[100] flex animate-[fade-in_260ms_ease-out_both] flex-col bg-ink/96 backdrop-blur-lg"
     >
-      <div className="flex shrink-0 items-start justify-between gap-6 px-5 py-5 tab:px-8 tab:py-7">
+      <div className="flex shrink-0 items-start justify-between gap-4 px-5 py-4 tab:gap-6 tab:px-8 tab:py-7">
         <div className="min-w-0">
           <p className="m-0 text-[11px] font-semibold uppercase tracking-[0.28em] text-mist tab:text-[12px]">
             {item.categoryLabel}
@@ -120,8 +120,8 @@ export function GalleryLightbox({
         ) : null}
       </div>
 
-      <div className="flex shrink-0 items-end justify-between gap-8 px-5 py-5 tab:px-8 tab:py-7">
-        <p className="m-0 max-w-[640px] text-[15px] leading-[1.65] text-mist-deep tab:text-[16px]">
+      <div className="flex shrink-0 items-end justify-between gap-4 px-5 py-4 tab:gap-8 tab:px-8 tab:py-7">
+        <p className="m-0 line-clamp-3 max-w-[640px] text-[14px] leading-[1.6] text-mist-deep tab:line-clamp-none tab:text-[16px] tab:leading-[1.65]">
           {item.description}
         </p>
         <p className="m-0 shrink-0 text-[13px] font-semibold tracking-[0.14em] text-white/85 tab:text-[14px]">

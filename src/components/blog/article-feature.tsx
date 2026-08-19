@@ -49,7 +49,7 @@ export function ArticleFeature({
           {post.title}
         </h2>
 
-        <p className="m-0 mt-6 max-w-[52ch] text-[18px] leading-[1.75] text-body">
+        <p className="m-0 mt-5 max-w-[52ch] text-[17px] leading-[1.75] text-body tab:mt-6 tab:text-[18px]">
           {post.excerpt}
         </p>
 

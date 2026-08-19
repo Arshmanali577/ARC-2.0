@@ -27,7 +27,7 @@ export function ProjectMasthead({
   total: number;
 }) {
   return (
-    <section className="relative flex min-h-[560px] flex-col overflow-hidden nav:min-h-[calc(100svh-92px)] nav:max-h-[900px]">
+    <section className="relative flex min-h-[500px] flex-col overflow-hidden tab:min-h-[560px] nav:min-h-[calc(100svh-92px)] nav:max-h-[900px]">
       {/* MediaPlate owns `relative` for `next/image fill`, so the layer that
           takes it out of flow has to be this wrapper. */}
       <div className="enter-plate absolute inset-0">
@@ -65,7 +65,7 @@ export function ProjectMasthead({
       />
 
       <div
-        className={`enter-stagger relative z-10 mt-auto pb-11 pt-[132px] ${gutter}`}
+        className={`enter-stagger relative z-10 mt-auto pb-10 pt-[100px] tab:pb-11 tab:pt-[132px] ${gutter}`}
       >
         <Link
           href="/projects"
@@ -74,7 +74,7 @@ export function ProjectMasthead({
           {backLink}
         </Link>
 
-        <span className="mt-10 flex items-center gap-4">
+        <span className="mt-8 flex items-center gap-4 tab:mt-10">
           <span aria-hidden className="h-px w-10 bg-white/45" />
           <span className="text-[12px] font-semibold uppercase tracking-[0.28em] text-mist">
             {project.location}
@@ -89,7 +89,7 @@ export function ProjectMasthead({
 
         {/* Where this build sits in the portfolio — the counterpart to the
             previous/next walk at the foot of the page. */}
-        <div className="mt-14 flex items-center gap-5 border-t border-white/20 pt-6 text-[12px] font-semibold uppercase tracking-[0.2em] text-white/55">
+        <div className="mt-10 flex items-center gap-4 border-t border-white/20 pt-5 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/55 tab:mt-14 tab:gap-5 tab:pt-6 tab:text-[12px] tab:tracking-[0.2em]">
           <span>
             Project {String(position).padStart(2, "0")} / {total}
           </span>

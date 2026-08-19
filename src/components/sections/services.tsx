@@ -66,7 +66,7 @@ export function Services() {
                   onPointerEnter={() => setActive(index)}
                   onFocus={() => setActive(index)}
                   className={cn(
-                    "group relative flex h-full items-center gap-6 border-b border-line py-7 transition-colors duration-500 ease-out nav:gap-9 nav:py-8",
+                    "group relative flex h-full items-center gap-4 border-b border-line py-6 transition-colors duration-500 ease-out tab:gap-6 tab:py-7 nav:gap-9 nav:py-8",
                     index === 0 && "border-t",
                   )}
                 >
@@ -83,7 +83,7 @@ export function Services() {
 
                   <span
                     className={cn(
-                      "w-8 shrink-0 text-[12px] font-semibold tracking-[0.16em] transition-colors duration-300 ease-out",
+                      "w-6 shrink-0 text-[12px] font-semibold tracking-[0.16em] transition-colors duration-300 ease-out tab:w-8",
                       isActive ? "text-gold" : "text-faint",
                     )}
                   >
@@ -97,17 +97,17 @@ export function Services() {
                       isActive && "nav:translate-x-1",
                     )}
                   >
-                    <span className="block font-display text-[24px] font-normal leading-[1.15] nav:w-[15ch] nav:shrink-0 nav:text-[26px]">
+                    <span className="block font-display text-[22px] font-normal leading-[1.15] tab:text-[24px] nav:w-[15ch] nav:shrink-0 nav:text-[26px]">
                       {homeServiceLabels[service.id] ?? service.title}
                     </span>
-                    <span className="mt-2.5 block max-w-[46ch] text-[16px] leading-[1.6] text-body nav:mt-0">
+                    <span className="mt-2 block max-w-[46ch] text-[15px] leading-[1.6] text-body tab:mt-2.5 tab:text-[16px] nav:mt-0">
                       {service.description}
                     </span>
                   </span>
 
                   <span
                     className={cn(
-                      "flex size-11 shrink-0 items-center justify-center border transition-colors duration-300 ease-out",
+                      "flex size-9 shrink-0 items-center justify-center border transition-colors duration-300 ease-out tab:size-11",
                       isActive
                         ? "border-brand bg-brand text-white"
                         : "border-line text-brand",

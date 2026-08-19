@@ -57,7 +57,7 @@ export function ContactForm({ labelledBy }: { labelledBy?: string }) {
       onSubmit={handleSubmit}
       aria-labelledby={labelledBy}
       aria-describedby="enquiry-note"
-      className="flex flex-col gap-9"
+      className="flex flex-col gap-7 tab:gap-9"
     >
       <div>
         <label className={labelClass} htmlFor="name">
@@ -73,7 +73,7 @@ export function ContactForm({ labelledBy }: { labelledBy?: string }) {
         />
       </div>
 
-      <div className="grid grid-cols-1 gap-9 nav:grid-cols-2 nav:gap-x-12">
+      <div className="grid grid-cols-1 gap-7 tab:gap-9 nav:grid-cols-2 nav:gap-x-12">
         <div>
           <label className={labelClass} htmlFor="email">
             {form.fields.email}
@@ -101,7 +101,7 @@ export function ContactForm({ labelledBy }: { labelledBy?: string }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-9 nav:grid-cols-2 nav:gap-x-12">
+      <div className="grid grid-cols-1 gap-7 tab:gap-9 nav:grid-cols-2 nav:gap-x-12">
         <div>
           <label className={labelClass} htmlFor="projectType">
             {form.fields.projectType}
@@ -158,10 +158,10 @@ export function ContactForm({ labelledBy }: { labelledBy?: string }) {
         />
       </div>
 
-      <div className="mt-2 flex flex-col gap-7 nav:flex-row nav:items-center nav:justify-between nav:gap-12">
+      <div className="mt-2 flex flex-col items-start gap-6 tab:gap-7 nav:flex-row nav:items-center nav:justify-between nav:gap-12">
         <button
           type="submit"
-          className="group/button inline-flex items-center justify-between gap-6 bg-brand px-8 py-[19px] text-[14px] font-semibold uppercase tracking-[0.12em] text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-ink active:scale-[0.98] active:duration-100"
+          className="group/button flex w-full items-center justify-between gap-4 bg-brand px-6 py-[18px] text-[14px] font-semibold uppercase tracking-[0.12em] text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-ink active:scale-[0.98] active:duration-100 tab:w-auto tab:gap-6 tab:px-8 tab:py-[19px]"
         >
           <span>{form.submitLabel}</span>
           <ArrowRight className="transition-transform duration-300 ease-out group-hover/button:translate-x-1" />

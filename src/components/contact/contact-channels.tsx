@@ -44,7 +44,7 @@ export function ContactChannels() {
   ];
 
   return (
-    <ul className="m-0 mt-11 flex list-none flex-col gap-3.5 p-0 tab:flex-row tab:flex-wrap tab:gap-4">
+    <ul className="m-0 mt-8 flex list-none flex-col gap-2.5 p-0 tab:mt-11 tab:flex-row tab:flex-wrap tab:gap-4">
       {channels.map(({ label, Icon, href, value, rows }) => {
         const body = (
           <>
@@ -74,7 +74,7 @@ export function ContactChannels() {
         );
 
         const className =
-          "group/tile flex items-center gap-4 border border-line-invert bg-white/[0.06] px-5 py-4 backdrop-blur-[2px] transition duration-300 ease-out";
+          "group/tile flex items-center gap-3.5 border border-line-invert bg-white/[0.06] px-4 py-3.5 backdrop-blur-[2px] transition duration-300 ease-out tab:gap-4 tab:px-5 tab:py-4";
 
         return (
           <li key={label}>

@@ -91,8 +91,8 @@ export default async function LocationDetailPage(
                 key={paragraph}
                 className={
                   index === 0
-                    ? "m-0 mt-9 max-w-[60ch] text-[20px] font-light leading-[1.7]"
-                    : "m-0 mt-7 max-w-[64ch] text-[18px] leading-[1.8] text-body"
+                    ? "m-0 mt-8 max-w-[60ch] text-[18px] font-light leading-[1.7] tab:mt-9 tab:text-[20px]"
+                    : "m-0 mt-6 max-w-[64ch] text-[16px] leading-[1.8] text-body tab:mt-7 tab:text-[18px]"
                 }
               >
                 {paragraph}

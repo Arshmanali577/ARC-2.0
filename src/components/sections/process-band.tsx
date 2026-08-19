@@ -47,7 +47,7 @@ export function ProcessBand() {
           <SectionHeading size={52} className="mt-6 max-w-[20ch]">
             {processBand.heading}
           </SectionHeading>
-          <p className="m-0 mt-5 max-w-[46ch] text-[18px] font-light leading-[1.75] text-white/70">
+          <p className="m-0 mt-5 max-w-[46ch] text-[17px] font-light leading-[1.75] text-white/70 tab:text-[18px]">
             {processBand.lead}
           </p>
         </div>
@@ -78,7 +78,7 @@ export function ProcessBand() {
           {processStages.map((step) => (
             <li
               key={step.id}
-              className="relative flex flex-col items-center px-2 text-center"
+              className="relative flex flex-col items-center px-1 text-center tab:px-2"
             >
               {/* Filled in the band's own navy so the dotted rule reads as
                   stopping at each marker rather than running under it. */}

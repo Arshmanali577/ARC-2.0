@@ -36,7 +36,7 @@ export function ProcessTimeline() {
               id={`stage-${step.id}`}
               className={cn(
                 "group relative scroll-mt-28",
-                isLast ? "pb-0" : "pb-20 nav:pb-24",
+                isLast ? "pb-0" : "pb-16 tab:pb-20 nav:pb-24",
               )}
             >
               {/* The rule: a full-run hairline with the drawn line over it, so
@@ -56,12 +56,12 @@ export function ProcessTimeline() {
                   sitting on the rule from 901px up. */}
               <span
                 aria-hidden
-                className="reveal-marker mb-8 flex size-14 items-center justify-center rounded-full bg-brand text-white transition-colors duration-500 ease-out group-hover:bg-ink nav:absolute nav:left-0 nav:top-0 nav:mb-0"
+                className="reveal-marker mb-6 flex size-12 items-center justify-center rounded-full bg-brand text-white transition-colors duration-500 ease-out group-hover:bg-ink tab:mb-8 tab:size-14 nav:absolute nav:left-0 nav:top-0 nav:mb-0"
               >
                 <Glyph size={24} />
               </span>
 
-              <div className="grid grid-cols-1 items-center gap-12 nav:pl-[104px] wide:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] wide:gap-14">
+              <div className="grid grid-cols-1 items-center gap-9 tab:gap-12 nav:pl-[104px] wide:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] wide:gap-14">
                 <div className="reveal-left">
                   <span className="flex items-center gap-4">
                     <span className="font-display text-[22px] leading-none text-faint">
@@ -111,10 +111,13 @@ export function ProcessTimeline() {
                     </div>
                   </div>
 
-                  {/* The outcome line, set over the corner of the plate. It hangs
-                      off the left edge from 901px, where the rail has already
-                      pushed the column inboard and there is room for it. */}
-                  <figcaption className="reveal-lift absolute bottom-5 left-5 flex max-w-[272px] items-center gap-3.5 bg-white p-4 shadow-plate transition-shadow duration-500 ease-out group-hover:shadow-plate-strong nav:-left-9 nav:bottom-7">
+                  {/* The outcome line. Set over the corner of the plate from
+                      `tab` up, and hanging off its left edge from 901px, where
+                      the rail has already pushed the column inboard and there
+                      is room for it. On a phone it steps down under the plate
+                      instead: the same card over a 196px-tall crop covered more
+                      than half the photograph it was meant to caption. */}
+                  <figcaption className="reveal-lift mt-4 flex items-center gap-3.5 border border-line-soft bg-white p-4 shadow-plate tab:border-0 transition-shadow duration-500 ease-out group-hover:shadow-plate-strong tab:absolute tab:bottom-5 tab:left-5 tab:mt-0 tab:max-w-[272px] nav:-left-9 nav:bottom-7">
                     <span
                       aria-hidden
                       className="grid size-10 shrink-0 place-items-center bg-gold text-white"

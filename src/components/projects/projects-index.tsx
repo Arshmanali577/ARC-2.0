@@ -91,7 +91,7 @@ export function ProjectsIndex({
                 aria-pressed={isActive}
                 onClick={() => setActive(filter.value)}
                 className={cn(
-                  "border px-5 py-3 text-[13px] font-medium uppercase tracking-[0.12em] transition duration-300 ease-out active:scale-[0.97]",
+                  "border px-5 py-3.5 text-[13px] font-medium uppercase tracking-[0.12em] transition duration-300 ease-out active:scale-[0.97]",
                   isActive
                     ? "border-brand bg-brand text-white"
                     : "border-line-strong text-brand hover:border-brand hover:bg-brand hover:text-white",

@@ -129,20 +129,31 @@ export function GalleryStage({
         <ExpandIcon size={14} />
       </button>
 
+      {/* Off on a phone. The caption below fills the lower half of a 4:3 crop
+          at 375px, so a disc parked at the stage's vertical centre sits on top
+          of the frame title — and touch already has the swipe this stage
+          listens for, with the thumbnail strip under it as the visible control.
+          Wrapped rather than hidden on the button itself: the arrow already
+          carries `inline-flex`, and two display utilities on one element are
+          resolved by stylesheet order, not by the order they are written. */}
       {items.length > 1 ? (
         <>
-          <GalleryArrow
-            direction="previous"
-            onClick={onPrevious}
-            label={labels.previous}
-            className="absolute left-3 top-1/2 z-30 -translate-y-1/2 tab:left-5"
-          />
-          <GalleryArrow
-            direction="next"
-            onClick={onNext}
-            label={labels.next}
-            className="absolute right-3 top-1/2 z-30 -translate-y-1/2 tab:right-5"
-          />
+          <span className="hidden tab:block">
+            <GalleryArrow
+              direction="previous"
+              onClick={onPrevious}
+              label={labels.previous}
+              className="absolute left-3 top-1/2 z-30 -translate-y-1/2 tab:left-5"
+            />
+          </span>
+          <span className="hidden tab:block">
+            <GalleryArrow
+              direction="next"
+              onClick={onNext}
+              label={labels.next}
+              className="absolute right-3 top-1/2 z-30 -translate-y-1/2 tab:right-5"
+            />
+          </span>
         </>
       ) : null}
 

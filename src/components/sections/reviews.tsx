@@ -133,18 +133,18 @@ export function Reviews() {
         role="group"
         aria-roledescription="carousel"
         aria-label={`Review ${active + 1} of ${count}`}
-        className="relative px-6 pb-14 pt-12 tab:px-10 tab:pb-16 tab:pt-14 nav:px-14 nav:py-[104px] nav:pr-[44%] wide:pr-[40%]"
+        className="relative px-6 pb-12 pt-10 tab:px-10 tab:pb-16 tab:pt-14 nav:px-14 nav:py-[104px] nav:pr-[44%] wide:pr-[40%]"
       >
         <Eyebrow tone="gold" withRule>
           {reviewsSection.eyebrow}
         </Eyebrow>
 
-        <div className="mt-9 flex flex-col gap-9 nav:flex-row nav:gap-12">
+        <div className="mt-7 flex flex-col gap-6 tab:mt-9 tab:gap-9 nav:flex-row nav:gap-12">
           {/* The mark, drawn once and left alone as the reviews turn over —
               it is the band's own furniture, not part of any one quote. */}
           <span
             aria-hidden
-            className="flex size-16 shrink-0 items-center justify-center rounded-full border border-gold/70 text-gold nav:size-[74px]"
+            className="flex size-14 shrink-0 items-center justify-center rounded-full border border-gold/70 text-gold tab:size-16 nav:size-[74px]"
           >
             <QuoteIcon size={26} />
           </span>
@@ -157,7 +157,7 @@ export function Reviews() {
                 run its own entrance instead of the words simply changing. */}
             <blockquote
               key={review.id}
-              className="feature-rise m-0 text-[19px] font-light leading-[1.6] text-white/92 [text-wrap:pretty] tab:text-[22px] nav:text-[25px] nav:leading-[1.55]"
+              className="feature-rise m-0 text-[18px] font-light leading-[1.6] text-white/92 [text-wrap:pretty] tab:text-[22px] nav:text-[25px] nav:leading-[1.55]"
             >
               “{review.quote}”
             </blockquote>
@@ -177,7 +177,7 @@ export function Reviews() {
           </figure>
         </div>
 
-        <div className="mt-11 flex flex-col gap-8 border-t border-line-invert pt-8 tab:flex-row tab:items-center tab:justify-between">
+        <div className="mt-9 flex flex-col gap-6 border-t border-line-invert pt-7 tab:mt-11 tab:flex-row tab:items-center tab:justify-between tab:gap-8 tab:pt-8">
           <div className="flex items-center gap-5">
             <ReviewArrow
               direction="previous"

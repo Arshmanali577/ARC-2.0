@@ -31,7 +31,7 @@ export function AboutApproach() {
           <SectionHeading size={54} className="mt-6">
             {approach.heading}
           </SectionHeading>
-          <p className="m-0 mt-7 max-w-[44ch] text-[18px] leading-[1.75] text-mist-deep">
+          <p className="m-0 mt-6 max-w-[44ch] text-[17px] leading-[1.75] text-mist-deep tab:mt-7 tab:text-[18px]">
             {approach.lead}
           </p>
 
@@ -53,7 +53,7 @@ export function AboutApproach() {
             return (
               <li
                 key={step.id}
-                className={`relative flex gap-6 ${isLast ? "pb-0" : "pb-9"}`}
+                className={`relative flex gap-4 tab:gap-6 ${isLast ? "pb-0" : "pb-8 tab:pb-9"}`}
               >
                 {/* The connector, drawn from the underside of one marker to
                     the top of the next. Not on the last stage, where a rule
@@ -61,7 +61,7 @@ export function AboutApproach() {
                 {isLast ? null : (
                   <span
                     aria-hidden
-                    className="pointer-events-none absolute bottom-0 left-7 top-14 border-l border-dashed border-white/25"
+                    className="pointer-events-none absolute bottom-0 left-6 top-12 border-l border-dashed border-white/25 tab:left-7 tab:top-14"
                   />
                 )}
 
@@ -69,7 +69,7 @@ export function AboutApproach() {
                     stopping at each marker rather than running under it. */}
                 <span
                   aria-hidden
-                  className="relative grid size-14 shrink-0 place-items-center rounded-full border border-white/35 bg-brand text-mist"
+                  className="relative grid size-12 shrink-0 place-items-center rounded-full border border-white/35 bg-brand text-mist tab:size-14"
                 >
                   <Icon size={22} />
                 </span>
