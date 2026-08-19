@@ -24,7 +24,7 @@ export function AboutApproach() {
       <div aria-hidden className="pointer-events-none absolute inset-0 hatch-dark" />
 
       <div className="relative grid grid-cols-1 items-start gap-14 nav:grid-cols-[minmax(0,0.95fr)_minmax(0,1.5fr)] nav:gap-16 wide:gap-20">
-        <div>
+        <div className="reveal-rows">
           <Eyebrow tone="light" withRule>
             {approach.eyebrow}
           </Eyebrow>

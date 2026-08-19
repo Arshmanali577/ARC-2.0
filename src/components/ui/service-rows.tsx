@@ -18,10 +18,16 @@ export function ServiceRows({
    * has to follow the page, or the outline skips from h1 to h3.
    */
   headingLevel = 3,
+  /**
+   * The service pages drop the arrow: every row there is a link already, and a
+   * column of ten identical arrows reads as chrome rather than as an affordance.
+   */
+  showArrow = true,
 }: {
   services: Service[];
   withAnchors?: boolean;
   headingLevel?: 2 | 3;
+  showArrow?: boolean;
 }) {
   const Heading = headingLevel === 2 ? "h2" : "h3";
 
@@ -32,7 +38,11 @@ export function ServiceRows({
           key={service.id}
           id={withAnchors ? service.anchor : undefined}
           href={service.href}
-          className="group relative grid scroll-mt-28 grid-cols-1 items-baseline gap-4 border-b border-line py-9 transition-colors duration-500 ease-out hover:border-brand nav:grid-cols-[64px_minmax(220px,1fr)_1.5fr_auto] nav:items-center nav:gap-12 nav:py-10"
+          className={`group relative grid scroll-mt-28 grid-cols-1 items-baseline gap-4 border-b border-line py-9 transition-colors duration-500 ease-out hover:border-brand nav:items-center nav:gap-12 nav:py-10 ${
+            showArrow
+              ? "nav:grid-cols-[64px_minmax(220px,1fr)_1.5fr_auto]"
+              : "nav:grid-cols-[64px_minmax(220px,1fr)_1.5fr]"
+          }`}
         >
           {/* Fills from the left on hover — a rule being drawn, not a wash. */}
           <span
@@ -52,9 +62,11 @@ export function ServiceRows({
             {service.description}
           </p>
 
-          <span className="flex h-11 w-11 items-center justify-center border border-line text-brand transition-colors duration-300 ease-out group-hover:border-brand group-hover:bg-brand group-hover:text-white nav:justify-self-end">
-            <ArrowRight size={18} />
-          </span>
+          {showArrow ? (
+            <span className="flex h-11 w-11 items-center justify-center border border-line text-brand transition-colors duration-300 ease-out group-hover:border-brand group-hover:bg-brand group-hover:text-white nav:justify-self-end">
+              <ArrowRight size={18} />
+            </span>
+          ) : null}
         </Link>
       ))}
     </div>

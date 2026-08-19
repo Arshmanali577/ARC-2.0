@@ -67,7 +67,7 @@ export function ContactDetails() {
   ];
 
   return (
-    <div className="nav:sticky nav:top-[120px]">
+    <div className="reveal-fade nav:sticky nav:top-[120px]">
       <Eyebrow as="h2" withRule>
         {contactPage.infoEyebrow}
       </Eyebrow>

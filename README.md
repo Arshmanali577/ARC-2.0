@@ -204,18 +204,51 @@ Supporting conventions:
   `LocationIndex` on /locations and every area page. Both are built only from
   names the content already holds, and their cell counts divide cleanly at
   every breakpoint so no row is left with an orphan.
-- Motion is CSS-only, and there are three utilities for it:
-  `reveal` (a single element), `reveal-group` (a grid or list, each of the
-  first few children finishing later than the last), and `page-enter` (the
-  route-change fade, applied once in `app/template.tsx`). All three animate on
-  scroll or on mount via `animation-timeline: view()` / a short keyframe,
-  wrapped in `@supports` and a `prefers-reduced-motion` guard — browsers
-  without support, and visitors who asked for less motion, get the content in
-  place. Do not reach for an IntersectionObserver to do this.
-- `reveal-group` goes on leaf grids and lists only, never on a wrapper holding
-  a sticky rail. See the comment above the keyframes in `globals.css` for the
-  two constraints that keep it from breaking sticky positioning and card
-  hover states.
+- Motion is CSS-only. Every utility lives in `globals.css`, and all of them are
+  wrapped in `@supports (animation-timeline: view())` and a
+  `prefers-reduced-motion` guard — browsers without support, and visitors who
+  asked for less motion, get the content in place. Do not reach for an
+  IntersectionObserver to do this.
+
+  | Utility | Use it on |
+  | --- | --- |
+  | `reveal` | one element — a panel, a feature row, a card the grid does not own |
+  | `reveal-soft` | copy inside a band that is already moving; 14px rather than 26px |
+  | `reveal-fade` | **any wrapper holding a `sticky` child** — opacity only, so it never becomes a containing block |
+  | `reveal-plate` | a photograph with no hover zoom of its own; settles out of a slight overscale |
+  | `reveal-group` | a leaf grid or list of cards |
+  | `reveal-rows` | a column of text or rows; shorter travel, stagger runs further down |
+  | `reveal-words` | a heading, revealed word by word as it is scrolled to |
+  | `enter-stagger` | a masthead's copy column — walks its own children **on the clock** |
+  | `enter-words` | a masthead heading, written word by word on the clock |
+  | `enter-plate` | a masthead photograph; scale only, never opacity |
+  | `page-enter` | the route-change fade, applied once in `app/template.tsx` |
+
+- **Scroll or clock, and the choice is not taste.** A `view()` timeline
+  resolves straight to its end state for anything already on screen when the
+  page paints, so a masthead would simply never animate. That is the whole
+  reason the `enter-*` utilities exist, and the only place they are used.
+- `reveal-group` and `reveal-rows` go on leaf grids and lists only, never on a
+  wrapper holding a sticky rail — use `reveal-fade` there. See the comment
+  above the keyframes in `globals.css` for the two constraints that keep these
+  from breaking sticky positioning and card hover states.
+- **Headings reveal their words; body copy does not.** `splitWords` in
+  `ui/split-text.tsx` renders one span per word with its own inline
+  `animation-range` / `animation-delay`, so the stagger is computed on the
+  server and nothing splits text in the browser. `SectionHeading` applies it to
+  every section h2 on the site; pass `words={false}` to opt a heading out.
+  Splitting a paragraph would mean hundreds of animated spans — don't.
+- A group never animates a child that reveals its own words: `reveal-group`,
+  `reveal-rows` and `enter-stagger` all exclude `.reveal-words` /
+  `.enter-words`, or the block and the words would run on top of each other.
+- **Two components are client-side, and only two.** `ui/counter.tsx` counts a
+  figure up the first time it is scrolled to — the number has to change, so CSS
+  cannot do it. It renders the finished value on the server, only ever winds
+  back an element that is still below the fold, leaves a non-numeric value
+  (`Licensed`, `QBCC`) alone, and always lands on the exact target even if the
+  frame clock is starved. `ui/magnetic.tsx` leans an action towards the cursor,
+  and is deliberately limited to a hero's primary — it is off entirely for
+  `(hover: none)` and for reduced motion.
 - `MediaPlate`'s `className` sizes the plate and must not carry a position
   utility — it owns `relative` for `next/image fill`. Position the wrapper.
 

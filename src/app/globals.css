@@ -323,7 +323,9 @@
 @utility reveal-group {
   @supports (animation-timeline: view()) {
     @media (prefers-reduced-motion: no-preference) {
-      & > * {
+      /* A heading revealing its own words is already animating; animating it
+         as a block as well would run the two on top of each other. */
+      & > *:not(.reveal-words):not(.enter-words) {
         animation: reveal-in linear both;
         animation-timeline: view();
         animation-range: entry 2% cover 22%;
@@ -496,10 +498,248 @@
   }
 }
 
+/* Reveal variants ------------------------------------------------------------
+   Four shapes of the same idea, all on `animation-timeline: view()` like the
+   `reveal` above, so none of them costs a byte of JavaScript and all of them
+   fall back to rendering the content in place.
+
+   Pick by what the element is, not by taste:
+
+     reveal        the default — 26px rise, for a block of content
+     reveal-soft   14px rise, for copy inside a band that is already moving
+     reveal-fade   opacity only — the safe one. Use it on any wrapper that
+                   holds a `sticky` child: a transform, even mid-animation,
+                   makes the wrapper a containing block and the sticky element
+                   pins to it instead of to the page.
+     reveal-plate  opacity plus a settle out of a slight overscale, for a
+                   photograph that carries no hover zoom of its own.
+
+   Every keyframe below settles on `transform: none` rather than
+   `translateY(0)`, for the reason given against `reveal-in`. */
+
+@keyframes reveal-in-soft {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* `scale`, not a transform, so it composes with a hover zoom instead of one
+   overriding the other — the same reason `plate-settle` is written this way. */
+@keyframes plate-in {
+  from {
+    opacity: 0;
+    scale: 1.04;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@utility reveal-soft {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: reveal-in-soft linear both;
+      animation-timeline: view();
+      animation-range: entry 4% cover 24%;
+    }
+  }
+}
+
+@utility reveal-fade {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: fade-in-full linear both;
+      animation-timeline: view();
+      animation-range: entry 2% cover 22%;
+    }
+  }
+}
+
+@keyframes fade-in-full {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility reveal-plate {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: plate-in linear both;
+      animation-timeline: view();
+      animation-range: entry 6% cover 30%;
+    }
+  }
+}
+
+/* The soft counterpart of `reveal-group`, for a run of rows rather than a grid
+   of cards: less travel, and the stagger runs further down the list because a
+   list is read top to bottom rather than taken in at once. */
+@utility reveal-rows {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      & > *:not(.reveal-words):not(.enter-words) {
+        animation: reveal-in-soft linear both;
+        animation-timeline: view();
+        animation-range: entry 2% cover 20%;
+      }
+
+      & > *:nth-child(2) {
+        animation-range: entry 2% cover 25%;
+      }
+
+      & > *:nth-child(3) {
+        animation-range: entry 2% cover 30%;
+      }
+
+      & > *:nth-child(4) {
+        animation-range: entry 2% cover 35%;
+      }
+
+      & > *:nth-child(n + 5) {
+        animation-range: entry 2% cover 40%;
+      }
+    }
+  }
+}
+
+/* Entrance --------------------------------------------------------------------
+   The scroll-driven reveals above are the wrong tool for a masthead: it is
+   already on screen when the page paints, so a `view()` timeline resolves
+   straight to its end state and nothing moves. A masthead is the one place on
+   the site that animates on the clock instead.
+
+   `enter-stagger` walks its own children, so a hero states itself in the order
+   it reads — eyebrow, heading, lead, actions, baseline rail — rather than
+   arriving as one block. Delays stay inside 320ms end to end: this runs while
+   the visitor is waiting, not while they are exploring. */
+@keyframes enter-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility enter-stagger {
+  @media (prefers-reduced-motion: no-preference) {
+    & > *:not(.reveal-words):not(.enter-words) {
+      animation: enter-up 640ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    & > *:nth-child(1) {
+      animation-delay: 40ms;
+    }
+
+    & > *:nth-child(2) {
+      animation-delay: 110ms;
+    }
+
+    & > *:nth-child(3) {
+      animation-delay: 180ms;
+    }
+
+    & > *:nth-child(4) {
+      animation-delay: 245ms;
+    }
+
+    & > *:nth-child(5) {
+      animation-delay: 300ms;
+    }
+
+    & > *:nth-child(n + 6) {
+      animation-delay: 340ms;
+    }
+  }
+}
+
+/* The photograph a masthead is set on, settling out of a slight overscale as
+   the copy arrives over it. On the clock for the same reason as above.
+
+   Scale only — deliberately no opacity. Every masthead on this site sets white
+   type over its photograph, so fading the plate up from transparent leaves the
+   heading white-on-pale and unreadable for the length of the entrance. It also
+   costs nothing to skip: the plate holds the LCP image, and it is worth more
+   on screen at full strength from the first paint than arriving politely. */
+@keyframes enter-plate {
+  from {
+    scale: 1.06;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@utility enter-plate {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: enter-plate 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* Word reveal ----------------------------------------------------------------
+   The type-level counterpart to the block reveals above: instead of a heading
+   arriving as one box, each word arrives in the order it is read.
+
+   The stagger is carried per word as an inline `animation-range` (scrolling) or
+   `animation-delay` (a masthead), written on the server by `splitWords` — so
+   there is no splitter running in the browser and no measurement at runtime.
+
+   `translateY` is set in `em` rather than px so the rise scales with the type:
+   the same rule reads correctly on an 86px hero line and on a 26px card title.
+   Settles on `transform: none`, like every other keyframe here. */
+@keyframes word-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.38em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility reveal-words {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      & > [data-word] {
+        animation: word-in linear both;
+        animation-timeline: view();
+      }
+    }
+  }
+}
+
+@utility enter-words {
+  @media (prefers-reduced-motion: no-preference) {
+    & > [data-word] {
+      animation: word-in 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+  }
+}
+
 /* Base ------------------------------------------------------------------- */
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Every animation on this site is already behind a
+       `prefers-reduced-motion: no-preference` query. Smooth scrolling is the
+       one piece of motion the browser owns rather than the stylesheet, so it
+       has to be turned off explicitly or an in-page anchor still flies. */
+    @media (prefers-reduced-motion: reduce) {
+      scroll-behavior: auto;
+    }
+
     /* `clip`, not `hidden`: it stops a stray overflow from producing a
        horizontal scrollbar without creating a scroll container, so every
        sticky rail on the site keeps working. */

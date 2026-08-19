@@ -15,7 +15,9 @@ import {
   StarIcon,
   WhatsappIcon,
 } from "@/components/ui/icon";
+import { Counter } from "@/components/ui/counter";
 import { Eyebrow, Section } from "@/components/ui/section";
+import { splitWords, wordsClass } from "@/components/ui/split-text";
 import { cta } from "@/content/homepage";
 import { site } from "@/content/site";
 import { cn } from "@/lib/cn";
@@ -176,13 +178,15 @@ export function CtaBand({
 
       <div className="relative grid grid-cols-1 items-start gap-14 nav:grid-cols-[1.02fr_1fr] nav:gap-16 wide:gap-20">
         {/* -- Statement ---------------------------------------------------- */}
-        <div>
+        <div className="reveal-rows">
           <Eyebrow tone="light" withRule>
             {eyebrow}
           </Eyebrow>
 
-          <h2 className="m-0 mt-7 max-w-[17ch] font-display text-[clamp(29px,8vw,36px)] font-normal leading-[1.07] tracking-[-0.03em] [text-wrap:balance] nav:text-[48px] wide:text-[56px]">
-            {heading}
+          <h2
+            className={`${wordsClass.scroll} m-0 mt-7 max-w-[17ch] font-display text-[clamp(29px,8vw,36px)] font-normal leading-[1.07] tracking-[-0.03em] [text-wrap:balance] nav:text-[48px] wide:text-[56px]`}
+          >
+            {splitWords(heading)}
           </h2>
 
           <p className="m-0 mt-6 max-w-[46ch] text-[18px] font-light leading-[1.75] text-white/72">
@@ -216,7 +220,7 @@ export function CtaBand({
 
         {/* -- Proof and panel ---------------------------------------------- */}
         <div>
-          <ul className="m-0 grid list-none grid-cols-2 gap-y-9 p-0 tab:grid-cols-4 tab:gap-y-0">
+          <ul className="reveal-group m-0 grid list-none grid-cols-2 gap-y-9 p-0 tab:grid-cols-4 tab:gap-y-0">
             {cta.proof.map((figure, index) => {
               const Icon = proofGlyphs[figure.icon] ?? HomeIcon;
 
@@ -233,7 +237,9 @@ export function CtaBand({
                 >
                   <Icon size={22} className="text-accent-soft" />
                   <p className="m-0 mt-3.5 font-display text-[25px] font-normal leading-none tracking-[-0.02em] nav:text-[29px]">
-                    {figure.value}
+                    {/* Two of the four figures are words rather than numbers;
+                        `Counter` prints those unchanged. */}
+                    <Counter value={figure.value} />
                   </p>
                   <p className="m-0 mt-2.5 text-[14px] leading-[1.4] text-white/55">
                     {figure.label}
@@ -243,7 +249,7 @@ export function CtaBand({
             })}
           </ul>
 
-          <div className="mt-11 rounded-[20px] border border-line-invert bg-white/[0.035] p-5 tab:mt-14 tab:p-8">
+          <div className="reveal mt-11 rounded-[20px] border border-line-invert bg-white/[0.035] p-5 tab:mt-14 tab:p-8">
             <div className="flex items-start gap-5">
               <span className="flex size-14 shrink-0 items-center justify-center rounded-full border border-line-invert-soft text-accent-soft">
                 <CalendarIcon size={22} />
@@ -286,7 +292,7 @@ export function CtaBand({
             ) : null}
           </div>
 
-          <p className="m-0 mt-7 flex items-center gap-3.5 text-[12px] font-medium uppercase tracking-[0.16em] text-white/45">
+          <p className="reveal-soft m-0 mt-7 flex items-center gap-3.5 text-[12px] font-medium uppercase tracking-[0.16em] text-white/45">
             <span aria-hidden className="h-px w-6 bg-white/25" />
             {site.licence.label} · {site.licence.number}
           </p>

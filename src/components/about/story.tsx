@@ -6,6 +6,7 @@ import {
   PinIcon,
   ShieldCheckIcon,
 } from "@/components/ui/icon";
+import { Counter } from "@/components/ui/counter";
 import { MediaPlate } from "@/components/ui/media-plate";
 import { Section, SectionHeading } from "@/components/ui/section";
 import { aboutPage } from "@/content/pages";
@@ -35,7 +36,7 @@ export function AboutStory() {
   return (
     <Section size="default">
       <div className="grid grid-cols-1 items-center gap-14 nav:grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] nav:gap-20 wide:gap-24">
-        <div>
+        <div className="reveal-rows">
           <SectionHeading size={54} className="max-w-[18ch]">
             {story.heading}
           </SectionHeading>
@@ -73,7 +74,7 @@ export function AboutStory() {
             src={story.media.src}
             alt={story.media.alt}
             sizes="(max-width: 900px) 100vw, 52vw"
-            className="aspect-[4/3] w-full"
+            className="reveal-plate aspect-[4/3] w-full"
           />
 
           {/* Stepped over the photograph rather than butted under it. The 1px
@@ -95,7 +96,7 @@ export function AboutStory() {
                     <Icon size={19} />
                   </span>
                   <span className="mt-5 font-display text-[27px] leading-none nav:text-[31px]">
-                    {stat.value}
+                    <Counter value={stat.value} />
                   </span>
                   <span className="mt-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-mist-deep">
                     {stat.label}

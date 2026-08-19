@@ -23,7 +23,7 @@ export function FeatureImage({
 }) {
   return (
     <section className={className}>
-      <div className={cn("group relative w-full overflow-hidden bg-surface", aspect)}>
+      <div className={cn("reveal group relative w-full overflow-hidden bg-surface", aspect)}>
         <MediaPlate
           label={caption ?? alt}
           tone="plate-2"
@@ -35,7 +35,7 @@ export function FeatureImage({
       </div>
 
       {caption ? (
-        <div className={cn("mt-5 flex items-center gap-5", gutter)}>
+        <div className={cn("reveal-soft mt-5 flex items-center gap-5", gutter)}>
           <span aria-hidden className="h-px w-10 bg-line-strong" />
           <span className="text-[12px] font-medium uppercase tracking-[0.14em] text-muted">
             {caption}

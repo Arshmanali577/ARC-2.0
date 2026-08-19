@@ -30,7 +30,7 @@ export function LocationIndex({
       size="tight"
       className={cn("bg-surface", className)}
     >
-      <ol className="m-0 grid list-none grid-cols-1 gap-px bg-line-soft p-0 tab:grid-cols-2 wide:grid-cols-5">
+      <ol className="reveal-group m-0 grid list-none grid-cols-1 gap-px bg-line-soft p-0 tab:grid-cols-2 wide:grid-cols-5">
         {localAreas.map((area) => {
           const isActive = area.slug === activeSlug;
 

@@ -29,7 +29,7 @@ export function AboutValues() {
   return (
     <Section size="default" className="bg-surface">
       <div className="grid grid-cols-1 items-start gap-12 nav:grid-cols-[minmax(0,0.9fr)_minmax(0,2fr)] nav:gap-16 wide:gap-20">
-        <div>
+        <div className="reveal-rows">
           <Eyebrow withRule>{values.eyebrow}</Eyebrow>
           <SectionHeading size={54} className="mt-6 max-w-[20ch]">
             {values.heading}

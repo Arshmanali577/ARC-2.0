@@ -22,7 +22,7 @@ export function Capability() {
         <ServiceRows services={homeServices} />
       </div>
 
-      <div className="mt-12 flex flex-col items-start justify-between gap-7 nav:flex-row nav:items-center nav:gap-16">
+      <div className="reveal-soft mt-12 flex flex-col items-start justify-between gap-7 nav:flex-row nav:items-center nav:gap-16">
         <p className="m-0 max-w-[46ch] text-[17px] leading-[1.65] text-body">
           {capabilitySection.footnote}
         </p>

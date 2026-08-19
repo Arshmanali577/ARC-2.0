@@ -109,7 +109,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
 
           {/* Contents, then sharing, then the article's tags. Sticky so the
               outline stays reachable through a long read. */}
-          <aside className="nav:sticky nav:top-[120px] nav:order-last">
+          <aside className="reveal-fade nav:sticky nav:top-[120px] nav:order-last">
             <ArticleToc blocks={post.blocks} />
 
             <div className="mt-12">

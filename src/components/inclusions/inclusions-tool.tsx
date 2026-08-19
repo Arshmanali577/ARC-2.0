@@ -146,7 +146,7 @@ export function InclusionsTool() {
                   aria-pressed={active}
                   onClick={() => setPackageId(item.id)}
                   className={cn(
-                    "flex flex-col border p-7 text-left transition duration-250 ease-out",
+                    "flex flex-col border p-7 text-left transition duration-250 ease-out active:scale-[0.99]",
                     active
                       ? "border-brand bg-surface"
                       : "border-line hover:border-brand",
@@ -433,7 +433,7 @@ function Choice({
       aria-pressed={active}
       onClick={onClick}
       className={cn(
-        "border px-5 py-3.5 text-[14px] uppercase tracking-[0.12em] transition duration-250 ease-out",
+        "border px-5 py-3.5 text-[14px] uppercase tracking-[0.12em] transition duration-250 ease-out active:scale-[0.98]",
         active
           ? "border-brand bg-brand text-white"
           : "border-line-strong text-brand hover:border-brand",

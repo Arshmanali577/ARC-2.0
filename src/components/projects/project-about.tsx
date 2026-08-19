@@ -21,6 +21,7 @@ import {
   QuoteIcon,
   SofaIcon,
 } from "@/components/ui/icon";
+import { Counter } from "@/components/ui/counter";
 import { Eyebrow, Section, SectionHeading } from "@/components/ui/section";
 import { projectsPage } from "@/content/pages";
 import {
@@ -182,7 +183,9 @@ function ProjectStats({ project }: { project: Project }) {
               {label}
             </dt>
             <dd className="m-0 font-display text-[26px] leading-none text-brand wide:text-[30px]">
-              {value}
+              {/* Bedrooms and bathrooms count from zero; the completion year
+                  rolls the last thirty, because `0 → 2024` reads as a bug. */}
+              <Counter value={String(value)} />
             </dd>
           </div>
         </div>
@@ -225,15 +228,15 @@ export function ProjectAbout({
         <div className="nav:col-start-2 nav:row-start-1">
           {/* The band's heading is the project title below; this stays a
               label so the page keeps one h1 and one h2 per section. */}
-          <Eyebrow as="p" withRule>
+          <Eyebrow as="p" withRule className="reveal-soft">
             {aboutHeading}
           </Eyebrow>
 
-          <SectionHeading size={54} className="mt-6">
+          <SectionHeading size={54} className="reveal-soft mt-6">
             {project.title}
           </SectionHeading>
 
-          <p className="m-0 mt-7 max-w-[62ch] text-[19px] font-light leading-[1.7] text-body nav:text-[20px]">
+          <p className="reveal-soft m-0 mt-7 max-w-[62ch] text-[19px] font-light leading-[1.7] text-body nav:text-[20px]">
             {project.description}
           </p>
 

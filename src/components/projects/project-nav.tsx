@@ -35,7 +35,7 @@ export function ProjectNav({
 
   return (
     <Section as="nav" size="tight" aria-label="Project navigation">
-      <div className="grid grid-cols-1 gap-px border-y border-line bg-line-soft nav:grid-cols-2">
+      <div className="reveal grid grid-cols-1 gap-px border-y border-line bg-line-soft nav:grid-cols-2">
         {previous ? (
           <NavCard project={previous} label={previousLabel} direction="prev" />
         ) : (

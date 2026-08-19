@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { gutter } from "@/components/ui/section";
+import { splitWords, wordsClass } from "@/components/ui/split-text";
 import { maintenancePage } from "@/content/pages";
 import { site } from "@/content/site";
 import { createPageMetadata } from "@/lib/seo";
@@ -20,7 +21,7 @@ export default function MaintenancePage() {
         className="pointer-events-none absolute inset-3 border border-white/12 nav:inset-7"
       />
 
-      <div className={`relative w-full py-[120px] ${gutter}`}>
+      <div className={`enter-stagger relative w-full py-[120px] ${gutter}`}>
         <span className="flex items-center gap-4">
           <span aria-hidden className="h-px w-10 bg-white/45" />
           <span className="text-[12px] font-semibold uppercase tracking-[0.28em] text-mist">
@@ -28,8 +29,10 @@ export default function MaintenancePage() {
           </span>
         </span>
 
-        <h1 className="m-0 mt-7 max-w-[16ch] font-display text-[clamp(29px,9vw,38px)] font-normal leading-[1.04] tracking-[-0.03em] [text-wrap:balance] nav:text-[62px]">
-          {maintenancePage.heading}
+        <h1
+          className={`${wordsClass.enter} m-0 mt-7 max-w-[16ch] font-display text-[clamp(29px,9vw,38px)] font-normal leading-[1.04] tracking-[-0.03em] [text-wrap:balance] nav:text-[62px]`}
+        >
+          {splitWords(maintenancePage.heading, "enter", 120)}
         </h1>
         <p className="m-0 mt-7 max-w-[52ch] text-[19px] font-light leading-[1.7] text-white/72">
           {maintenancePage.body}

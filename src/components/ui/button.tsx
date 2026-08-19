@@ -19,8 +19,14 @@ export type ButtonVariant =
   | "panelSolid" // rounded white row, enquire band's consultation panel
   | "mediaSolid"; // navy block sitting over a photograph
 
+/**
+ * `active:scale-[0.98]` is the press. Tailwind v4 compiles `scale-*` to the
+ * `scale` property and `translate-*` to `translate`, so the press composes with
+ * the lift a variant adds on hover instead of one cancelling the other — and
+ * `transition` covers both.
+ */
 const base =
-  "group/button relative inline-flex items-center gap-3 transition duration-300 ease-out";
+  "group/button relative inline-flex items-center gap-3 transition duration-300 ease-out active:scale-[0.98] active:duration-100";
 
 const variants: Record<ButtonVariant, string> = {
   headerSolid:
@@ -123,7 +129,7 @@ export function UnderlineLink({
     <Link
       href={href}
       className={cn(
-        "group/link inline-flex items-center gap-2.5 whitespace-nowrap border-b pb-1.5 text-[14px] font-semibold uppercase tracking-[0.12em] transition-[border-color,opacity,color] duration-300 ease-out",
+        "group/link inline-flex items-center gap-2.5 whitespace-nowrap border-b pb-1.5 text-[14px] font-semibold uppercase tracking-[0.12em] transition-[border-color,opacity,color] duration-300 ease-out active:scale-[0.99]",
         tone === "light" && "border-white/50 text-white hover:border-white",
         tone === "dark" && "border-brand text-brand hover:opacity-60",
         // The footer's azure treatment: the rule stays dim until the link is

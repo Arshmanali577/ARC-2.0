@@ -28,18 +28,18 @@ export function Practice() {
             <MediaPlate
               {...practice.media}
               sizes="(max-width: 900px) 100vw, 42vw"
-              className="aspect-[4/5] w-full"
+              className="reveal-plate aspect-[4/5] w-full"
             />
           </div>
 
           <div>
-            <p className="m-0 text-[21px] font-light leading-[1.65] text-white/92">
+            <p className="reveal-soft m-0 text-[21px] font-light leading-[1.65] text-white/92">
               {practice.lead}
             </p>
             {practice.body.map((paragraph) => (
               <p
                 key={paragraph}
-                className="m-0 mt-6 text-[18px] leading-[1.75] text-mist-deep"
+                className="reveal-soft m-0 mt-6 text-[18px] leading-[1.75] text-mist-deep"
               >
                 {paragraph}
               </p>
@@ -64,7 +64,7 @@ export function Practice() {
               ))}
             </div>
 
-            <p className="m-0 mt-10 border-t border-line-invert pt-8 text-[16px] leading-[1.75] text-mist-deep">
+            <p className="reveal-soft m-0 mt-10 border-t border-line-invert pt-8 text-[16px] leading-[1.75] text-mist-deep">
               {practice.note}
             </p>
           </div>

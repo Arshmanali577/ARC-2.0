@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { MediaPlate } from "@/components/ui/media-plate";
 import { gutter } from "@/components/ui/section";
+import { splitWords, wordsClass } from "@/components/ui/split-text";
 import { projectsPage } from "@/content/pages";
 import type { Project } from "@/content/projects";
 
@@ -10,8 +11,10 @@ const { backLink } = projectsPage.detail;
 /**
  * The project masthead. Same vocabulary as the homepage hero — bottom-weighted
  * scrim, inset drawing frame, baseline rail — with the photograph given the
- * whole viewport. The specifications deliberately stay in the Project Details
- * rail below rather than being printed twice.
+ * whole viewport, and the same clocked entrance, so arriving on a project
+ * reads as the same movement as arriving anywhere else. The specifications
+ * deliberately stay in the Project Details rail below rather than being
+ * printed twice.
  */
 export function ProjectMasthead({
   project,
@@ -27,7 +30,7 @@ export function ProjectMasthead({
     <section className="relative flex min-h-[560px] flex-col overflow-hidden nav:min-h-[calc(100svh-92px)] nav:max-h-[900px]">
       {/* MediaPlate owns `relative` for `next/image fill`, so the layer that
           takes it out of flow has to be this wrapper. */}
-      <div className="absolute inset-0">
+      <div className="enter-plate absolute inset-0">
         <MediaPlate
           label={project.title.toUpperCase()}
           tone="dark"
@@ -56,7 +59,9 @@ export function ProjectMasthead({
         className="pointer-events-none absolute inset-3 border border-white/12 nav:inset-7"
       />
 
-      <div className={`relative z-10 mt-auto pb-11 pt-[132px] ${gutter}`}>
+      <div
+        className={`enter-stagger relative z-10 mt-auto pb-11 pt-[132px] ${gutter}`}
+      >
         <Link
           href="/projects"
           className="inline-block border-b border-white/40 pb-1.5 text-[13px] font-semibold uppercase tracking-[0.14em] text-white/70 transition-colors duration-300 ease-out hover:border-white hover:text-white"
@@ -71,8 +76,10 @@ export function ProjectMasthead({
           </span>
         </span>
 
-        <h1 className="m-0 mt-7 max-w-[14ch] font-display text-[clamp(33px,10.5vw,44px)] font-normal leading-[1.02] tracking-[-0.03em] text-white [text-wrap:balance] nav:text-[62px] wide:text-[80px]">
-          {project.title}
+        <h1
+          className={`${wordsClass.enter} m-0 mt-7 max-w-[14ch] font-display text-[clamp(33px,10.5vw,44px)] font-normal leading-[1.02] tracking-[-0.03em] text-white [text-wrap:balance] nav:text-[62px] wide:text-[80px]`}
+        >
+          {splitWords(project.title, "enter", 150)}
         </h1>
 
         {/* Where this build sits in the portfolio — the counterpart to the

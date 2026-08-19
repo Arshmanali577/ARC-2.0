@@ -1,6 +1,7 @@
 import type { ElementType, ReactNode } from "react";
 
 import { UnderlineLink } from "@/components/ui/button";
+import { hasWords, splitWords, wordsClass } from "@/components/ui/split-text";
 import { cn } from "@/lib/cn";
 
 /**
@@ -114,24 +115,38 @@ type HeadingProps = {
   children: ReactNode;
   /** Matches the per-section desktop size in the design. */
   size?: 52 | 54;
+  /** Turn the word-by-word reveal off where a heading needs to arrive whole. */
+  words?: boolean;
   className?: string;
 };
 
-/** Section H2: Century Gothic / Questrial, 34px mobile → 52–54px desktop. */
+/**
+ * Section H2: Century Gothic / Questrial, 34px mobile → 52–54px desktop.
+ *
+ * Every section heading on the site reveals word by word as it is scrolled to,
+ * from this one place — so the treatment can never be applied unevenly, and a
+ * band that opts out has to say so. A heading built entirely out of elements
+ * with no text of its own falls back to the block reveal, because there are no
+ * words to walk.
+ */
 export function SectionHeading({
   children,
   size = 52,
+  words = true,
   className,
 }: HeadingProps) {
+  const split = words && hasWords(children);
+
   return (
     <h2
       className={cn(
         "m-0 font-display text-[clamp(27px,8vw,34px)] font-normal leading-[1.1] tracking-[-0.02em] [text-wrap:balance]",
         size === 54 ? "nav:text-[54px] nav:leading-[1.08]" : "nav:text-[52px]",
+        split && wordsClass.scroll,
         className,
       )}
     >
-      {children}
+      {split ? splitWords(children, "scroll") : children}
     </h2>
   );
 }
@@ -174,7 +189,10 @@ export function SectionHeader({
         className,
       )}
     >
-      <div className="max-w-[720px]">
+      {/* `reveal-group` walks its own children, so every band on the site opens
+          in the order it reads — eyebrow, then heading, then lead — from one
+          class here rather than a decision taken again in each section. */}
+      <div className="reveal-group max-w-[720px]">
         <Eyebrow tone={tone === "light" ? "light" : "muted"} withRule>
           {eyebrow}
         </Eyebrow>
@@ -198,7 +216,7 @@ export function SectionHeader({
           href={action.href}
           tone={tone === "light" ? "light" : "dark"}
           withArrow
-          className="shrink-0"
+          className="reveal-soft shrink-0"
         >
           {action.label}
         </UnderlineLink>

@@ -41,7 +41,7 @@ export default function ContactPage() {
 
           <div
             id="enquiry"
-            className="scroll-mt-[120px] bg-surface p-8 nav:p-12 wide:p-14"
+            className="reveal scroll-mt-[120px] bg-surface p-8 nav:p-12 wide:p-14"
           >
             <Eyebrow>{contactPage.form.eyebrow}</Eyebrow>
 

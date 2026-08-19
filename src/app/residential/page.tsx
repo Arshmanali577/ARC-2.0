@@ -25,7 +25,7 @@ export default function ResidentialPage() {
       />
 
       <Section size="default">
-        <ServiceRows services={residentialServices} withAnchors headingLevel={2} />
+        <ServiceRows services={residentialServices} withAnchors headingLevel={2} showArrow={false} />
       </Section>
 
       <Section size="default" className="bg-surface">

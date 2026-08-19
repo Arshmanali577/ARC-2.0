@@ -16,7 +16,7 @@ export function ContactMap() {
   return (
     <Section size="default">
       <div className="grid grid-cols-1 items-center gap-12 nav:grid-cols-[0.82fr_1.18fr] nav:gap-16 wide:gap-20">
-        <div>
+        <div className="reveal-rows">
           <Eyebrow as="h2" withRule>
             {eyebrow}
           </Eyebrow>
@@ -59,7 +59,7 @@ export function ContactMap() {
           </div>
         </div>
 
-        <div className="border border-line">
+        <div className="reveal border border-line">
           <iframe
             src={site.contact.mapEmbed}
             title={`Map showing ${site.name} in ${site.contact.address.locality}`}

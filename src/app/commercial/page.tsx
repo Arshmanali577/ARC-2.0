@@ -21,7 +21,7 @@ export default function CommercialPage() {
       />
 
       <Section size="default">
-        <ServiceRows services={commercialServices} withAnchors headingLevel={2} />
+        <ServiceRows services={commercialServices} withAnchors headingLevel={2} showArrow={false} />
       </Section>
 
       <CtaBand />

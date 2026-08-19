@@ -1,3 +1,4 @@
+import { Counter } from "@/components/ui/counter";
 import { Section } from "@/components/ui/section";
 import { stats as homeStats, type Stat } from "@/content/homepage";
 import { site } from "@/content/site";
@@ -6,6 +7,10 @@ import { site } from "@/content/site";
  * Figures under a drawn rule, aligned to the page gutter. Each cell opens with
  * a hairline so the row reads as a measured scale rather than four boxes — the
  * same marker the process stages use further down the page.
+ *
+ * The three figures count up the first time the row is scrolled to; the
+ * licence cell is a word, not a number, so `Counter` leaves it exactly as it
+ * is rather than trying to find digits in it.
  */
 export function StatsBar({ stats = homeStats }: { stats?: Stat[] }) {
   const cells = [
@@ -25,7 +30,7 @@ export function StatsBar({ stats = homeStats }: { stats?: Stat[] }) {
 
   return (
     <Section as="section" size="tight" className="bg-brand text-white">
-      <div className="reveal-group grid grid-cols-1 gap-x-14 gap-y-12 tab:grid-cols-2 wide:grid-cols-4">
+      <div className="reveal-rows grid grid-cols-1 gap-x-14 gap-y-12 tab:grid-cols-2 wide:grid-cols-4">
         {cells.map((cell, index) => (
           <div
             key={cell.key}
@@ -40,7 +45,7 @@ export function StatsBar({ stats = homeStats }: { stats?: Stat[] }) {
                   : "text-[clamp(34px,11vw,46px)] wide:text-[52px]"
               }`}
             >
-              {cell.value}
+              {cell.accent ? cell.value : <Counter value={cell.value} />}
             </div>
             <div className="mt-4 text-[12px] font-medium uppercase tracking-[0.16em] text-mist-deep">
               {cell.label}

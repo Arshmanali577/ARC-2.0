@@ -40,7 +40,7 @@ export function ProcessBand() {
       />
 
       <div className="relative">
-        <div className="flex flex-col items-center text-center">
+        <div className="reveal-rows flex flex-col items-center text-center">
           <Eyebrow tone="light" withRule>
             {processBand.eyebrow}
           </Eyebrow>
@@ -96,7 +96,7 @@ export function ProcessBand() {
           ))}
         </ol>
 
-        <div className="mt-14 flex justify-center">
+        <div className="reveal-soft mt-14 flex justify-center">
           <UnderlineLink href={processBand.link.href} tone="light" withArrow>
             {processBand.link.label}
           </UnderlineLink>

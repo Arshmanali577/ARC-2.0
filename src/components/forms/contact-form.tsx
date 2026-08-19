@@ -161,7 +161,7 @@ export function ContactForm({ labelledBy }: { labelledBy?: string }) {
       <div className="mt-2 flex flex-col gap-7 nav:flex-row nav:items-center nav:justify-between nav:gap-12">
         <button
           type="submit"
-          className="group/button inline-flex items-center justify-between gap-6 bg-brand px-8 py-[19px] text-[14px] font-semibold uppercase tracking-[0.12em] text-white transition duration-300 ease-out hover:bg-ink"
+          className="group/button inline-flex items-center justify-between gap-6 bg-brand px-8 py-[19px] text-[14px] font-semibold uppercase tracking-[0.12em] text-white transition duration-300 ease-out hover:-translate-y-0.5 hover:bg-ink active:scale-[0.98] active:duration-100"
         >
           <span>{form.submitLabel}</span>
           <ArrowRight className="transition-transform duration-300 ease-out group-hover/button:translate-x-1" />

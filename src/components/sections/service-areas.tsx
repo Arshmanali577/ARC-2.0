@@ -18,7 +18,7 @@ const homeAreas = homeAreaSlugs
 export function ServiceAreas() {
   return (
     <Section className="pb-[92px] pt-16 nav:pb-[128px] nav:pt-20">
-      <div className="flex flex-col items-start justify-between gap-4 border-b border-line pb-6 nav:flex-row nav:items-baseline nav:gap-0">
+      <div className="reveal-soft flex flex-col items-start justify-between gap-4 border-b border-line pb-6 nav:flex-row nav:items-baseline nav:gap-0">
         <Eyebrow>{serviceAreaSection.eyebrow}</Eyebrow>
         <UnderlineLink href={serviceAreaSection.link.href} withArrow>
           {serviceAreaSection.link.label}

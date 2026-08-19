@@ -32,7 +32,7 @@ export function WhyChoose() {
 
   return (
     <Section size="default" className="bg-surface">
-      <div className="flex flex-col items-center text-center">
+      <div className="reveal-rows flex flex-col items-center text-center">
         <Eyebrow withRule>{eyebrow}</Eyebrow>
         <SectionHeading size={52} className="mt-6 max-w-[22ch]">
           {heading}

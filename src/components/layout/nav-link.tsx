@@ -36,15 +36,29 @@ export function NavLink({
       onClick={onNavigate}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "transition-[border-color,color] duration-250 ease-out",
+        "transition-[color,opacity] duration-250 ease-out",
         variant === "bar"
-          ? "whitespace-nowrap border-b pb-[3px]"
+          ? "group/nav relative whitespace-nowrap pb-[3px]"
           : "border-b border-line-soft py-4 text-[14px] font-medium uppercase tracking-[0.08em]",
-        variant === "bar" && (active ? "border-brand" : "border-transparent hover:border-brand"),
         variant === "stacked" && (active ? "text-brand" : "text-brand/70"),
+        variant === "stacked" && "hover:text-brand",
       )}
     >
       {label}
+      {/* The rule under a desktop link is drawn rather than faded in: it wipes
+          from the left on hover and stays drawn on the page you are on. Same
+          1px hairline in the same place as before — only the way it arrives
+          has changed. `scale-x` rather than a width, so it is a compositor
+          transform and never touches the row's layout. */}
+      {variant === "bar" ? (
+        <span
+          aria-hidden
+          className={cn(
+            "pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left bg-brand transition-transform duration-300 ease-out",
+            active ? "scale-x-100" : "scale-x-0 group-hover/nav:scale-x-100",
+          )}
+        />
+      ) : null}
     </Link>
   );
 }

@@ -82,7 +82,7 @@ export default async function LocationDetailPage(
 
       <Section size="default">
         <div className="grid grid-cols-1 items-start gap-14 nav:grid-cols-[1.25fr_1fr] nav:gap-20">
-          <div>
+          <div className="reveal-rows">
             <SectionHeading size={54}>
               {areaCopy.buildingHeading(area.name)}
             </SectionHeading>
@@ -107,7 +107,7 @@ export default async function LocationDetailPage(
 
           {/* The local strengths, read as a schedule rather than a panel of
               marketing bullets. */}
-          <div className="nav:sticky nav:top-[120px]">
+          <div className="reveal-fade nav:sticky nav:top-[120px]">
             <Eyebrow as="h2" withRule>
               {areaCopy.strengthsHeading}
             </Eyebrow>

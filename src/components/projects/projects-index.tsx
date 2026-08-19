@@ -76,7 +76,7 @@ export function ProjectsIndex({
 
   return (
     <div className={className}>
-      <div className="flex flex-col items-start justify-between gap-6 nav:flex-row nav:items-center nav:gap-12">
+      <div className="reveal-soft flex flex-col items-start justify-between gap-6 nav:flex-row nav:items-center nav:gap-12">
         <div
           role="group"
           aria-label="Filter projects by type"
@@ -91,7 +91,7 @@ export function ProjectsIndex({
                 aria-pressed={isActive}
                 onClick={() => setActive(filter.value)}
                 className={cn(
-                  "border px-5 py-3 text-[13px] font-medium uppercase tracking-[0.12em] transition duration-300 ease-out",
+                  "border px-5 py-3 text-[13px] font-medium uppercase tracking-[0.12em] transition duration-300 ease-out active:scale-[0.97]",
                   isActive
                     ? "border-brand bg-brand text-white"
                     : "border-line-strong text-brand hover:border-brand hover:bg-brand hover:text-white",

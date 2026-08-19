@@ -9,7 +9,7 @@ import { localExpertise } from "@/content/homepage";
 export function LocalExpertise() {
   return (
     <Section className="pt-[92px] nav:pt-[128px]">
-      <div className="grid grid-cols-1 gap-10 nav:grid-cols-[1fr_1fr] nav:gap-20">
+      <div className="reveal-rows grid grid-cols-1 gap-10 nav:grid-cols-[1fr_1fr] nav:gap-20">
         <div>
           <Eyebrow withRule>{localExpertise.eyebrow}</Eyebrow>
           <SectionHeading size={54} className="mt-6 max-w-[16ch]">

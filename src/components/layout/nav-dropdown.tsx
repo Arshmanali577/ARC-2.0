@@ -41,10 +41,7 @@ export function NavDropdown({ group }: { group: NavGroup }) {
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((value) => !value)}
-        className={cn(
-          "flex items-center gap-2 whitespace-nowrap border-b pb-[3px] uppercase tracking-[0.08em] transition-[border-color] duration-250 ease-out",
-          open ? "border-brand" : "border-transparent hover:border-brand",
-        )}
+        className="relative flex items-center gap-2 whitespace-nowrap pb-[3px] uppercase tracking-[0.08em]"
       >
         {group.label}
         <ChevronDown
@@ -52,6 +49,15 @@ export function NavDropdown({ group }: { group: NavGroup }) {
           className={cn(
             "transition-transform duration-300 ease-out",
             open && "rotate-180",
+          )}
+        />
+        {/* The same drawn rule as `NavLink`, so a group and a plain link mark
+            themselves identically in the bar. */}
+        <span
+          aria-hidden
+          className={cn(
+            "pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left bg-brand transition-transform duration-300 ease-out",
+            open ? "scale-x-100" : "scale-x-0",
           )}
         />
       </button>
@@ -67,12 +73,20 @@ export function NavDropdown({ group }: { group: NavGroup }) {
         )}
       >
         <ul className="m-0 list-none border border-line-soft bg-white p-0 shadow-plate">
-          {group.children.map((child) => (
+          {group.children.map((child, index) => (
             <li key={child.href} className="border-b border-line-soft last:border-b-0">
               <Link
                 href={child.href}
                 onClick={() => setOpen(false)}
-                className="block px-6 py-4 uppercase tracking-[0.08em] transition-colors duration-250 ease-out hover:bg-surface"
+                /* Each row arrives a beat after the one above it, so the panel
+                   unrolls instead of appearing. The delay is only paid on the
+                   way in — closing, every row leaves together, because a
+                   staggered exit reads as lag. */
+                style={{ transitionDelay: open ? `${60 + index * 45}ms` : "0ms" }}
+                className={cn(
+                  "block px-6 py-4 uppercase tracking-[0.08em] transition duration-300 ease-out hover:bg-surface",
+                  open ? "translate-x-0 opacity-100" : "-translate-x-1 opacity-0",
+                )}
               >
                 {child.label}
               </Link>

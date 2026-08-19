@@ -21,7 +21,7 @@ export function SelectedWork() {
         action={projectsSection.link}
       />
 
-      <ProjectFeature project={lead} index={0} className="mt-16" />
+      <ProjectFeature project={lead} index={0} className="reveal mt-16" />
 
       <div className="reveal-group mt-20 grid grid-cols-1 gap-x-9 gap-y-14 tab:grid-cols-2 nav:grid-cols-3">
         {supporting.map((project, index) => (

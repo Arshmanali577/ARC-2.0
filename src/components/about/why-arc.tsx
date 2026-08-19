@@ -29,7 +29,7 @@ export function AboutWhyArc() {
   return (
     <Section size="default" className="bg-surface">
       <div className="grid grid-cols-1 items-start gap-12 nav:grid-cols-[minmax(0,0.95fr)_minmax(0,1.35fr)] nav:gap-16 wide:gap-24">
-        <div>
+        <div className="reveal-rows">
           <Eyebrow withRule>{whyArc.eyebrow}</Eyebrow>
           <SectionHeading size={54} className="mt-6 max-w-[20ch]">
             {whyArc.heading}

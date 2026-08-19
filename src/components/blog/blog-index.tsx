@@ -40,7 +40,7 @@ export function BlogIndex({
 
   return (
     <>
-      <div className="flex flex-col items-start justify-between gap-6 border-b border-line pb-7 nav:flex-row nav:items-center nav:gap-12">
+      <div className="reveal-soft flex flex-col items-start justify-between gap-6 border-b border-line pb-7 nav:flex-row nav:items-center nav:gap-12">
         <div
           role="group"
           aria-label="Filter articles by category"
@@ -55,7 +55,7 @@ export function BlogIndex({
                 aria-pressed={isActive}
                 onClick={() => setActive(category)}
                 className={cn(
-                  "border px-5 py-3.5 text-[14px] uppercase tracking-[0.12em] transition duration-300 ease-out",
+                  "border px-5 py-3.5 text-[14px] uppercase tracking-[0.12em] transition duration-300 ease-out active:scale-[0.97]",
                   isActive
                     ? "border-brand bg-brand text-white"
                     : "border-line-strong text-brand hover:border-brand hover:bg-brand hover:text-white",
@@ -77,7 +77,7 @@ export function BlogIndex({
 
       {feature ? (
         <>
-          <div className="mt-16">
+          <div className="reveal mt-16">
             <ArticleFeature
               post={feature}
               formattedDate={formattedDates[feature.slug]}

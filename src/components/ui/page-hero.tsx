@@ -2,12 +2,19 @@ import type { ReactNode } from "react";
 
 import { MediaPlate } from "@/components/ui/media-plate";
 import { gutter } from "@/components/ui/section";
+import { hasWords, splitWords, wordsClass } from "@/components/ui/split-text";
 import { cn } from "@/lib/cn";
 
 /**
  * The masthead every internal page opens with. Same navy plate, tint and type
  * scale as the homepage hero, one step down in size so the page H1 never
- * competes with it.
+ * competes with it — and the same entrance: the photograph settles out of a
+ * slight overscale while `enter-stagger` walks the copy column, so every
+ * internal page opens in the same hand as the homepage.
+ *
+ * Anything a page passes as `children` — the About page's action, the Contact
+ * page's channel tiles — is the last child of that column, so it arrives last
+ * without either page having to say so.
  */
 
 const heights = {
@@ -53,6 +60,11 @@ export function PageHero({
   children,
   className,
 }: PageHeroProps) {
+  // A page can pass its H1 as markup — one word in the accent colour, a hard
+  // line break — and `splitWords` walks through those, so the reveal survives
+  // whatever shape the heading is.
+  const splitHeading = hasWords(heading);
+
   return (
     <section
       className={cn(
@@ -63,7 +75,7 @@ export function PageHero({
     >
       {/* MediaPlate owns `relative` for `next/image fill`, so the layer that
           takes it out of flow has to be this wrapper. */}
-      <div className="absolute inset-0">
+      <div className="enter-plate absolute inset-0">
         <MediaPlate
           label={mediaLabel}
           tone="dark"
@@ -102,7 +114,9 @@ export function PageHero({
         className="pointer-events-none absolute inset-3 border border-white/12 nav:inset-7"
       />
 
-      <div className={`relative z-10 pb-[64px] pt-[112px] text-white ${gutter}`}>
+      <div
+        className={`enter-stagger relative z-10 pb-[64px] pt-[112px] text-white ${gutter}`}
+      >
         <span className="flex items-center gap-4">
           <span
             aria-hidden
@@ -121,8 +135,13 @@ export function PageHero({
           </span>
         </span>
 
-        <h1 className="m-0 mt-7 max-w-[18ch] font-display text-[clamp(29px,9vw,38px)] font-normal leading-[1.04] tracking-[-0.03em] [text-wrap:balance] nav:text-[54px] wide:text-[68px]">
-          {heading}
+        <h1
+          className={cn(
+            "m-0 mt-7 max-w-[18ch] font-display text-[clamp(29px,9vw,38px)] font-normal leading-[1.04] tracking-[-0.03em] [text-wrap:balance] nav:text-[54px] wide:text-[68px]",
+            splitHeading && wordsClass.enter,
+          )}
+        >
+          {splitHeading ? splitWords(heading, "enter", 120) : heading}
         </h1>
 
         {divider ? (

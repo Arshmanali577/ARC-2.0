@@ -7,11 +7,16 @@ import type { Block, InlineNode } from "@/lib/markdown";
  * Article typography for the migrated blog posts. Sizes come from the same
  * scale the section components use, set at a comfortable reading measure.
  * Headings carry the anchor id the table of contents links to.
+ *
+ * The blocks reveal one after another as the reader comes down the page, on
+ * the site's own `reveal-rows`. The travel is 14px rather than 26px: a long
+ * read is the one place where a full-height rise on every paragraph would be
+ * felt as an interruption rather than as polish.
  */
 
 export function Prose({ blocks }: { blocks: Block[] }) {
   return (
-    <div className="max-w-[68ch]">
+    <div className="reveal-rows max-w-[68ch]">
       {blocks.map((block, index) => (
         <BlockNode key={index} block={block} first={index === 0} />
       ))}

@@ -28,7 +28,7 @@ export default function ProjectsPage() {
 
       {/* The showcase band's "view all projects" lands here. */}
       <Section id="all-projects" size="default">
-        <h2 className="m-0 font-display text-[22px] font-normal uppercase leading-[1.2] tracking-[0.1em] text-brand nav:text-[26px]">
+        <h2 className="reveal-soft m-0 font-display text-[22px] font-normal uppercase leading-[1.2] tracking-[0.1em] text-brand nav:text-[26px]">
           {projectsPage.index.heading}
         </h2>
 

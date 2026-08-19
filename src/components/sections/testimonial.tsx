@@ -1,5 +1,6 @@
 import { MediaPlate } from "@/components/ui/media-plate";
 import { Section, SectionHeader } from "@/components/ui/section";
+import { splitWords, wordsClass } from "@/components/ui/split-text";
 import { testimonialSection } from "@/content/homepage";
 import { testimonials } from "@/content/testimonials";
 
@@ -18,7 +19,7 @@ export function Testimonial() {
         heading={testimonialSection.heading}
       />
 
-      <figure className="m-0 mt-16 grid grid-cols-1 items-center gap-12 nav:grid-cols-[1fr_1.35fr] nav:gap-16">
+      <figure className="reveal-rows m-0 mt-16 grid grid-cols-1 items-center gap-12 nav:grid-cols-[1fr_1.35fr] nav:gap-16">
         <MediaPlate
           {...testimonialSection.media}
           sizes="(max-width: 900px) 100vw, 40vw"
@@ -27,8 +28,12 @@ export function Testimonial() {
 
         <div>
           <span aria-hidden className="block h-0.5 w-16 bg-brand" />
-          <blockquote className="m-0 mt-9 font-display text-[24px] font-normal leading-[1.4] tracking-[-0.01em] [text-wrap:pretty] nav:text-[32px]">
-            “{lead.quote}”
+          {/* The one paragraph on the site set as display type, so it takes
+              the heading treatment rather than the block reveal. */}
+          <blockquote
+            className={`${wordsClass.scroll} m-0 mt-9 font-display text-[24px] font-normal leading-[1.4] tracking-[-0.01em] [text-wrap:pretty] nav:text-[32px]`}
+          >
+            {splitWords(`“${lead.quote}”`)}
           </blockquote>
           <figcaption className="mt-9 flex items-center gap-4 border-t border-line pt-7">
             <span aria-hidden className="h-0.5 w-11 bg-brand" />
