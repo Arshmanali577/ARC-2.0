@@ -7,7 +7,6 @@
  */
 
 import { localAreas } from "@/content/local-areas";
-import { projects } from "@/content/projects";
 import { site } from "@/content/site";
 
 type PageSeo = {
@@ -82,7 +81,7 @@ export const aboutPage = {
       { icon: "experience", value: site.experience, label: "Years Experience" },
       {
         icon: "projects",
-        value: `${projects.length}`,
+        value: site.projectsDelivered,
         label: "Projects Delivered",
       },
       {
@@ -485,6 +484,8 @@ export const contactPage = {
     email: "Email",
     hours: "Business Hours",
   },
+  /** The chat row under the schedule. Its number and link live in `site.ts`. */
+  whatsapp: "Message us on WhatsApp",
   /** The lit panel that closes the details rail. */
   consultation: {
     heading: "Book a Free Consultation",

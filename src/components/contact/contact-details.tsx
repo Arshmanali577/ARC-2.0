@@ -7,6 +7,7 @@ import {
   MailIcon,
   PhoneIcon,
   PinIcon,
+  WhatsappIcon,
 } from "@/components/ui/icon";
 import { Eyebrow } from "@/components/ui/section";
 import { contactPage } from "@/content/pages";
@@ -106,13 +107,25 @@ export function ContactDetails() {
         ))}
       </dl>
 
+      {/* The one row that opens a conversation rather than stating a fact, so
+          it sits under the schedule rather than in it — but it keeps the same
+          size-11 mark as the rows above, so the column still reads as one
+          list. The mark stays WhatsApp green through the navy hover: a channel
+          that is not recognisable is not doing its job, which is the same
+          reason the enquire band's tile keeps its colour. */}
       <a
         href={site.contact.whatsappHref}
         target="_blank"
         rel="noreferrer"
-        className="group mt-8 flex items-center justify-between gap-8 border border-line-strong px-6 py-5 text-[16px] text-brand transition duration-300 ease-out hover:border-brand hover:bg-brand hover:text-white"
+        className="group mt-8 flex items-center gap-5 border border-line-strong py-5 pl-5 pr-6 text-[16px] text-brand transition duration-300 ease-out hover:border-brand hover:bg-brand hover:text-white"
       >
-        <span>Message us on WhatsApp</span>
+        <span
+          aria-hidden
+          className="social-whatsapp flex size-11 shrink-0 items-center justify-center text-white"
+        >
+          <WhatsappIcon size={22} />
+        </span>
+        <span className="min-w-0 flex-1">{contactPage.whatsapp}</span>
         <ArrowUpRight
           size={18}
           className="shrink-0 transition-transform duration-300 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5"

@@ -76,18 +76,23 @@ export function PageHero({
       {/* MediaPlate owns `relative` for `next/image fill`, so the layer that
           takes it out of flow has to be this wrapper. */}
       <div className="enter-plate absolute inset-0">
-        <MediaPlate
-          label={mediaLabel}
-          tone="dark"
-          src={image}
-          alt={imageAlt}
-          position={imagePosition}
-          priority
-          align="end"
-          labelPadding={20}
-          sizes="100vw"
-          className="h-full w-full"
-        />
+        {/* The drift lives on a layer of its own: `enter-plate` animates `scale`
+            here on the clock, and two utilities on one element would overwrite
+            each other's `animation` rather than compose. */}
+        <div className="parallax-plate h-full w-full">
+          <MediaPlate
+            label={mediaLabel}
+            tone="dark"
+            src={image}
+            alt={imageAlt}
+            position={imagePosition}
+            priority
+            align="end"
+            labelPadding={20}
+            sizes="100vw"
+            className="h-full w-full"
+          />
+        </div>
       </div>
 
       {/* Same bottom-weighted scrim as the homepage hero and the project

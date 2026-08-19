@@ -178,6 +178,49 @@
     );
 }
 
+/* Why-choose band ------------------------------------------------------------
+   The deepest navy again, but lit from the top left in the brass the band's
+   numerals and glyphs are drawn in — so the light in the band and the accent
+   picking out its content are the same colour, and the four cells read as
+   sitting in one pool rather than on a flat rectangle. */
+@utility choose-surface {
+  background-color: var(--color-ink);
+  background-image:
+    radial-gradient(
+      116% 78% at 10% -12%,
+      rgba(184, 133, 63, 0.17),
+      transparent 62%
+    ),
+    radial-gradient(
+      82% 86% at 94% 110%,
+      rgba(11, 58, 105, 0.62),
+      transparent 72%
+    );
+}
+
+/* Pointer light --------------------------------------------------------------
+   The moving highlight `PointerGlow` casts. The position arrives as two custom
+   properties written straight to the element by a pointer handler, so the only
+   thing that changes per frame is a gradient origin — no re-render, no layout,
+   and the colour still lives here rather than in a component.
+
+   Two grounds, one idea: brass on navy, brand navy on a light surface. */
+@utility pointer-lit {
+  background-image: radial-gradient(
+    260px circle at var(--glow-x, 50%) var(--glow-y, 0%),
+    rgba(211, 168, 106, 0.2),
+    transparent 68%
+  );
+}
+
+@utility pointer-lit-soft {
+  background-image: radial-gradient(
+    220px circle at var(--glow-x, 50%) var(--glow-y, 0%),
+    rgba(0, 43, 92, 0.075),
+    transparent 70%
+  );
+}
+
 /* Draughting paper. A 72px grid at the threshold of visibility, masked so it
    only ever surfaces near the top edge and dissolves before it reaches the
    copy underneath. */
@@ -269,6 +312,30 @@
   background-image: linear-gradient(140deg, #ff5a5f 0%, #e82f45 50%, #b81d30 100%);
 }
 
+/* Chat button ----------------------------------------------------------------
+   The ring behind the floating WhatsApp disc. A slow, shallow breath — enough
+   that the button is noticed on a long page, small enough that it is never the
+   thing being watched. Off under reduced motion, like every other movement
+   here; the button itself is unchanged. */
+@keyframes whatsapp-pulse {
+  0%,
+  70%,
+  100% {
+    opacity: 0;
+    scale: 1;
+  }
+  35% {
+    opacity: 0.45;
+    scale: 1.35;
+  }
+}
+
+@utility whatsapp-pulse {
+  @media (prefers-reduced-motion: no-preference) {
+    animation: whatsapp-pulse 3.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  }
+}
+
 /* Scroll reveal ----------------------------------------------------------- */
 
 /* Two deliberate details here:
@@ -291,9 +358,28 @@
   }
 }
 
-/* Starts part-way up rather than at zero: a route change still reads as a
-   transition, but the first paint of a cold load is never invisible, so this
-   costs nothing against LCP. */
+/* The route change, and the gallery lightbox's own entrance. Starts part-way up
+   rather than at zero: a navigation still reads as a transition, but the first
+   paint of a cold load is never invisible, so this costs nothing against LCP.
+
+   Opacity only, and that is not a matter of taste — it was measured. Adding a
+   `translateY` that settles on `transform: none` looks safe, because every other
+   keyframe in this stylesheet ends that way for exactly this reason. It is not:
+   a *finished* animation still resolves its filled end value through the
+   transform interpolation, so the computed style is `matrix(1, 0, 0, 1, 0, 0)`
+   rather than the keyword `none` — an identity matrix, but a transform all the
+   same, and therefore a containing block that never goes away.
+
+   That is survivable on a card. It is not survivable here. `page-enter` wraps
+   every route, and the gallery lightbox is deliberately rendered inline rather
+   than through a portal, so a `fixed` overlay inside this wrapper stops being
+   fixed to the viewport: probed on `/contact`, an element at `top: 0` inside a
+   transformed `.page-enter` sits at `-958px` once the page has been scrolled
+   1200px. The route change gets its upward motion from the content instead —
+   `enter-stagger` on a masthead, and the reveal observer firing immediately for
+   anything already above the fold.
+
+   If you are about to add a transform here, add it to the children. */
 @keyframes fade-in {
   from {
     opacity: 0.55;
@@ -491,10 +577,124 @@
   }
 }
 
-/* Opacity only — safe on any wrapper, including ones holding sticky children. */
+/* Parallax ------------------------------------------------------------------
+   The one piece of motion on the site that is about depth rather than about
+   arrival: a photograph drifts against the page as its frame crosses the
+   viewport, so a masthead sits *behind* the copy over it rather than on the
+   same plane.
+
+   Three decisions keep it cheap and keep it subtle:
+
+    1. **`translate`, not a transform.** The plates this goes near already
+       carry a hover zoom that Tailwind compiles to `scale`, and `enter-plate`
+       animates `scale` on the wrapper above it. Writing the drift to
+       `translate` means all three compose instead of the last one winning —
+       the same reason `plate-settle` is written the way it is.
+    2. **The overscale is static, and it is the smallest one that works.** The
+       drift needs headroom to move into or the frame shows its own ground at
+       the edges. `1.08` leaves 4% top and bottom for a 3.5% drift, which
+       spends the whole budget — do not raise `--drift` without raising the
+       scale with it. Much larger and the plate is being re-cropped, which is
+       a design change rather than motion.
+    3. **A phone gets less of it.** The same percentage reads as a far larger
+       movement on a 4:3 plate at 390px wide, and a phone is the case where
+       the scroll is least likely to be a smooth one.
+
+   Goes on a wrapper of its own rather than on the plate itself, so the plate
+   keeps its own hover zoom and its own `relative` for `next/image fill`. */
+@keyframes plate-drift {
+  from {
+    translate: 0 calc(var(--drift) * -1);
+  }
+  to {
+    translate: 0 var(--drift);
+  }
+}
+
+@utility parallax-plate {
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      --drift: 2%;
+      scale: 1.05;
+      animation: plate-drift linear both;
+      animation-timeline: view();
+      /* The whole time the frame is on screen, so the drift is never in a
+         hurry — a range tied to `entry` would spend the movement in the first
+         moment and then sit still for the rest of the section. */
+      animation-range: cover 0% cover 100%;
+
+      @media (width >= 901px) {
+        --drift: 3.5%;
+        scale: 1.08;
+      }
+    }
+  }
+}
+
+/* Header --------------------------------------------------------------------
+   The bar itself does not change: the design's white, its hairline and its
+   type are the same at the top of the page as they are a thousand pixels down,
+   and nothing here touches its height — a sticky element that resizes itself
+   reflows the whole document under it on every frame of a scroll.
+
+   What changes is that once the page has moved, the bar starts casting onto
+   the content passing beneath it, so it reads as a layer above the page rather
+   than as a strip printed on it.
+
+   Drawn as a gradient on `::after` and animated with opacity alone rather than
+   as a `box-shadow` on the header: a shadow would repaint a full-width,
+   backdrop-blurred, sticky element continuously, which is the one thing in
+   this stylesheet worth being careful about. An opacity on a fixed-size layer
+   is a compositor job and costs nothing.
+
+   `scroll()`, not `view()` — this answers to the document's scroll position,
+   because the header itself never leaves the viewport for a `view()` timeline
+   to measure. */
+@keyframes header-cast {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility header-cast {
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    height: 22px;
+    pointer-events: none;
+    opacity: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 26, 56, 0.09),
+      rgba(0, 26, 56, 0)
+    );
+  }
+
+  @supports (animation-timeline: scroll()) {
+    @media (prefers-reduced-motion: no-preference) {
+      &::after {
+        animation: header-cast linear both;
+        animation-timeline: scroll(root block);
+        /* Fully cast by the time the first band is under the bar. */
+        animation-range: 0 90px;
+      }
+    }
+  }
+}
+
+/* Quick on purpose: this runs while the visitor is waiting for the page they
+   asked for, so it is the one animation on the site tuned to be over rather
+   than to be noticed. The curve is the site's entrance ease, shared with
+   `enter-stagger` and the reveals; opacity only, for the reason set out against
+   `fade-in` above. */
 @utility page-enter {
   @media (prefers-reduced-motion: no-preference) {
-    animation: fade-in 300ms ease-out both;
+    animation: fade-in 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 }
 
@@ -811,4 +1011,185 @@
 @utility feature-progress {
   transform-origin: left;
   animation: feature-progress linear both;
+}
+
+/* One-shot reveals ------------------------------------------------------------
+   Everything above this point defines the reveals on `animation-timeline:
+   view()`, which is scroll-*linked*: the animation's progress is the element's
+   position, so scrolling back up runs it in reverse and the content fades out
+   again. That is the wrong reading for an arrival — an element should arrive
+   once and then be part of the page.
+
+   This block is the other mode. When `lib/reveal-script.ts` has run it puts
+   `data-reveal="on"` on `<html>` before first paint, and every rule below takes
+   over: the `animation` shorthand resets `animation-timeline` back to `auto`,
+   so the same keyframes now run on the clock, held at their first frame by
+   `animation-play-state: paused`. The observer stamps `data-seen` the first time
+   an element crosses into view, that flips the run to `running`, and because it
+   is a normal time-based animation with `both` fill it finishes and stays
+   finished. There is nothing left to re-trigger.
+
+   Why it is written as an override rather than as a rewrite of the utilities:
+
+    - **The two modes share one set of keyframes.** `reveal-in`, `word-in`,
+      `plate-in` and the rest are unchanged, so a browser that never runs the
+      script still gets the scroll-linked reveal it always did, and the two
+      paths cannot drift apart.
+    - **It survives a browser with no `view()` support.** Each rule names its
+      own `animation-name`, so the JS path does not depend on the `@supports`
+      block above it matching.
+    - **Unlayered, so it wins.** `@utility` compiles into `@layer utilities`;
+      these rules sit outside every layer, which beats a layered declaration
+      regardless of selector specificity.
+
+   Untouched by any of this: `rail-draw`, `plate-settle`, `parallax-plate` and
+   `header-cast`. Those are continuous — they measure the scroll rather than
+   announce an arrival — and tracking it in both directions is the point.
+
+   The `prefers-reduced-motion` guard is still here as well as in the script, so
+   a visitor who turns reduced motion on mid-session is covered by the
+   stylesheet even though the attribute is already set. */
+
+:root {
+  /* Long enough to read as a movement, short enough that scrolling never waits
+     on it. The curve is the site's existing entrance ease — the same one
+     `enter-stagger`, `enter-plate` and `feature-rise` use, so the scroll and
+     the masthead move in the same hand. */
+  --reveal-duration: 620ms;
+  --reveal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* One step of a staggered group. A grid of four cards therefore finishes
+     240ms after the first one starts — a sequence, not a queue. */
+  --reveal-step: 80ms;
+
+  /* Words run far tighter than cards. A heading is read as one line, so the
+     stagger has to be quick enough to look like the line being written rather
+     than like each word being placed. `splitWords` multiplies this by the word's
+     index, capped, so a long heading still lands inside the same window. */
+  --reveal-word-step: 38ms;
+}
+
+/* A phone runs the same reveals, but a shorter stagger: the same 80ms step over
+   a list that is one column rather than three turns a group into a visible
+   waiting line, and a low-end device is where a long tail of overlapping
+   animations is most likely to drop frames. */
+@media (width < 901px) {
+  :root {
+    --reveal-duration: 520ms;
+    --reveal-step: 45ms;
+    --reveal-word-step: 26ms;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* -- Single elements -- */
+  [data-reveal="on"] .reveal {
+    animation: reveal-in var(--reveal-duration) var(--reveal-ease) both paused;
+  }
+
+  [data-reveal="on"] .reveal-soft {
+    animation: reveal-in-soft var(--reveal-duration) var(--reveal-ease) both
+      paused;
+  }
+
+  [data-reveal="on"] .reveal-fade {
+    animation: fade-in-full var(--reveal-duration) var(--reveal-ease) both
+      paused;
+  }
+
+  [data-reveal="on"] .reveal-plate {
+    animation: plate-in var(--reveal-duration) var(--reveal-ease) both paused;
+  }
+
+  [data-reveal="on"] .reveal-left {
+    animation: slide-in-left var(--reveal-duration) var(--reveal-ease) both
+      paused;
+  }
+
+  [data-reveal="on"] .reveal-right {
+    animation: slide-in-right var(--reveal-duration) var(--reveal-ease) both
+      paused;
+  }
+
+  [data-reveal="on"] .reveal-marker {
+    animation: marker-pop var(--reveal-duration) var(--reveal-ease) both paused;
+  }
+
+  [data-reveal="on"] .reveal-lift {
+    animation: lift-in var(--reveal-duration) var(--reveal-ease) both paused;
+  }
+
+  [data-reveal="on"] :is(.reveal, .reveal-soft, .reveal-fade, .reveal-plate,
+      .reveal-left, .reveal-right, .reveal-marker, .reveal-lift)[data-seen] {
+    animation-play-state: running;
+  }
+
+  /* -- Groups --
+     The element the observer watches is the group; the animation is on its
+     children, and the stagger is a delay per child. Same exclusion as the
+     scroll-linked version above: a child that reveals its own words is already
+     animating, and running a block reveal underneath it doubles the movement.
+
+     `:where(:not(…))` rather than a bare `:not(…)`, and that is load-bearing.
+     These two rules use the `animation` shorthand, so they declare *every*
+     animation longhand — including `animation-delay` and
+     `animation-play-state`. The rules under them that stagger the children and
+     the rule that starts them therefore have to outrank these, and a bare
+     `:not(.reveal-words):not(.enter-words)` adds two classes' worth of
+     specificity that would put this rule on top instead: the children would be
+     stapled to `paused` with a zero delay, which is to say they would never
+     reveal and never stagger. `:where()` contributes nothing, so the base sits
+     at (0,2,0) and everything below it wins by selector alone. */
+  [data-reveal="on"]
+    .reveal-group
+    > *:where(:not(.reveal-words)):where(:not(.enter-words)) {
+    animation: reveal-in var(--reveal-duration) var(--reveal-ease) both paused;
+  }
+
+  [data-reveal="on"]
+    .reveal-rows
+    > *:where(:not(.reveal-words)):where(:not(.enter-words)) {
+    animation: reveal-in-soft var(--reveal-duration) var(--reveal-ease) both
+      paused;
+  }
+
+  /* Capped at the fourth child for a grid and the fifth for a list, matching
+     the ranges the scroll-linked version uses. Past the cap everything shares
+     the last delay: a twelve-card grid must not have its last card waiting
+     most of a second, and by that point the sequence has already read. */
+  [data-reveal="on"] :is(.reveal-group, .reveal-rows) > *:nth-child(2) {
+    animation-delay: var(--reveal-step);
+  }
+
+  [data-reveal="on"] :is(.reveal-group, .reveal-rows) > *:nth-child(3) {
+    animation-delay: calc(var(--reveal-step) * 2);
+  }
+
+  [data-reveal="on"] .reveal-group > *:nth-child(n + 4) {
+    animation-delay: calc(var(--reveal-step) * 3);
+  }
+
+  [data-reveal="on"] .reveal-rows > *:nth-child(4) {
+    animation-delay: calc(var(--reveal-step) * 3);
+  }
+
+  [data-reveal="on"] .reveal-rows > *:nth-child(n + 5) {
+    animation-delay: calc(var(--reveal-step) * 4);
+  }
+
+  [data-reveal="on"] :is(.reveal-group, .reveal-rows)[data-seen] > * {
+    animation-play-state: running;
+  }
+
+  /* -- Headings --
+     `splitWords` writes each word's own `animation-delay` as an inline style,
+     which outranks the shorthand's implicit `0s` here — so the per-word stagger
+     is still computed on the server and still costs nothing at runtime. */
+  [data-reveal="on"] .reveal-words > [data-word] {
+    animation: word-in var(--reveal-duration) var(--reveal-ease) both paused;
+  }
+
+  [data-reveal="on"] .reveal-words[data-seen] > [data-word] {
+    animation-play-state: running;
+  }
 }

@@ -17,7 +17,8 @@ export type ButtonVariant =
   | "actionOutline" // outlined full-width row, enquire band
   | "cardSolid" // rounded navy row, foot of a floating card
   | "panelSolid" // rounded white row, enquire band's consultation panel
-  | "mediaSolid"; // navy block sitting over a photograph
+  | "mediaSolid" // navy block sitting over a photograph
+  | "brassSolid"; // brass block, the review band's single action
 
 /**
  * `active:scale-[0.98]` is the press. Tailwind v4 compiles `scale-*` to the
@@ -43,6 +44,13 @@ const variants: Record<ButtonVariant, string> = {
   // block would read as a foreign object sitting inside one.
   cardSolid:
     "w-full justify-center rounded-full bg-brand px-7 py-[17px] text-[13px] font-semibold uppercase tracking-[0.14em] text-white shadow-plate hover:-translate-y-0.5 hover:bg-ink hover:shadow-plate-strong",
+  // The one brass button on the site. It closes the review band, where every
+  // other mark — the quote rule, the eyebrow, the name — is already brass, and
+  // a white button would be the only cold thing in the block. Ink rather than
+  // white for the label: brass is a mid tone, and white on it does not clear
+  // AA at this size.
+  brassSolid:
+    "bg-gold px-8 py-[17px] text-[13px] font-semibold uppercase tracking-[0.14em] text-ink hover:-translate-y-0.5 hover:bg-gold-soft",
   // Sits on a photograph rather than on a page ground, so it carries a
   // hairline of its own: without one the navy block dissolves into the scrim
   // wherever the image behind it happens to be dark.

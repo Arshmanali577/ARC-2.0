@@ -11,7 +11,7 @@ import { headerCta, isNavGroup, primaryNav } from "@/content/site";
 export function SiteHeader() {
   return (
     <header
-      className={`sticky top-0 z-20 flex items-center justify-between gap-5 border-b border-line-soft bg-white/94 py-[22px] backdrop-blur-[10px] ${gutter}`}
+      className={`header-cast sticky top-0 z-20 flex items-center justify-between gap-5 border-b border-line-soft bg-white/94 py-[22px] backdrop-blur-[10px] ${gutter}`}
     >
       <Link href="/" aria-label="ARC Builders — home">
         <Wordmark />

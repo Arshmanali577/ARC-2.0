@@ -61,8 +61,11 @@ export function Section({
 type EyebrowProps = {
   children: ReactNode;
   /** `brass` picks the rule out in the journey's stage colour, leaving the
-   *  label itself in brand navy — the treatment the portfolio bands open on. */
-  tone?: "muted" | "light" | "brass";
+   *  label itself in brand navy — the treatment the portfolio bands open on.
+   *  `gold` takes the label into that colour as well: the homepage's own
+   *  treatment, where the eyebrow is the only thing labelling a band and has
+   *  to carry it on its own. */
+  tone?: "muted" | "light" | "brass" | "gold";
   /** Draws the short hairline tick the homepage bands lead with. */
   withRule?: boolean;
   /** Promote to a heading when the eyebrow is what labels a block of content. */
@@ -85,6 +88,7 @@ export function Eyebrow({
         tone === "light" && "text-mist",
         tone === "muted" && "text-muted",
         tone === "brass" && "text-brand",
+        tone === "gold" && "text-gold",
       )}
     >
       {children}
@@ -104,6 +108,7 @@ export function Eyebrow({
           tone === "light" && "bg-line-invert-hero",
           tone === "muted" && "bg-line-strong",
           tone === "brass" && "bg-gold",
+          tone === "gold" && "bg-gold",
         )}
       />
       {label}

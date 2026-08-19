@@ -31,18 +31,23 @@ export function ProjectMasthead({
       {/* MediaPlate owns `relative` for `next/image fill`, so the layer that
           takes it out of flow has to be this wrapper. */}
       <div className="enter-plate absolute inset-0">
-        <MediaPlate
-          label={project.title.toUpperCase()}
-          tone="dark"
-          src={project.heroImage}
-          video={project.heroVideo}
-          alt={project.title}
-          priority
-          align="end"
-          labelPadding={20}
-          sizes="100vw"
-          className="h-full w-full"
-        />
+        {/* The drift lives on a layer of its own: `enter-plate` animates `scale`
+            here on the clock, and two utilities on one element would overwrite
+            each other's `animation` rather than compose. */}
+        <div className="parallax-plate h-full w-full">
+          <MediaPlate
+            label={project.title.toUpperCase()}
+            tone="dark"
+            src={project.heroImage}
+            video={project.heroVideo}
+            alt={project.title}
+            priority
+            align="end"
+            labelPadding={20}
+            sizes="100vw"
+            className="h-full w-full"
+          />
+        </div>
       </div>
 
       <div

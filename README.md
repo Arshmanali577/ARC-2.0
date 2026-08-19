@@ -22,7 +22,7 @@ npm run typecheck
 
 | Route                 | Source of content                                   |
 | --------------------- | --------------------------------------------------- |
-| `/`                   | `content/homepage.ts`                                |
+| `/`                   | `content/homepage.ts` — approach, featured, why, services, process, locations, reviews |
 | `/projects`           | `content/projects.ts` (12 projects)                  |
 | `/projects/[slug]`    | ” — overview, specifications, full gallery           |
 | `/residential`        | `content/services.ts` + `content/pages.ts`           |
@@ -47,7 +47,10 @@ src/
 │  ├─ sitemap.ts · robots.ts
 ├─ components/
 │  ├─ layout/            site-header · site-footer · mobile-nav · nav-dropdown
-│  ├─ sections/          The homepage bands, top to bottom · cta-band (all pages)
+│  ├─ sections/          The homepage bands, top to bottom: hero · approach ·
+│  │                     why-arc · services · process-steps · locations ·
+│  │                     reviews · cta-band (closes every page) ·
+│  │                     process-band (/contact)
 │  ├─ projects/          featured-projects · projects-index (client) ·
 │  │                     project-masthead · project-gallery · project-nav
 │  ├─ about/             story · values
@@ -57,9 +60,10 @@ src/
 │  │                     article-meta · article-toc
 │  ├─ contact/           contact-details · contact-map
 │  ├─ forms/ · inclusions/           The remaining client components
-│  └─ ui/                button · feature-image · icon · json-ld · media-plate · page-hero ·
-│                        project-card · project-feature · prose · section ·
-│                        service-rows · wordmark
+│  └─ ui/                button · counter · feature-image · icon · json-ld ·
+│                        magnetic · media-plate · page-hero · pointer-glow ·
+│                        pointer-label · project-card · project-feature ·
+│                        prose · section · service-rows · split-text · wordmark
 ├─ content/              ⭐ All copy and data. No prose lives in a component.
 │  ├─ site.ts            Brand, contact details, licence, navigation
 │  ├─ homepage.ts        Homepage copy, section by section
@@ -68,7 +72,8 @@ src/
 │  ├─ local-areas.ts · inclusions.ts
 │  └─ blog/*.md          The original post files, unchanged
 └─ lib/                  blog.ts (build-time reader) · markdown.ts · schema.ts ·
-                         seo.ts · cn.ts
+                         seo.ts · cn.ts · reveal-script.ts (the inline
+                         head script that makes the scroll reveals one-shot)
 ```
 
 The two starred files are where almost every routine change belongs.
@@ -173,8 +178,13 @@ almost every layout on the site — reach for one before inventing a fourth:
 
 Supporting conventions:
 
-- Every band opens with `SectionHeader` (eyebrow → heading → lead → action),
-  which is what keeps the vertical rhythm identical section to section.
+- A band with a heading opens with `SectionHeader` (eyebrow → heading → lead →
+  action). The homepage's later bands are labelled by an eyebrow alone, on the
+  same rule: `Eyebrow tone="gold" as="h2"` on one edge, an `UnderlineLink` on
+  the other. Both keep the vertical rhythm identical section to section.
+- **Brass is the homepage's marker**, and only a marker: the eyebrow, the index
+  numerals, the glyphs and the review band's single button. Anything that is a
+  surface — a band, a card, a button doing real work elsewhere — stays navy.
 - Vertical rhythm comes from `Section`'s `size` prop, not per-page padding.
 - Images are cropped with `aspect-*`, never a fixed height, so a row of media
   keeps its proportions at every breakpoint. A grid of frames uses **one**
@@ -204,11 +214,34 @@ Supporting conventions:
   `LocationIndex` on /locations and every area page. Both are built only from
   names the content already holds, and their cell counts divide cleanly at
   every breakpoint so no row is left with an orphan.
-- Motion is CSS-only. Every utility lives in `globals.css`, and all of them are
-  wrapped in `@supports (animation-timeline: view())` and a
-  `prefers-reduced-motion` guard — browsers without support, and visitors who
-  asked for less motion, get the content in place. Do not reach for an
-  IntersectionObserver to do this.
+- Motion is CSS-only: every keyframe and every utility lives in `globals.css`,
+  and there is no animation library. The reveals run in one of two modes off the
+  same keyframes.
+
+  **One-shot (what ships).** `lib/reveal-script.ts` is a few hundred bytes of
+  blocking inline script in `<head>`. It sets `data-reveal="on"` on `<html>`
+  before first paint — which is what hides an unseen element — and hands every
+  reveal to a single `IntersectionObserver` that stamps `data-seen` the first
+  time it arrives, then drops it. The rules under `[data-reveal="on"]` at the
+  foot of `globals.css` reset the timeline to `auto`, so the same keyframes run
+  on the clock for `--reveal-duration` and hold at their first frame until the
+  stamp lands. An element therefore arrives **once** and stays arrived.
+
+  **Scroll-linked (the fallback).** With the script absent the utilities run as
+  written, on `animation-timeline: view()`, wrapped in `@supports` and a
+  `prefers-reduced-motion` guard. Progress tracks the scroll, so a reveal plays
+  backwards on the way back up — acceptable as a fallback, which is why the
+  script exists.
+
+  It is an inline script rather than a client component on purpose: set before
+  paint, nothing is ever painted visible and then snatched back, and because the
+  same script both hides and reveals, there is no arrangement in which content
+  is stranded at `opacity: 0`. JavaScript off, blocked or broken means the
+  attribute is never set and the page renders in place.
+
+  Timing is three tokens on `:root` — `--reveal-duration`, `--reveal-step`
+  (one child of a staggered group) and `--reveal-word-step` — all shortened
+  under 901px. Change the feel there, not on a utility.
 
   | Utility | Use it on |
   | --- | --- |
@@ -224,6 +257,10 @@ Supporting conventions:
   | `enter-plate` | a masthead photograph; scale only, never opacity |
   | `page-enter` | the route-change fade, applied once in `app/template.tsx` |
 
+  Continuous scroll effects are **not** part of this and stay scroll-linked in
+  both modes, because tracking the scroll is the point of them: `rail-draw`,
+  `plate-settle`, `parallax-plate`, `header-cast`.
+
 - **Scroll or clock, and the choice is not taste.** A `view()` timeline
   resolves straight to its end state for anything already on screen when the
   page paints, so a masthead would simply never animate. That is the whole
@@ -232,6 +269,21 @@ Supporting conventions:
   wrapper holding a sticky rail — use `reveal-fade` there. See the comment
   above the keyframes in `globals.css` for the two constraints that keep these
   from breaking sticky positioning and card hover states.
+- **A finished transform is not `transform: none`.** Every keyframe here ends on
+  `none`, but a filled animation resolves that through transform interpolation,
+  so the computed style is `matrix(1, 0, 0, 1, 0, 0)` — an identity matrix, and
+  still a containing block. Harmless on a card; fatal on a wrapper holding
+  `position: fixed`. It is why `page-enter` is opacity only (the gallery
+  lightbox is rendered inline, not through a portal, and a transform on that
+  wrapper drags its `fixed` overlay off screen by exactly the scroll offset) and
+  why `reveal-fade` exists. Before putting a travelling reveal on a wrapper,
+  check what is `fixed` or `sticky` underneath it.
+- The one-shot rules use `:where(:not(…))` where the scroll-linked ones use a
+  bare `:not(…)`. That is load-bearing, not tidiness: those rules use the
+  `animation` shorthand, which declares `animation-delay` and
+  `animation-play-state` too, so the stagger and the `running` flip below them
+  have to win on specificity. A bare `:not()` would pin every group child to
+  `paused` at zero delay — which is to say, invisible for ever.
 - **Headings reveal their words; body copy does not.** `splitWords` in
   `ui/split-text.tsx` renders one span per word with its own inline
   `animation-range` / `animation-delay`, so the stagger is computed on the
@@ -241,14 +293,32 @@ Supporting conventions:
 - A group never animates a child that reveals its own words: `reveal-group`,
   `reveal-rows` and `enter-stagger` all exclude `.reveal-words` /
   `.enter-words`, or the block and the words would run on top of each other.
-- **Two components are client-side, and only two.** `ui/counter.tsx` counts a
-  figure up the first time it is scrolled to — the number has to change, so CSS
-  cannot do it. It renders the finished value on the server, only ever winds
-  back an element that is still below the fold, leaves a non-numeric value
-  (`Licensed`, `QBCC`) alone, and always lands on the exact target even if the
-  frame clock is starved. `ui/magnetic.tsx` leans an action towards the cursor,
-  and is deliberately limited to a hero's primary — it is off entirely for
-  `(hover: none)` and for reduced motion.
+- **Motion that answers the pointer is a separate, smaller set**, in `ui/`:
+  `counter` · `magnetic` · `pointer-glow` · `pointer-label`. Every one of them
+  is a client component, and every one obeys the same three rules — gated on
+  `(hover: hover) and (pointer: fine)`, off under `prefers-reduced-motion`, and
+  written straight to the node from a pointer handler with no state and no
+  re-render, so a pointer move costs one style write rather than a React pass.
+
+  | Component | What it does | Where it is used |
+  | --- | --- | --- |
+  | `Counter` | counts a figure up the first time it is scrolled to | approach figures, enquire-band proof |
+  | `Magnetic` | leans one action towards the cursor | hero primary, review arrows and CTA |
+  | `PointerGlow` | a soft light that tracks the cursor across a card | approach figures, why-arc cells, process stages, suburb tiles |
+  | `PointerLabel` | a disc riding the cursor, carrying one word | the services frame; available on the featured carousel via `pointerHint` |
+
+  `Counter` is the one exception to "no observer": the number itself has to
+  change, so CSS cannot do it. It renders the finished value on the server,
+  only ever winds back an element still below the fold, leaves a non-numeric
+  value (`Licensed`, `QBCC`) alone, and always lands on the exact target even
+  if the frame clock is starved.
+- **Restraint is the point.** A page where everything follows the pointer reads
+  as a demo rather than as a building company: one glow per band, one magnetic
+  action per view, and a label only where the affordance is not already written
+  somewhere on screen.
+- Padding never goes on an `<svg>` sized by its own `width`/`height`
+  attributes. Preflight puts every element in `border-box`, so the padding eats
+  the drawing instead of the box around it — put the spacing on a wrapper.
 - `MediaPlate`'s `className` sizes the plate and must not carry a position
   utility — it owns `relative` for `next/image fill`. Position the wrapper.
 

@@ -3,8 +3,10 @@ import { Inter, Questrial } from "next/font/google";
 
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { WhatsappFloat } from "@/components/layout/whatsapp-float";
 import { allServices } from "@/content/services";
 import { defaultKeywords, serviceAreaNames, site } from "@/content/site";
+import { revealScript } from "@/lib/reveal-script";
 import { absoluteUrl } from "@/lib/seo";
 
 import "./globals.css";
@@ -105,7 +107,23 @@ const organisationSchema = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-AU" className={`${inter.variable} ${questrial.variable}`}>
+    <html
+      lang="en-AU"
+      /* `globals.css` sets `scroll-behavior: smooth` so an in-page anchor
+         glides. Next 16 no longer overrides that during a route change unless
+         this attribute says to: without it the router's scroll-to-top is
+         *animated*, which drags the viewport through the whole incoming page —
+         every reveal fires while the page is still flying past, so by the time
+         the visitor is looking the new page has already finished arriving. */
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${questrial.variable}`}
+    >
+      <head>
+        {/* Blocking, and in `<head>` on purpose: this is what puts the site's
+            scroll reveals into their one-shot mode, and an element it will hide
+            must never be painted visible first. See `lib/reveal-script.ts`. */}
+        <script dangerouslySetInnerHTML={{ __html: revealScript }} />
+      </head>
       <body>
         <script
           type="application/ld+json"
@@ -122,6 +140,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <WhatsappFloat />
       </body>
     </html>
   );

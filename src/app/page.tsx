@@ -1,13 +1,13 @@
-import { Capability } from "@/components/sections/capability";
+import { FeaturedCarousel } from "@/components/projects/featured-carousel";
+import { Approach } from "@/components/sections/approach";
 import { CtaBand } from "@/components/sections/cta-band";
 import { Hero } from "@/components/sections/hero";
-import { Journey } from "@/components/sections/journey";
-import { LocalExpertise } from "@/components/sections/local-expertise";
-import { Practice } from "@/components/sections/practice";
-import { SelectedWork } from "@/components/sections/selected-work";
-import { ServiceAreas } from "@/components/sections/service-areas";
-import { StatsBar } from "@/components/sections/stats-bar";
-import { Testimonial } from "@/components/sections/testimonial";
+import { Locations } from "@/components/sections/locations";
+import { ProcessSteps } from "@/components/sections/process-steps";
+import { Reviews } from "@/components/sections/reviews";
+import { Services } from "@/components/sections/services";
+import { WhyArc } from "@/components/sections/why-arc";
+import { featuredSection } from "@/content/homepage";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
@@ -31,19 +31,30 @@ export const metadata = createPageMetadata({
   images: ["/projects/25-langford-st/hero.webp"],
 });
 
-/** Section order follows the live homepage. */
+/**
+ * Section order follows the homepage reference design: the statement and its
+ * figures, the portfolio, the reasons, what we build, how we build it, where
+ * we build it, what clients said, and the enquiry.
+ *
+ * The featured band is the portfolio page's own carousel, given this page's
+ * labels — one band, one behaviour, in both of the places it appears.
+ */
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <StatsBar />
-      <SelectedWork />
-      <Practice />
-      <Capability />
-      <LocalExpertise />
-      <ServiceAreas />
-      <Journey />
-      <Testimonial />
+      <Approach />
+      <FeaturedCarousel
+        eyebrow={featuredSection.eyebrow}
+        link={featuredSection.link}
+        counter
+        className="bg-white"
+      />
+      <WhyArc />
+      <Services />
+      <ProcessSteps />
+      <Locations />
+      <Reviews />
       <CtaBand />
     </>
   );

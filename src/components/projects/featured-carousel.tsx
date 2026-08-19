@@ -6,6 +6,7 @@ import { useSwipe } from "@/components/projects/gallery/swipe";
 import { Button, UnderlineLink } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, PinIcon } from "@/components/ui/icon";
 import { MediaPlate } from "@/components/ui/media-plate";
+import { PointerLabel } from "@/components/ui/pointer-label";
 import { Eyebrow, Section, gutter } from "@/components/ui/section";
 import { projectsPage } from "@/content/pages";
 import {
@@ -239,7 +240,28 @@ function Slide({
  * off screen, it does not advance at all under `prefers-reduced-motion`, and
  * the arrows and dashes keep working in every one of those states.
  */
-export function FeaturedCarousel() {
+type FeaturedCarouselProps = {
+  /** The band's own label. Defaults to the portfolio page's. */
+  eyebrow?: string;
+  /** Where "view all" goes. The portfolio page jumps to its own index below. */
+  link?: { label: string; href: string };
+  /** Prints `01 / 04` beside the dashes — the homepage band's own measure. */
+  counter?: boolean;
+  /**
+   * One word that rides the cursor across the stage, saying what a click does.
+   * Off by default: the portfolio page has already said it in the band above.
+   */
+  pointerHint?: string;
+  className?: string;
+};
+
+export function FeaturedCarousel({
+  eyebrow = labels.eyebrow,
+  link = { label: labels.viewAll, href: "#all-projects" },
+  counter = false,
+  pointerHint,
+  className,
+}: FeaturedCarouselProps = {}) {
   const items = featuredProjects;
   const count = items.length;
 
@@ -316,8 +338,71 @@ export function FeaturedCarousel() {
     return () => window.clearTimeout(timer);
   }, [active, hasFilm, inView, next, reduced]);
 
+  /* Extracted so the pointer hint can wrap it without the band being
+     written out twice. */
+  const stage = (
+    <div
+      ref={stageRef}
+      tabIndex={0}
+      role="group"
+      aria-roledescription="carousel"
+      aria-label={`${current.title} — project ${active + 1} of ${count}`}
+      onKeyDown={(event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          previous();
+        } else if (event.key === "ArrowRight") {
+          event.preventDefault();
+          next();
+        }
+      }}
+      {...swipe}
+      /* Full-bleed on purpose: the peeks are meant to run off both edges of
+         the page. The container's ratio is the showing card's own ratio
+         divided by its width, which is what holds that card at a steady
+         2.2:1 from a phone up to a wide monitor. */
+      className="relative aspect-[3/2] w-full overflow-hidden tab:aspect-[2/1] nav:aspect-[11/4]"
+    >
+      {items.map((project, index) => {
+        /* Wrapped to the shorter way round, so stepping from the last
+           project to the first slides forward rather than rewinding the
+           whole band. */
+        let offset = index - active;
+        if (offset > count / 2) offset -= count;
+        if (offset < -count / 2) offset += count;
+
+        return (
+          <Slide
+            key={project.slug}
+            project={project}
+            offset={offset}
+            isActive={index === active}
+            videoRef={videoRef}
+            onSelect={() => select(index)}
+            onProgress={setProgress}
+            onEnded={next}
+            playFilm={playFilm}
+          />
+        );
+      })}
+
+      <CarouselArrow
+        direction="previous"
+        onClick={previous}
+        label={labels.previous}
+        className="left-3 tab:left-6 nav:left-10"
+      />
+      <CarouselArrow
+        direction="next"
+        onClick={next}
+        label={labels.next}
+        className="right-3 tab:right-6 nav:right-10"
+      />
+    </div>
+  );
+
   return (
-    <Section size="default" padded={false} className="bg-surface">
+    <Section size="default" padded={false} className={cn("bg-surface", className)}>
       <div
         className={cn(
           "flex items-center justify-between gap-6 pb-9 tab:pb-11",
@@ -325,73 +410,29 @@ export function FeaturedCarousel() {
         )}
       >
         <Eyebrow tone="brass" withRule as="h2">
-          {labels.eyebrow}
+          {eyebrow}
         </Eyebrow>
-        <UnderlineLink href="#all-projects" tone="quiet" withArrow>
-          {labels.viewAll}
+        <UnderlineLink href={link.href} tone="quiet" withArrow>
+          {link.label}
         </UnderlineLink>
       </div>
 
-      <div
-        ref={stageRef}
-        tabIndex={0}
-        role="group"
-        aria-roledescription="carousel"
-        aria-label={`${current.title} — project ${active + 1} of ${count}`}
-        onKeyDown={(event) => {
-          if (event.key === "ArrowLeft") {
-            event.preventDefault();
-            previous();
-          } else if (event.key === "ArrowRight") {
-            event.preventDefault();
-            next();
-          }
-        }}
-        {...swipe}
-        /* Full-bleed on purpose: the peeks are meant to run off both edges of
-           the page. The container's ratio is the showing card's own ratio
-           divided by its width, which is what holds that card at a steady
-           2.2:1 from a phone up to a wide monitor. */
-        className="relative aspect-[3/2] w-full overflow-hidden tab:aspect-[2/1] nav:aspect-[11/4]"
-      >
-        {items.map((project, index) => {
-          /* Wrapped to the shorter way round, so stepping from the last
-             project to the first slides forward rather than rewinding the
-             whole band. */
-          let offset = index - active;
-          if (offset > count / 2) offset -= count;
-          if (offset < -count / 2) offset += count;
-
-          return (
-            <Slide
-              key={project.slug}
-              project={project}
-              offset={offset}
-              isActive={index === active}
-              videoRef={videoRef}
-              onSelect={() => select(index)}
-              onProgress={setProgress}
-              onEnded={next}
-              playFilm={playFilm}
-            />
-          );
-        })}
-
-        <CarouselArrow
-          direction="previous"
-          onClick={previous}
-          label={labels.previous}
-          className="left-3 tab:left-6 nav:left-10"
-        />
-        <CarouselArrow
-          direction="next"
-          onClick={next}
-          label={labels.next}
-          className="right-3 tab:right-6 nav:right-10"
-        />
-      </div>
+      {pointerHint ? (
+        <PointerLabel label={pointerHint}>{stage}</PointerLabel>
+      ) : (
+        stage
+      )}
 
       <div className="mt-8 flex items-center justify-center gap-3">
+        {counter ? (
+          <span className="mr-4 text-[12px] font-semibold tracking-[0.16em] text-muted">
+            <span className="text-brand">
+              {String(active + 1).padStart(2, "0")}
+            </span>
+            <span className="px-1.5 text-faint">/</span>
+            {String(count).padStart(2, "0")}
+          </span>
+        ) : null}
         {items.map((project, index) => {
           const isActive = index === active;
           const runsKeyframe = isActive && !hasFilm && !reduced && inView;

@@ -1,15 +1,14 @@
 /**
  * Homepage copy, section by section, in the order it appears on the page.
  *
- * Every string is migrated from the live site's homepage (see
- * `Content-Extraction/Home/Text/content.md`). The only strings that are not
- * from the live homepage are the two hero button labels, which the extraction
- * did not capture and which are kept from this theme instead.
+ * Most strings are migrated from the live site's homepage (see
+ * `Content-Extraction/Home/Text/content.md`). The exceptions are the two hero
+ * button labels and the copy for the bands the homepage reference design
+ * introduces — the approach statement, the four reasons under "Built
+ * Differently", and the band labels — which are that design's own words.
  */
 
 import type { MediaPlate } from "@/components/ui/media-plate";
-import { localAreas } from "@/content/local-areas";
-import { projects } from "@/content/projects";
 import { site } from "@/content/site";
 import { testimonials } from "@/content/testimonials";
 
@@ -30,102 +29,161 @@ export const hero = {
   } satisfies MediaPlate,
 };
 
-/* -- Stats bar ------------------------------------------------------------ */
+/* -- The approach --------------------------------------------------------- */
 
-export type Stat = { value: string; label: string };
+export type ApproachFigure = {
+  /** Names the glyph; the drawing itself stays in the component. */
+  icon: "award" | "home" | "pin" | "draft";
+  value: string;
+  /** The caption under the figure, one line per entry. */
+  label: string[];
+  /**
+   * Set where the figure is words rather than a number, so it is not counted
+   * up and is set at label size instead of display size.
+   */
+  word?: boolean;
+};
 
 /**
- * The live hero animates three counters. Only the years figure is recorded in
- * the extracted content (`companyInfo.experience`), so the other two cells
- * count what is actually in this project rather than assert an unverified
- * number. Replace them once the real figures are supplied.
+ * The statement the page opens on, with the four figures that back it. Every
+ * figure is the reference design's own — swap a value here the day the
+ * business has a differently verified number to put in its place.
  */
-export const stats: Stat[] = [
-  { value: "18+", label: "Years of Industry Experience" },
-  { value: `${projects.length}`, label: "Successful Projects" },
-  { value: `${localAreas.length}`, label: "Service Areas Across SEQ" },
-];
+export const approach = {
+  eyebrow: "The ARC Approach",
+  heading: "We don't just build houses. We build homes with purpose.",
+  body: "For over 18 years, ARC Builders has been creating custom homes that are beautifully designed, expertly constructed and built to stand the test of time. Your vision, our expertise — exceptional results, every time.",
+  figures: [
+    { icon: "award", value: site.experience, label: ["Years", "Experience"] },
+    {
+      icon: "home",
+      value: site.projectsDelivered,
+      label: ["Homes", "Delivered"],
+    },
+    {
+      icon: "pin",
+      value: "South East Queensland",
+      label: ["Locations"],
+      word: true,
+    },
+    { icon: "draft", value: "100%", label: ["Custom", "Built"] },
+  ] satisfies ApproachFigure[],
+};
 
-/* -- Selected work -------------------------------------------------------- */
+/* -- Featured project ----------------------------------------------------- */
 
+export const featuredSection = {
+  eyebrow: "Featured Project",
+  link: { label: "View all projects", href: "/projects" },
+};
+
+/**
+ * The label a *list* of projects is given elsewhere on the site — the location
+ * pages open their portfolio block with it. The homepage's own featured band
+ * is labelled by `featuredSection` above.
+ */
 export const projectsSection = {
   eyebrow: "Portfolio",
   heading: "Featured Projects",
   link: { label: "All projects", href: "/projects" },
 };
 
-/* -- The practice (About preview) ----------------------------------------- */
+/* -- Why choose ARC ------------------------------------------------------- */
 
-export type Pillar = { index: string; title: string; body: string };
-
-export const practice = {
-  eyebrow: "About ARC Builders",
-  heading: "Custom Homes Built With Precision and Care",
-  lead: "At ARC Builders, we bring over 18 years of experience delivering high-quality custom homes in Brisbane and South East Queensland. Our expert team is committed to exceptional customer service, offering a seamless and transparent building experience from design to completion.",
-  body: [
-    "We specialise in custom home design, multi-generational homes, and Vastu-inspired home planning, creating functional, spacious homes tailored for modern families who value comfort, connection, and long-term living.",
-    "With fixed pricing, transparent quotes, and no hidden costs, you can build with confidence knowing exactly what to expect. Unlike standard project builders, we offer fully customised home designs so your home reflects your lifestyle, preferences, and future needs.",
-  ],
-  note: "ARC Builders - trusted custom home builders in Queensland, delivering personalised homes with precision, quality, and a difference.",
-  link: { label: "More about ARC", href: "/about" },
-  media: {
-    label: "WILLOWMERE RESIDENCE — KINGSTON",
-    tone: "brand-mid",
-    src: "/projects/3-dart-ave-kingston/hero.webp",
-    alt: "Willowmere Residence, Kingston",
-  } satisfies MediaPlate,
+export type Reason = {
+  index: string;
+  title: string;
+  body: string;
+  /** Names the glyph; the drawing itself stays in the component. */
+  icon: "people" | "price" | "home" | "service";
 };
 
-export const pillars: Pillar[] = [
-  {
-    index: "01",
-    title: "18+ Years",
-    body: "Experienced custom home delivery across Queensland",
-  },
-  {
-    index: "02",
-    title: "Transparent Quotes",
-    body: "Fixed pricing and clear scope without hidden costs",
-  },
-  {
-    index: "03",
-    title: "Custom Planning",
-    body: "Fully personalised homes for modern family living",
-  },
-  {
-    index: "04",
-    title: "Specialist Design",
-    body: "Multi-generational and Vastu-inspired home planning",
-  },
-];
+export const whyArc = {
+  eyebrow: "Why Choose ARC",
+  heading: "Built Differently.",
+  reasons: [
+    {
+      index: "01",
+      title: "18+ Years Experience",
+      body: "Nearly two decades of industry knowledge and craftsmanship you can trust.",
+      icon: "people",
+    },
+    {
+      index: "02",
+      title: "Transparent Pricing",
+      body: "Fixed pricing and clear scope so you know exactly what to expect.",
+      icon: "price",
+    },
+    {
+      index: "03",
+      title: "Fully Custom Design",
+      body: "Homes designed around your lifestyle, block, and future needs — not a template.",
+      icon: "home",
+    },
+    {
+      index: "04",
+      title: "Personal Service",
+      body: "A dedicated team that listens, communicates, and delivers exceptional results.",
+      icon: "service",
+    },
+  ] satisfies Reason[],
+};
 
-/* -- What we build -------------------------------------------------------- */
+/* -- Services ------------------------------------------------------------- */
 
-export const capabilitySection = {
-  eyebrow: "What We Do",
-  heading: "Our Services",
-  lead: "We design and build stylish residential and commercial buildings that suit your style, budget, and requirements.",
-  footnote: "Need a complete service scope for residential or commercial work?",
-  links: [
-    { label: "Residential services", href: "/residential" },
-    { label: "Commercial services", href: "/commercial" },
-  ],
+export const servicesSection = {
+  eyebrow: "Our Services",
+  link: { label: "View all services", href: "/residential" },
 };
 
 /** The four service lines the live homepage surfaces, in the same order. */
 export const homeServiceIds = ["1", "2", "3", "7"];
 
-/* -- Local expertise ------------------------------------------------------ */
-
-export const localExpertise = {
-  eyebrow: "Local Expertise",
-  heading: "Custom Home Builder in Brisbane & South East Queensland",
-  lead: "ARC Builders supports Indian-Australian and local families with custom homes, Vastu-aware planning, transparent pricing, and practical project delivery across South East Queensland.",
+/**
+ * Homepage-only overrides. "Shop Fitouts" is the right name on /commercial,
+ * where the whole page is commercial work; on a homepage row sitting under
+ * three residential lines it has to say which side of the business it is.
+ */
+export const homeServiceLabels: Record<string, string> = {
+  "7": "Commercial & Shop Fitouts",
 };
 
-export const serviceAreaSection = {
-  eyebrow: "Where we build",
-  link: { label: "All service areas", href: "/locations" },
+/**
+ * One photograph per service line, shown in the frame beside the rows and
+ * swapped as the pointer walks down them. Keyed by service id, so a row with
+ * no photograph of its own simply leaves the frame on the one before it.
+ */
+export const homeServiceMedia: Record<string, { src: string; alt: string }> = {
+  "1": {
+    src: "/projects/14-verona-st-pallara/hero.webp",
+    alt: "Aurelia Residence, Pallara — a custom family home",
+  },
+  "2": {
+    src: "/projects/25-langford-st/gallery-05.webp",
+    alt: "A renovated ensuite in stone and timber, Eight Mile Plains",
+  },
+  "3": {
+    src: "/projects/49-herbert-st/gallery-03.webp",
+    alt: "A rear extension opening onto lawn and pool, Camp Hill",
+  },
+  "7": {
+    src: "/projects/commercial-fitout.jpg",
+    alt: "A commercial reception fitout in oak joinery and stone",
+  },
+};
+
+/* -- Process -------------------------------------------------------------- */
+
+export const processSection = {
+  eyebrow: "Our Process",
+  link: { label: "The full process", href: "/process" },
+};
+
+/* -- Locations ------------------------------------------------------------ */
+
+export const locationsSection = {
+  eyebrow: "Locations We Build",
+  link: { label: "View all locations", href: "/locations" },
 };
 
 /** The eight suburbs the live homepage lists, in order. */
@@ -140,26 +198,41 @@ export const homeAreaSlugs = [
   "mount-gravatt",
 ];
 
-/* -- The journey (process) ------------------------------------------------ */
-
-export const journeySection = {
-  eyebrow: "How We Work",
-  heading: "Our Process",
-  lead: "From first conversation to final handover, every step is transparent, collaborative, and focused on your vision.",
-  link: { label: "The full process", href: "/process" },
-};
-
 /* -- Testimonials --------------------------------------------------------- */
 
-export const testimonialSection = {
-  eyebrow: "Testimonials",
-  heading: "What Our Clients Say",
-  media: {
-    label: "ELMSWORTH RESIDENCE — CALAMVALE",
-    tone: "plate-1",
-    src: "/projects/35-ayesha-place-calamvale/hero.webp",
-    alt: "Elmsworth Residence, Calamvale",
-  } satisfies MediaPlate,
+/**
+ * The band shows one review at a time against a photograph of the kind of work
+ * it is about. `media` is indexed by position in `testimonials`, so the two
+ * lists stay in step — a review added there wants a photograph added here, and
+ * the band falls back to the first if one is missing.
+ */
+export const reviewsSection = {
+  eyebrow: "Testimonial",
+  action: { label: "Book a consultation", href: "/contact" },
+  previous: "Previous review",
+  next: "Next review",
+  media: [
+    {
+      src: "/process/stage-02-planning.webp",
+      alt: "A kitchen with a stone island and timber joinery",
+    },
+    {
+      src: "/projects/35-ayesha-place-calamvale/hero.webp",
+      alt: "Elmsworth Residence, Calamvale",
+    },
+    {
+      src: "/projects/17-ormskirk-st-calamvale/gallery-15.webp",
+      alt: "A double-height entry with a pendant fitting, Calamvale",
+    },
+    {
+      src: "/projects/14-verona-st-pallara/hero.webp",
+      alt: "Aurelia Residence, Pallara",
+    },
+    {
+      src: "/projects/commercial-fitout.jpg",
+      alt: "A medical centre reception in oak joinery and stone",
+    },
+  ],
 };
 
 /* -- Closing call to action ----------------------------------------------- */
@@ -179,7 +252,7 @@ export const cta = {
   proof: [
     {
       icon: "projects",
-      value: `${projects.length}`,
+      value: site.projectsDelivered,
       label: "Projects Delivered",
     },
     { icon: "experience", value: site.experience, label: "Years Experience" },

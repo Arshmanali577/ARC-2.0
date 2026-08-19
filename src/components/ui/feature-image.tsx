@@ -24,14 +24,21 @@ export function FeatureImage({
   return (
     <section className={className}>
       <div className={cn("reveal group relative w-full overflow-hidden bg-surface", aspect)}>
-        <MediaPlate
-          label={caption ?? alt}
-          tone="plate-2"
-          src={src}
-          alt={alt}
-          sizes="100vw"
-          className="h-full w-full transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
-        />
+        {/* The plate drifts inside its frame as the band passes, so a
+            full-bleed photograph reads as a view through the page rather than
+            a picture laid on it. Separate layer from the plate: the drift is a
+            `scale` plus a `translate`, and the hover zoom below is a `scale`
+            of its own — on one element the later utility would simply win. */}
+        <div className="parallax-plate h-full w-full">
+          <MediaPlate
+            label={caption ?? alt}
+            tone="plate-2"
+            src={src}
+            alt={alt}
+            sizes="100vw"
+            className="h-full w-full transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
+          />
+        </div>
       </div>
 
       {caption ? (

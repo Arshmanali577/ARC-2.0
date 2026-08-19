@@ -54,13 +54,34 @@ const SCROLL_CAP = 46;
 const ENTER_STEP = 38;
 const ENTER_CAP = 380;
 
+/**
+ * How many words in the stagger still grows. Past this they all share the last
+ * delay — a fifteen-word heading whose final word waits six hundred milliseconds
+ * has stopped reading as a sentence being written and started reading as a
+ * queue. Ten steps of `--reveal-word-step` is 380ms, the same window the
+ * masthead entrance uses.
+ */
+const WORD_CAP = 10;
+
 function wordStyle(index: number, mode: SplitMode, base: number) {
   if (mode === "enter") {
     return { animationDelay: `${base + Math.min(index * ENTER_STEP, ENTER_CAP)}ms` };
   }
 
+  // Both, because a scrolled heading has two ways of running and this is the
+  // one place the stagger is written. `animation-range` drives the scroll-linked
+  // path; `animation-delay` drives the one-shot path the reveal script switches
+  // the site into. Neither interferes with the other: a progress-based timeline
+  // ignores `animation-delay` outright, and the one-shot rules reset the
+  // timeline to `auto`, which is where `animation-range` stops applying.
+  //
+  // The delay is a `calc` on the token rather than a number so it still shrinks
+  // with the rest of the stagger on a phone, where the token is redefined.
   const end = Math.min(SCROLL_START + index * SCROLL_STEP, SCROLL_CAP);
-  return { animationRange: `entry 2% cover ${end}%` };
+  return {
+    animationRange: `entry 2% cover ${end}%`,
+    animationDelay: `calc(var(--reveal-word-step) * ${Math.min(index, WORD_CAP)})`,
+  };
 }
 
 /**

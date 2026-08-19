@@ -18,6 +18,13 @@ export const site = {
   copyrightYear: 2026,
   experience: "18+",
 
+  /**
+   * The headline delivery figure the proof bands quote. It counts the whole
+   * build history, not the twelve case studies kept in `projects.ts`, so it is
+   * stated here rather than derived from that array.
+   */
+  projectsDelivered: "100+",
+
   licence: {
     label: "QBCC Licensed Builder",
     authority: "QBCC",
@@ -31,6 +38,8 @@ export const site = {
     emailHref: "mailto:admin@arcbuilders.com.au",
     whatsappHref:
       "https://wa.me/61411878438?text=Hi%20ARC%20Builders%2C%20I%27m%20interested%20in%20discussing%20a%20project.",
+    /** The floating chat button in the corner of every page. */
+    whatsappLabel: "Message on WhatsApp",
     mapEmbed:
       "https://www.google.com/maps?q=25+Langford+Street,+Eight+Mile+Plains+QLD+4113,+Australia&output=embed",
     directionsHref:

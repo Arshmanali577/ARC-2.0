@@ -26,13 +26,18 @@ export function Hero() {
       {/* MediaPlate owns `relative` for `next/image fill`, so the layer that
           takes it out of flow has to be this wrapper. */}
       <div className="enter-plate absolute inset-0">
-        <MediaPlate
-          {...hero.media}
-          priority
-          align="end"
-          labelPadding={20}
-          className="h-full w-full"
-        />
+        {/* The drift lives on a layer of its own: `enter-plate` animates `scale`
+            here on the clock, and two utilities on one element would overwrite
+            each other's `animation` rather than compose. */}
+        <div className="parallax-plate h-full w-full">
+          <MediaPlate
+            {...hero.media}
+            priority
+            align="end"
+            labelPadding={20}
+            className="h-full w-full"
+          />
+        </div>
       </div>
 
       {/* Bottom-weighted scrim: the copy clears AA contrast without the
